@@ -1,0 +1,31 @@
+# Dependencies
+/node_modules
+
+# Production
+/build
+
+# Generated files
+.docusaurus
+.cache-loader
+/website/*
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+docs-examples-from-docusaurus/exampledoc5.md
+docs-examples-from-docusaurus/exampledoc4.md
+docs-examples-from-docusaurus/doc3.md
+docs-examples-from-docusaurus/doc2.md
+docs-examples-from-docusaurus/doc1.md
+Dockerfile
+docker-compose.yml
+blog/2022-05-30-CEC2-workshop.md
+.dockerignore
