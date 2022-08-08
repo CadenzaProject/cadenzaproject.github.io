@@ -23,7 +23,7 @@ function AboutHeader() {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title"> The Clarity Project </h1>{" "}
+        <h1 className="hero__title"> The Cadenza Project </h1>{" "}
         <p className="hero__subtitle"> About Us </p>{" "}
         <div className={styles.buttons}> </div>{" "}
       </div>{" "}
@@ -97,6 +97,7 @@ const SteeringPersonList = [
 const PersonList = [
   {
     name: "Michael Akeroyd",
+    department: "School of Medicine",
     affiliation: "University of Nottingham",
     url: "https://www.nottingham.ac.uk/medicine/people/michael.akeroyd",
     avatar: "/img/avatar/akeroyd.jpeg",
@@ -110,21 +111,66 @@ const PersonList = [
   },
   {
     name: "Trevor Cox",
+    department: "School of Science, Engineering and Environment",
     affiliation: "University of Salford",
     url: "https://www.salford.ac.uk/our-staff/trevor-cox",
     avatar: "/img/avatar/cox.jpeg",
   },
   {
+    name: "Alinka Greasley",
+    department: "School of Music",
+    affiliation: "University of Leeds",
+    url: "https://ahc.leeds.ac.uk/music/staff/286/dr-alinka-greasley",
+    avatar: "/img/avatar/greasley.jpeg",
+  },
+  {
     name: "Simone Graetzer",
+    department: "School of Science, Engineering and Environment",
     affiliation: "University of Salford",
     url: "https://www.salford.ac.uk/our-staff/simone-graetzer",
     avatar: "/img/avatar/graetzer.jpeg",
   },
   {
     name: "Graham Naylor",
+    department: "School of Medicine",
     affiliation: "University of Nottingham",
     url: "https://www.nottingham.ac.uk/medicine/people/graham.naylor",
     avatar: "/img/avatar/naylor.jpeg",
+  },
+  {
+    name: "William Whitmer",
+    affiliation: "University of Nottingham",
+    department: "School of Medicine",
+    url: "https://www.nottingham.ac.uk/medicine/people/bill.whitmer",
+    avatar: "",
+  },
+  {
+    name: "Scott Bannister",
+    department: "School of Music",
+    affiliation: "University of Leeds",
+    url: "https://ahc.leeds.ac.uk/music/staff/3358/dr-scott-bannister",
+    avatar: "/img/avatar/bannister.jpeg",
+  },
+  {
+    name: "Bruno Fazenda",
+    department: "School of Science, Engineering and Environment",
+    affiliation: "University of Salford",
+    url: "https://www.salford.ac.uk/our-staff/bruno-fazenda",
+    avatar: "/img/avatar/fazenda.jpeg",
+  },
+  {
+    name: "Rebecca Vos",
+    department: "Faculty of Engineering, Department of Electrical and Electronic Engineering",
+    affiliation: "Imperial College London",
+    url: "https://www.imperial.ac.uk/people/r.vos",
+    avatar: "/img/avatar/vos.jpeg",
+  },
+  {
+    name: "Gerardo Roa",
+    department: "Department of Computer Science",
+    affiliation: "University of Sheffield",
+    url: "https://www.sheffield.ac.uk/dcs/people/research-staff/gerardo-roa-dabike",
+    avatar: "/img/avatar/roa.jpeg",
   },
 ];
 
@@ -166,7 +212,7 @@ export default function Home() {
           <p>Text here etc</p>
 
           <a id="team" />
-          <h2> The Clarity Team</h2>
+          <h2> The Cadenza Team</h2>
           <Grid container px={10} spacing={5}>
             {PersonList.map((props, idx) => (
               <GridItem style={{ minWidth: "300px" }} item xs={6}>
@@ -176,7 +222,7 @@ export default function Home() {
           </Grid>
 
           <Box py={5}>
-            <h2> The Clarity Steering Committee</h2>
+            <h2> The Cadenza Steering Committee</h2>
 
             <Grid container px={10} spacing={5}>
               {SteeringPersonList.map((props, idx) => (
@@ -189,16 +235,62 @@ export default function Home() {
 
           <Box>
             <a id="partners" />
-            <h2> Our Clarity Partners</h2>
+            <h2> Our Cadenza Partners</h2>
 
             <Box style={{ textAlign: "center" }}>
               <Box
                 component="img"
+                style={{marginLeft: '.5rem', marginRight: '.5rem' }}
                 sx={{
                   height: 100,
                 }}
                 alt="RNID logo."
                 src={useBaseUrl("img/logos/RNID-logo.jpeg")}
+              />
+              <Box
+                  component="img"
+                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  sx={{
+                    height: 100,
+                  }}
+                  alt="Logitech logo."
+                  src={useBaseUrl("img/logos/logitech-logo.png")}
+              />
+              <Box
+                  component="img"
+                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  sx={{
+                    height: 100,
+                  }}
+                  alt="Oldenburg logo."
+                  src={useBaseUrl("img/logos/oldenburg-logo.jpeg")}
+              />
+              <Box
+                  component="img"
+                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  sx={{
+                    height: 100,
+                  }}
+                  alt="Google logo."
+                  src={useBaseUrl("img/logos/google-logo.png")}
+              />
+              <Box
+                  component="img"
+                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  sx={{
+                    height: 100,
+                  }}
+                  alt="Sonova logo."
+                  src={useBaseUrl("img/logos/sonova-logo.png")}
+              />
+              <Box
+                  component="img"
+                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  sx={{
+                    height: 100,
+                  }}
+                  alt="BBC logo."
+                  src={useBaseUrl("img/logos/bbc-logo.png")}
               />
             </Box>
           </Box>
