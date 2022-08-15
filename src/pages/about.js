@@ -240,7 +240,7 @@ export default function Home() {
             <Box style={{ textAlign: "center" }}>
               <Box
                 component="img"
-                style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                style={{marginLeft: '2rem', marginRight: '4rem' }}
                 sx={{
                   height: 100,
                 }}
@@ -249,7 +249,7 @@ export default function Home() {
               />
               <Box
                   component="img"
-                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  style={{marginLeft: '10rem', marginRight: 'rem' }}
                   sx={{
                     height: 100,
                   }}
@@ -258,16 +258,17 @@ export default function Home() {
               />
               <Box
                   component="img"
-                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  style={{marginLeft: '10rem', marginRight: '0rem' }}
                   sx={{
                     height: 100,
                   }}
                   alt="Oldenburg logo."
                   src={useBaseUrl("img/logos/oldenburg-logo.jpeg")}
               />
+              <br></br>
               <Box
                   component="img"
-                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  style={{marginLeft: '5rem', marginRight: '0rem' }}
                   sx={{
                     height: 100,
                   }}
@@ -276,7 +277,7 @@ export default function Home() {
               />
               <Box
                   component="img"
-                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  style={{marginLeft: '5rem', marginRight: '0rem' }}
                   sx={{
                     height: 100,
                   }}
@@ -285,7 +286,7 @@ export default function Home() {
               />
               <Box
                   component="img"
-                  style={{marginLeft: '.5rem', marginRight: '.5rem' }}
+                  style={{marginLeft: '5rem', marginRight: '10rem' }}
                   sx={{
                     height: 100,
                   }}
