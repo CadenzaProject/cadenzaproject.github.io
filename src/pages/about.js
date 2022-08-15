@@ -170,7 +170,7 @@ const PersonList = [
     affiliation: "University of Nottingham",
     department: "School of Medicine",
     url: "https://www.nottingham.ac.uk/medicine/people/bill.whitmer",
-    avatar: "",
+    avatar: "/img/avatar/whitmer.jpeg",
   },
 ];
 
