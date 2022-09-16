@@ -84,14 +84,34 @@ function SteeringPersonCard({ name, affiliation, avatar, url }) {
 
 const SteeringPersonList = [
   {
-    name: "Peter Derleth",
-    affiliation: "Sonova AG",
-    avatar: "/img/avatar/derleth.jpeg",
+    name: "Alan Archer-Boyd",
+    affiliation: "BBC",
+    avatar: "/img/avatar/archer-boyd.jpeg",
+  },
+  {
+    name: "Richard F. Lyon",
+    affiliation: "Google",
+    avatar: "/img/avatar/lyon.jpeg",
+  },
+  {
+    name: "Andrew Harper",
+    affiliation: "Logitech",
+    avatar: "/img/avatar/harper.jpeg",
+  },
+  {
+    name: "Volker Hohmann",
+    affiliation: "Universität Oldenburg",
+    avatar: "/img/avatar/hohmann.png",
   },
   {
     name: "Ralph Holme",
     affiliation: "Royal National Institute for the Deaf",
     avatar: "/img/avatar/holme.jpeg",
+  },
+  {
+    name: "Stefan Launer",
+    affiliation: "Sonova",
+    avatar: "/img/avatar/launer.jpeg",
   },
 ];
 const PersonList = [
