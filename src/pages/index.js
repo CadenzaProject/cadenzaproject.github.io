@@ -21,6 +21,11 @@ function HomepageHeader() {
             About Us{" "}
           </Link>{" "}
         </div>{" "}
+        <div className={styles.buttons}>
+        <Link className="button button--secondary button--lg" to="./test">
+          Test{" "}
+          </Link>{" "}
+        </div>{" "}
       </div>{" "}
     </header>
   );

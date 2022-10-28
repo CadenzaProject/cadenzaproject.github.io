@@ -49,6 +49,21 @@ module.exports = {
 
                     }, ]
                 }, {
+                    type: 'dropdown',
+                    label: 'Take Part',
+                    position: 'right',
+                    items: [{
+                        to: '/docs/cadenza1/cc1_intro/',
+                        label: 'Challenge 1',
+                    }, {
+                        to: '/docs/cadenza2/cc2_intro/',
+                        label: 'Challenge 2',
+                    } ]
+                }, {
+                    to: '/docs/learning/learning_intro/',
+                    label: 'Learning',
+                    position: 'right'
+                }, {
                     to: '/blog/',
                     label: 'Blog',
                     position: 'right'
