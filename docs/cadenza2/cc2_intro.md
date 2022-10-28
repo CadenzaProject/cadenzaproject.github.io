@@ -9,3 +9,5 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 
 Details to appear
+
+The current challenge is [Challenge 1](/docs/cadenza1/cc1_intro.md).

@@ -1,6 +1,6 @@
 ---
-id: learning_intro
-title: Learning resources
+id: education_intro
+title: Education
 sidebar_label: Introduction
 sidebar_position: 1
 ---

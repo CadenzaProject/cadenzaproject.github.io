@@ -60,12 +60,12 @@ module.exports = {
                         label: 'Challenge 2',
                     } ]
                 }, {
-                    to: '/docs/learning/learning_intro/',
-                    label: 'Learning',
+                    to: '/docs/education/education_intro/',
+                    label: 'Education',
                     position: 'right'
                 }, {
                     to: '/blog/',
-                    label: 'Blog',
+                    label: 'Latest',
                     position: 'right'
                 },
 
@@ -88,7 +88,7 @@ module.exports = {
                         },
                         {
                             label: 'Cadenza Google Group',
-                            href: 'https://groups.google.com/g/cadenz-challenge',
+                            href: 'https://groups.google.com/g/cadenza-challenge',
                         },
                         {
                             label: 'Email Us',
@@ -144,7 +144,7 @@ module.exports = {
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
-                    blogTitle: 'Cadenza Blog',
+                    blogTitle: 'Latest',
                     blogDescription: 'News and updates about our challenges and workshops',
                     postsPerPage: 'ALL',
                     blogSidebarTitle: 'Recent posts',

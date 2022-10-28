@@ -8,4 +8,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 
-Details to appear
+- Overview with video​
+
+- Track 1​
+
+- Overview of scenario (1 paragraph)​
+
+- Baseline schematic with short description (as overview of challenge, 1 paragraph)​
+
+- Track 2​
+
+- Overview of scenario (1 paragraph)​
+
+- Baseline schematic with short description (as overview of challenge, 1 paragraph)
