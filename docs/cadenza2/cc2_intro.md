@@ -8,6 +8,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 
-Details to appear
+[Challenge 1](/docs/cadenza1/cc1_intro.md) is currently running.
 
-The current challenge is [Challenge 1](/docs/cadenza1/cc1_intro.md).
+Challenge 2 is expected to run in 2024.
