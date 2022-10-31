@@ -50,7 +50,7 @@ module.exports = {
                     }, ]
                 }, {
                     type: 'dropdown',
-                    label: 'Take Part',
+                    label: 'Challenges',
                     position: 'right',
                     items: [{
                         to: '/docs/cadenza1/cc1_intro/',
