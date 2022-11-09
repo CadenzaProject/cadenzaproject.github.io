@@ -23,5 +23,5 @@ On the download site you will see three data packages are available,
 
 All participants will require the **core** data package. Participants using machine learning approaches will additionally require the **train** data package. Participants wishing to extend the training set by using our provided scene rendering tools will also require the high order ambisonic impulse responses (i.e., the **hoairs** package).
 
-To unpack the data we recommend you follow the instructions in the [Clarity Challenge GitHub repository](https://github.com/claritychallenge/clarity).
+To unpack the data we recommend you follow the instructions in the [Cadenza Challenge GitHub repository](https://github.com/CadenzaProject/Cadenza).
 

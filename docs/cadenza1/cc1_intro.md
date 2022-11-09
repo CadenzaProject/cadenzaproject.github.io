@@ -23,7 +23,7 @@ DESCRIPTION OF DIAGRAM
 
 ## Track 2
 
-This will focus on another common, but more complex, listening setup: listening to music on a car stereo. A hearing impaired user wearing their hearing aids, sitting in a car, listens to recorded music played over the car stereo. Your task is to process the music played from the stereo to improve hte perceived audio quality and reduce the effects of the car noise.
+This will focus on another common, but more complex, listening setup: listening to music on a car stereo. A hearing impaired user wearing their hearing aids, sitting in a car, listens to recorded music played over the car stereo. Your task is to process the music played from the stereo to improve the perceived audio quality and reduce the effects of the car noise.
 
 SCHEMATIC DIAGRAM HERE
 

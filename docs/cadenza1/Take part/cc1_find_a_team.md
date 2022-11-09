@@ -11,4 +11,4 @@ We encourage everyone to join the [Cadenza Challenge’s Google group](https://g
 
 You are welcome to contact us if you have any questions about forming a team or participating in the challenge:
 
-[Email the Clarity Team](mailto:claritychallengecontact@gmail.com)
+[Email the Cadenza Team](mailto:cadenzachallengecontact@gmail.com)
