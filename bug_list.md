@@ -5,12 +5,11 @@ This document is to keep a record of what needs updating/fixing/filling in on th
 ## Challenge 1
 
 ### Take part
-cc1_registration - need to add a new google form, this is the one from clarity.
-                 - add registration closing date
+cc1_registration - add registration closing date
 cc1_download - Data - fix download links, fix github link at end
 cc1_listening_tests - this is old from clarity
-cc1_find_a_team - make new google forms and links
-cc1_rules - check
+cc1_find_a_team - done
+cc1_rules - done I think - check
 cc1_prizes - have we got any prizes???
 cc1_submission - update all the dates, evaluation data, submission details, stuff about listening tests, naming conventions, 
 

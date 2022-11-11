@@ -9,7 +9,7 @@ sidebar_position: 11
 
 ### Training and development
 
-There is no limit on the amount of training data that can be generated using our tools and training data sets. Teams can also use their own data for training or expand the training data through simple automated modifications. However, teams that do this must make a second submission using only the official audio files and signal generation tool. Any audio or metadata can be used during training and development, but during evaluation, **the proposed simulated hearing aid or Enhancement Processor will not have access to all of the data (see next section).**
+There is no limit on the amount of training data that can be generated using our tools and training data sets. Teams can also use their own data for training or expand the training data through simple automated modifications. However, teams that do this must make a second submission using only the official audio files and signal generation tool. Any audio or metadata can be used during training and development, but during evaluation, the proposed simulated hearing aid or Enhancement Processor will not have access to all of the data (see next section).
 
 ### Evaluation
 

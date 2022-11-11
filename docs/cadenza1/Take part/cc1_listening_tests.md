@@ -7,7 +7,7 @@ sidebar_position: 4
 
 ## Overview
 
-The  listeners will be provided with a USB stereo headset to complete the listening experiment. The experiment will be run by our “Listen@Home” web software running on either the participant’s own computer or a tablet we supply. The software plays each sentence once, then the participant speaks aloud what they think was said by the target talker. Their response is recorded by the headset’s microphone for offline scoring. We ask that the participant uses a quiet room for the experiment.
+The listeners will be provided with a USB stereo headset to complete the listening experiment. The experiment will be run by our “Listen@Home” web software running on either the participant’s own computer or a tablet we supply. The software plays each sentence once, then the participant speaks aloud what they think was said by the target talker. Their response is recorded by the headset’s microphone for offline scoring. We ask that the participant uses a quiet room for the experiment.
 
 Intelligibility will be evaluated as the number of words identified correctly in the sentence.
 
