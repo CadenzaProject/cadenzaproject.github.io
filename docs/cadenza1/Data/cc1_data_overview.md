@@ -8,5 +8,5 @@ sidebar_position: 10
 Details to appear
 
 
-Data and software can be downloaded from the [download page](./Take part/cc1_download)
+Data and software can be downloaded from the [download page](/docs/cadenza1/Take%20part/cc1_download.md)
 

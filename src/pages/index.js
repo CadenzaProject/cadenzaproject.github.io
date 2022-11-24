@@ -16,15 +16,24 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title"> {siteConfig.title} </h1>{" "}
         <p className="hero__subtitle"> {siteConfig.tagline} </p>{" "}
+        Quick links:
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="./about">
+          <Link 
+            className="button button--secondary button--lg" to="./about" style={{margin: "10px"}}>
             About Us{" "}
           </Link>{" "}
-        </div>{" "}
-        <div className={styles.buttons}>
-        <Link className="button button--secondary button--lg" to="./test">
-          Test{" "}
+          
+          <Link className="button button--secondary button--lg" to="./docs/cadenza1/cc1_intro" style={{margin: "10px"}}>
+          The Current Challenge{" "}
           </Link>{" "}
+
+          <Link className="button button--secondary button--lg" to="./blog" style={{margin: "10px"}}>
+          Latest News{" "}
+          </Link>{" "}
+          
+          {/* <Link className="button button--secondary button--lg" to="./test" style={{margin: "10px"}}>
+          Test{" "}
+          </Link>{" "} */}
         </div>{" "}
       </div>{" "}
     </header>
@@ -68,8 +77,8 @@ export default function Home() {
             <blockquote>
               “Running competitions is a great approach, because it will grow a
               new research community devoted to making music more accessible to
-              all.Machine learning has revolutionised audio research, but too
-              often it doesn 't consider the diversity of listeners.
+              all. Machine learning has revolutionised audio research, but too
+              often it doesn't consider the diversity of listeners.
               <p />
               I've been an amateur musician since I was at primary school, and
               now realise my hearing isn't what it used to be. I will be one of
