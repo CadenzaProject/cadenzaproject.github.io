@@ -180,9 +180,9 @@ const PersonList = [
   },
   {
     name: "Rebecca Vos",
-    department: "Faculty of Engineering, Department of Electrical and Electronic Engineering",
-    affiliation: "Imperial College London",
-    url: "https://www.imperial.ac.uk/people/r.vos",
+    department: "School of Science, Engineering and Environment",
+    affiliation: "University of Salford",
+    url: "https://www.salford.ac.uk/our-staff/rebecca-vos",
     avatar: "/img/avatar/vos.jpeg",
   },
   {

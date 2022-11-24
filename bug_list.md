@@ -2,24 +2,29 @@
 
 This document is to keep a record of what needs updating/fixing/filling in on the website.
 
+index.js - done
+about.js - done
+contact.js - done
+
 ## Challenge 1
+cc1_intro - need pictures of scenarios
 
 ### Take part
 cc1_registration - add registration closing date
 cc1_download - Data - fix download links, fix github link at end
-cc1_listening_tests - this is old from clarity
+cc1_listening_tests - get new from michael
 cc1_find_a_team - done
 cc1_rules - done I think - check
-cc1_prizes - have we got any prizes???
+cc1_prizes - done (gone! - no prizes)
 cc1_submission - update all the dates, evaluation data, submission details, stuff about listening tests, naming conventions, 
 
 ### The Challenge Data
-cc1_data_overview - 
+cc1_data_overview - holding page at present, needs description of data and links adding
 cc1_data_rules - all needs checking, copied from clarity
 cc1_data_more_details - 
 
 ### Software
-cc1_baseline - 
+cc1_baseline - block diagrams here. add haaqi,  refs
 cc1_core_software - 
 cc1_additional_tools - 
 cc1_scene_generator - 

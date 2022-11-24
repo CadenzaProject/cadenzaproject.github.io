@@ -5,13 +5,27 @@ sidebar_label: Baseline
 sidebar_position: 14
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+Challenge entrants are supplied with a fully functioning baseline system. [Figure 1](#fig1) shows a simplified schematic:
+
+- Music processing system (green box)
+- This is then passed through the headphones (purple box).
+
+- The enhancement is individualised for each listener with quantified hearing characteristics, hence there is also a system to select a random listener (white ellipse).
+- The Improved audio signal that is outputted from the system is then passed to the evaluation stage (orange box). We are using the Hearing-Aid Audio Quality Index (HAAQI) as the objective metric to estimate speech intelligibility \[[1](#refs)].
+
+
 ## Track 1
 
 ### Diagram
 
 Below, a schematic diagram is shown for the baseline system for the headphone listening scenario:
 
-![Schematic diagram of the baseline system for the headphone listening scenario](/img/Baseline_1.png)
+<figure id="fig1">
+<img width="800" src={useBaseUrl('/img/Baseline_1.png')} />
+<figcaption>Figure 1, The baseline for the headphone listening scenario (Track 1). For simplicity, not all signal paths are shown.</figcaption>
+</figure>
 
 ### Description
 
@@ -35,3 +49,9 @@ The music samples are then fed into the Music Processor block of the car enterta
 The signals are then passed through the BRIR of the car (taken from the [eBrIRD](https://www.phon.ucl.ac.uk/resource/ebrird/) database), and finally through a hearing aid simulator, into which the car noise is also passed.
 
 The evaluation stage compares the processed audio and a reference (unprocessed) signal to calculate the HAAQI score.
+
+## References
+
+<a name="refs"></a>
+
+1. Kates, J.M. and Arehart, K.H., 2021. The hearing-aid speech perception index (haspi) version 2. Speech Communication, 131, pp.35-46.
