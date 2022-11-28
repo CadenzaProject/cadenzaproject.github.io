@@ -6,7 +6,7 @@ sidebar_position: 8
 ---
 
 :::info
-All teams are [required to register](./cc1_registration.mdx) prior to submission and before the registration deadline August 28th.
+All teams are [required to register](./cc1_registration.mdx) prior to submission and before the registration deadline [tbc].
 :::
 
 We will be operating a two-stage submission process:
@@ -14,27 +14,31 @@ We will be operating a two-stage submission process:
 - **Stage 1**: Evaluation using HAAQI
 - **Stage 2**: Evaluation using listening panel
 
-Key dates.
+Key dates:
 
-- **July 25th**: Evaluation data release for HASPI evaluation for all entrants.
-- **Aug 28th**: Registration deadline.
-- **Sept 1st**: All entrants submit (i) audio for HASPI evaluation and (ii) a draft of their technical report.
-- **Sept 8th**: Deadline by which all entrants must submit two page technical reports to Clarity-2022 workshop.
-- **Sept 8th**: Entrants informed which systems are going forward to the listening test evaluation stage. Evaluation data for listening tests released to those entrants.
-- **Sept 15th**: Entrants submit audio for listening tests.
+- **Feb 1st**: "Beta" version of evaluation data release for HASPI evaluation for all entrants.
+- **March 1st**: Evaluation data release for HASPI evaluation for all entrants.
+- **tbc**: Registration deadline.
+- **Sept 1st**: All entrants submit (i) audio for HAAQI evaluation and (ii) a draft of their technical report.
+- **Sept 1st**: Deadline by which all entrants must submit two page technical reports to Clarity-2022 workshop.
+- **Sept 1st**: Entrants informed which systems are going forward to the listening test evaluation stage. Evaluation data for listening tests released to those entrants.
+- **Sept 1st**: Entrants submit audio for listening tests.
 
 ## What evaluation data is provided?
 
-The evaluation data consists of 1500 scenes. For each scene, you are provided with the signals received at each of the three microphones on the left and right hearing aid device. You will also be provided with JSON or csv formatted metadata consisting of
+Coming soon! Please check back later!
+
+<!-- The evaluation data consists of 1500 scenes. For each scene, you are provided with the signals received at each of the three microphones on the left and right hearing aid device. You will also be provided with JSON or csv formatted metadata consisting of
 
   1. the audiograms and DTT results for a set of listeners and
   2. a mapping of which listeners will listen to which scenes.
 
 There will also be some clean audio examples for the target talker, that are not the same as the target utterance.
 
-For the stage 1 HASPI evaluation, there will be one listener per scene and the scene-listener mapping will be the same for all teams.
+For the stage 1 HAAQI evaluation, there will be one listener per scene and the scene-listener mapping will be the same for all teams.
 
-For the stage 2 listening test evaluation, there will be five listeners per scene and each team will have a separate scene-listener mapping. The file formats will be the same as used for the development data; for details see the [Data Overview](./Data/cc1_data_overview) page.
+For the stage 2 listening test evaluation, there will be five listeners per scene and each team will have a separate scene-listener mapping. The file formats will be the same as used for the development data; for details see the [Data Overview](./Data/cc1_data_overview) page. 
+-->
 
 ## What audio do I need to submit?
 
@@ -48,7 +52,7 @@ We also encourage you to submit your simulated hearing aid code.
 See the page on [listening tests](./cc1_listening_tests) for more information about the levels that can be reproduced by the listening test equipment. When playing signals to listeners we will then play them as is. The responsibility for the final signal level is therefore yours. It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant, they may well turn down the volume themselves.
 
 ## Naming and packaging signals
-Your processed signals should be named using the conventions used by the baseline system, i.e., `<Scene ID>_<Listener ID>_HA-output.wav` and explained on the [data page](./Data/cc1_data_overview).
+Your processed signals should be named using the conventions used by the baseline system, i.e., `<Scene ID>_<Listener ID>_HA-output.wav` and explained on the [data page](/docs/cadenza1/Data/cc1_data_overview).
 These should be placed in a directory whose name is the unique team ID that you will be sent, e.g., `E001` and  then packaged using `zip` or `tar` or any standard packaging tool.
 The resulting file should be about 2 GB for the first round.
 

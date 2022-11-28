@@ -19,6 +19,8 @@ There is no limit on the amount of training data that can be generated using our
 - The listener characterisation (pure tone air-conduction audiograms and/or digit triple test results).
 - The provided clean audio examples for the target talker (these will not be the same as any of the target utterances.)
 - The head-rotation signal (but if used, a version of the system that does not use it should also be prepared for comparison.)**
+
+
 ## Computational restrictions
 
 - Teams may choose to use all, some or none of the parts of the baseline model.
