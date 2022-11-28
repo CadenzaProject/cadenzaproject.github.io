@@ -24,10 +24,10 @@ cc1_data_rules - all needs checking, copied from clarity
 cc1_data_more_details - nothing here at the mo
 
 ### Software
-cc1_baseline - block diagrams here. add haaqi,  refs
-cc1_core_software - 
-cc1_additional_tools - 
-cc1_scene_generator - 
+cc1_baseline - block diagrams here. - needs finishing
+cc1_core_software - need to add details of the scene generator, hearing aid models etc
+cc1_additional_tools - nothing to add here yet
+cc1_scene_generator - all needs adding
 
 ## Education
 ### Hearing Impairment

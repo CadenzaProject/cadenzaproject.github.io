@@ -1,7 +1,7 @@
 ---
 id: cc1_intro
 title: The 1st Cadenza Challenge
-sidebar_label: CC1 Introduction
+sidebar_label: Cadenza 1 Introduction
 sidebar_position: 1
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';

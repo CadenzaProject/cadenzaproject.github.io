@@ -2,7 +2,7 @@
 id: cc1_data_rules
 title: Rules
 sidebar_label: Rules
-sidebar_position: 11
+sidebar_position: 3.3
 ---
 
 ## What information can I use?

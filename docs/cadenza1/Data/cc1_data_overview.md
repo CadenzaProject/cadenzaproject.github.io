@@ -2,7 +2,7 @@
 id: cc1_data_overview
 title: Overview
 sidebar_label: Overview
-sidebar_position: 10
+sidebar_position: 3.1
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
