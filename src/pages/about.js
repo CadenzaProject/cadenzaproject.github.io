@@ -223,9 +223,8 @@ export default function Home() {
               <b>
                 <a href="#partners">associated industrial partners</a>
               </b>
-              . Our aim is to organise open evaluations for music processing
-              algorithms for improving the experience of hearing impaired
-              listeners.{" "}
+              . Our aim is to organise open challenges for music processing
+              algorithms to improve the listening experience for those with different hearing.{" "}
             </Typography>
           </p>
 

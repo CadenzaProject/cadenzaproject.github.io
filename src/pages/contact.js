@@ -60,8 +60,8 @@ export default function Home() {
             <h3>Reporting software issues</h3>
             For issues relating the the Cadenza software please consider raising
             an 'issue' on our{" "}
-            <a href="https://github.com/cadenzachallenge">
-              Cadenza software GitHub site
+            <a href="https://github.com/claritychallenge/clarity">
+              Clarity-Cadenza GitHub site
             </a>
             . We are also happy for people to use the GitHub issues to raise
             feature requests.
@@ -70,8 +70,15 @@ export default function Home() {
             <h3>Contacting individual team members</h3>
             If you wish to contact a specific team member you will find
             individual contact details via the links on our{" "}
-            <a href="../about">'About Us'</a> page
+            <a href="../about">About Us</a> page
           </Paper>
+          <Paper sx={{ p: 2, m: 4 }}>
+            <h3>Media contact</h3>
+				Please email {" "}
+            <a href="mailto:t.j.cox@salford.ac.uk">
+             Trevor Cox
+			 </a>
+          </Paper>		  
         </Box>
       </main>{" "}
     </Layout>

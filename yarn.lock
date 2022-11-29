@@ -4588,9 +4588,9 @@
     "@leichtgewicht/ip-codec" "^2.0.1"
 
 "docusaurus-lunr-search@https://github.com/praveenn77/docusaurus-lunr-search.git#0f83df127f671c478da90d0b993deb2253b38ae3":
-  "integrity" "sha512-NVERhDfcHsOKSB/8kSNsZr7qzLsLpgshUc6VAeBtWJhLlSJMSGUX13YpBzeDDgmt4dniKgLX31gdamkJUvdtcg=="
+  "integrity" "sha512-NzHDAzjdbrjs1ttHlOmSqUamWc/xPiOODTzroIx7vDOZXA2cuTfu30dXBhnRw8Fh5IFEgGVT7RYKQDjnYtnOJQ=="
   "resolved" "git+ssh://git@github.com/praveenn77/docusaurus-lunr-search.git"
-  "version" "2.2.0"
+  "version" "2.3.2"
   dependencies:
     "autocomplete.js" "^0.37.0"
     "classnames" "^2.2.6"
@@ -7944,7 +7944,7 @@
     "react-fast-compare" "^3.2.0"
     "shallowequal" "^1.1.0"
 
-"react-is@^16.13.1", "react-is@^16.8.6":
+"react-is@^16.13.1":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
@@ -7963,6 +7963,11 @@
   "integrity" "sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
+
+"react-is@^16.8.6":
+  "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
+  "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
+  "version" "16.13.1"
 
 "react-is@^18.2.0":
   "integrity" "sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w=="
@@ -8565,7 +8570,12 @@
   "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
   "version" "5.7.1"
 
-"semver@^5.7.0", "semver@^5.7.1":
+"semver@^5.7.0":
+  "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
+  "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
+  "version" "5.7.1"
+
+"semver@^5.7.1":
   "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
   "version" "5.7.1"
