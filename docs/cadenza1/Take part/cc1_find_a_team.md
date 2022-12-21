@@ -2,7 +2,7 @@
 id: cc1_find_a_team
 title: Find a Team
 sidebar_label: Find a Team
-sidebar_position: 2.3
+sidebar_position: 2.4
 ---
 
 If you'd like to team up with someone else to compete in the challenges, we can help. Please complete [this Google form](https://forms.gle/oZDFEEQLbhroQ3H77) to let us know your own expertise, and what you're looking for in a collaborator. We'll then put people in contact with possible collaborators.
