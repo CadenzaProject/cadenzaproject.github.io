@@ -28,5 +28,5 @@ The listener is wearing their hearing aids, sitting in a car and listening to re
 
 <figure id="fig2">
 <img width="800" src={useBaseUrl('/img/car_simple.png')} />
-<figcaption>Figure 2, The baseline for the car listening scenario (Track 2). For simplicity, not all signal paths are shown.</figcaption>
+<figcaption>Figure 2, The baseline for the car listening scenario (Track 2  ). For simplicity, not all signal paths are shown.</figcaption>
 </figure>
