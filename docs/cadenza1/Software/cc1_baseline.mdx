@@ -5,55 +5,36 @@ sidebar_label: Baseline
 sidebar_position: 4.1
 ---
 
-Details to appear
-
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Challenge entrants are supplied with a fully functioning baseline system. [Figure 1](#fig1) shows a simplified schematic:
+Challenge entrants will be supplied with a fully functioning baseline system at launch.
 
-- Music processing system (green box)
-- This is then passed through the headphones (purple box).
-
-- The enhancement is individualised for each listener with quantified hearing characteristics, hence there is also a system to select a random listener (white ellipse).
-- The Improved audio signal that is outputted from the system is then passed to the evaluation stage (orange box). We are using the Hearing-Aid Audio Quality Index (HAAQI) as the objective metric to estimate speech intelligibility \[[1](#refs)].
-
-
-## Track 1
-
-### Diagram
-
-Below, a schematic diagram is shown for the baseline system for the headphone listening scenario:
+## Task 1
 
 <figure id="fig1">
-<img width="800" src={useBaseUrl('/img/Baseline_1.png')} />
-<figcaption>Figure 1, The baseline for the headphone listening scenario (Track 1). For simplicity, not all signal paths are shown.</figcaption>
+<img width="800" src={useBaseUrl('../img/headphone_simple_v2.png')} />
+<figcaption>Figure 1, The baseline for the headphone listening scenario (Task 1), not all connections shown.</figcaption>
 </figure>
 
-### Description
+The music databases (blue box) are available in object based format, allowing us to create both stereo input to the headphones (grey line) and music in VDBO (vocal, drums, bass, other) format (red lines). These later signals form the reference VDBO signals that are needed for the objective evaluation using HAAQI [1]. The demixing part is therefore a variant on a standard demixing approach, except the quality of the separation is evaluated using HAAQI rather than a measure like SDR (Signal to Distortion Ratio).
 
-Music samples are taken from the [Jamendo](https://www.jamendo.com/) and [MedleyDB](https://medleydb.weebly.com/) databases. These are either already separated into "vocal", "drums", "bass, and "other" channels, or optionally (for the Jamendo samples) are given as stereo/mono signals which can later be separated.
+The audiogram metadata allows the music enhancement to be individualised to the hearing ability of the listener (dash grey lines).
 
-The evaluation stage compares the processed audio and a reference (unprocessed) signal to calculate the HAAQI score.
+The VDBO signals are then remixed to give the stereo output from the headphones. It would be possible to use a simple remixer that uses the levels stated in the original music's metadata. But there is freedom here to experiment with changing the remixing to improve the audio quality for the listener with hearing loss.
 
-## Track 2
+## Task 2
 
-### Diagram
-
-Below, a schematic diagram is shown for the baseline system for the car listening scenario:
-
-<figure id="fig2">
-<img width="800" src={useBaseUrl('/img/Baseline_2.png')} />
-<figcaption>Figure 2, The baseline for the car listening scenario (Track 2). For simplicity, not all signal paths are shown.</figcaption>
+<figure id="fig1">
+<img width="800" src={useBaseUrl('/img/car_simple_v2.png')} />
+<figcaption>Figure 1, The baseline for the headphone listening scenario (Task 1).</figcaption>
 </figure>
 
-### Description
+The music databases (blue box) provide samples as input to the car stereo and also reference left and right stereo signals for evaluating using HAAQI.
+Your task is to process the music taking into account the listener audiogram and also the car noise. You have access to the car speed, which will determine the power spectrum of the car noise. A level limiter will be applied to the processed music to restrict levels to a sensible value.
 
-As in Track 1, the music samples are taken from the [Jamendo](https://www.jamendo.com/) and [MedleyDB](https://medleydb.weebly.com/) databases, and are either already separated into "vocal", "drums", "bass, and "other" channels, or optionally (for the Jamendo samples) are given as stereo/mono signals which can later be separated. 
+The evaluation starts by predicting the signals at the microphones of the hearing aids. The effect of the 'room' acoustics is simulated by applying Binaural Room Impulse Responses (taken from the [eBrIRD](https://www.phon.ucl.ac.uk/resource/ebrird/) database). The car noise to be added will be provided by a simple simulator or noise in a car cabin.
 
-The music samples are then fed into the Music Processor block of the car entertainment system. A level limiter is added afterwards to restrict levels to a sensible value.
-The signals are then passed through the BRIR of the car (taken from the [eBrIRD](https://www.phon.ucl.ac.uk/resource/ebrird/) database), and finally through a hearing aid simulator, into which the car noise is also passed.
-
-The evaluation stage compares the processed audio and a reference (unprocessed) signal to calculate the HAAQI score.
+The microphone signals are then processed by a simple hearing aid. This then provides left and right signals that can be used for evaluation either by HAAQI or the listening panel.
 
 ## References
 

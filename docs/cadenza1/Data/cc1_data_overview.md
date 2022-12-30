@@ -7,27 +7,45 @@ sidebar_position: 3.1
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Data and baseline code can be downloaded from the [download page](/docs/cadenza1/Take%20part/cc1_download.md)
+Data and baseline code can be downloaded from the [download page](../Take%20part/cc1_download) following this [timeline](../Take%20part/cc1_key_dates).
 
-## A Training, development, evaluation data
+## Training/development
 
-<!-- The dataset of 10,000 scenes is split into three:
+For training and development, we're planning to provide a dataset of music extracted from:
 
-1. Training (train).
-2. Development (dev).
-3. Evaluation (eval).
+- Jamendo (Task 2 only)
+- FMA 
+- MedleydB
+- Bach10 
+- MUSDB18
 
-Uses of the data:
+We leave it to you to decide how to use this as part of the training and development. For more information on augmenting and supplementing the training data, please see the [rules](../Take%20part/cc1_rules#training-and-development).
 
-- You should not use the development or evaluation data set for training.
-- The system submitted should be chosen on the evidence provided by the development set.
-- The final listening and ranking will be performed with the (held-out) evaluation set.
-- For more information on augmenting and supplementing the training data, please see the [rules](/docs/cadenza1/Take%20part/cc1_rules.md).
-- The evaluation dataset will be made available one month before the challenge submission deadline. -->
+## Evaluation
+
+- For evaluation, we're planning to use the MUSDB18 evaluation set (50 tracks in VDBO format).
+- You should process all of the entire music pieces.
+- The whole pieces will be used for HAAQI evaluation.
+- We will then select a random 10 second sample from each piece of music for listening panel evaluation.
+
+## C Listener data
+
+We will provide metadata characterising the hearing abilities of the listeners, so the audio signals you generate can be individualised.
+
+The same types of data are available for training/development and evaluation.
+
+A panel of hearing-aided listeners will be recruited for evaluation. They will be experienced bilateral hearing-aid users: they use two hearing aids but the hearing loss may be asymmetrical. The average pure tone air-conduction hearing loss will be between 25 and about 60 dB in the better ear.
+
+The quantification of the listeners’ hearing is done with left and right pure tone air-conduction audiograms. These measure the threshold at which people can hear a pure-tone sound.
+
+The audiogram is the standard clinical measurement of hearing ability. It’s the pure-tone threshold of hearing in each ear, measured in quiet in a sound booth. The procedure is standardized e.g., [British Society of Audiology Recommended Procedure](https://www.thebsa.org.uk/resources/pure-tone-air-bone-conduction-threshold-audiometry-without-masking/). Typically it’s measured at octave frequencies and important intermediate frequencies.The values of the audiogram defines how much gain the hearing aid needs to apply, with the calculation typically done by one of a group of "prescription rules", e.g. [CAMFIT](https://www.psychol.cam.ac.uk/hearing/cam2-cameq2-hf-hearing-aid-fitting-software), [NAL-NL2](https://hearworks.com.au/technology/nal-nl2/) or [DSL](https://www.dslio.com/?page_id=95).
+
+Note that the scale of an audiogram is in “dB HL” = “dB Hearing Level”. This is not dB SPL; instead, it’s relative to an international standard such that 0-dB is “normal hearing” at every frequency. For background see [Why the Audiogram Is Upside-down | The Hearing Review](https://hearingreview.com/hearing-loss/patient-care/evaluation/why-the-audiogram-is-upside-down) and [The Quest for Audiometric Zero | The Hearing Review](https://hearingreview.com/resource-center/expert-insight/quest-audiometric-zero)
+
+<!-- 
 
 ## B The scene dataset
-
-<!-- The complete dataset is composed split into the following sets:
+The complete dataset is composed split into the following sets:
 
 - Training (6000 scenes, 24 speakers);
 - Development (2500 scenes, 10 speakers);
@@ -93,34 +111,12 @@ One challenge will be identifying the target talker from the hearing aid microph
 - The ID of the target talker is given with examples of clean audio. This would allow an algorithm to learn characteristics of the target talker to then help it identify the voice in the mixture.
 - The azimuth of the target and the starting time of the utterance are both roughly known from the scene generation metadata statistics.
 
-These two approaches mimic what is available to human listeners. They might focus on a known voice or they might use visual cues to know roughly where and when someone is talking.  -->
+These two approaches mimic what is available to human listeners. They might focus on a known voice or they might use visual cues to know roughly where and when someone is talking.
 
-## C Listener data
-<!-- 
-We will provide metadata characterising the hearing abilities of the listeners so the audio signals you generate for evaluation can be individualised to the specific listeners who will be hearing them.
-
-The same types of data are available for training, development and evaluation.
-
-A panel of hearing-aided listeners will be recruited for evaluation. They will be experienced bilateral hearing-aid users: they use two hearing aids but the hearing loss may be asymmetrical. The average pure tone air-conduction hearing loss will be between 25 and about 60 dB in the better ear. They will be fluent in British English.
-
-The quantification of the listeners’ hearing is done with:
-
- - Left and right pure tone air-conduction audiograms. These measure the threshold at which people can hear a pure-tone sound.
- - Results from the DTT (digit-triplet test, also known as a triple digit test)​
-
-The audiogram is the standard clinical measurement of hearing ability. It’s the pure-tone threshold of hearing in each ear, measured in quiet in a sound booth. The procedure is standardized e.g., [British Society of Audiology Recommended Procedure](https://www.thebsa.org.uk/resources/pure-tone-air-bone-conduction-threshold-audiometry-without-masking/). Typically it’s measured at octave frequencies and important intermediate frequencies.The values of the audiogram defines how much gain the hearing aid needs to apply, with the calculation typically done by one of a group of "prescription rules", e.g. [CAMFIT](https://www.psychol.cam.ac.uk/hearing/cam2-cameq2-hf-hearing-aid-fitting-software), [NAL-NL2](https://hearworks.com.au/technology/nal-nl2/) or [DSL](https://www.dslio.com/?page_id=95).
-
-Note that the scale of an audiogram is in “dB HL” = “dB Hearing Level”. This is not dB SPL; instead, it’s relative to an international standard such that 0-dB is “normal hearing” at every frequency. For background see [Why the Audiogram Is Upside-down | The Hearing Review](https://hearingreview.com/hearing-loss/patient-care/evaluation/why-the-audiogram-is-upside-down) and [The Quest for Audiometric Zero | The Hearing Review](https://hearingreview.com/resource-center/expert-insight/quest-audiometric-zero)
-
-The DTT is an adaptive test of speech-in-noise ability. In each trial a listener hears three spoken digits (e.g. 3-6-1) against a background of noise at a given signal-to-noise-ratio (SNR). The task is to respond on a keypad with those three digits in the order they were presented. If the listener gets all three correct, then the SNR is reduced for the next trial so making it slightly harder. If the listener makes any mistake (i.e., any digit wrong, or the order wrong) then the SNR is increased, so making the next trial slightly easier. The test carries on trial-by-trial. The test asymptotes to the SNR at which the participant is equally likely to get all three correct or not, with a few tens of trials needed to get an acceptable result. DTT tests are now used world-wide to measure hearing as they are easy to make in any local language, to explain to participants and to do, and moreover can be done over the internet or telephone as they measure a relative threshold (signal-to-noise ratio), not an absolute threshold in dB SPL. Listeners are encouraged to set a volume that is comfortable and that does not distort or crackle, but is not too quiet.
-
-[This paper](https://pubmed.ncbi.nlm.nih.gov/33840339/) is a recent scoping review of the field. The particular version we used is [Vlaming et al.'s high-frequency DTT](https://pubmed.ncbi.nlm.nih.gov/25127323/), which uses a high-pass noise as the masker. Ours starts at -14 dB SNR, goes up/down at 2 dB steps per trial, and continues for 40 trials.
-
-In the datafile, an average of the SNR for the last 30 trials is provided (labelled 'threshold'). For reference, the SNRs are supplied for each trial as well. The very first trial is practice and is not scored. -->
 
 ## D Data file formats and naming conventions
 
-<!-- ### D.1 Abbreviations used in filenames
+### D.1 Abbreviations used in filenames
 
 The following abbreviations are used consistently throughout the filenames and references in the metadata.
 
@@ -309,9 +305,6 @@ JSON file named scenes_listeners.json dictates which scenes are to be processed 
     "S00002": ["L0003", "L0005", "L0007"],
     ... 
 }
-``` -->
- 
-## References
-<!-- 
+``` 
 1. Demirsahin, Isin and Kjartansson, Oddur and Gutkin, Alexander and Rivera, Clara, "Open-source Multi-speaker Corpora of the English Accents in the British Isles", Proceedings of The 12th Language Resources and Evaluation Conference (LREC), 6532--6541, 2020, [Avialable Online](https://openslr.org/83/)
 2. Bogdanov, Dmitry and Won, Minz and Tovstogan, Philip and Porter, Alastair and Serra, Xavier, "The MTG-Jamendo Dataset for Automatic Music Tagging", In Proc. Machine Learning for Music Discovery Workshop, International Conference on Machine Learning (ICML 2019), 2019, Long Beach, CA, United States", [Available Online](https://mtg.github.io/mtg-jamendo-dataset/) -->

@@ -61,9 +61,8 @@ export default function Home() {
             </b>
             <p />
             The improvement in music will be achieved by running a series of
-            open signal processing challenges. Competitors will be given music to enhance, through
-            processing and / or remixing. They will be challenged to improve and
-            personalise the music for listeners with hearing losses.
+            open signal processing challenges. Competitors will be ask to personalise and enhance music, through
+            processing and/or remixing.
             <p />
             <blockquote>
               “Running competitions is a great approach, because it will grow a
@@ -72,8 +71,7 @@ export default function Home() {
               often it doesn't consider the diversity of listeners.
               <p />
               <i>
-                Professor Trevor Cox, Director of the Acoustics Research Centre
-                at The University of Salford, and project lead
+                Professor Trevor Cox, The University of Salford
               </i>
               .
             </blockquote>

@@ -8,7 +8,7 @@ sidebar_position: 2.5
 
 ## Teams
 
-- Teams must have pre-registered and nominated a contact person.
+- Teams must have [pre-registered](cc1_registration.mdx) and nominated a contact person.
 - Teams can be from one or more institutions.
 - The organisers may enter the challenge themselves but will not be eligible to win any prizes.
 
@@ -16,7 +16,7 @@ sidebar_position: 2.5
 
 - Teams must provide a technical document of up to 2 pages describing the system/model and any external data and pre-existing tools, software and models used.
 - We will publish all technical documents (anonymous or otherwise).
-- Teams are encouraged – but not required – to provide us with access to the system/model and to make their code open source.
+- Teams are encouraged to make their code open source.
 - Anonymous entries are allowed but will not be eligible for any prizes.
 - Teams may reserve the right to be referred to using anonymous code names in the published rank ordering.
 
@@ -26,58 +26,57 @@ sidebar_position: 2.5
 
 There is no limit on the amount of training data that can be generated using our tools and training data sets. Teams can also expand the training data through simple automated modifications. However, teams that do this must make a second submission using only the official audio files and signal generation tool. All the audio or metadata can be used during training and development.
 
+You should **not** use the evaluation data set for training or tuning the system.
+
 ### Evaluation
 
-The only data that can be used to process the evaluation dataset for each track are:
+The only data that can be used to *enhance* the evaluation data are:
 
-### Track 1: Headphones
+#### Task 1: Headphones
 
-- The listener characterisation (e.g. pure tone air-conduction audiograms).
-- The reference audio mix.
-- The audio input signals to the headphones.
-- The metadata and raw music from the databases (e.g. Jamendo, MedleyDB, etc)
+- The listener characterisation (e.g. audiogram).
+- The stereo music input signals to the headphones.
 
-### Track 2: Car
+#### Task 2: Car
 
-- The listener characterisation (e.g. pure tone air-conduction audiograms).
-- The reference audio mix.
-- The audio input signals to the Car Infotainment System.
-- The metadata and raw music from the databases (e.g. Jamendo, MedleyDB, etc).
-- The car noise metadata (e.g. car speed).
+- The listener characterisation (e.g. audiogram).
+- The audio input signals to the car stereo.
+- A reference stereo mix of the music including the metadata on how the mix was done (e.g. level of each instrument).
+- The car speed.
 
 ## Computational restrictions
 
-- Teams must start with the baseline, but the following parts may be altered:
--- The mixer/processing that takes the raw music and metadata and creates input signals for the heaphones/car infotainment system.
--- The headphone processor (track 1)
--- The car infotainment processor (track 2)
--- HAAQI does not have to be used during development, but we will use this for evaluation.
-- There is no need for processing to be causal (the scenario is reproducing recorded music).
+- There is no need for processing to be causal, as both scenarios are for recorded music.
 - There is no limit on computational cost.
+- Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement* in [Figure 1](../cc1_intro#track-1-headphones) and [Figure 2](../cc1_intro#track-2-car). These are:
+	- Task 1: the headphone demixer/remixer. 
+	- Task 2 the car stereo processer.
+- While HAAQI is being used to complement the listening panel evaluation, other metrics and approaches can be used by the teams.
 
 ## Submitting multiple entries
 
 You can submit two entries, where one is optimised for HAAQI and the other for listening tests if you wish. In this case:
 
-- Both systems must be submitted for HAAQI evaluation.
 - You must register two teams, submitting each entry as a different team.
-- In your documentation, you must make it clear which has been optimised for listening tests and the relationship between the two entries.
-
-We will assume that if only one of these systems is to go forward to listening tests, your preference is to use the one optimised for listening tests.
+- In your documentation, you must make it clear, which has been optimised for listening tests and the relationship between the two entries.
+- Both systems will be evaluated via HAAQI.
 
 ## Evaluation of systems
 
 ### Stage 1: Objective evaluation
 
-- Entries will be ranked according to average HAAQI score across all signals in the evaluation dataset. We will use the HAAQI implementation in the baseline system.
+Entries will be ranked according to average HAAQI score across all signals in the evaluation dataset. We will use the HAAQI implementation in the baseline system. For Task 1 headphones, the HAAQI evaluation will be on the demixed signals, for Task 2 car, the HAAQI evaluation is on the output of the hearing aid.
+
+For anyone entering Task 1 by a different approach to demixing/remixing, their entries will not be objectively evaluated, because no suitable metric currently exists.
 
 ### Stage 2: Listening test evaluation
 
 - There is a limit on how many systems can be evaluated by the listener panel.
 - The expectation is that only one entry can go through to the listener panel from any entrant.
-- We will choose which will go to the listener panel based on
-   - The ones that score best using the objective metric HAAQI.
-   - A sample of others that use contrasting and promising approaches.
+- We will choose which ones will go to the listener panel based on:
+   - The scores by the objective metric HAAQI.
+   - The approach detailed in the technical report.
+   - Informal listening by the Cadenza team.
 
 ## Intellectual property
 
