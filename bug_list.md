@@ -10,32 +10,33 @@ contact.js - done
 cc1_intro - need pictures of scenarios
 
 ### Take part
+cc1_key_dates - exact dates need adding for june onwards
 cc1_registration - add registration closing date
-cc1_download - Data - fix download links, fix github link at end
-cc1_listening_tests - done
+cc1_download - Data - add download links
 cc1_find_a_team - done
-cc1_rules - done 
-cc1_prizes - done (gone! - no prizes)
-cc1_submission - check all dates, evaluation data, submission details, stuff about listening tests, naming conventions, 
+cc1_rules - done - check figure links
+[cc1_prizes - done (gone! - no prizes)]
+cc1_submission - done 
 
 ### Data
-cc1_data_overview - 
-cc1_music_input - put in all stuff about music databases etc, bit about demixing
- - jamendo filtering?, 
-cc1_listening_tests - done I think - Trevor to check
-cc1_data_more_details - 
+cc1_data_overview - done
+cc1_listening_tests - done - fyi links to cc1_additional_tools
+[cc1_data_more_details - hidden]
 
 ### Software
-cc1_baseline - 
-cc1_core_software - 
-cc1_additional_tools - 
-cc1_scene_generator - 
+cc1_baseline - redo figs
+cc1_core_software - fill in about scene generator and baseline hearing aid
+cc1_additional_tools - needs to stay visible as other pages link here 
+                     - fill in details of car noise generator
+                     - add software to select 10s sample from track at random point
+cc1_scene_generator - empty atm
 
 
 ## Education
 ### Hearing Impairment
 edu_HI_general - 
 edu_HI_HAFM - 
+edu_audiograms - pad out, add some pictures
 
 ### Audio Processing
 

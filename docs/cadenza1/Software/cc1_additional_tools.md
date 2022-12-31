@@ -8,7 +8,7 @@ sidebar_position: 4.3
 
 ## Car noise generator
 
-Thiis 
+Details coming soon!
 
 
 ## Sample selection from track

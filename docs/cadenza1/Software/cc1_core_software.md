@@ -5,9 +5,7 @@ sidebar_label: Core Software
 sidebar_position: 4.2
 ---
 
-Details to appear
-
-The code is provided as a [GitHub repository](https://github.com/cadenzachallenge/cadenza) containing individual Python tools and a complete baseline system. Tools will allow the processing of individual scenes or the bulk processing of the complete Cadenza dataset.
+The code is provided as a [GitHub repository](https://github.com/cadenzachallenge/cadenza) containing individual Python tools and a complete baseline system. The tools will allow the processing of individual scenes or the bulk processing of the complete Cadenza dataset.
 The key elements of the baseline system are the:
 
 - Scene generator.
@@ -17,6 +15,9 @@ The key elements of the baseline system are the:
 <!-- [Additional tools](./cc1_additional_tools) are available to use as you see fit. These include a hearing loss model, differentiable source separation and hearing aid amplification modules and an alternative intelligibility model. -->
 
 ## A. Scene generator
+
+Details coming soon!
+
 <!-- 
 Fully open-source python code for generating hearing aid inputs for each scene
 
