@@ -7,11 +7,11 @@ sidebar_position: 3.2
 
 ## Overview
 
-The listeners will be provided with a USB stereo headset to complete the listening experiment. The experiment will be run by online-experiment software using a browser-based audio player. We will ask that the participant uses a quiet room for the experiment. The software will play a piece of music, then the participant will respond with their grading of it on a set of scales.
+The listeners will be provided with Sennheiser PC-8 USB headsets to complete the listening experiment. The experiment will be run via a browser-based audio player. We will instruct participants to use a quiet room. The software will play a piece of music, then the participant will respond with their grading of audio quality on a set of scales.
  
-## Hardware
+## Levels
 
-We will be using Sennheiser PC-8 USB headsets. For safety reasons, we allow participants to set the overall audio volume so that the sounds are not so loud as to be uncomfortable. This means that we cannot be sure at what dB SPL the signals will be presented (and as we don’t have any individual measures of loudness recruitment, we don’t know how loud they will seem to the participants either). It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant, they may well turn down the volume themselves.
+For safety reasons, we allow participants to set the overall audio volume so that the sounds are not so loud as to be uncomfortable. This means that we cannot be sure at what dB SPL the signals will be presented (and as we don’t have any individual measures of loudness recruitment, we don’t know how loud they will seem to the participants either). It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant, they may well turn down the volume themselves.
  
 Our measurements of PC-8 headsets: 
 * A 1-kHz pure tone set to unity gain (RMS 0.707) with soundcard volume at 100% produces a level of 99 dB SPL using an artificial ear with 2 cc coupler (IEC 60318–1).
@@ -22,13 +22,12 @@ Accordingly in the submitted signals, 0 dB FS should correspond to 99 dB SPL (at
 ## Music samples
 
 - A subset of music tracks (probably ~30) will be used from the evaluation dataset.
-- A 10-second sample will be extracted from each music track at a random time point across tracks with a short fade-in and fade-out.
-
-The code for extracting samples will be provided, please see [Additional Tools](../Software/cc1_additional_tools)
+- A 10-second sample will be extracted from each music track at a random time point and a short fade-in and fade-out applied.
+- The code for extracting samples will be provided, please see [Additional Tools](../Software/cc1_additional_tools)
 
 ## Listening test design
 
-The listening test will probably have a combinatorial design so that each listener hears entries from each team, and evaluates them using a series of 4-5 perceptual sliders. 
+The listening test will probably have a combinatorial design so that each listener hears entries from each team. Subjects will evaluate the samples on 4-5 perceptual sliders: 
 
 - One of these scales will be for perceived overall basic audio quality. This will be used to rank the entrants.
 - The other scales will be used to rate aspects of the audio quality such as clarity. This data will be used to produce an improved objective measure for audio quality for future challenges. 

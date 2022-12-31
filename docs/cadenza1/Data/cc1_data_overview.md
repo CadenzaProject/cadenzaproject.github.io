@@ -30,9 +30,7 @@ We leave it to you to decide how to use this as part of the training and develop
 
 ## C Listener data
 
-We will provide metadata characterising the hearing abilities of the listeners, so the audio signals you generate can be individualised.
-
-The same types of data are available for training/development and evaluation.
+We will provide metadata characterising the hearing abilities of the listeners, so the audio signals you generate can be individualised. The same types of data are available for training/development and evaluation.
 
 A panel of hearing-aided listeners will be recruited for evaluation. They will be experienced bilateral hearing-aid users: they use two hearing aids but the hearing loss may be asymmetrical. The average pure tone air-conduction hearing loss will be between 25 and about 60 dB in the better ear.
 

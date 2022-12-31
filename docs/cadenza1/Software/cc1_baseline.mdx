@@ -16,9 +16,9 @@ Challenge entrants will be supplied with a fully functioning baseline system at 
 <figcaption>Figure 1, The baseline for the headphone listening scenario (Task 1), not all connections shown.</figcaption>
 </figure>
 
-The music databases (blue box) are available in object based format, allowing us to create both stereo input to the headphones (grey line) and music in VDBO (vocal, drums, bass, other) format (red lines). These later signals form the reference VDBO signals that are needed for the objective evaluation using HAAQI [1]. The demixing part is therefore a variant on a standard demixing approach, except the quality of the separation is evaluated using HAAQI rather than a measure like SDR (Signal to Distortion Ratio).
+The music databases (blue box) are available in object based format, allowing us to create both stereo input to the demixer (grey line) and music in VDBO (vocal, drums, bass, other) format (red lines). These later signals form the reference VDBO signals that are needed for the objective evaluation using HAAQI [1]. The demixing part is therefore a variant on a standard demixing challenge, except the quality of the separation is evaluated using HAAQI rather than a measure like SDR (Signal to Distortion Ratio).
 
-The audiogram metadata allows the music enhancement to be individualised to the hearing ability of the listener (dash grey lines).
+The audiogram metadata allows the music enhancement (e.g. demixing/remixing) to be individualised to the hearing ability of the listener (dash grey lines).
 
 The VDBO signals are then remixed to give the stereo output from the headphones. It would be possible to use a simple remixer that uses the levels stated in the original music's metadata. But there is freedom here to experiment with changing the remixing to improve the audio quality for the listener with hearing loss.
 
@@ -30,11 +30,11 @@ The VDBO signals are then remixed to give the stereo output from the headphones.
 </figure>
 
 The music databases (blue box) provide samples as input to the car stereo and also reference left and right stereo signals for evaluating using HAAQI.
-Your task is to process the music taking into account the listener audiogram and also the car noise. You have access to the car speed, which will determine the power spectrum of the car noise. A level limiter will be applied to the processed music to restrict levels to a sensible value.
+Your task is to process the music taking into account the listener audiogram and also the car noise. You have access to the car speed, which will determine the power spectrum of the car noise. A level limiter will be applied to the output of the car stereo.
 
-The evaluation starts by predicting the signals at the microphones of the hearing aids. The effect of the 'room' acoustics is simulated by applying Binaural Room Impulse Responses (taken from the [eBrIRD](https://www.phon.ucl.ac.uk/resource/ebrird/) database). The car noise to be added will be provided by a simple simulator or noise in a car cabin.
+The evaluation starts by predicting the signals at the microphones of the hearing aids. The effect of the 'room' acoustics is simulated by applying Binaural Room Impulse Responses (taken from the [eBrIRD](https://www.phon.ucl.ac.uk/resource/ebrird/) database). The car noise to be added will be provided by a simple simulator of noise in a car cabin.
 
-The microphone signals are then processed by a simple hearing aid. This then provides left and right signals that can be used for evaluation either by HAAQI or the listening panel.
+After the car noise and acoustic simulation, the signals are then processed by a simple hearing aid. This then provides left and right signals that can be used for evaluation either by HAAQI or the listening panel.
 
 ## References
 
