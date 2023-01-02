@@ -11,8 +11,8 @@ More information will shortly be added to the Cadenza project website.
 
 # Data
 
-Details of the audio data and how it has been produced, and how the listening tests will be conducted.
+Details of the databases, file formats etc.
 
 # Software
 
-Details of the baseline software systems that will be released, the scene generator, and any additional tools.
+Details of the baseline software systems, and any additional tools.
