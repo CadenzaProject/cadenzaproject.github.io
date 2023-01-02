@@ -48,7 +48,7 @@ The only data that can be used to *enhance* the evaluation data are:
 
 - There is no need for processing to be causal, as both scenarios are for recorded music.
 - There is no limit on computational cost.
-- Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement* in [Figure 1](../cc1_intro#track-1-headphones) and [Figure 2](../cc1_intro#track-2-car). These are:
+- Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement* in [Figure 1](../cc1_intro#track-1-headphones) and [Figure 2](../cc1_intro#track-2-car) in the first challenge [Overview](/docs/cadenza1/cc1_intro#overview). These are:
 	- Task 1: the headphone demixer/remixer. 
 	- Task 2 the car stereo processer.
 - While HAAQI is being used to complement the listening panel evaluation, other metrics and approaches can be used by the teams.

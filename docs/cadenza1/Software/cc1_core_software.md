@@ -18,6 +18,8 @@ The key elements of the baseline system are the:
 
 Details coming soon!
 
+<!-- link to the scene generator page>
+
 <!-- 
 Fully open-source python code for generating hearing aid inputs for each scene
 
@@ -35,11 +37,11 @@ Details coming soon!
 
 ## C. HAAQI Speech Intelligibility model
 
-Python implementation of the Hearing Aid Audio Quality Index (HAAQI) model which is used for objective audio quality estimation. This will be used in the stage 1 evaluation of entrants (see [Rules](/docs/cadenza1/Data/cc1_data_rules)).
+Python implementation of the Hearing Aid Audio Quality Index (HAAQI) model which is used for objective audio quality estimation. This will be used in the stage 1 evaluation of entrants (see [Rules](/docs/cadenza1/Take%20part/cc1_rules#stage-1-objective-evaluation)).
 
-- **Inputs**: reference target signal (i.e., the premixed target signal convolved with the BRIR with the reflections “turned off”, specified as ‘target_anechoic’), HA output signals, audiogram, level reference (level in dB SPL which corresponds to 0 dB FS)
+<!--  - **Inputs**: reference target signal (i.e., the premixed target signal convolved with the BRIR with the reflections “turned off”, specified as ‘target_anechoic’), HA output signals, audiogram, level reference (level in dB SPL which corresponds to 0 dB FS)
 - **Outputs**: predicted intelligibility score
-It is important to remember that both reference target and HA output signals have to be calibrated to the same dB SPL level before calculating HASPI.
+It is important to remember that both reference target and HA output signals have to be calibrated to the same dB SPL level before calculating HASPI. -->
 
 
 ## References

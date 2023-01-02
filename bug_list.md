@@ -7,14 +7,14 @@ about.js - done
 contact.js - done
 
 ## Challenge 1
-cc1_intro - need pictures of scenarios
+cc1_intro - done
 
 ### Take part
 cc1_key_dates - exact dates need adding for june onwards
 cc1_registration - add registration closing date
 cc1_download - Data - add download links
 cc1_find_a_team - done
-cc1_rules - done - check figure links
+cc1_rules - done
 [cc1_prizes - done (gone! - no prizes)]
 cc1_submission - done 
 
@@ -26,6 +26,7 @@ cc1_listening_tests - done - fyi links to cc1_additional_tools
 ### Software
 cc1_baseline - redo figs
 cc1_core_software - fill in about scene generator and baseline hearing aid
+                  - add inputs/outputs for haaqi
 cc1_additional_tools - needs to stay visible as other pages link here 
                      - fill in details of car noise generator
                      - add software to select 10s sample from track at random point

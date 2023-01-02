@@ -15,13 +15,13 @@ The first Cadenza challenge is about improving the **perceived audio quality** o
 
 The two tasks are based on two common listening scenarios:
 - Task 1: headphones.
-- Task 2. in the car.
+- Task 2: in the car.
 
 You can enter one or both tasks.
 
 ## Task 1: Headphones
 
-Someone is listening via headphones, and not using their hearing aids. As Figure 1 shows, the machine learning challenge here is to first demix stereo tracks into a VDBO (vocal, drums, bass and other) representation. This then allows a personalised remixing for the listener that has better audio quality. For example, for some music you might amplify vocal to improve the audibility of the lyrics.
+Someone with a hearing loss is listening via headphones, not using their hearing aids. As Figure 1 shows, the machine learning challenge here is to first demix stereo tracks into a VDBO (vocal, drums, bass and other) representation. This then allows a personalised remixing for the listener that has better audio quality. For example, for some music you might amplify the vocals to improve the audibility of the lyrics.
 
 To evaluate the quality of the demixing, the objective measure HAAQI (Hearing aid audio quality index) is used. The evaluation of the remixed version will be via our listening panel.
 
