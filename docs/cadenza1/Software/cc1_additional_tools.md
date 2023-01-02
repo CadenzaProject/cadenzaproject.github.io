@@ -8,7 +8,9 @@ sidebar_position: 4.4
 
 ## Car noise generator
 
-Details coming soon!
+This software generates car noise, using the car speed as input. This is provided so that entrants can generate additional samples of car noise. The system should not use the car noise signal itself to perform noise cancellation, only the metadata on car speed.
+
+More details coming soon!
 
 
 ## Sample selection from track

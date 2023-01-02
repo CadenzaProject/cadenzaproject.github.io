@@ -28,9 +28,9 @@ cc1_baseline - redo figs
 cc1_core_software - fill in about scene generator and baseline hearing aid
                   - add inputs/outputs for haaqi
 cc1_additional_tools - needs to stay visible as other pages link here 
-                     - fill in details of car noise generator
+                     - add software for car noise generator
                      - add software to select 10s sample from track at random point
-cc1_scene_generator - empty atm
+cc1_scene_generator - empty atm - made invisible for now
 
 
 ## Education
