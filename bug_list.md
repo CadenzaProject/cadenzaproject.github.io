@@ -35,18 +35,20 @@ cc1_scene_generator - empty atm - made invisible for now
 
 ## Education
 ### Hearing Impairment
-edu_HI_general - 
-edu_HI_HAFM - 
-edu_audiograms - pad out, add some pictures
+edu_HI_general - done
+edu_HI_HAFM - done
+edu_audiograms - pad out, add some pictures??
 
-### Audio Processing
-
+### Audio Mixing
+edu_AM_demixing_remixing - add more talk
 
 ### Perceptual Testing
-
+nothing here yet
 
 ### Software
+edu_SW_python - done - maybe a bit sparse?
 
-
+### Audio Processing
+nothing here yet
 
 
