@@ -50,11 +50,11 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <div>
-          <Box sx={{ py: 6, px: 20 }}>
+          <Box sx={{ py: 6, px: 6 }}>
             <p />
             <b>
               How can we process and remix music so it sounds best for those
-              with a hearing loss? The new Cadenza project aims to better define
+              with a hearing loss? The Cadenza project aims to better define
               what music personalised for someone with a hearing loss should
               sound like and exploit the latest in machine learning to create
               improved listening experiences.
