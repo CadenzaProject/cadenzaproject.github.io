@@ -24,7 +24,7 @@ You can enter one or both tasks.
 
 ## Task 1: Headphones
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/suGTTolF1e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="560" src="https://www.youtube.com/embed/suGTTolF1e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Someone with a hearing loss is listening via headphones, not using their hearing aids. As Figure 1 shows, the machine learning challenge here is to first demix stereo tracks into a VDBO (vocal, drums, bass and other) representation. This then allows a personalised remixing for the listener that has better audio quality. For example, for some music you might amplify the vocals to improve the audibility of the lyrics.
 
@@ -41,7 +41,7 @@ While the main focus is on demixing/remixing, we'll accept entries using alterna
 
 ## Task 2: Car
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/lgMNux9A3q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="560" src="https://www.youtube.com/embed/lgMNux9A3q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 The listener is wearing their hearing aids, sitting in a car and listening to recorded music played over the car stereo. Your task is to process the music played from the stereo to improve the audio quality allowing for the presence of the car noise. You have access to the car speed, which gives an estimation of the power spectrum of the noise but not the noise signal itself, so this is not a noise cancellation task. The block that can be changed is labelled *Enhancement.*
 
