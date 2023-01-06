@@ -16,7 +16,7 @@ Website under construction
 :::
 # Overview
 
-The two tasks are based on two common listening scenarios:
+The tasks are based on two common listening scenarios:
 - Task 1: headphones.
 - Task 2: in the car.
 
