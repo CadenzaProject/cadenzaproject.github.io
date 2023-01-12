@@ -9,23 +9,48 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Data and baseline code can be downloaded from the [download page](../Take%20part/cc1_download) following this [timeline](../Take%20part/cc1_key_dates).
 
-## Training/development
+## Task 1: Headphones
 
-For training and development, we're planning to provide a dataset of music extracted from:
+### Training/development
 
-- Jamendo (Task 2 only)
-- FMA 
-- MedleydB
-- Bach10 
-- MUSDB18
+The main training database will be the train/dev split of [MUSDB18](https://sigsep.github.io/datasets/musdb.html).
 
 We leave it to you to decide how to use this as part of the training and development. For more information on augmenting and supplementing the training data, please see the [rules](../Take%20part/cc1_rules#training-and-development).
 
+You can supplement that data from the following sources:
+- [MTG-Jamendo](https://mtg.github.io/mtg-jamendo-dataset/)
+- [FMA](https://github.com/mdeff/fma) 
+- [MedleydB](https://medleydb.weebly.com/)
+- [Bach10 Sibelius](https://zenodo.org/record/321361#.Y7_Ds3b7SUk)
+
+There is overlap between MedleydB and MUSDB18. If you choose to use MedleydB during training, you need to ensure that none of the tracks are from the MUSDB18 evaluation set.
+
+### Evaluation
+
+- We will use the MUSDB18 evaluation set.
+- You should process all of the entire music.
+- All the music will be used for HAAQI evaluation.
+- We will then select a random 10 second sample from each piece of music for listening panel evaluation.
+
+## Task 1: Car
+
+### Training/development
+
+The main training database will be the train/dev split of [FMA](https://github.com/mdeff/fma). 
+
+We leave it to you to decide how to use this as part of the training and development. For more information on augmenting and supplementing the training data, please see the [rules](../Take%20part/cc1_rules#training-and-development).
+
+You can supplement that data from the following sources:
+- [MTG-Jamendo](https://mtg.github.io/mtg-jamendo-dataset/)
+- [MedleydB](https://medleydb.weebly.com/)
+- [Bach10 Sibelius](https://zenodo.org/record/321361#.Y7_Ds3b7SUk)
+- [MUSDB18](https://sigsep.github.io/datasets/musdb.html)
+
 ## Evaluation
 
-- For evaluation, we're planning to use the MUSDB18 evaluation set (50 tracks in VDBO format).
-- You should process all of the entire music pieces.
-- The whole pieces will be used for HAAQI evaluation.
+- We will use the FMA evaluation set.
+- You should process all of the music.
+- All of the music will be used for HAAQI evaluation.
 - We will then select a random 10 second sample from each piece of music for listening panel evaluation.
 
 ## Listener data
