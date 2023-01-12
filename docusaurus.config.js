@@ -60,8 +60,8 @@ module.exports = {
                         label: 'Challenge 2',
                     } ]
                 }, {
-                    to: '/docs/education/education_intro/',
-                    label: 'Education',
+                    to: '/docs/learning_resources/learning_intro/',
+                    label: 'Learning Resources',
                     position: 'right'
                 }, {
                     to: '/blog/',

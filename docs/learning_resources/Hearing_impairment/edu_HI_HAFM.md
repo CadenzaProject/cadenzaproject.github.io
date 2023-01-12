@@ -2,7 +2,7 @@
 id: edu_HI_HAFM
 title: Hearing Aids For Music
 sidebar_label: Hearing Aids For Music
-sidebar_position: 2.2
+sidebar_position: 2.3
 ---
 
 The [Hearing Aids for Music (HAFM) project](https://musicandhearingaids.org/) explored how hearing impairments and the use of hearing aid technology affects people’s music experiences through a series of clinic surveys, an interview study and a national online survey.

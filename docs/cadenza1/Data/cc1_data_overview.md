@@ -59,7 +59,7 @@ We will provide metadata characterising the hearing abilities of the listeners, 
 
 A panel of hearing-aided listeners will be recruited for evaluation. They will be experienced bilateral hearing-aid users: they use two hearing aids but the hearing loss may be asymmetrical. The average pure tone air-conduction hearing loss will be between 25 and about 60 dB in the better ear.
 
-The quantification of the listeners’ hearing is done with left and right pure tone air-conduction audiograms. These measure the threshold at which people can hear a pure-tone sound. For more information about audiograms please visit our education page on [Audiograms](/docs/education/Hearing_impairment/edu_audiograms).
+The quantification of the listeners’ hearing is done with left and right pure tone air-conduction audiograms. These measure the threshold at which people can hear a pure-tone sound. For more information about audiograms please visit our section on [Audiograms](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
 
 <!-- 
 
