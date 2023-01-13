@@ -18,5 +18,8 @@ An important aspect of music listening is the perceptual experience of audio qua
 
 As part of the Cadenza challenges, listeners with hearing loss will rate music processed by your systems, in terms of overall audio quality, and on related important perceptual dimensions. To develop these dimensions and associated rating scales, we are performing a sensory evaluation study using [descriptive analysis methods](https://www.sciencedirect.com/topics/food-science/descriptive-analysis). In this work, a group of listeners with hearing loss firstly provide single-word perceptual terms to describe various music excerpts provided to them. Then, they come together across three focus groups to discuss the meaning and grouping of different terms, and reach a consensus regarding the most important perceptual dimensions for audio quality, how these can be defined, and how they can be rated or scored in the challenges. Importantly, these dimensions describe audio quality, as opposed to indicating preference or liking for what is heard. It is on these dimensions, alongside a rating of overall audio quality, that your systems will be subjectively rated by listeners. 
 
-# References
-1 [taken from this technical document](https://forcetechnology.com/-/media/force-technology-media/pdf-files/unnumbered/senselab/tech-document-perceptual-characteristics-of-audio-uk.pdf?la=en)
+## References
+
+<a name="refs"></a>
+
+1. Perceptual characteristics of audio, [https://forcetechnology.com/-/media/force-technology-media/pdf-files/unnumbered/senselab/tech-document-perceptual-characteristics-of-audio-uk.pdf?la=en](https://forcetechnology.com/-/media/force-technology-media/pdf-files/unnumbered/senselab/tech-document-perceptual-characteristics-of-audio-uk.pdf?la=en).
