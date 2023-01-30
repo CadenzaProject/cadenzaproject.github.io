@@ -46,6 +46,6 @@ While the main focus is on demixing/remixing, we'll accept entries using alterna
 The listener is wearing their hearing aids, sitting in a car and listening to recorded music played over the car stereo. Your task is to process the music played from the stereo to improve the audio quality allowing for the presence of the car noise. You have access to the car speed, which gives an estimation of the power spectrum of the noise but not the noise signal itself, so this is not a noise cancellation task. The block that can be changed is labelled *Enhancement.*
 
 <figure id="fig2">
-<img width="800" src={useBaseUrl('/img/car_simple_v3.png')} />
-<figcaption>Figure 2, The baseline for the car listening scenario (Task 2  ). For simplicity, not all signal paths are shown.</figcaption>
+<img width="800" src={useBaseUrl('/img/car_simple_v2.png')} />
+<figcaption>Figure 2, The baseline for the car listening scenario (Task 2). For simplicity, not all signal paths are shown.</figcaption>
 </figure>

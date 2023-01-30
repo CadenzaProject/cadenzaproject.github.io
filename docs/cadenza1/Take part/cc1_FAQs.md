@@ -7,6 +7,8 @@ sidebar_position: 2.7
 
 This page will hopefully cover most of the common questions that you may have about the challenge!
 
+To see current discussions of the challenge, please join the [Google group](https://groups.google.com/g/cadenza-challenge).
+
 If you have more questions that aren't covered, please [contact us](http://cadenzachallenge.org/contact).
 
 
