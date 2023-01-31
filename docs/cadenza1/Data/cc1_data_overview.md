@@ -32,7 +32,7 @@ There is overlap between MedleydB and MUSDB18. If you choose to use MedleydB dur
 - All the music will be used for HAAQI evaluation.
 - We will then select a random 10 second sample from each piece of music for listening panel evaluation.
 
-## Task 1: Car
+## Task 2: Car
 
 ### Training/development
 
