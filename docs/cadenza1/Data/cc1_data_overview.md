@@ -13,17 +13,16 @@ Data and baseline code can be downloaded from the [download page](../Take%20part
 
 ### Training/development
 
-The main training database will be the train/dev split of [MUSDB18](https://sigsep.github.io/datasets/musdb.html).
+The main training database will be the train/dev parts of [MUSDB18](https://sigsep.github.io/datasets/musdb.html). There are 86 traniing songs and 14 development songs.
 
 We leave it to you to decide how to use this as part of the training and development. For more information on augmenting and supplementing the training data, please see the [rules](../Take%20part/cc1_rules#training-and-development).
 
 You can supplement that data from the following sources:
-- [MTG-Jamendo](https://mtg.github.io/mtg-jamendo-dataset/)
 - [FMA](https://github.com/mdeff/fma) 
-- [MedleydB](https://medleydb.weebly.com/)
+- [MedleydB] version 1 and version 2(https://medleydb.weebly.com/)
 - [Bach10 Sibelius](https://zenodo.org/record/321361#.Y7_Ds3b7SUk)
 
-There is overlap between MedleydB and MUSDB18. If you choose to use MedleydB during training, you need to ensure that none of the tracks are from the MUSDB18 evaluation set.
+There is some overlap between MedleydB and MUSDB18. If you choose to use MedleydB during training, you need to ensure that none of the tracks are from the MUSDB18 evaluation set.
 
 ### Evaluation
 

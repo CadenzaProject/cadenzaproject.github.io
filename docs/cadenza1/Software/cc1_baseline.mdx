@@ -20,7 +20,21 @@ The music databases (blue box) are available in object based format, allowing us
 
 The audiogram metadata allows the music enhancement (e.g. demixing/remixing) to be individualised to the hearing ability of the listener (dash grey lines).
 
-The VDBO signals are then remixed to give the stereo output from the headphones. It would be possible to use a simple remixer that uses the levels stated in the original music's metadata. But there is freedom here to experiment with changing the remixing to improve the audio quality for the listener with hearing loss.
+The VDBO signals are remixed to give the stereo output from the headphones. It would be possible to use a simple remixer that uses the levels stated in the original music's metadata. But there is freedom here to experiment with changing the remixing to improve the audio quality for the listener with hearing loss.
+
+
+### Baseline system
+
+The baseline system takes an out-of-the-box [Hybrid Demucs music source separation model](https://arxiv.org/abs/2111.03600) trained exclusively on the MUSDB18 training data. This model is publicly available in the [TorchAudio library](https://pytorch.org/audio/main/generated/torchaudio.pipelines.HDEMUCS_HIGH_MUSDB.html#torchaudio.pipelines.HDEMUCS_HIGH_MUSDB).  The output of the demixing is 8 stems corresponding to the left and right channel for each source, I.e., left vocal, right vocal, left bass, right bass, and so on. 
+
+Then, a Nal-R prescription procedure and compression is applied to each stem using the personalized audiogram of each listener, resulting in the output stems. 
+
+The output stems are then evaluated by computing the mean of the Hearing-Aid Audio Quality Index (HAAQI) score of each stem. 
+
+For the remixing procedure, the baseline simply does a linear addition of the output stems. 
+
+Your challenge is to improve the demixing and remixing blocks. The rest of the baseline is fixed and should not be changed. 
+***
 
 ## Task 2
 

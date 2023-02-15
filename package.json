@@ -29,7 +29,7 @@
         "@mui/core": "^5.0.0-alpha.54",
         "@mui/icons-material": "^5.8.0",
         "@mui/material": "^5.8.1",
-        "@svgr/webpack": "^5.5.0",
+        "@svgr/webpack": "^6.5.1",
         "clsx": "^1.1.1",
         "docusaurus-lunr-search": "https://github.com/praveenn77/docusaurus-lunr-search.git#0f83df127f671c478da90d0b993deb2253b38ae3",
         "docusaurus-plugin-image-zoom": "^0.1.1",

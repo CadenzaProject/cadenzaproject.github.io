@@ -49,3 +49,12 @@ The listener is wearing their hearing aids, sitting in a car and listening to re
 <img width="800" src={useBaseUrl('/img/car_simple_v2.png')} />
 <figcaption>Figure 2, The baseline for the car listening scenario (Task 2). For simplicity, not all signal paths are shown.</figcaption>
 </figure>
+
+
+
+
+# Watch the UKAN+ Webinar: Machine Learning Challenges to Improve Hearing Devices: Clarity & Cadenza Projects
+
+For more details on the [Clarity](claritychallenge.org/) and Cadenza projects, please see this recording of the webinar given by Trevor Cox, Alinka Greasley, and Rebecca Vos on the topic:
+
+<iframe width="100%" height="560" src="https://www.youtube.com/embed/7dUZ-lDsQMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
