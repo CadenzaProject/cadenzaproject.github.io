@@ -5,9 +5,9 @@ sidebar_label: Core Software
 sidebar_position: 4.2
 ---
 
-:::info
+<!-- :::info
 More details of the software will follow in Jan/Feb 2023
-:::
+::: -->
 
 
 The code is provided as a [GitHub repository](https://github.com/cadenzachallenge/cadenza) containing individual Python tools and a complete baseline system. 
