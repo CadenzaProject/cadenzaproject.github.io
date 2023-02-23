@@ -7,13 +7,15 @@ sidebar_position: 1
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
+:::caution
+Website under construction
+:::
+
 The first Cadenza challenge is about improving the **perceived audio quality of recorded music for people with a hearing loss**.
 
 >What do we mean by audio quality? Imagine listening to a music track in two different ways. First listening via a low quality mp3 played on a cheap cell phone, and then via a high quality wav heard over studio-grade loudspeaker monitors. The underlying music is the same in both cases, but the *audio quality* is very different.
 
-:::caution
-Website under construction
-:::
+
 # Overview
 
 The tasks are based on two common listening scenarios:
