@@ -28,13 +28,19 @@ You can enter one or both tasks.
 
 <iframe width="100%" height="560" src="https://www.youtube.com/embed/suGTTolF1e4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Someone with a hearing loss is listening via headphones, not using their hearing aids. As Figure 1 shows, the machine learning challenge here is to first demix stereo tracks into a VDBO (vocal, drums, bass and other) representation. This then allows a personalised remixing for the listener that has better audio quality. For example, for some music you might amplify the vocals to improve the audibility of the lyrics.
+Someone with a hearing loss is listening via headphones, not using their hearing aids. 
+As Figure 1 shows, the machine learning challenge here is to first demix stereo tracks 
+into a VDBO (vocal, drums, bass and other) representation. 
+This then allows a personalised remixing for the listener that has better audio quality. 
+For example, for some music you might amplify the vocals to improve the audibility of the lyrics.
 
-To evaluate the quality of the demixing, the objective measure HAAQI (Hearing aid audio quality index) is used. The evaluation of the remixed version will be via our listening panel.
+To evaluate the quality of the demixing, the objective measure HAAQI (Hearing aid audio quality index) is used. 
+The evaluation of the remixed version will be via our listening panel.
 
 The block that can be changed by you is labelled *Enhancement* in Figure 1.
 
-While the main focus is on demixing/remixing, we'll accept entries using alternative signal processing approaches that can improve music for people with a hearing loss. Your entry would replace the whole box labelled enhancement.
+While the main focus is on demixing/remixing, we'll accept entries using alternative signal processing approaches 
+that can improve music for people with a hearing loss. Your entry would replace the whole box labelled enhancement.
 
 <figure id="fig1">
 <img width="800" src={useBaseUrl('/img/headphone_simple_v2.png')} />

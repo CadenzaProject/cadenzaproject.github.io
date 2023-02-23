@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Challenge entrants will be supplied with a fully functioning baseline system at launch.
 
-## Task 1
+## 1. Task 1
 
 <figure id="fig1">
 <img width="800" src={useBaseUrl('../img/headphone_simple_v2.png')} />
@@ -23,7 +23,7 @@ The audiogram metadata allows the music enhancement (e.g. demixing/remixing) to 
 The VDBO signals are remixed to give the stereo output from the headphones. It would be possible to use a simple remixer that uses the levels stated in the original music's metadata. But there is freedom here to experiment with changing the remixing to improve the audio quality for the listener with hearing loss.
 
 
-### Baseline system
+### 1.1 Baseline system
 
 The baseline system takes an out-of-the-box [Hybrid Demucs music source separation model](https://arxiv.org/abs/2111.03600) trained exclusively on the MUSDB18 training data. This model is publicly available in the [TorchAudio library](https://pytorch.org/audio/main/generated/torchaudio.pipelines.HDEMUCS_HIGH_MUSDB.html#torchaudio.pipelines.HDEMUCS_HIGH_MUSDB).  The output of the demixing is 8 stems corresponding to the left and right channel for each source, I.e., left vocal, right vocal, left bass, right bass, and so on. 
 
@@ -36,7 +36,7 @@ For the remixing procedure, the baseline simply does a linear addition of the ou
 Your challenge is to improve the demixing and remixing blocks. The rest of the baseline is fixed and should not be changed. 
 ***
 
-## Task 2
+## 2. Task 2
 
 <figure id="fig1">
 <img width="800" src={useBaseUrl('/img/car_simple_v2.png')} />
@@ -50,7 +50,7 @@ The evaluation starts by predicting the signals at the microphones of the hearin
 
 After the car noise and acoustic simulation, the signals are then processed by a simple hearing aid. This then provides left and right signals that can be used for evaluation either by HAAQI or the listening panel.
 
-## References
+## 3. References
 
 <a name="refs"></a>
 

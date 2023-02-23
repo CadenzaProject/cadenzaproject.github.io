@@ -20,7 +20,7 @@ The key elements of the baseline system are the:
 
 <!-- [Additional tools](./cc1_additional_tools) are available to use as you see fit. These include a hearing loss model, differentiable source separation and hearing aid amplification modules and an alternative intelligibility model. -->
 
-## A. Baseline Demixer
+## 1. Baseline Demixer
 
 The demixing stage simply takes the out-of-the-box Hybrid [Demucs](https://arxiv.org/abs/2111.03600) music source separation model to obtain stereo VDBO stems. This model is publicly available in the [TorchAudio library](https://pytorch.org/audio/main/generated/torchaudio.pipelines.HDEMUCS_HIGH_MUSDB.html#torchaudio.pipelines.HDEMUCS_HIGH_MUSDB). Then, it applies a Nal-R [1] and compression procedure to each stem to personalize the output.
 
@@ -28,14 +28,14 @@ The demixing stage simply takes the out-of-the-box Hybrid [Demucs](https://arxiv
     Output: 8 stems (left and right VDBO stems) for each song-listener. 
 
 
-## B. HAAQI Speech Intelligibility model
+## 2. HAAQI Speech Intelligibility model
 Python implementation of the Hearing Aid Audio Quality Index (HAAQI) model which is used for objective  estimation. This will be used in the stage 1 evaluation of entrants (see [Rules](/docs/cadenza1/Take%20part/cc1_rules#stage-1-objective-evaluation)).
 
     Inputs: Reference target stem (I.e., the corresponding left or right channel of the VDBO stem to evaluate), the enhanced output stem, listener audiogram.
     Output: predicted audio quality score. 
 
 
-## References
+## 3. References
 
 <a name="refs"></a>
 

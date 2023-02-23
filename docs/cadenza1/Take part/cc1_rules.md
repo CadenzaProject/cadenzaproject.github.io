@@ -6,13 +6,13 @@ sidebar_position: 2.5
 ---
 
 
-## Teams
+## 1. Teams
 
 - Teams must have [pre-registered](cc1_registration.mdx) and nominated a contact person.
 - Teams can be from one or more institutions.
 - The organisers may enter the challenge themselves but will not be eligible to win any prizes.
 
-## Transparency
+## 2. Transparency
 
 - Teams must provide a technical document of up to 2 pages describing the system/model and any external data and pre-existing tools, software and models used.
 - We will publish all technical documents (anonymous or otherwise).
@@ -20,15 +20,15 @@ sidebar_position: 2.5
 - Anonymous entries are allowed but will not be eligible for any prizes.
 - Teams may reserve the right to be referred to using anonymous code names in the published rank ordering.
 
-## What information can I use?
+## 3. What information can I use?
 
-### Training and development
+### 3.1. Training and development
 
 There is no limit on the amount of training data that can be generated using our tools and training data sets. Teams can also expand the training data through simple automated modifications. However, teams that do this must make a second submission using only the official audio files and signal generation tool. All the audio or metadata can be used during training and development.
 
 You should **not** use the evaluation data set for training or tuning the system.
 
-### Evaluation
+### 3.2. Evaluation
 
 The only data that can be used to *enhance* the evaluation data are:
 
@@ -44,7 +44,7 @@ The only data that can be used to *enhance* the evaluation data are:
 - A reference stereo mix of the music including the metadata on how the mix was done (e.g. level of each instrument).
 - The car speed.
 
-## Computational restrictions
+## 4. Computational restrictions
 
 - There is no need for processing to be causal, as both scenarios are for recorded music.
 - There is no limit on computational cost.
@@ -53,7 +53,7 @@ The only data that can be used to *enhance* the evaluation data are:
 	- Task 2 the car stereo processer.
 - While HAAQI is being used to complement the listening panel evaluation, other metrics and approaches can be used by the teams.
 
-## Submitting multiple entries
+## 5. Submitting multiple entries
 
 You can submit two entries, where one is optimised for HAAQI and the other for listening tests if you wish. In this case:
 
@@ -61,15 +61,15 @@ You can submit two entries, where one is optimised for HAAQI and the other for l
 - In your documentation, you must make it clear, which has been optimised for listening tests and the relationship between the two entries.
 - Both systems will be evaluated via HAAQI.
 
-## Evaluation of systems
+## 6. Evaluation of systems
 
-### Stage 1: Objective evaluation
+### 6.1. Stage 1: Objective evaluation
 
 Entries will be ranked according to average HAAQI score across all signals in the evaluation dataset. We will use the HAAQI implementation in the baseline system. For Task 1 headphones, the HAAQI evaluation will be on the demixed signals, for Task 2 car, the HAAQI evaluation is on the output of the hearing aid.
 
 For anyone entering Task 1 by a different approach to demixing/remixing, their entries will not be objectively evaluated, because no suitable metric currently exists.
 
-### Stage 2: Listening test evaluation
+### 6.2. Stage 2: Listening test evaluation
 
 - There is a limit on how many systems can be evaluated by the listener panel.
 - The expectation is that only one entry can go through to the listener panel from any entrant.
@@ -78,7 +78,7 @@ For anyone entering Task 1 by a different approach to demixing/remixing, their e
    - The approach detailed in the technical report.
    - Informal listening by the Cadenza team.
 
-## Intellectual property
+## 7. Intellectual property
 
 The following terms apply to participation in this machine learning challenge (“Challenge”). Entrants may create original solutions, prototypes, datasets, scripts, or other content, materials, discoveries or inventions (a “Submission”). The Challenge is organised by the Challenge Organiser.
 
