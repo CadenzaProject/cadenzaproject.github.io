@@ -13,17 +13,19 @@ We recommend installing the software first and then following the instructions i
 
 ## 2. Data
 
-The data will be available to download by March 2023.
+The data is available for [download here](https://forms.gle/UQkuCxqQVxZtGggPA).
 
-<!-- The data is available for [download here](https://mab.to/zU7TS8jJelkoD).
+On the download site you will see five data packages are available,
 
-On the download site you will see three data packages are available,
+* `cadenza_cad1_task1_core_musdb18hq.tar.gz` **[21.1 GB]** - core audio data for training, validation and evaluation.
+* `cadenza_cad1_task1_core_metadata.tar.gz` **[7 KB]** - metadata for training and validation.
+* `cadenza_cad1_task1_augmentation_medleydb.tar.gz` **[38.1 GB]** - optional augmentation audio data for training.
+* `cadenza_cad1_task1_augmentation_bach10.tar.gz` **[125 MB]** - optional augmentation audio data for training.
+* `cadenza_cad1_task1_augmentation_fma_small.tar.gz` **[7.1 GB]** - optional augmentation audio data for training.
 
-- `clarity_CEC2_core.v1_1.tgz`  [**28 GB**] - metadata and dev set
-- `clarity_CEC2_train.v1_1.tgz` [**69 GB**] - scenes for training systems
-- `clarity_CEC2_hoairs.v1_0.tgz` [**144 GB**] - impulse responses for generating extended training data -->
 
-<!-- All participants will require the **core** data package. Participants using machine learning approaches will additionally require the **train** data package. Participants wishing to extend the training set by using our provided scene rendering tools will also require the high order ambisonic impulse responses (i.e., the **hoairs** package). 
+All participants will require the **core** data packages. 
+Participants wishing to extend the training set will require either of all of the **augmentation** data packages. 
 
-To unpack the data we recommend you follow the instructions in the [Cadenza Challenge GitHub repository](https://github.com/CadenzaProject/Cadenza). -->
+To unpack the data we recommend you follow the instructions in the [Clarity-Cadenza Challenge GitHub repository](https://github.com/claritychallenge/clarity).
 
