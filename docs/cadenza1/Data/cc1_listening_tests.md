@@ -29,8 +29,8 @@ Accordingly in the submitted signals, 0 dB FS should correspond to 99 dB SPL (at
 
 The listening test will probably have a combinatorial design so that each listener hears entries from each team. Subjects will evaluate the samples on 4-5 perceptual sliders: 
 
-- One of these scales will be for perceived overall basic audio quality. This will be used to rank the entrants.
-- The other scales will be used to rate aspects of the audio quality such as clarity. This data will be used to produce an improved objective measure for audio quality for future challenges. 
+- One of these scales will be for perceived overall basic audio quality. This will be used to rank the entrants. Perceived audio quality is about well the music meets a person’s expectations of how the music should ideally sound.
+- The other scales will be used to rate aspects of the audio quality. We have been working with a sensory panel to develop these, and the current short-list for the scales as of March 2023 is: Clarity, Harshness, Distortion, Frequency Balance and Spaciousness. This data will be used to produce an improved objective measure for audio quality for future challenges. 
 
 There will be approximately 50 members on the panel, and each listener will provide scores for every system, using a subset of the total music samples. Should a listener drop out from the panel, we will endeavour to replace them with someone with a similar hearing loss, but should that prove impractical we will reduce the size of the panel.
 

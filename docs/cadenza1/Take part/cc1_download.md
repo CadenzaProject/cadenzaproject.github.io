@@ -7,8 +7,7 @@ sidebar_position: 2.3
 
 ## 1. Software
 
-All the necessary software tools will be available in the [GitHub repository](https://github.com/CadenzaProject) by March 2023.
-
+All the necessary software tools will be available from [Clarity-Cadenza GitHub repository](https://github.com/claritychallenge/clarity)
 
 We recommend installing the software first and then following the instructions in the repository's README for downloading and unpacking the data.
 

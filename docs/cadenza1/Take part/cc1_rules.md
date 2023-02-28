@@ -42,7 +42,7 @@ The only data that can be used to *enhance* the evaluation data are:
 - The listener characterisation (e.g. audiogram).
 - The audio input signals to the car stereo.
 - A reference stereo mix of the music including the metadata on how the mix was done (e.g. level of each instrument).
-- The car speed.
+- The metadata for the car noise generator (e.g. the speed).
 
 ## 4. Computational restrictions
 
@@ -80,9 +80,11 @@ For anyone entering Task 1 by a different approach to demixing/remixing, their e
 
 ## 7. Intellectual property
 
-The following terms apply to participation in this machine learning challenge (“Challenge”). Entrants may create original solutions, prototypes, datasets, scripts, or other content, materials, discoveries or inventions (a “Submission”). The Challenge is organised by the Challenge Organiser.
+The following terms apply to participation in this machine learning challenge (“Challenge”). Entrants may create original solutions, prototypes, datasets, scripts, or other content, materials, discoveries or inventions. Entrants retain ownership of all intellectual and industrial property rights (including moral rights) in and to these.
 
-Entrants retain ownership of all intellectual and industrial property rights (including moral rights) in and to Submissions.
+The "submission" constitutes the audio files submitted to the challenge and the accompanying technical report.
+
+The Challenge is organised by the Challenge Organiser.
 
 As a condition of submission, Entrant grants the Challenge Organiser, its subsidiaries, agents and partner companies, a perpetual, irrevocable, worldwide, royalty-free, and non-exclusive licence to use, reproduce, adapt, modify, publish, distribute, publicly perform, create a derivative work from, and publicly display the Submission.
 

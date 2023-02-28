@@ -21,14 +21,14 @@ You can supplement the training and validation data from the following sources:
 - [Bach10](https://labsites.rochester.edu/air/resource.html)
 
 We leave it to you to decide how to use these as part of the training and validation sets.
-Mind that some songs from MedleydB are already part of the training set in MUSDB18. 
+Note, some of the songs from MedleydB are already part of the training set in MUSDB18. 
 For more information on augmenting and supplementing the training data, please see the [rules](../Take%20part/cc1_rules#training-and-development). 
 
 
 ### 1.2 Evaluation
 
 - We will use the MUSDB18-HQ's evaluation set which is made up of 50 songs.
-- You must process all complete songs.
+- You must process all of these for the complete songs.
 - All the music will be used for HAAQI evaluation.
 - We will then select a random 10-second sample from each piece of music for listening panel evaluation.
 
@@ -55,7 +55,7 @@ This is because FMA doesn't have enough music samples from these genres to keep 
 
 ## 3. Listener data
 
-We will provide metadata characterising the hearing abilities of the listeners, so the audio signals you 
+We have provided metadata characterising the hearing abilities of the listeners, so the audio signals you 
 generate can be individualised. The same types of data are available for training/development and evaluation.
 
 A panel of hearing-aided listeners will be recruited for evaluation. They will be experienced bilateral 
@@ -64,6 +64,6 @@ tone air-conduction hearing loss will be between 25 and about 60 dB in the bette
 
 The quantification of the listeners’ hearing is done with left and right pure tone air-conduction audiograms. 
 These measure the threshold at which people can hear a pure-tone sound. For more information about audiograms 
-please visit our section on [Audiograms](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
+please visit our section on [audiograms](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
 
 
