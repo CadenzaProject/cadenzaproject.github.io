@@ -33,7 +33,7 @@ The block that can be changed by you is labelled *Enhancement* in Figure 1.
 While the main focus is on demixing/remixing, we'll accept entries using alternative signal processing approaches that can improve music for people with a hearing loss. Your entry would replace the whole box labelled enhancement.
 
 <figure id="fig1">
-<img width="800" src={useBaseUrl('/img/headphone_simple_v2.png')} />
+<img width="800" src={useBaseUrl('/img/headphone_simple_v3.png')} />
 <figcaption>Figure 1, The baseline for the headphone listening scenario (Task 1). For simplicity, not all signal paths are shown.</figcaption>
 </figure>
 
