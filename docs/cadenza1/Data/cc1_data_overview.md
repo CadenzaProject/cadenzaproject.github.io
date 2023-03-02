@@ -82,11 +82,41 @@ please visit our section on [audiograms](/docs/learning_resources/Hearing_impair
 
 ## 4. Data file formats and naming conventions
 
-### 4.1 Abbreviations used in filenames
+### 4.1 Enhanced signals
 
-The following abbreviations are used consistently throughout the filenames and references in the metadata.
+The signals that are output by the baseline enhancement algorithm.
 
-* `L` - listener
+* Eight enhanced output signal corresponding to the left or right channel of each stem (i.e., as submitted by the challenge entrants)
+
+<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_<Channel>_<Stem>.wav
+
+* One enhanced output signal corresponding to the final remix
+
+<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_remix.wav
+
+Where:
+Listener ID – ID of the listener panel member, e.g., L001 to L100 for initial ‘pseudo-listeners’, etc.
+Song Name - Track name from MUSDB18, e.g, One Minute Smile.
+Channel - left or right channel
+Stem - Vocal, Bass, Drums or Others
+
+
+For example, for validation ID `L5011` and Validation track `One Minute Smile_left`
+```text
+L5011
+└───One Minute Smile
+    ├───L5011_Actions - One Minute Smile_left_bass.wav
+    ├───L5011_Actions - One Minute Smile_right_bass.wav
+    ├───L5011_Actions - One Minute Smile_left_drums.wav
+    ├───L5011_Actions - One Minute Smile_right_drums.wav
+    ├───5011_Actions - One Minute Smile_left_other.wav
+    ├───L5011_Actions - One Minute Smile_right_other.wav
+    ├───L5011_Actions - One Minute Smile_left_vocals.wav
+    ├───L5011_Actions - One Minute Smile_right_vocals.wav
+    └───L5011_Actions - One Minute Smile_remix.wav
+```
+
+
 
 ### 4.2 Listener metadata
 
