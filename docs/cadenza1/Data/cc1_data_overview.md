@@ -80,4 +80,50 @@ The quantification of the listeners’ hearing is done with left and right pure 
 These measure the threshold at which people can hear a pure-tone sound. For more information about audiograms 
 please visit our section on [audiograms](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
 
+## 4. Data file formats and naming conventions
+
+### 4.1 Abbreviations used in filenames
+
+The following abbreviations are used consistently throughout the filenames and references in the metadata.
+
+* `L` - listener
+
+### 4.2 Listener metadata
+
+Audiogram data is stored in a JSON file per dataset with the following format.
+
+```json
+{
+    "L0001": {
+        "name": "L0001",
+        "audiogram_cfs": [250, 500, 1000, 2000, 3000, 4000, 6000, 8000],
+        "audiogram_levels_l": [10, 10, 20, 30, 40, 55, 55, 60],
+        "audiogram_levels_r": [ … ],
+    },
+    "L0002": {
+        ...
+    },
+    ...
+}
+```
+
+### 4.3 Music metadata
+
+Music data is store in a single JSON per file dataset with the following format.
+
+```json
+[
+  {
+    "Track Name":"A Classic Education - NightOwl",
+    "Genre":"Singer/Songwriter",
+    "Source":"MedleyDB",
+    "License":"CC BY-NC-SA",
+    "Split":"train"
+  },
+  ...
+]
+```
+
+
+
 
