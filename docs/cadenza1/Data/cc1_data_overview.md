@@ -76,7 +76,7 @@ hearing-aid users: they use two hearing aids but the hearing loss may be asymmet
 tone air-conduction hearing loss will be between 25 and about 60 dB in the better ear.
 
 
-The quantification of the listeners’ hearing is done with left and right pure tone air-conduction audiograms. 
+The quantification of the listeners' hearing is done with left and right pure tone air-conduction audiograms. 
 These measure the threshold at which people can hear a pure-tone sound. For more information about audiograms 
 please visit our section on [audiograms](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
 
@@ -88,20 +88,22 @@ The signals that are output by the baseline enhancement algorithm.
 
 * Eight enhanced output signal corresponding to the left or right channel of each stem (i.e., as submitted by the challenge entrants)
 
-<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_<Channel>_<Stem>.wav
+`<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_<Channel>_<Stem>.wav`
 
 * One enhanced output signal corresponding to the final remix
 
-<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_remix.wav
+`<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_remix.wav`
 
 Where:
-Listener ID – ID of the listener panel member, e.g., L001 to L100 for initial ‘pseudo-listeners’, etc.
+Listener ID – ID of the listener panel member, e.g., L001 to L100 for initial `pseudo-listeners`, etc.
 Song Name - Track name from MUSDB18, e.g, One Minute Smile.
 Channel - left or right channel
 Stem - Vocal, Bass, Drums or Others
 
 
-For example, for validation ID `L5011` and Validation track `One Minute Smile_left`
+For example, for validation listener ID `L5011` and validation song name `One Minute Smile_left`,
+the enhanced output is: 
+
 ```text
 L5011
 └───One Minute Smile
@@ -109,7 +111,7 @@ L5011
     ├───L5011_Actions - One Minute Smile_right_bass.wav
     ├───L5011_Actions - One Minute Smile_left_drums.wav
     ├───L5011_Actions - One Minute Smile_right_drums.wav
-    ├───5011_Actions - One Minute Smile_left_other.wav
+    ├───L5011_Actions - One Minute Smile_left_other.wav
     ├───L5011_Actions - One Minute Smile_right_other.wav
     ├───L5011_Actions - One Minute Smile_left_vocals.wav
     ├───L5011_Actions - One Minute Smile_right_vocals.wav
@@ -117,10 +119,9 @@ L5011
 ```
 
 
-
 ### 4.2 Listener metadata
 
-Audiogram data is stored in a JSON file per dataset with the following format.
+Audiograms data is stored in a JSON file per dataset with the following format.
 
 ```json
 {
@@ -128,7 +129,7 @@ Audiogram data is stored in a JSON file per dataset with the following format.
         "name": "L0001",
         "audiogram_cfs": [250, 500, 1000, 2000, 3000, 4000, 6000, 8000],
         "audiogram_levels_l": [10, 10, 20, 30, 40, 55, 55, 60],
-        "audiogram_levels_r": [ … ],
+        "audiogram_levels_r": [ ... ],
     },
     "L0002": {
         ...
