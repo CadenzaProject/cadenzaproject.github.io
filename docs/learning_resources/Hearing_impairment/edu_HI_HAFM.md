@@ -35,7 +35,7 @@ compression speed and ratios. However, there were no clear patterns of what thos
 increased gain at high frequencies whereas others increased gain at low frequencies, and whilst some audiologists chose
 slow-acting compression for music, others emphasised fast-acting compression to enhance music listening.
 
-Overall, the studies highlight that improvements to signal processing strategies for music for hearing aid users is 
+Overall, the studies highlight that improvements to signal processing strategies for music for hearing aid users are 
 needed, along with a better understanding of how novel processing strategies impact on listeners' experiences and 
 enjoyment of music. This is one of the key aims of the Cadenza project.
 
