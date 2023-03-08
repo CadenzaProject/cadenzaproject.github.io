@@ -5,14 +5,38 @@ sidebar_label: Hearing Aids For Music
 sidebar_position: 2.3
 ---
 
-The [Hearing Aids for Music (HAFM) project](https://musicandhearingaids.org/) explored how hearing impairments and the use of hearing aid technology affects people’s music experiences through a series of clinic surveys, an interview study and a national online survey.
+Our Cadenza bid was influenced by findings on the Hearing Aids for Music (HAfM) project which explored how hearing 
+impairments and the use of hearing aid technology affects people's music experiences through a series of clinic surveys, 
+an interview study and a national online survey.
 
-It was an interdisciplinary project led by a small team and supported by an advisory board who are leaders in a range of disciplines including music psychology, clinical audiology, computer science, auditory perception, deaf education, and hearing therapy.
+The interdisciplinary project was led by a small team and supported by an advisory board who were leaders in music 
+psychology, clinical audiology, computer science, auditory perception, deaf education, and hearing therapy. The HAfM 
+team obtained a large amount of original empirical data from > 1,500 hearing aid users and > 100 audiology practitioners
+across the UK and internationally.
 
-The HAFM team obtained a large amount of original empirical data from > 1,500 hearing aid users and > 100 audiology practitioners across the UK and internationally, and have worked with > 35 National Health Service (NHS) Trusts. The project has been pioneering in its accessibility – all studies have been accessible for deaf people with British Sign Language as first language.
+Results showed that whilst hearing aids facilitate music perception and appreciation, participants reported experiencing 
+a range of problems such as pitch perception problems, distortion, difficulties hearing out instruments and hearing 
+lyrics in songs, and difficulties in live performance contexts.
 
-Project findings have shown that whilst hearing aids facilitate musical appreciation, there are challenges in musical settings such as distortion, difficulties hearing words in songs, and difficulties in live performance contexts.
+Results also highlighted that the digital signal processing strategies applied to hearing aids to enhance speech 
+perception can have a negative impact on music perception. For example, feedback manager can mistakenly identify 
+musical stimuli (e.g. pure tones on the flute) as feedback and suppress it. Similarly, noise reduction strategies 
+can mistake music for noise and suppress the music. Compression strategies can introduce changes to the sound 
+level that can be too slow or too quick, particularly in music with sudden and wide dynamic changes (e.g. classical).
 
-To improve music listening, our research has identified behavioural strategies for hearing aid users and musicians (e.g. listening practice, the use of music programs, assistive listening devices) and practice-based strategies for audiologists (e.g. counselling tips, fitting hearing aids in clinic, tools to aid discussion). We have developed advice leaflets for hearing aid users and audiologists which outline these strategies, and which are freely available above and on our resources page.
+Furthermore, there was mixed evidence for the efficacy of music programs implemented by manufacturers to help 
+with music perception. Whilst a small number of participants reported being happy with their music program, a 
+large percentage were not able to tell the difference between the music program and their speech program, or 
+reported that the music program made things worse.
 
-Website: [https://musicandhearingaids.org/](https://musicandhearingaids.org/)
+Audiologists were asked to reflect on the strategies they used to enhance music perception. Many emphasised the 
+importance of turning off adaptive signal processing features for speech, and they also reported using changes gain,
+compression speed and ratios. However, there were no clear patterns of what those changes should be, as some advocated 
+increased gain at high frequencies whereas others increased gain at low frequencies, and whilst some audiologists chose
+slow-acting compression for music, others emphasised fast-acting compression to enhance music listening.
+
+Overall, the studies highlight that improvements to signal processing strategies for music for hearing aid users is 
+needed, along with a better understanding of how novel processing strategies impact on listeners' experiences and 
+enjoyment of music. This is one of the key aims of the Cadenza project.
+
+Website: https://musicandhearingaids.org/
