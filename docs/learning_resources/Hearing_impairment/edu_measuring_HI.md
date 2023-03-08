@@ -26,7 +26,19 @@ is to set the amplification of hearing aids to provide audibility for that perso
 (i.e., applying gain that counters that person’s hearing loss at each frequency calculated from their hearing 
 threshold at that frequency). 
 
-The thresholds at four mid-frequencies important for speech - 0.5, 1, 2 and 4 kHz – are averaged out to give an overall 
+Occasionally audiograms are equal across frequency, or show better hearing at higher frequencies, but by-far the typical 
+audiogram for an older adult shows worse hearing at higher frequencies, sometimes by as much as 60 dB or more (see Figure 1 
+for examples of real audiograms). 
+
+<figure id="fig1">
+<img width="800" src={useBaseUrl('../img/real_audiogram.png')} />
+<figcaption>Figure 1, Examples of real Audiograms.</figcaption>
+</figure>
+
+
+It is usual to calculate an average across frequency to give a single-number value for
+hearing loss. Many rules for choice and weighting of frequencies have been proposed or used. We use the popular “four-frequency” average:
+the thresholds at four mid-frequencies important for speech - 0.5, 1, 2 and 4 kHz – are averaged out to give an overall 
 hearing threshold score, usually for the ear with better (lower) thresholds. This better-ear pure-tone average (PTA),
 has been classified into broad categories, as follows: 
 
@@ -50,7 +62,7 @@ adults [and worsens with age at a rate of roughly 1 dB/year](https://pubs.asha.o
 
 <figure id="fig1">
 <img width="800" src={useBaseUrl('../img/audiogram_example.png')} />
-<figcaption>Figure 1, An example Audiogram.</figcaption>
+<figcaption>Figure 2, An example Audiogram.</figcaption>
 </figure>
 
 The threshold values of the audiogram defines how much gain the hearing aid needs to apply, 
