@@ -31,7 +31,7 @@ audiogram for an older adult shows worse hearing at higher frequencies, sometime
 for examples of real audiograms). 
 
 <figure id="fig1">
-<img width="800" src={useBaseUrl('../img/real_audiogram.png')} />
+<img width="800" src={useBaseUrl('../img/real_audiograms.png')} />
 <figcaption>Figure 1, Examples of real Audiograms.</figcaption>
 </figure>
 
