@@ -39,7 +39,7 @@ The output of the demixing is 8 stems corresponding to the left and right channe
 i.e., left vocal, right vocal, left bass, right bass, and so on.
 
 Then, a NAL-R amplification and compression is applied to each stem using the personalized audiogram of each listener.
-NAL-R is a perscription formulation for fitting simple hearing aids. This then creates the output stems.
+NAL-R is a prescription formulation for fitting simple hearing aids. This then creates the output stems.
 
 These output stems are then evaluated by computing the mean of the Hearing-Aid Audio Quality Index (HAAQI) score of each stem. 
 
@@ -69,7 +69,17 @@ The car noise to be added will be provided by a simple simulator of noise in a c
 After the car noise and acoustic simulation, the signals are then processed by a simple hearing aid.
 This then provides left and right signals that can be used for evaluation either by HAAQI or the listening panel.
 
-Your challenge is to improve the car stereo ('Enhancement'). The 'Evaluation' is fixed and should not be changed. 
+Your challenge is to improve the car stereo ('Enhancement'). The 'Evaluation' is fixed and should not be changed.
+
+### 2.1 Baseline system
+
+In enhancement, the baseline system simply normalise the signal accordingly to the average audiogram of the ear with
+greater hearing loss. The system attenuates the signal and save it in 16 bits.
+
+In the evaluation stage, the car noise and car acoustics characteristics (HRTFs) are added to the enhanced signal.
+This signal is then passed to a simple hearing aid (HA) composed of a NAL-R amplification.
+
+The output of the HA is use for HAAQI and Listening panel evaluation.
 
 ## 3. References
 

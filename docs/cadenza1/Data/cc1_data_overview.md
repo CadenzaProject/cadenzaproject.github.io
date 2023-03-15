@@ -50,7 +50,8 @@ genre classification. From the eight genres available in FMA-small, we selected 
 * `Pop`
 * `Rock`
 
-However, research suggest that people with hearing loss prefer to listen `classical` and `orchestal` music. Therefore,  
+However, those with hearing loss are statistically likely to be older people. Older people are more likely to 
+listen to `classical` and `orchestral` music [1]. Therefore,  
 we included samples from these two genres sourced from the MTG-Jamendo dataset.
 We used MTG-Jamendo FMA doesn't have enough music samples from these two genres to keep the classes balanced.
 
@@ -305,6 +306,12 @@ Audiograms data used in Task 1 and Taks 2 is stored in a JSON file per dataset w
 }
 ```
 
+***
+
+## 7. Reference
+
+[1] Bonneville-Roussy, A., Rentfrow, P. J., Xu, M. K., & Potter, J. (2013). Music through the ages: Trends in musical 
+engagement and preferences from adolescence through middle adulthood. Journal of personality and social psychology, 105(4), 703.
 
 
 
