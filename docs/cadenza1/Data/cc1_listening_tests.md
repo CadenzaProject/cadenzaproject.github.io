@@ -14,9 +14,11 @@ The listeners will be provided with Sennheiser PC-8 USB headsets to complete the
 For safety reasons, we allow participants to set the overall audio volume so that the sounds are not so loud as to be uncomfortable. This means that we cannot be sure at what dB SPL the signals will be presented (and as we don’t have any individual measures of loudness recruitment, we don’t know how loud they will seem to the participants either). It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant, they may well turn down the volume themselves.
  
 Our measurements of PC-8 headsets: 
+
 * A 1-kHz pure tone set to unity gain (RMS 0.707) with soundcard volume at 100% produces a level of 99 dB SPL using an artificial ear with 2 cc coupler (IEC 60318–1).
 * A steady-amplitude “ICRA speech-shaped noise” ([1] track 1), scaled to 0.3 RMS, with soundcard volume at 100% produces an A-weighted level of 90 dB SPL at the same volume level. With this RMS, the noise had 0.1% of its samples clipped.
-Accordingly in the submitted signals, 0 dB FS should correspond to 99 dB SPL (at 1 kHz).
+
+Accordingly, in the submitted signals, 0 dB FS should correspond to 99 dB SPL (at 1 kHz).
 
 
 ## 3. Music samples
