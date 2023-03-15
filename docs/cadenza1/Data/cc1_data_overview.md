@@ -22,7 +22,7 @@ You can supplement the training and validation data from the following sources:
 - MedleydB version 1 and version 2
 
 We leave it to you to decide how to use these as part of the training and validation sets.
-Note, some of the songs from MedleydB are already part of the training set in MUSDB18-HQ. 
+Note, some songs from MedleydB are already part of the training set in MUSDB18-HQ. 
 For more information on augmenting and supplementing the training data, please see the [rules](../Take%20part/cc1_rules#training-and-development). 
 
 
@@ -37,56 +37,70 @@ For more information on augmenting and supplementing the training data, please s
 
 ### 2.1 Training/development
 
-The main dataset is the small split of the FMA. FMA-Small is balanced dataset for 
-genre classification (`electronic`, `experimental`, `folk`, `hip-hop`, `instrumental`, `international`, `pop`, `rock`).
-Each genre contains 1000 30-samples divided into 800/100/100 for training/validation/evaluation. However,
-research suggest that people with hearing loss prefer to listen `classical` and `orchestal` music. Therefore,  
-we included samples from these two genres sourced from the MTG-Jamendo dataset.
-This is because FMA doesn't have enough music samples from these genres to keep the classes balanced.
+#### 2.1.1 Music Data
 
+The music dataset is based on the small split of the FMA dataset and MTG Jamendo. FMA-Small is a balanced dataset for 
+genre classification. From the eight genres available in FMA-small, we selected five only five genres:
+
+* `Hip-Hop`
+* `Instrumental`
+* `International`
+* `Pop`
+* `Rock`
+
+However, research suggest that people with hearing loss prefer to listen `classical` and `orchestal` music. Therefore,  
+we included samples from these two genres sourced from the MTG-Jamendo dataset.
+We used MTG-Jamendo FMA doesn't have enough music samples from these two genres to keep the classes balanced.
+
+* `Classical`
+* `Orchestral`
+
+Each genre contains 900 30-seconds samples divided into 800 for training and 100 for development. 
+
+#### 2.1.2 HRTF Data
+
+To take the car acoustic conditions into account, we use the `Anechoic` and `Car` binaural room impulse 
+responses from the eBrIRD ELOSPHERES dataset.
 
 ### 2.2 Evaluation
 
-- 1000 30-second samples 
-  - 800 from the FMA-small evaluation set.
-  - 200 from the additional two genres.
-- You should process all of the music.
-- All of the music will be used for HAAQI evaluation.
-- We will then select a random 10 second sample from each piece of music for listening panel evaluation.
+- 700 30-second samples
+- You should process all the music.
+- All the music will be used for HAAQI evaluation.
+- We will then select a random 10-second sample from each piece of music for listening panel evaluation.
 
 ## 3. Listener data
 
 We have provided metadata characterising the hearing abilities of the listeners, so the audio signals you 
-generate can be individualised. The same types of data are available for training/development and evaluation.
+generate can be individualised. The same types of data are available for training and development.
 
 For training, we will use the same 83 audiograms from the Clarity project.
 
-We constructed a new set of listeners to separate the training with the validation sets. The validation audiograms are 
-a filtered, pseudo-random selection from the
+We constructed a new set of listeners to separate the training from the development listeners. 
+The development audiograms are a filtered, pseudo-random, selection from the
 von Gablenz and Holube (2019) dataset (https://zenodo.org/record/4995261#.Y_3O1HbP2Hu).
 We first filtered the audiograms to better-ear 4-frequency hearing loss between 25 and 60 dB.
-We then divided the data into BEA bands of 20-29, 30-39, 40-49 and 50-59 dB, and randomly chose from each
+Then, we divided the data into BEA bands of 20-29, 30-39, 40-49 and 50-59 dB, and randomly chose from each
 band the necessary number of audiograms to give the same distribution per band as in
 the original Clarity dataset (namely 11, 37, 34 and 18). This gave an unequal male:female distribution
 (63 to 37), so 13 males were then randomly selected and replaced by females with the same BEA.
-Of the 100 audiograms, only 50 (25 per gender) were randomly selected to be part of the validation set.
+Of the 100 audiograms, only 50 (25 per gender) were randomly selected to be part of the development set.
 
 A panel of hearing-aided listeners will be recruited for evaluation. They will be experienced bilateral 
 hearing-aid users: they use two hearing aids but the hearing loss may be asymmetrical. The average pure 
 tone air-conduction hearing loss will be between 25 and about 60 dB in the better ear.
 
-
 The quantification of the listeners' hearing is done with left and right pure tone air-conduction audiograms. 
 These measure the threshold at which people can hear a pure-tone sound. For more information about audiograms 
 please visit our section on [audiograms](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
 
-## 4. Data file formats and naming conventions
+## 4. Task 1: Data file formats and naming conventions
 
 ### 4.1 Enhanced signals
 
-The signals that are output by the baseline enhancement algorithm.
+There are nine output signals generated by the baseline enhancement algorithm:
 
-* Eight enhanced output signal corresponding to the left or right channel of each stem (i.e., as submitted by the challenge entrants)
+* Eight enhanced output signal corresponding to the left and right channels of each stem (i.e., as submitted by the challenge entrants)
 
 `<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_<Channel>_<Stem>.wav`
 
@@ -95,33 +109,178 @@ The signals that are output by the baseline enhancement algorithm.
 `<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_remix.wav`
 
 Where:
-Listener ID – ID of the listener panel member, e.g., L001 to L100 for initial `pseudo-listeners`, etc.
-Song Name - Track name from MUSDB18, e.g, One Minute Smile.
-Channel - left or right channel
-Stem - Vocal, Bass, Drums or Others
+* `Listener ID` – ID of the listener panel member, e.g., L001 to L100 for initial `pseudo-listeners`, etc.
+* `Song Name` - Track name from MUSDB18, e.g, One Minute Smile.
+* `Channel` - left or right channel
+* `Stem `- Vocal, Bass, Drums or Others
 
 
-For example, for validation listener ID `L5011` and validation song name `One Minute Smile_left`,
+For example, for development listener ID `L5011` and development song name `One Minute Smile_left`,
 the enhanced output is: 
 
 ```text
 L5011
-└───One Minute Smile
-    ├───L5011_Actions - One Minute Smile_left_bass.wav
-    ├───L5011_Actions - One Minute Smile_right_bass.wav
-    ├───L5011_Actions - One Minute Smile_left_drums.wav
-    ├───L5011_Actions - One Minute Smile_right_drums.wav
-    ├───L5011_Actions - One Minute Smile_left_other.wav
-    ├───L5011_Actions - One Minute Smile_right_other.wav
-    ├───L5011_Actions - One Minute Smile_left_vocals.wav
-    ├───L5011_Actions - One Minute Smile_right_vocals.wav
-    └───L5011_Actions - One Minute Smile_remix.wav
+  └───One Minute Smile
+      ├───L5011_Actions - One Minute Smile_left_bass.wav
+      ├───L5011_Actions - One Minute Smile_right_bass.wav
+      ├───L5011_Actions - One Minute Smile_left_drums.wav
+      ├───L5011_Actions - One Minute Smile_right_drums.wav
+      ├───L5011_Actions - One Minute Smile_left_other.wav
+      ├───L5011_Actions - One Minute Smile_right_other.wav
+      ├───L5011_Actions - One Minute Smile_left_vocals.wav
+      ├───L5011_Actions - One Minute Smile_right_vocals.wav
+      └───L5011_Actions - One Minute Smile_remix.wav
 ```
 
+### 4.2 Music metadata
 
-### 4.2 Listener metadata
+Music data is store in a single JSON per file dataset with the following format.
 
-Audiograms data is stored in a JSON file per dataset with the following format.
+```json
+[
+  {
+    "Track Name":"A Classic Education - NightOwl",
+    "Genre":"Singer/Songwriter",
+    "Source":"MedleyDB",
+    "License":"CC BY-NC-SA",
+    "Split":"train"
+  },
+  ...
+]
+```
+
+## 5. Task 2: Data file formats and naming conventions
+
+### 5.1 Enhanced signals
+
+The baseline generates one output per scene:
+
+`<Dataset Split><Listener ID>_<Song ID>.wav`
+
+Where:
+
+* `Dataset Split` - Split you are evaluation, `train`, `valid` or `test`.
+* `Listener ID` - ID of the listener panel member, e.g., L001 to L100 for initial `pseudo-listeners`, etc.
+* `Song ID` - ID of the song.
+
+For example:
+
+```text
+valid
+  ├───L5000_fma_041020.wav
+  ├───L5000_fma_058333.wav
+  ├───L5007_mtg_00539764.wav
+  ├─── ... 
+```
+
+### 5.2 Evaluation Signal 
+
+In the evaluation stage, several signal can be generated to explore the different intermediate signals. These signals
+can be generated by setting the parameter `evaluate.save_intermediate_wavs` to True in `config.yaml`.
+
+When `evaluate.save_intermediate_wavs` is True, the evaluation generates:
+
+* `car_noise_anechoic.wav` - Car noise with anechoic HRTFs at the front HA microphones.
+* `car_noise_anechoic_scaled.wav` - Car noise with anechoic HRTFs at the front HA microphones scaled to SNR.
+* `enh_signal_hrtf.wav` - Enhanced musical signal with car HRTFs at the front HA microphone.
+* `enh_signal_hrtf_plus_car_noise_anechoic.wav` - Enhanced music with car noise added at certain SNR. Signal to pass through the HA.
+* `ha_processed_signal.wav` - Output of the HA to use in HAAQI evaluation.
+* `ref_signal_anechoic.wav` - Reference signal with anechoic HRTFs at the eardrums.
+* `ref_signal_for_eval` - Reference signal to use in HAAQI evaluation.
+
+When `evaluate.save_intermediate_wavs` is False, the evaluation generates:
+
+* `ha_processed_signal.wav` - Output of the HA to use in HAAQI evaluation.
+* `ref_signal_for_eval` - Reference signal to use in HAAQI evaluation.
+
+### 5.3 Music Metadata
+
+Music data is store in a single JSON per file dataset with the following format.
+
+```json
+  {
+  "fma_000002": {
+    "track_id": "000002",
+    "path": "training/Hip-Hop/000002.mp3",
+    "artist": "AWOL",
+    "album": "AWOL - A Way Of Life",
+    "title": "Food",
+    "license": "Attribution-NonCommercial-ShareAlike 3.0 International",
+    "genre": "Hip-Hop",
+    "bit_rate": 256000,
+    "duration": 168,
+    "channels": 2,
+    "source": "fma"
+  },
+...
+```
+
+### 5.4 HRTFs Metadata
+
+HRTFs data is store in a single JSON with the following format.
+
+```json
+{
+    "train": {
+      "-57.5": {
+        "car": {
+          "left_speaker": {
+            "left_side": "HR13_E03_CH1_Left",
+            "right_side": "HR13_E03_CH1_Right"
+          },
+          "right_speaker": {
+            "left_side": "HR13_E04_CH1_Left",
+            "right_side": "HR13_E04_CH1_Right"
+          }
+        },
+        "anechoic": {
+          "left_speaker": {
+            "left_side": "HR5_E02_CH0_Left",
+            "right_side": "HR5_E02_CH0_Right"
+          },
+          "right_speaker": {
+            "left_side": "HR21_E02_CH0_Left",
+            "right_side": "HR21_E02_CH0_Right"
+          }
+        }
+      },
+      ...
+    ...
+}
+```
+
+### 5.5 Scenes Metadata
+
+Scene data is store in a single JSON with the following format.
+
+```json
+{
+    "S100000": {
+        "scene": "S100000",
+        "song": "fma_081613",
+        "song_path": "training/Instrumental/081613.mp3",
+        "hr": 25.0,
+        "car_noise_parameters": {
+            "speed": 114.0,
+            "gear": 6,
+            "reference_level_db": 30.9,
+            "engine_num_harmonics": 12,
+            "rpm": 1915.2,
+            "primary_filter": {"order": 1, "btype": "lowpass", "cutoff_hz": 20.3632},
+            "secondary_filter": {"order": 2, "btype": "lowpass", "cutoff_hz": 314.2048},
+            "bump": {"order": 2, "btype": "bandpass", "cutoff_hz": [77, 110]},
+            "dip_low": {"order": 1, "btype": "lowpass", "cutoff_hz": 170},
+            "dip_high": {"order": 1, "btype": "highpass", "cutoff_hz": 455}
+        },
+        "snr": 7.8386,
+        "split": "train"
+    },
+...
+```
+
+## 6 Listener metadata
+
+Audiograms data used in Task 1 and Taks 2 is stored in a JSON file per dataset with the following format.
 
 ```json
 {
@@ -138,22 +297,7 @@ Audiograms data is stored in a JSON file per dataset with the following format.
 }
 ```
 
-### 4.3 Music metadata
 
-Music data is store in a single JSON per file dataset with the following format.
-
-```json
-[
-  {
-    "Track Name":"A Classic Education - NightOwl",
-    "Genre":"Singer/Songwriter",
-    "Source":"MedleyDB",
-    "License":"CC BY-NC-SA",
-    "Split":"train"
-  },
-  ...
-]
-```
 
 
 
