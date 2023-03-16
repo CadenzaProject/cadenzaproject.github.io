@@ -23,6 +23,7 @@ We leave it to you to decide how to use these as part of the training and valida
 Note, some songs from MedleydB are already part of the training set in MUSDB18-HQ. 
 For more information on augmenting and supplementing the training data, please see the [rules](../Take%20part/cc1_rules#training-and-development). 
 
+***
 
 ## 2 Evaluation
 
@@ -30,6 +31,8 @@ For more information on augmenting and supplementing the training data, please s
 - You must process all of these for the complete songs.
 - All the music will be used for HAAQI evaluation.
 - We will then select a random 10-second sample from some of the pieces of music for listening panel evaluation.
+
+***
 
 ## 3. Data file formats and naming conventions
 
