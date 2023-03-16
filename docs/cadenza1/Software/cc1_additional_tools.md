@@ -13,7 +13,7 @@ For more details see the readme on the git.
 
 This software generates car noise, using the car speed as input. This is provided so that entrants can generate the car noise 
 for the evaluation stage. You are allow to generate different noises to learn the spectrum characteristics of the noises
-given the speed. However, entrants cannot use the car noise signal itself to perform noise cancellation, only the metadata on car speed.
+given the speed. However, entrants cannot use the car noise signal itself to perform noise cancellation, only the metadata (e.g. car speed).
 
 The model is split into two parts. 
 

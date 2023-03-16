@@ -43,9 +43,9 @@ The key elements of the task2 baseline system are:
 
 The scene metadata contains several parameters that is used by the car scene metadata. 
 
-1. Using the car parameters, a car noise signal is generated. For details in the Car Noise generator, see 
+1. Using the car parameters, a car noise signal is generated. For details of the Car Noise generator, see 
 [additional tools](/docs/cadenza1/Software/cc1_additional_tools). This signal is added with anechoic HRTFs
-at the front microphone of the HA.
+at the front microphone of the Hearing Aid (HA).
 2. Using the head rotation angle, the model adds car HRTFs at the front microphone of the HA to the enhanced music.
 3. These two signal are then added together at a given SNR at the front microphone of the HA.
 4. The resulting signal is pass through a fixed HA composed of a simple NAL-R amplification.
@@ -54,10 +54,10 @@ at the front microphone of the HA.
 
 ## 3. HAAQI Speech Intelligibility model
 
-Python implementation of the Hearing Aid Audio Quality Index (HAAQI) model which is used for objective estimation.
+This is a python implementation of the Hearing Aid Audio Quality Index (HAAQI) model which is used for objective estimation.
 This will be used in the stage 1 evaluation of entrants (see [Rules](/docs/cadenza1/Take%20part/cc1_rules#stage-1-objective-evaluation)).
 
-Note that HAAQI is not a binaural metric, instead, each channel must be processed separately. We average the independent 
+Note that HAAQI is not a binaural metric, instead, each channel must be processed separately. We average the left and right 
 scores to produce a final overall score.
 
 ## 4. References
