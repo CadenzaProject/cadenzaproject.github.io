@@ -85,6 +85,32 @@ An important issue to be aware of is the possibility of the hearing aid producin
 
 More details can be found in the [core software](cc1_core_software) page.
 
+#### 2.1.1 Enhancement Procedure
+
+The enhancement procedure goes as follows:
+
+1. Computes the level in dB LUFS of the original song, i.e., the song from the dataset.
+2. Computes the average hearing loss (HL) for each ear.  Refer to [measuring hearing impairment](docs/learning_resources/Hearing_impairment/edu_measuring_HI)
+resource to understand how this average is computed.
+3. Set a temporal target level according maximum average HL.
+   - If average is equal or greater than 50, set the temporal target level to -19 dB LUFS. Then, for every 5dB LUFS over 50 dB,
+   reduce the level in an additional 1 dB LUFS.
+   - Otherwise, set the temporal target level at -14 dB LUFS.
+4. The final target level for normalisation is set as the minimum between the temporal target and the original song levels.
+
+Example:
+All levels are in dB LUFS
+
+| Song | Max average HL | Original Level | Temp Target Level | Final Level |
+|------|----------------|----------------|-------------------|-------------|
+| 1    |  35            |    -13         |   -14             | -14         |
+| 2    |  42            |    -15         |   -14             | -15         |
+| 3    |  50            |    -15         |   -19             | -19         |
+| 4    |  60            |    -13         |   -19             | -21         |
+
+The levels of -14 and -19 dB LUFS were set according to [Spotify standard](https://artists.spotify.com/en/help/article/loudness-normalization).
+
+
 ## 3. References
 
 <a name="refs"></a>

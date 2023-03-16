@@ -11,10 +11,10 @@ The Cadenza Challenges are about improving the **perceived audio quality of reco
 
 >What do we mean by audio quality? Imagine listening to the same music track in two different ways. First listening via a low quality mp3 played on a cheap cell phone, and then via a high quality wav heard over studio-grade loudspeaker monitors. The underlying music is the same in both cases, but the *audio quality* is very different - this is what we are interested in.
 
-
 # Overview
 
 The tasks are based on two common listening scenarios:
+
 - Task 1: headphones.
 - Task 2: in the car.
 
@@ -37,6 +37,8 @@ While the main focus is on demixing/remixing, we'll accept entries using alterna
 <figcaption>Figure 1, The baseline for the headphone listening scenario (Task 1). For simplicity, not all signal paths are shown.</figcaption>
 </figure>
 
+***
+ 
 ## Task 2: Car
 
 <iframe width="100%" height="560" src="https://www.youtube.com/embed/lgMNux9A3q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -53,8 +55,7 @@ The listener is wearing their hearing aids, sitting in a car and listening to re
 <figcaption>Figure 2, The baseline for the car listening scenario (Task 2). For simplicity, not all signal paths are shown.</figcaption>
 </figure>
 
-
-
+***
 
 # Watch the UKAN+ Webinar: Machine Learning Challenges to Improve Hearing Devices: Clarity & Cadenza Projects
 
