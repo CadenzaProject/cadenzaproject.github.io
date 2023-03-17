@@ -60,6 +60,10 @@ This will be used in the stage 1 evaluation of entrants (see [Rules](/docs/caden
 Note that HAAQI is not a binaural metric, instead, each channel must be processed separately. We average the left and right 
 scores to produce a final overall score.
 
+The reference signals for HAAQI are:
+- Task 1 Headphone. The original left and right channels of the music tracks.
+- Task 2 Car. The references are the left and right signals at the ear canal of a listener auditioning the music over a stereo set-up of two loudspeakers, in an anechoic room.
+
 ## 4. References
 
 <a name="refs"></a>

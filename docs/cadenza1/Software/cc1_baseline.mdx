@@ -81,11 +81,13 @@ This signal is then passed to a simple hearing aid (HA) composed of a NAL-R ampl
 
 The output of the HA is use for HAAQI and listening panel evaluation.
 
-An important issue to be aware of is the possibility of the hearing aid producing signals with an amplitude that causes clipping. This happens for some samples in the baseline (because our baseline is very simple!).
+An important issue to be aware of is the possibility of the hearing aid producing signals with an amplitude that causes clipping.
 
 More details can be found in the [core software](cc1_core_software) page.
 
 #### 2.1.1 Loudness consideration in enhancement
+
+The baseline enhancement system simply sets an appropriate level for the original music based on the music and audiogram of the listener. It isn't perfect and some samples still clip!
 
 1. Computes the level in dB LUFS (loudness units relative to full scale) of the original song, i.e., the song from the dataset.
 2. Computes the average hearing loss (HL) for each ear.  Refer to [measuring hearing impairment](docs/learning_resources/Hearing_impairment/edu_measuring_HI)
@@ -110,11 +112,13 @@ The levels of -14 and -19 dB LUFS were set according to [Spotify standard](https
 
 #### 2.1.1 Loudness consideration in evaluation
 
-The evaluation procedure is as follows:
+For the signal passing through the hearing aid. The enhanced signal ("processed music in above diagram") has the car acoustic characteristics and car noise added (See [here](cc1_core_software#21-car-acoustics-model)).
+This then goes into the hearing aid, which is a simple linear amplifier. If any sample values exceed +1 (or are below -1) on the output of the hearing aid, they are then set to +1 (or -1). Consequently, setting the levels of the enhancement signals to prevent clipping at this point is vital.
 
-1. Takes the enhanced signal and adds the car acoustic characteristics (See [here](cc1_core_software#21-car-acoustics-model)).
-2. Anechoic HRTFs at the listener eardrums are added to the original song from the dataset.
-3. The reference signal is then normalise to the lower loudness between the enhanced signal after adding the car acoustics and -14 dB LUFS.
+For the reference signal ("clean music") passing to HAAQI, a simple stereo set up in a dead room is simulated:
+
+1. Anechoic HRTFs are applied to the reference signal to simulate the stereo set-up. This then gives the music at the listener ear canal.
+2. The reference signal is then normalise to the lower loudness between the enhanced signal after adding the car acoustics and -14 dB LUFS.
 This becomes the reference signal for HAAQI evaluation.
 
 ***
