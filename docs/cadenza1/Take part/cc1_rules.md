@@ -42,8 +42,8 @@ The only data that can be used to *enhance* the evaluation data are:
 - The listener characterisation (e.g. audiogram).
 - The audio input signals to the car stereo.
 - The metadata for the car noise generator (e.g. the speed).
-- SNR of the Music and the car noise at the hearing aid's microphones.
-- Head rotation in angles.
+- The SNR of the music and the car noise at the hearing aid's microphones.
+- The angle of the listener's head rotation.
 
 ## 4. Computational restrictions
 
