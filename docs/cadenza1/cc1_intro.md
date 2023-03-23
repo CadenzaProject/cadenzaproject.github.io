@@ -8,8 +8,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 :::info
-* Registration is open! [Register Here](/docs/cadenza1/Take%20part/cc1_registration.mdx)
-* Request access to Datasets [here](/docs/cadenza1/Take%20part/cc1_download.md)
+* Registration is open! [Register here](/docs/cadenza1/Take%20part/cc1_registration.mdx).
+* Request access to Datasets [here](/docs/cadenza1/Take%20part/cc1_download.md).
 :::
 
 The Cadenza Challenges are about improving the **perceived audio quality of recorded music for people with a hearing loss**.
