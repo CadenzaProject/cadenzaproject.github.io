@@ -4,6 +4,9 @@ title: Objective measures for hearing-aid audio
 sidebar_label: Objective measures for hearing-aid audio
 sidebar_position: 3.2
 ---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 ## HASPI and HASQI
 Below is a by James Kates on two objective measures used for evaluating the intelligibility and quality of hearing-aid processed *speech*. These metrics have much in common with the metric we're using in the first challenges for music, HAAQI.
 
@@ -25,7 +28,7 @@ HAAQI was developed by James Kates and Kathryn Arehart and is an intrusive (doub
 <figcaption>Figure 1, Schematic for HAAQI [1].</figcaption>
 </figure>
 
-[1] [Kates, J.M. and Arehart, K.H., 2015. The hearing-aid audio quality index (HAAQI). IEEE/ACM transactions on audio, speech, and language processing, 24(2), pp.354-365.](https://ieeexplore.ieee.org/document/7352333)
+[1] Kates, J.M. and Arehart, K.H., 2015. [The hearing-aid audio quality index (HAAQI)](https://ieeexplore.ieee.org/document/7352333). IEEE/ACM transactions on audio, speech, and language processing, 24, pp.354-365.
 
 
 
