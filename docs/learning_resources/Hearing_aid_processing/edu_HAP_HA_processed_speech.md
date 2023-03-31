@@ -1,15 +1,32 @@
 ---
 id: edu_HAP_HA_processed_speech
-title: Objective measures for Hearing-Aid Processed Speech
-sidebar_label: Objective measures for Hearing-Aid Processed Speech
+title: Objective measures for hearing-aid audio
+sidebar_label: Objective measures for hearing-aid audio
 sidebar_position: 3.2
 ---
-
-For the Clarity Workshop in 2021, James Kates gave a talk on hearing-aid processed speech. This talk and the rest of the workshop are freely available [online](https://www.youtube.com/playlist?list=PLNqx4n2qXsY_22KVZFoy9LxT6_ssxfSAS).
+## HASPI and HASQI
+Below is a by James Kates on two objective measures used for evaluating the intelligibility and quality of hearing-aid processed *speech*. These metrics have much in common with the metric we're using in the first challenges for music, HAAQI.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hp9NT1zkGz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-# Synopsis
+<details>
+<summary>Click here for synopsis</summary>
+
 Signal degradations, such as additive noise and nonlinear distortion, can reduce the intelligibility and quality of a speech signal. Predicting intelligibility and quality for hearing aids is especially difficult since these devices may contain intentional nonlinear distortion designed to make speech more audible to a hearing-impaired listener. This speech processing often takes the form of time-varying multichannel gain adjustments. Intelligibility and quality metrics used for hearing aids and hearing-impaired listeners must therefore consider the trade-offs between audibility and distortion introduced by hearing-aid speech envelope modifications. This presentation uses the Hearing Aid Speech Perception Index (HASPI) and the Hearing Aid Speech Quality Index (HASQI) to predict intelligibility and quality, respectively. These indices incorporate a model of the auditory periphery that can be adjusted to reflect hearing loss. They have been trained on intelligibility scores and quality ratings from both normal-hearing and hearing-impaired listeners for a wide variety of signal and processing conditions. The basics of the metrics are explained, and the metrics are then used to analyze the effects of additive noise on speech, to evaluate noise suppression algorithms, and to measure differences among commercial hearing aids.
+
+</details>
+
+## HAAQI (Hearing Aid Audio Quality Index)
+
+HAAQI was developed by James Kates and Kathryn Arehart and is an intrusive (double-ended) metric, requiring both a processed and reference signal [1]. A schematic is shown in Figure 1. HAAQI involves an auditory model including hearing thresholds to allow for hearing loss via the audiogram and gain. It then compares the temporal fine-structure (BM Vib in Fig. 1) and the envelope of the two signals (Env) using correlation (Corr) and quantifying spectal differences. (The processes are similar to HASQI; see video above). The main difference to HASQI is the way the separate linear and non-linear terms are combined to predict perceived quality ("combine terms"). The metric has been shown to predict well the effects of additive noise (e.g., background noise and/or artefacts) as well as noise reduction, nonlinearities (e.g., compression) and spectral shifts. But it has not been used before to explore demixed signals, as is being done in Task 1 of the 2023 challenge.
+
+<figure id="fig1">
+<img width="800" src={useBaseUrl('../img/haaqi_schematic.gif')} />
+<figcaption>Figure 1, Schematic for HAAQI [1].</figcaption>
+</figure>
+
+[1] [Kates, J.M. and Arehart, K.H., 2015. The hearing-aid audio quality index (HAAQI). IEEE/ACM transactions on audio, speech, and language processing, 24(2), pp.354-365.](https://ieeexplore.ieee.org/document/7352333)
+
+
 
 
