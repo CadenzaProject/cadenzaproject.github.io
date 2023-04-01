@@ -5,7 +5,7 @@ sidebar_label: Intelligent Sound Mixing
 sidebar_position: 3.2
 ---
 
-Can previous work in intelligent sound mixing help inform approaches to the Cadenza challenges? In this Q&A, Dr Bruno Fazenda from the Cadenza team discusses what we might learn from previous work on automatic sound mixing.
+**Can previous work in intelligent sound mixing help inform approaches to the Cadenza challenges? In this Q&A, Dr Bruno Fazenda from the Cadenza team discusses what we might learn from previous work on automatic sound mixing.**
 
 ### What is Intelligent Sound Mixing?
  
