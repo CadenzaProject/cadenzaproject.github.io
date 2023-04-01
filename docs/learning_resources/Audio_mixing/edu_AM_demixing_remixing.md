@@ -17,5 +17,5 @@ the main steps in source separation, including importing datasets and training m
 The [Deep learning for automatic mixing](https://dl4am.github.io/tutorial/landing-page.html) book, by
 Christian J. Steinmetz, Soumya Sai Vanka, Marco Martínez and Gary Bromham, provides a comprehensive tutorial that serves 
 as a starting point for researchers interested on applying the last deep learning techniques on automatic music mixing.
-A video for the tutorial is available [here](https://www.youtube.com/watch?v=HHUqXwsmua8).
+The video of the tutorial is available [here](https://www.youtube.com/watch?v=HHUqXwsmua8).
 
