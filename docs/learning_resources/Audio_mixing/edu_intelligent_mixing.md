@@ -38,6 +38,7 @@ You are making the processing done by the car stereo, so the strategy should be 
 4.	[Wilson, AD   and Fazenda, BM   2017, 'Populating the mix space : parametric methods for generating multitrack audio mixtures' , Applied Sciences, 7 (12) , p. 1329.](https://www.mdpi.com/2076-3417/7/12/1329)
 5.	[De Man, B., Reiss, J., & Stables, R. (2017). Ten years of automatic mixing. Proceedings of the 3rd Workshop on Intelligent Music Production, Salford, UK, 15 September 2017](https://www.open-access.bcu.ac.uk/4968/1/WIMP2017_DeManEtAl.pdf)
 
+### Further Material
 
-
-
+To know more about how to implement an intelligent sound mixing, please visit our dedicated link on
+[Learning Resources](/docs/learning_resources/Audio_mixing/edu_AM_demixing_remixing.md). 
