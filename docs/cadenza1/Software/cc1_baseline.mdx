@@ -18,7 +18,7 @@ Challenge entrants have a fully functioning baseline system to build from.
 
 The music databases (blue box) are available in object based format, allowing us to create both stereo input to the
 demixer (grey line) and music in VDBO (vocal, drums, bass, other) format (red lines).
-These later signals form the reference VDBO signals that are needed for the objective evaluation using HAAQI (Hearing Aid Audio Quality Index) [1].
+These later signals form the reference VDBO signals that are needed for the objective evaluation using [HAAQI](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) (Hearing Aid Audio Quality Index) [1].
 The demixing part is therefore a variant on a standard demixing challenge, except the quality of
 the separation is evaluated using HAAQI rather than a measure like SDR (Signal to Distortion Ratio).
 
@@ -41,7 +41,7 @@ i.e., left vocal, right vocal, left bass, right bass, and so on.
 Then, a NAL-R amplification and compression is applied to each stem using the personalized audiogram of each listener.
 NAL-R is a prescription formulation for fitting simple hearing aids. This then creates the output stems.
 
-These output stems are then evaluated by computing the mean HAAQI score of each stem. 
+These output stems are then evaluated by computing the mean [HAAQI](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) score of each stem. 
 
 For the remixing procedure, the baseline simply does a linear addition of the output stems. 
 
@@ -57,7 +57,7 @@ Your challenge is to improve the demixing and remixing blocks in the "enhancemen
 </figure>
 
 The music database (blue box) provide samples as input to the car stereo and also reference left and right
-stereo signals for evaluating using HAAQI. Your task is to process the music taking into account the listener
+stereo signals for evaluating using [HAAQI](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index). Your task is to process the music taking into account the listener
 audiogram and also the car noise. You have access to the car metadata (e.g. speed), which will determine
 the power spectrum of the car noise.
 
@@ -67,7 +67,7 @@ The effect of the 'room' acoustics is simulated by applying Binaural Room Impuls
 The car noise comes from a simulator we provide.
 
 After the car noise and acoustic simulation, the signals are then processed by a simple hearing aid.
-This then provides left and right signals that can be used for evaluation either by HAAQI or the listening panel.
+This then provides left and right signals that can be used for evaluation either by [HAAQI](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) or the listening panel.
 
 Your challenge is to improve the car stereo ('Enhancement'). The 'Evaluation' is fixed and should not be changed.
 
@@ -120,11 +120,11 @@ The levels of -14 and -19 dB LUFS were set according to [Spotify standard](https
 For the signal passing through the hearing aid. The enhanced signal ("processed music in above diagram") has the car acoustic characteristics and car noise added (See [here](cc1_core_software#21-car-acoustics-model)).
 This then goes into the hearing aid, which is a simple linear amplifier. If any sample values exceed +1 (or are below -1) on the output of the hearing aid, they are then set to +1 (or -1). Consequently, setting the levels of the enhancement signals to prevent clipping at this point is vital.
 
-For the reference signal ("clean music") passing to HAAQI, a simple stereo set up in a dead room is simulated:
+For the reference signal ("clean music") passing to [HAAQI](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index), a simple stereo set up in a dead room is simulated:
 
 1. Anechoic HRTFs are applied to the reference signal to simulate the stereo set-up. This then gives the music at the listener ear canal.
 2. The reference signal is then normalise to the lower loudness between the enhanced signal after adding the car acoustics and -14 dB LUFS.
-This becomes the reference signal for HAAQI evaluation.
+This becomes the reference signal for [HAAQI](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) evaluation.
 
 ***
 

@@ -8,12 +8,12 @@ sidebar_position: 3.3
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The same listener data is used for Task 1 and 2. We have provided metadata characterising the hearing abilities of the listeners, so the audio signals you 
-generate can be individualised. The same types of data are available for training and development.
+generate can be individualised. The same types of data are available for training and development. More on [hearing loss](../../learning_resources/Hearing_impairment/edu_HI_general) and [how it is measured](../../learning_resources/Hearing_impairment/edu_measuring_HI).
 
-For training, we will use the same 83 audiograms from the [Clarity project](https://claritychallenge.org/).
+For training, we will use the same 83 [audiograms](../../learning_resources/Hearing_impairment/edu_measuring_HI) from the [Clarity project](https://claritychallenge.org/).
 
 We constructed a new set of listeners to separate the training from the development listeners. 
-The development audiograms are a filtered, pseudo-random, selection from the
+The development [audiograms](../../learning_resources/Hearing_impairment/edu_measuring_HI) are a filtered, pseudo-random, selection from the
 von Gablenz and Holube (2019) dataset (https://zenodo.org/record/4995261#.Y_3O1HbP2Hu).
 We first filtered the audiograms to better-ear 4-frequency hearing loss between 25 and 60 dB.
 Then, we divided the data into BEA bands of 20-29, 30-39, 40-49 and 50-59 dB, and randomly chose from each
@@ -27,8 +27,7 @@ hearing-aid users: they use two hearing aids but the hearing loss may be asymmet
 tone air-conduction hearing loss will be between 25 and about 60 dB in the better ear.
 
 The quantification of the listeners' hearing is done with left and right pure tone air-conduction audiograms. 
-These measure the threshold at which people can hear a pure-tone sound. For more information about audiograms 
-please visit our section on [audiograms](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
+These measure the threshold at which people can hear a pure-tone sound. [More information](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
 
 ## Data file formats and naming conventions
 

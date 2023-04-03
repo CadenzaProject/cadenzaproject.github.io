@@ -29,7 +29,7 @@ For more information on augmenting and supplementing the training data, please s
 
 - We will use the MUSDB18-HQ's evaluation set which is made up of 50 songs.
 - You must process all of these for the complete songs.
-- All the music will be used for HAAQI evaluation.
+- All the music will be used for [HAAQI evaluation](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech).
 - We will then select a random 10-second sample from some of the pieces of music for listening panel evaluation.
 
 ***

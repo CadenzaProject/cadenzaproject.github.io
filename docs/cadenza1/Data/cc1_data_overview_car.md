@@ -40,7 +40,7 @@ responses from the eBrIRD ELOSPHERES dataset.
 
 - 700 30-second samples
 - You should process all the music.
-- All the music will be used for HAAQI evaluation.
+- All the music will be used for [HAAQI evaluation](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech).
 - We will then select a random 10-second sample from some of this music for listening panel evaluation.
 
 ***
