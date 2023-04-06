@@ -5,7 +5,7 @@ sidebar_label: Hearing loss and Hearing-Aid signal processing
 sidebar_position: 3.1
 ---
 
-For the Clarity Workshop in 2021, Karolina Smeds gave a talk on hearing loss and hearing-aid signal processing. This talk and the rest of the workshop are freely available [online](https://www.youtube.com/playlist?list=PLNqx4n2qXsY_22KVZFoy9LxT6_ssxfSAS).
+***For the Clarity Workshop in 2021, Karolina Smeds gave a talk on hearing loss and hearing-aid signal processing. This talk and the rest of the workshop are freely available [online](https://www.youtube.com/playlist?list=PLNqx4n2qXsY_22KVZFoy9LxT6_ssxfSAS).***
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/waPONoYrf8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

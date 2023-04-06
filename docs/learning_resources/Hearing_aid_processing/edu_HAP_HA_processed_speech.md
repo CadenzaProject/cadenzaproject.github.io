@@ -30,6 +30,24 @@ A schematic for the rest of HAAQI is shown Figure 1. HAAQI involves an auditory 
 <figcaption>Figure 1, Schematic for HAAQI [1].</figcaption>
 </figure>
 
+## User's Guide
+
+For more information about the design and use of HASPI, HASQI and HAAQI, please refer to the official [user's guide](/documents/Users_Guide_ver3.docx).
+
+:::warning Note to users
+
+In the HAAQI Python implementation, the parameter `equalisation` indicates if the `reference signal` already includes 
+an amplification or not. If the reference signal does not include an amplification, one have to set the parameter
+`equalisation = 1`. This will make to HAAQI to apply the NAL-R amplification. 
+
+
+It is important to note that the `processed signal` must include the hearing aid amplification before is presented to HAAQI. 
+No hearing aid amplification is applied to this signal within the HAAQI score.   
+
+:::
+
+## Reference
+
 [1] Kates, J.M. and Arehart, K.H., 2015. [The hearing-aid audio quality index (HAAQI)](https://ieeexplore.ieee.org/document/7352333). IEEE/ACM transactions on audio, speech, and language processing, 24, pp.354-365.
 
 [2] Byrne, D. and Dillon, H., 1986. The National Acoustic Laboratories'(NAL) new procedure for selecting the gain and frequency response of a hearing aid. Ear and hearing, 7(4), pp.257-265. 

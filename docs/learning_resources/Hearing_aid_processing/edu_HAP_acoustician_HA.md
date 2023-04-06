@@ -5,7 +5,7 @@ sidebar_label: An Acoustician's Experience
 sidebar_position: 3.3
 ---
 
-For the Clarity Workshop in 2021, Barry M. Gibbs gave a talk on an acoustician's experience of wearing a hearing aid. This talk and the rest of the workshop are freely available [online](https://www.youtube.com/playlist?list=PLNqx4n2qXsY_22KVZFoy9LxT6_ssxfSAS).
+***For the Clarity Workshop in 2021, Barry M. Gibbs gave a talk on an acoustician's experience of wearing a hearing aid. This talk and the rest of the workshop are freely available [online](https://www.youtube.com/playlist?list=PLNqx4n2qXsY_22KVZFoy9LxT6_ssxfSAS).***
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IiGRmm8PBHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
