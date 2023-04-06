@@ -1,6 +1,6 @@
 ---
 id: cc1_data_overview_car
-title: Task 2 car data
+title: Task 2 Car
 sidebar_label: Task2 car
 sidebar_position: 3.2
 ---
@@ -177,8 +177,3 @@ Scene data is stored in a single JSON with the following format.
 
 [1] Bonneville-Roussy, A., Rentfrow, P. J., Xu, M. K., & Potter, J. (2013). Music through the ages: Trends in musical 
 engagement and preferences from adolescence through middle adulthood. Journal of personality and social psychology, 105(4), 703.
-
-
-
-
-
