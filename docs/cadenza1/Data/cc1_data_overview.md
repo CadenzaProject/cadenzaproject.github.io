@@ -43,7 +43,8 @@ This brings us the problem that HAAQI is not taking into consideration any disto
 
 To solve this problem, we are computing a combined score for this task. The algorithm goes as follows:
 
-* First, using `reference signal`, detect all silence areas greater than two seconds. 
+* First, the reference and processed signals are normalised to values between -1 and 1. 
+* Using `reference signal`, detect all silence areas greater than two seconds. 
   * In average, the tempo of the training music is 120 bpm, which means 2 beats-per-second and `2 seconds` in a 4/4 bar.
 * Concatenate non-silence and silence segments from reference and processed signal, obtaining:
   * `non_silence_reference`
@@ -57,6 +58,7 @@ The final score is computed as:
 $$
 Score = \frac{Samples_{music} * HAAQI_{music} - Samples_{silence} * RMS_{silence}}{Samples_{music} + Samples_{silence}}
 $$
+
 
 ***
 
