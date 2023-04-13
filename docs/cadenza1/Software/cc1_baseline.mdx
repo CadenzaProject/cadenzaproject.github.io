@@ -32,9 +32,12 @@ changing the remixing to improve the audio quality for the listeners.
 
 ### 1.1 Baseline system
 
-The baseline system takes an out-of-the-box [Hybrid Demucs music source separation model](https://arxiv.org/abs/2111.03600)
-trained exclusively on the MUSDB18 training data. This model is publicly available in the
+We are presenting two baseline systems using two out-of-the-box systems trained exclusively on the MUSDB18 training data.
+
+1. The time-domain system [Hybrid Demucs music source separation model](https://arxiv.org/abs/2111.03600). This model is publicly available in the
 [TorchAudio library](https://pytorch.org/audio/main/generated/torchaudio.pipelines.HDEMUCS_HIGH_MUSDB.html#torchaudio.pipelines.HDEMUCS_HIGH_MUSDB).
+2. The spectrogram-based system [Open-Unmix model](https://github.com/sigsep/open-unmix-pytorch). This model is publicly available through `torch.hub`.
+
 The output of the demixing is 8 stems corresponding to the left and right channel for each source,
 i.e., left vocal, right vocal, left bass, right bass, and so on.
 
