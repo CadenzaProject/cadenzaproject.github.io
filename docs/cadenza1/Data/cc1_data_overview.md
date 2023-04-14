@@ -32,32 +32,53 @@ For more information on augmenting and supplementing the training data, please s
 - All the music will be used for [HAAQI evaluation](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech).
 - We will then select a random 10-second sample from some of the pieces of music for listening panel evaluation.
 
-### 2.1 HAAQI + RMS Score
+[//]: # (### 2.1 HAAQI + RMS Score)
 
-The HAAQI algorithm only computes the score from the non-silence segments of the signal. It first prunes any leading and trail silence.
-Then, it filters out any segments where the energy is below to certain threshold. 
-This works well in a traditional music quality task where one can expect that always a component of the music will be active.
-However, in the demixing task, it is expected that a single stem has several silent segments during the song. 
-For example, in a song, one can expect several segments where the `vocal` is silence, this, to favour a solo-instrument segment.
-This brings us the problem that HAAQI is not taking into consideration any distortion error from the silence segments. 
+[//]: # ()
+[//]: # (The HAAQI algorithm only computes the score from the non-silence segments of the signal. It first prunes any leading and trail silence.)
 
-To solve this problem, we are computing a combined score for this task. The algorithm goes as follows:
+[//]: # (Then, it filters out any segments where the energy is below to certain threshold. )
 
-* First, the reference and processed signals are normalised to values between -1 and 1. 
-* Using `reference signal`, detect all silence areas greater than two seconds. 
-  * In average, the tempo of the training music is 120 bpm, which means 2 beats-per-second and `2 seconds` in a 4/4 bar.
-* Concatenate non-silence and silence segments from reference and processed signal, obtaining:
-  * `non_silence_reference`
-  * `non_silence_processed`
-  * `silence_processed`
-* Compute HAAQI using the `non_silence_reference` and `non_silence_processed` signals ($HAAQI_{music}$)
-* Compute RMS of the `silence_processed` signal ($RMS_{silence}$)
+[//]: # (This works well in a traditional music quality task where one can expect that always a component of the music will be active.)
 
-Let $Samples_{music}$ the total number of samples of non-silence segments and $Samples_{silence}$ the total number of silence samples.
-The final score is computed as:
-$$
-Score = \frac{Samples_{music} * HAAQI_{music} - Samples_{silence} * RMS_{silence}}{Samples_{music} + Samples_{silence}}
-$$
+[//]: # (However, in the demixing task, it is expected that a single stem has several silent segments during the song. )
+
+[//]: # (For example, in a song, one can expect several segments where the `vocal` is silence, this, to favour a solo-instrument segment.)
+
+[//]: # (This brings us the problem that HAAQI is not taking into consideration any distortion error from the silence segments. )
+
+[//]: # ()
+[//]: # (To solve this problem, we are computing a combined score for this task. The algorithm goes as follows:)
+
+[//]: # ()
+[//]: # (* First, the reference and processed signals are normalised to values between -1 and 1. )
+
+[//]: # (* Using `reference signal`, detect all silence areas greater than two seconds. )
+
+[//]: # (  * In average, the tempo of the training music is 120 bpm, which means 2 beats-per-second and `2 seconds` in a 4/4 bar.)
+
+[//]: # (* Concatenate non-silence and silence segments from reference and processed signal, obtaining:)
+
+[//]: # (  * `non_silence_reference`)
+
+[//]: # (  * `non_silence_processed`)
+
+[//]: # (  * `silence_processed`)
+
+[//]: # (* Compute HAAQI using the `non_silence_reference` and `non_silence_processed` signals &#40;$HAAQI_{music}$&#41;)
+
+[//]: # (* Compute RMS of the `silence_processed` signal &#40;$RMS_{silence}$&#41;)
+
+[//]: # ()
+[//]: # (Let $Samples_{music}$ the total number of samples of non-silence segments and $Samples_{silence}$ the total number of silence samples.)
+
+[//]: # (The final score is computed as:)
+
+[//]: # ($$)
+
+[//]: # (Score = \frac{Samples_{music} * HAAQI_{music} - Samples_{silence} * RMS_{silence}}{Samples_{music} + Samples_{silence}})
+
+[//]: # ($$)
 
 
 ***
