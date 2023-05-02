@@ -35,12 +35,13 @@ perceptual attributes of music audio quality.
 Starting from 373 unique terms used by participants to describe music audio quality, a discussion process 
 was completed as outlined in the image below:
 
-
 <figure id="fig1">
-<img width="500" src={useBaseUrl('../img/Sensory_Eval_Flowchart.jpg')} />
-<figcaption>Figure 1, 89 terms that were used four or more times to describe the musical excerpts.</figcaption>
-</figure>
+<img width="1000" src={useBaseUrl('../img/Sensory_Eval_Flowchart.jpg')} />
 
+<figcaption>Figure 1, Objectives of each Focus Group session.</figcaption>
+</figure>
+  
+  
 At this stage in the work, we wanted to share the current state of these perceptual attributes and short definitions:
 
 | Attribute              | Short Definition                                                                                                                                                                                                                                                                    | 
