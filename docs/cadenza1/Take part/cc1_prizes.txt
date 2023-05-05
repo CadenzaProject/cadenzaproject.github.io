@@ -2,7 +2,7 @@
 id: cc1_prizes
 title: Prizes
 sidebar_label: Prizes
-sidebar_position: 7
+sidebar_position: 4
 ---
 
 Details to appear

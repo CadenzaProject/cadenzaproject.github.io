@@ -2,7 +2,7 @@
 id: cc1_data_listener
 title: Listener metadata
 sidebar_label: Listener data
-sidebar_position: 3.3
+sidebar_position: 5.3
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -2,7 +2,7 @@
 id: cc1_data_overview_car
 title: Task 2 Car
 sidebar_label: Task2 car
-sidebar_position: 3.2
+sidebar_position: 5.2
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

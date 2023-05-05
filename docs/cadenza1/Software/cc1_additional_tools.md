@@ -2,7 +2,7 @@
 id: cc1_additional_tools
 title: Additional tools
 sidebar_label: Additional tools
-sidebar_position: 4.4
+sidebar_position: 6.4
 ---
 
 The [Clarity-Cadenza git](https://github.com/claritychallenge/clarity) include a variety of additional tools. 

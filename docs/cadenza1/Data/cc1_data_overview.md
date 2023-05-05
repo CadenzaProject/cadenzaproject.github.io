@@ -2,7 +2,7 @@
 id: cc1_data_overview
 title: Task 1 Headphones
 sidebar_label: Task1 headphones
-sidebar_position: 3.1
+sidebar_position: 5.1
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

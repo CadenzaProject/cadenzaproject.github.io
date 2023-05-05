@@ -2,7 +2,7 @@
 id: cc1_core_software
 title: Core Software
 sidebar_label: Core Software
-sidebar_position: 4.2
+sidebar_position: 6.2
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

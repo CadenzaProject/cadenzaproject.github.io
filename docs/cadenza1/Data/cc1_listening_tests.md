@@ -2,7 +2,7 @@
 id: cc1_listening_tests
 title: Listening tests
 sidebar_label: Listening tests
-sidebar_position: 3.4
+sidebar_position: 5.4
 ---
 
 ## 1. Overview

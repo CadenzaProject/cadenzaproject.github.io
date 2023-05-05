@@ -2,7 +2,7 @@
 id: cc1_FAQs
 title: Frequently Asked Questions
 sidebar_label: FAQs/Resources
-sidebar_position: 2.7
+sidebar_position: 4.7
 ---
 
 ### Learning resources
