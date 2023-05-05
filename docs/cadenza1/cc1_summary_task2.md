@@ -88,8 +88,20 @@ The evaluation stage is a common for all submissions.
 As shown in Figure [[2](#fig2)], the evaluation takes the reference music signal. Note that, in this figure, the
 `Music` and the `Clean Music` are the same signal but are show in separate lines for illustration purposes.
 
+In this stage, both the enhanced and the reference signal are processed before the HAAQI evaluation. 
+See [Core Software](Software/cc1_core_software#21-car-acoustics-model).
 
-and the eight processed stems and computes the eight HAAQI scores.
+### 1.2.1 Process on the enhanced signal.
+
+1. Generate car noise based on the parameters from the metadata.
+2. Apply anechoic HRTFs to the noise.
+3. Apply car HRTFs to the enhanced signal.
+4. Scale the noise to match the SNR ar hearing aids
+5. Add both signal
+
+### 1.2.2 Process on the reference signal.
+
+1. Add anechoic room impulses.
 
 To learn more about HAAQI, please refer to our [Learning Resources](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech)
 and to our Python [HAAQI implementation](https://github.com/claritychallenge/clarity/blob/cad1task1-baseline2/clarity/evaluator/haaqi/haaqi.py).
