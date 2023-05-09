@@ -108,7 +108,7 @@ and to our Python [HAAQI implementation](https://github.com/claritychallenge/cla
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores.
 
-# 2. Baselines
+# 2. Baseline
 
 In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide a baseline system.
 Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task2/baseline)
