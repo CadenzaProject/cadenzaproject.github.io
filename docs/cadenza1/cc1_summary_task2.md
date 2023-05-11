@@ -18,7 +18,7 @@ We will share the results of your system with you so you can use them in a paper
 :::
 ::::::
 
-# 1. Description of the Problem
+## 1. Description of the Problem
 
 A listener with hearing loss wearing their hearing aids is sitting in a car and listening to recorded music played 
 over the car stereo (see Figure [[1](#fig1)])
@@ -39,7 +39,7 @@ As shown in Figure [[2](#fig2)], the system is split into two stages; the _enhan
 <figcaption>Figure 2, The baseline for the car listening scenario. For simplicity, not all signal paths are shown.</figcaption>
 </figure>
 
-## 1.1 Enhancement Stage
+### 1.1 Enhancement Stage
 :::info
 You can adapt and modify the baseline **enhancement** script or make your script.
 :::
@@ -48,7 +48,7 @@ Your task is to process the music in such a way that improves the music quality.
 For this, you have access to the car speed, which gives an estimation of the power spectrum of the noise
 but not the noise signal itself, so this is not a noise cancellation task.
 
-### 1.1.1 Dataset
+#### 1.1.1 Dataset
 
 In the enhancement stage, you have access to:
 
@@ -68,7 +68,7 @@ the [baseline readme](https://github.com/claritychallenge/clarity/tree/main/reci
 
 To download the datasets, please visit [Download data and software](Take%20part/cc1_download#21-task-2---car).
 
-### 1.1.2 Output
+#### 1.1.2 Output
 
 The output of this stage is one stereo signal:
 - Sample rate = 32000 Hz
@@ -84,7 +84,7 @@ they may well turn down the volume themselves. Also, there may be clipping in th
 if the processed signals are too large.
 :::
 
-## 1.2 Evaluation Stage
+### 1.2 Evaluation Stage
 
 :::danger Bear in mind
 You are not allowed to change the **evaluation** script provided in the baseline.
@@ -98,7 +98,7 @@ As shown in Figure [[2](#fig2)], the evaluation takes the reference music signal
 In this stage, both the enhanced and the reference signal are processed before the HAAQI evaluation. 
 See [Core Software](Software/cc1_core_software#21-car-acoustics-model).
 
-### 1.2.1 Process on the enhanced signal.
+#### 1.2.1 Process on the enhanced signal.
 
 1. Generate car noise based on the parameters from the metadata.
 2. Apply anechoic HRTFs to the noise.
@@ -106,7 +106,7 @@ See [Core Software](Software/cc1_core_software#21-car-acoustics-model).
 4. Scale the noise to match the SNR ar hearing aids
 5. Add both signal
 
-### 1.2.2 Process on the reference signal.
+#### 1.2.2 Process on the reference signal.
 
 1. Add anechoic room impulses.
 
@@ -115,7 +115,7 @@ and to our Python [HAAQI implementation](https://github.com/claritychallenge/cla
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores.
 
-# 2. Software
+## 2. Software
 
 All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza
 GitHub repository](https://github.com/claritychallenge/clarity).
@@ -140,13 +140,13 @@ git checkout tags/v0.3.2
 pip install pyclarity==0.3.2
 ```
 
-# 3. Baseline
+## 3. Baseline
 
 In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide a baseline system.
 Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task2/baseline)
 and [Baseline](Software/cc1_baseline#2-task-2-car) link to read more about the baseline and learn how to run it.
 
-# 4. Liderboard
+## 4. Liderboard
 
 :::tip Participate in our Liderboard
 If you have scores using the validation set, send us the `score.csv` file, and we will include you.
