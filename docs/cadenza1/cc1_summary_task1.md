@@ -21,7 +21,7 @@ We will share the results of your system with you so you can use them in a paper
 :::
 ::::::
 
-# 1. Description of the Problem
+## 1. Description of the Problem
 
 A listener with a hearing loss is listening music via headphones, not using their hearing aids. 
 
@@ -37,7 +37,7 @@ As shown in Figure [[1](#fig1)], the system is split into two stages; the _enhan
 </figure>
 
 
-## 1.1 Enhancement Stage
+### 1.1 Enhancement Stage
 :::info
 You can adapt and modify the baseline **enhancement** script or make your script.
 :::
@@ -48,7 +48,7 @@ remix signal optimised for a target listener.
 For this, you will have access to relevant datasets that will
 allow you to explore different approaches to separate the music and/or to remix the signals.  
 
-### 1.1.1 Dataset
+#### 1.1.1 Dataset
 
 In the enhancement stage, you have access to:
 
@@ -61,7 +61,7 @@ the [baseline readme](https://github.com/claritychallenge/clarity/tree/main/reci
 
 To download the datasets, please visit [Download data and software](Take%20part/cc1_download#21-task-1---headphones).
 
-### 1.1.2 Output
+#### 1.1.2 Output
 
 The output of this stage are:
 
@@ -83,7 +83,7 @@ they may well turn down the volume themselves. Also, there may be clipping in th
 if the processed signals are too large.
 :::
 
-## 1.2 Evaluation Stage
+### 1.2 Evaluation Stage
 
 :::danger Bear in mind
 You are not allowed to change the **evaluation** script provided in the baseline.
@@ -99,7 +99,7 @@ and to our Python [HAAQI implementation](https://github.com/claritychallenge/cla
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores. 
 
-# 2. Software
+## 2. Software
 
 All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza 
 GitHub repository](https://github.com/claritychallenge/clarity).
@@ -124,7 +124,7 @@ git checkout tags/v0.3.2
 pip install pyclarity==0.3.2
 ```
 
-# 3. Baselines
+## 3. Baselines
 
 In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide two baselines.
 Both baseline systems work in a similar way. Using a music source separation model, the systems
@@ -137,7 +137,7 @@ extra data was used for augmentation.
 Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task1/baseline)
 and [Baseline](Software/cc1_baseline#1-task-1-headphones) links to read more about the baselines and learn how to run them.
 
-# 4. Liderboard
+## 4. Liderboard
 
 :::tip Participate in our Liderboard
 If you have scores using the validation set, send us the `score.csv` file, and we will include you.
