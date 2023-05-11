@@ -76,9 +76,16 @@ The output of this stage are:
 
 For more details about the format of the submission, please refer to [Submission](Take%20part/cc1_submission) webpage.
 
+:::caution Note
+The responsibility for the final remixed signal level is yours. 
+It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant, 
+they may well turn down the volume themselves. Also, there may be clipping in the evaluation block in some tasks
+if the processed signals are too large.
+:::
+
 ## 1.2 Evaluation Stage
 
-:::danger
+:::danger Bear in mind
 You are not allowed to change the **evaluation** script provided in the baseline.
 Your output signals with be scored using this script.
 :::
@@ -92,7 +99,32 @@ and to our Python [HAAQI implementation](https://github.com/claritychallenge/cla
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores. 
 
-# 2. Baselines
+# 2. Software
+
+All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza 
+GitHub repository](https://github.com/claritychallenge/clarity).
+
+The official code for the first challenge was released on version `v0.3.2`. 
+To avoid any conflic, we highly recommend for you to work using version v0.3.2 and 
+not with the code from the `main` branch. To install this versions you can:
+
+1. Download the files of the release v0.3.2 from:
+https://github.com/claritychallenge/clarity/releases/tag/v0.3.2
+
+2. Clone the repository and checkout version v0.3.2
+
+```bash
+git clone https://github.com/claritychallenge/clarity.git
+git checkout tags/v0.3.2
+```
+
+3. Install pyclarity from PyPI as:
+
+```bash
+pip install pyclarity==0.3.2
+```
+
+# 3. Baselines
 
 In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide two baselines.
 Both baseline systems work in a similar way. Using a music source separation model, the systems
@@ -103,9 +135,9 @@ extra data was used for augmentation.
 2. `Open-UnMix`: This baseline system uses the `umxhq` model from Open-UnMix. This is a spetrogram-based model.
 
 Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task1/baseline)
-and [Baseline](Software/cc1_baseline#1-task-1-headphones) link to read more about the baselines and learn how to run them.
+and [Baseline](Software/cc1_baseline#1-task-1-headphones) links to read more about the baselines and learn how to run them.
 
-# 3. Liderboard
+# 4. Liderboard
 
 :::tip Participate in our Liderboard
 If you have scores using the validation set, send us the `score.csv` file, and we will include you.
