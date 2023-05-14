@@ -8,20 +8,22 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 ::::::tip Participate
-If you have an interesting idea of how you can improve music for people with hearing loss listening music in a car, 
-we invite you to make a copy of the baseline, adapt the enhancement script and experiment with your ideas. 
+Can you improve music for people with a hearing loss and hearing aid, listening to music in a noisy car? We invite you to make a copy of the baseline, adapt the enhancement script and experiment with your ideas. 
 Then, you can run the whole system to obtain the HAAQI scores.
 
-:::danger Remember
-After the objective evaluation we will run subjective evaluation using a listeners panel of 50 listeners.
+After the objective evaluation, we will run a subjective evaluation using a listeners panel of people with a hearing loss.
 We will share the results of your system with you so you can use them in a paper. 
+
+:::danger Note
+This is like a near-end speech enhancement task, but the signal to be processed is music. The hearing aid being used by the listener is fixed by us.
+
 :::
 ::::::
 
 ## 1. Description of the Problem
 
-A listener with hearing loss wearing their hearing aids is sitting in a car and listening to recorded music played 
-over the car stereo (see Figure [[1](#fig1)])
+A person with hearing loss is wearing their hearing aids and sitting in a car. They're listening to recorded music played 
+over the car stereo (see Figure [[1](#fig1)]).
 
 <figure id="fig1">
 <img width="250" src={useBaseUrl('/img/Car_scenario.png')} />
@@ -41,12 +43,11 @@ As shown in Figure [[2](#fig2)], the system is split into two stages; the _enhan
 
 ### 1.1 Enhancement Stage
 :::info
-You can adapt and modify the baseline **enhancement** script or make your script.
+You can adapt and modify the baseline **enhancement** script or make your own script.
 :::
 
-Your task is to process the music in such a way that improves the music quality.
-For this, you have access to the car speed, which gives an estimation of the power spectrum of the noise
-but not the noise signal itself, so this is not a noise cancellation task.
+Your task is to process the music in such a way that improves the reproduced quality of the music.
+For this, you have access to the car speed and other metadata, which gives an estimation of the power spectrum of the noise. You don't have the noise signal itself, so this is not a noise cancellation task.
 
 #### 1.1.1 Dataset
 
@@ -54,9 +55,9 @@ In the enhancement stage, you have access to:
 
 1. A music dataset containing 5600 30-second excepts of samples from 8 music genres. 
 2. Metadata of:
-    - Listener Characteristics (audiograms). [Listener Data](Data/cc1_data_listener)
-    - Car speed. This is very important as it provides some information about the car noise.
-    - SNR at the hearing aids. This tells you how loud is the noise in relation to the music.
+    - Listener Characteristics (audiograms) - see [listener Data](Data/cc1_data_listener)
+    - Car speed and metadata. This is very important as it provides information to approximately estimate the noise spectrum.
+    - SNR at the hearing aids. This tells you how loud the car noise relative to the music.
 
 :::caution
 The SNR at the hearing aids microphone information is an SNR relative to the music.
@@ -66,22 +67,21 @@ This means that simply increasing the music level will result in an increment of
 Please refer to [task 2 data page](Data/cc1_data_overview_car) and
 the [baseline readme](https://github.com/claritychallenge/clarity/tree/main/recipes/cad1/task2/baseline) for details.
 
-To download the datasets, please visit [Download data and software](Take%20part/cc1_download#21-task-2---car).
+To download the datasets, please visit [download data and software](Take%20part/cc1_download#21-task-2---car).
 
 #### 1.1.2 Output
 
 The output of this stage is one stereo signal:
-- Sample rate = 32000 Hz
-- Precision: 16bit integer
+- Sample rate = 32 kHz
+- Precision: 16 bit integer
 - Compressed using FLAC
 
-For more details about the format of the submission, please refer to [Submission](Take%20part/cc1_submission) webpage.
+For more details about the format of the submission, please refer to [submission](Take%20part/cc1_submission) webpage.
 
 :::caution Note
 The responsibility for the final signal level is yours.
-It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant,
-they may well turn down the volume themselves. Also, there may be clipping in the evaluation block in some tasks
-if the processed signals are too large.
+It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to someone in the listening panel,
+they may well turn down the volume. Also, there may be clipping in the evaluation block if the processed signals are too large.
 :::
 
 ### 1.2 Evaluation Stage
