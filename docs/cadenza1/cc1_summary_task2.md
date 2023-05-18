@@ -137,7 +137,7 @@ git checkout tags/v0.3.2
 3. Install pyclarity from PyPI as:
 
 ```bash
-pip install pyclarity==0.3.2
+pip install pyclarity==0.3.3
 ```
 
 ## 3. Baseline
