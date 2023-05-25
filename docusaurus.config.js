@@ -24,6 +24,13 @@ module.exports = {
         crossorigin: 'anonymous',
     }, "https://fonts.googleapis.com/icon?family=Material+Icons", ],
     plugins: [
+        [
+            '@docusaurus/plugin-google-gtag',
+            {
+                trackingID: 'G-GXN3NPFXC7',
+                anonymizeIP: false,
+            },
+        ],
         [require.resolve('docusaurus-lunr-search'), {
             indexBaseUrl: true
         }], './sitePlugin', require.resolve("docusaurus-plugin-image-zoom")
