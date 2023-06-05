@@ -20,7 +20,17 @@ This is like a near-end speech enhancement task, but the signal to be processed 
 :::
 ::::::
 
-## 1. Description of the Problem
+## 1. Leaderboard
+
+If you have scores using the validation set, send us the `score.csv` file, and we will include you.
+The score used for the ranking is the total average.
+
+| Ranking | Team                    | Average score | 
+|:-------:|:------------------------|:-------------:|
+|    1    | Baseline                |    0.1146     |
+
+
+## 2. Description of the Problem
 
 A person with hearing loss is wearing their hearing aids and sitting in a car. They're listening to recorded music played 
 over the car stereo (see Figure [[1](#fig1)]).
@@ -41,15 +51,16 @@ As shown in Figure [[2](#fig2)], the system is split into two stages; the _enhan
 <figcaption>Figure 2, The baseline for the car listening scenario. For simplicity, not all signal paths are shown.</figcaption>
 </figure>
 
-### 1.1 Enhancement Stage
+### 2.1 Enhancement Stage
 :::info
 You can adapt and modify the baseline **enhancement** script or make your own script.
 :::
 
 Your task is to process the music in such a way that improves the reproduced quality of the music.
-For this, you have access to the car speed and other metadata, which gives an estimation of the power spectrum of the noise. You don't have the noise signal itself, so this is not a noise cancellation task.
+For this, you have access to the car speed and other metadata, which gives an estimation of the power spectrum of the noise. 
+You don't have the noise signal itself, so this is not a noise cancellation task.
 
-#### 1.1.1 Dataset
+#### 2.1.1 Dataset
 
 In the enhancement stage, you have access to:
 
@@ -69,11 +80,11 @@ the [baseline readme](https://github.com/claritychallenge/clarity/tree/main/reci
 
 To download the datasets, please visit [download data and software](Take%20part/cc1_download#21-task-2---car).
 
-#### 1.1.2 Output
+#### 2.1.2 Output
 
 The output of this stage is one stereo signal:
 - Sample rate = 32 kHz
-- Precision: 16 bit integer
+- Precision: 16-bit integer
 - Compressed using FLAC
 
 For more details about the format of the submission, please refer to [submission](Take%20part/cc1_submission) webpage.
@@ -84,7 +95,7 @@ It’s worth bearing in mind that should your signals overall seem too loud to b
 they may well turn down the volume. Also, there may be clipping in the evaluation block if the processed signals are too large.
 :::
 
-### 1.2 Evaluation Stage
+### 2.2 Evaluation Stage
 
 :::danger Bear in mind
 You are not allowed to change the **evaluation** script provided in the baseline.
@@ -98,7 +109,7 @@ As shown in Figure [[2](#fig2)], the evaluation takes the reference music signal
 In this stage, both the enhanced and the reference signal are processed before the HAAQI evaluation. 
 See [Core Software](Software/cc1_core_software#21-car-acoustics-model).
 
-#### 1.2.1 Process on the enhanced signal.
+#### 2.2.1 Process on the enhanced signal.
 
 1. Generate car noise based on the parameters from the metadata.
 2. Apply anechoic HRTFs to the noise.
@@ -106,7 +117,7 @@ See [Core Software](Software/cc1_core_software#21-car-acoustics-model).
 4. Scale the noise to match the SNR ar hearing aids
 5. Add both signal
 
-#### 1.2.2 Process on the reference signal.
+#### 2.2.2 Process on the reference signal.
 
 1. Add anechoic room impulses.
 
@@ -115,23 +126,23 @@ and to our Python [HAAQI implementation](https://github.com/claritychallenge/cla
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores.
 
-## 2. Software
+## 3. Software
 
 All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza
 GitHub repository](https://github.com/claritychallenge/clarity).
 
-The official code for the first challenge was released on version `v0.3.2`.
-To avoid any conflic, we highly recommend for you to work using version v0.3.2 and
+The official code for the first challenge was released on version `v0.3.3`.
+To avoid any conflict, we highly recommend for you to work using version v0.3.3 and
 not with the code from the `main` branch. To install this versions you can:
 
-1. Download the files of the release v0.3.2 from:
-   https://github.com/claritychallenge/clarity/releases/tag/v0.3.2
+1. Download the files of the release v0.3.3 from:
+   https://github.com/claritychallenge/clarity/releases/tag/v0.3.3
 
-2. Clone the repository and checkout version v0.3.2
+2. Clone the repository and checkout version v0.3.3
 
 ```bash
 git clone https://github.com/claritychallenge/clarity.git
-git checkout tags/v0.3.2
+git checkout tags/v0.3.3
 ```
 
 3. Install pyclarity from PyPI as:
@@ -140,20 +151,8 @@ git checkout tags/v0.3.2
 pip install pyclarity==0.3.3
 ```
 
-## 3. Baseline
+## 4. Baseline
 
 In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide a baseline system.
 Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task2/baseline)
 and [Baseline](Software/cc1_baseline#2-task-2-car) link to read more about the baseline and learn how to run it.
-
-## 4. Liderboard
-
-:::tip Participate in our Liderboard
-If you have scores using the validation set, send us the `score.csv` file, and we will include you.
-:::
-
-The score used for the ranking is the total average.
-
-| Ranking | Team                    | Average score | 
-|:-------:|:------------------------|:-------------:|
-|    1    | Baseline                |    0.1146     |
