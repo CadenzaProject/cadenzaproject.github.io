@@ -144,7 +144,9 @@ If you have scores using the validation set, send us the `score.csv` file, and w
 
 The score used for the ranking is the average over all examples.
 
-| Ranking | Team                     | Average score | 
-|:-------:|:-------------------------|:-------------:|
-|    1    | Baseline Demucs          |    0.2592     |
-|    2    | Baseline OpenUnMix       |    0.2273     |
+| Ranking | Team               | Average score | 
+|:-------:|:-------------------|:-------------:|
+|    1    | Baseline Demucs    |    0.2592     |
+|    2    | Baseline OpenUnMix |    0.2273     |
+|    3    | xumx_slicq_v2      |    0.2046     |
+
