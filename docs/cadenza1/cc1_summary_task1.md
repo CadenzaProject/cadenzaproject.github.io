@@ -66,7 +66,7 @@ In the enhancement stage, you have access to:
 2. Music data for augmentation, if needed. 
 3. Listeners characteristics (audiograms). [Listener Data](Data/cc1_data_listener)
 
-Please refer to [task 1 data page](Data/cc1_data_overview) and 
+Please refer to [task 1 data page](Data/cc1_data_overview_headphone) and 
 the [baseline readme](https://github.com/claritychallenge/clarity/tree/main/recipes/cad1/task1/baseline) for details.
 
 To download the datasets, please visit [download data and software](Take%20part/cc1_download#21-task-1---headphones).
