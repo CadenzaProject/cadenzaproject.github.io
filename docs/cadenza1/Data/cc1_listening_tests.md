@@ -13,7 +13,10 @@ The listeners will be provided with Sennheiser PC-8 USB headsets to complete the
 
 ## 2. Levels
 
-For safety reasons, we allow participants to set the overall audio volume so that the sounds are not so loud as to be uncomfortable. This means that we cannot be sure at what dB SPL the signals will be presented (and as we don’t have any individual measures of loudness recruitment, we don’t know how loud they will seem to the participants either). It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant, they may well turn down the volume themselves.
+For safety reasons, we allow participants to set the overall audio volume so that the sounds are not so loud as to be uncomfortable. 
+This means that we cannot be sure at what dB SPL the signals will be presented 
+(and as we don’t have any individual measures of loudness recruitment, we don’t know how loud they will seem to the participants either). 
+It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant, they may well turn down the volume themselves.
  
 Our measurements of PC-8 headsets: 
 
@@ -26,8 +29,8 @@ Accordingly, in the submitted signals, 0 dB FS should correspond to 99 dB SPL (a
 
 ## 3. Music samples
 
-- A subset of music tracks (probably ~30) will be used from the evaluation dataset.
-- A 10-second sample will be extracted from each music track at a random time point and a short fade-in and fade-out applied.
+- A subset of music tracks will be used from the evaluation dataset.
+- A 15-second sample will be extracted from each music track at a random time point and a short fade-in and fade-out applied.
 - The code for extracting samples will be provided, please see [Additional Tools](../Software/cc1_additional_tools)
 
 ***

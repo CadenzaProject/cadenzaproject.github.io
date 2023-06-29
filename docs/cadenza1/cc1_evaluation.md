@@ -5,7 +5,8 @@ sidebar_label: Evaluation
 sidebar_position: 4
 ---
 :::info
-If you haven't received your TEAM ID and you already registered, please contact the team [here](https://groups.google.com/u/1/g/cadenza-challenge)
+If you haven't received your **TEAM ID** and you already registered, please contact the team [here](https://groups.google.com/u/1/g/cadenza-challenge).
+If you still don't register your team, please go [here](Take%20Part/cc1_registration).
 
 Please, to run the evaluation, first ensure you updated your code to pyclarity version 0.3.4
 and downloaded the data for,
@@ -92,11 +93,13 @@ you need to submit.
 
 ## 2. Task 2 - Car
 
+### 2.1 Evaluation Music Dataset
+
 Like the training and validation sets, the evaluation set is based on the small split of the FMA dataset and the MTG Jamendo dataset.
 The tracks were selected following the same procedure as the training and validation sets (see [here](Data/cc1_data_overview_car#11-music-data)).
 However, to keep the entrants' submission in manageable sizes, we reduced the test set to 10 tracks per genre. 
 
-### 2.1 Test Script
+### 2.2 Test Script
 
 Together with the dataset, we released the `PyCLarity` version `0.3.4`.
 This version includes small changes in the recipes that allow to process the signal and generates
