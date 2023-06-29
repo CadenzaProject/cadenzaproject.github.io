@@ -51,7 +51,7 @@ responses from the eBrIRD ELOSPHERES dataset.
 
 The baseline generates one output per scene:
 
-`<Dataset Split><Listener ID>_<Song ID>.wav`
+`<Dataset Split>/<Listener ID>/<Scene_ID>_<Listener ID>_<Song ID>.flac`
 
 Where:
 

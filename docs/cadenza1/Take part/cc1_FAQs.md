@@ -15,7 +15,7 @@ If you have more questions that aren't covered, please [contact us](http://caden
 
 
 ### What data can I use?
-You should be able to find the information on the [Rules](/docs/cadenza1/Take%20part/cc1_rules.md) or the [Data Overview](/docs/cadenza1/Data/cc1_data_overview_headphone.md) page.
+You should be able to find the information on the [Rules](/docs/cadenza1/Take%20part/cc1_rules) or the [Data Overview](/docs/cadenza1/Data/cc1_data_overview_headphone) page.
 
 ### I want to enter the first task without using the demixing/remixing approach
 This is fine (see [here](/docs/cadenza1/cc1_intro.md))! We are accepting alternative approaches. Please make sure that your approach is clear in your technical report.

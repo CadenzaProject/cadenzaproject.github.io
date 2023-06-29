@@ -40,10 +40,12 @@ Also, there may be clipping in the evaluation block in some tasks if the process
 
 You must submit the following audio for all the signals in the evaluation set:
 - The VDBO (vocal, drums, bass, other) demixed signals for both left and right.
+    - Predefined 30-second segment.
     - 16-bit
     - 24 kHz sampling rate
     - Compressed using the lossless FLAC compressor
 - The remixed stereo signal.
+    - Predefined 15-second segment.
     - 16-bit
     - 32 kHz sampling rate
     - Compressed using the lossless FLAC compressor
@@ -74,13 +76,12 @@ When you have registered you will receive a link to a Google Drive to which you 
 
 Materials uploaded will be visible to the Cadenza Team but not to other entrants.
 
-<!-- ### Naming and packaging signals
-I THOUGHT THE NAMING CONVENTION MIGHT NEED CHANGING HENCE COMMENTED OUT FOR NOW
-Your processed signals should be named using the conventions used by the baseline system, i.e., `<Scene ID>_<Listener ID>_HA-output.wav` and explained on the [data page](/docs/cadenza1/Data/cc1_data_overview).
+Your processed signals should be named using the conventions used by the baseline system, i.e.,
+for Task 1 `<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_<Channel>_<Stem>.flac` and
+`<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_remix.wav` as explained in
+[Task1 data page](../Data/cc1_data_overview_headphone), and for
+Task 2 `<Dataset Split>/<Listener ID>/<Scene_ID>_<Listener ID>_<Song ID>.flac` as explained in [Task2 data page](../Data/cc1_data_overview_car).
 These should be placed in a directory whose name is the unique team ID that you will be sent, e.g., `E001` and  then packaged using `zip` or `tar` or any standard packaging tool.
 The resulting file should be about 2 GB for the first round.
--->
 
-:::warning
-Note, in order to use the Google Drive you will need to have a Google account. If you anticipate problems using Google then please make arrangements to send us the materials by other means, e.g., via a service such as WeTransfer or similar.
-:::
+
