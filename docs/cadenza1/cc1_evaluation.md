@@ -28,7 +28,7 @@ python3 test.py path.root=/path/to/cadenza_data/dir \
         team_id=<Your_Team_ID>
 ```
 
-The script will produce a file we request you to submit called `submission_<Your_Team_ID>.zip` **[4 GB]**.
+The script will produce a file we request you to submit called `submission_<Your_Team_ID>.zip` **[23 GB]**.
 
 ### 1.1 Evaluation Music Dataset
 
