@@ -131,24 +131,24 @@ The output of the evaluation stage is a CSV file with all the HAAQI scores.
 All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza
 GitHub repository](https://github.com/claritychallenge/clarity).
 
-The official code for the first challenge was released on version `v0.3.3`.
-To avoid any conflict, we highly recommend for you to work using version v0.3.3 and
+The official code for the first challenge was released on version `v0.3.4`.
+To avoid any conflict, we highly recommend for you to work using version v0.3.4 and
 not with the code from the `main` branch. To install this versions you can:
 
-1. Download the files of the release v0.3.3 from:
-   https://github.com/claritychallenge/clarity/releases/tag/v0.3.3
+1. Download the files of the release v0.3.4 from:
+   https://github.com/claritychallenge/clarity/releases/tag/v0.3.4
 
-2. Clone the repository and checkout version v0.3.3
+2. Clone the repository and checkout version v0.3.4
 
 ```bash
 git clone https://github.com/claritychallenge/clarity.git
-git checkout tags/v0.3.3
+git checkout tags/v0.3.4
 ```
 
 3. Install pyclarity from PyPI as:
 
 ```bash
-pip install pyclarity==0.3.3
+pip install pyclarity==0.3.4
 ```
 
 ## 4. Baseline

@@ -12,9 +12,23 @@ Please, to run the evaluation, first ensure you updated your code to pyclarity v
 and downloaded the data for,
 * task 1 [download here](https://forms.gle/UQkuCxqQVxZtGggPA)  
 * task 2 [download here](https://forms.gle/2Y7KLZY23i7bH3Lo9)
+
 :::
 
 ## 1. Task 1 - Headphone
+
+The evaluation package contains all audio tracks and metadata files necessary for run the evaluation.
+
+* `cadenza_cad1_task1_evaluation.v1_0.tar.gz` **[1.9 GB]** - audio and metadata evaluation data.
+
+For processing the test data, run:
+```bash
+python3 test.py path.root=/path/to/cadenza_data/dir \
+        path.exp=/path/to/experiment/ \
+        team_id=<Your_Team_ID>
+```
+
+The script will produce a file we request you to submit called `submission_<Your_Team_ID>.zip` **[4 GB]**.
 
 ### 1.1 Evaluation Music Dataset
 
@@ -92,6 +106,23 @@ you need to submit.
 
 
 ## 2. Task 2 - Car
+
+The evaluation package contains all audio tracks and metadata files necessary for run the evaluation.
+
+* `cadenza_cad1_task2_evaluation.v1_0.tar.gz` **[375 MB]** - audio and metadata evaluation data.
+
+For processing the test data, run:
+
+```bash
+python3 test.py path.root=/path/to/cadenza_data/dir \
+        path.exp=/path/to/experiment/ 
+        path.scenes_file=/path/to/scenes.test.json \
+        path.scenes_listeners_file=/path/to/scenes_listeners.test.json \
+        evaluate.split=test \
+        team_id=<Your_Team_ID>
+```
+
+The script will produce a file we request you to submit called `submission_<Your_Team_ID>.zip` **[4 GB]**.
 
 ### 2.1 Evaluation Music Dataset
 
