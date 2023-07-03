@@ -10,8 +10,8 @@ If you still don't register your team, please go [here](Take%20Part/cc1_registra
 
 Please, to run the evaluation, first ensure you updated your code to pyclarity version 0.3.4
 and downloaded the data for,
-* task 1 [download here](https://drive.google.com/file/d/1_lgTLn31plSizQY7gG5y5Jthsm9SSmdj/view?usp=drive_link)  
-* task 2 [download here](https://drive.google.com/file/d/1R6jglyxDyAC4wFhAh77WXcnInBBVGwzm/view?usp=drive_link)
+* task 1 [download here](https://forms.gle/UQkuCxqQVxZtGggPA)  
+* task 2 [download here](https://forms.gle/2Y7KLZY23i7bH3Lo9)
 
 :::
 
