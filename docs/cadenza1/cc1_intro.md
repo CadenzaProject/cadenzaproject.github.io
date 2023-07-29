@@ -7,14 +7,9 @@ sidebar_position: 1
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::tip Evaluation Set 
-The **evaluation code** and **evaluation set** are now available.
-Please, go [here](cc1_evaluation) for details. 
-:::
 
 :::info
-* Registration is open! [Register here](/docs/cadenza1/Take%20part/cc1_registration.mdx).
-* Request access to Datasets [here](/docs/cadenza1/Take%20part/cc1_download.md).
+* Registration are closed!!
 :::
 
 The Cadenza Challenges are about improving the **perceived audio quality of recorded music for people with a hearing loss**.
