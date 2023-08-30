@@ -62,7 +62,10 @@ module.exports = {
                     items: [{
                         to: '/docs/cadenza1/cc1_intro/',
                         label: 'Challenge 1',
-                    }, ]
+                    }, {
+                        to: '/docs/icassp_2024/intro/',
+                        label: 'Challenge ICASSP 2024',
+                    }]
                 }, {
                     to: '/docs/learning_resources/learning_intro/',
                     label: 'Learning Resources',

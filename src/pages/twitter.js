@@ -27,10 +27,8 @@ function TwitterFeed() {
 }
 
 function Twitter() {
-    return ( <
-        Layout title = "Hello" >
-        <
-        div style = {
+    return ( <Layout title = "Hello" >
+        <div style = {
             {
                 display: "flex",
                 justifyContent: "center",
@@ -38,11 +36,8 @@ function Twitter() {
                 fontSize: "20px",
             }
         } >
-        <
-        TwitterFeed / >
-        <
-        /div> <
-        /Layout>
+        <TwitterFeed/>
+        </div> </Layout>
     );
 }
 export default Twitter;
