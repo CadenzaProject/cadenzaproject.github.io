@@ -72,13 +72,6 @@ that can improve music for people with a hearing loss. Your entry would replace 
 
 # What is to be provided
 
-* Music dataset (MUSDB-18HQ) for training and evaluation.
+* Music dataset (MUSDB18-HQ) for training and evaluation.
 * Listener characteristics, including audiograms.
 * Software including tools for augmenting training data, a baseline system, a fixed hearing aid implementation and code for scoring signals using the HAAQI hearing aid metrics.
-
-The scenario is similar to the [Task 1 from the First Clarity Challenge](../cadenza1/cc1_summary_task1) but with the following key differences:
-
-* Participants are asked to focus on the remixing only. 
-
-This site provides access to all the software, data and information that you need to get started.
-
