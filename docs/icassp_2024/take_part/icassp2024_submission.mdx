@@ -6,59 +6,19 @@ sidebar_position: 2.6
 ---
 
 :::info
-All teams are [required to register](./cc1_registration.mdx) prior to submission. Early registration will help us to plan the listening panel.
+All teams are [required to register](icassp2024_registration.mdx) prior to submission. [Key Dates](/docs/cadenza1/Take%20part/cc1_key_dates) including submission deadline.
 :::
 
-[Key Dates](/docs/cadenza1/Take%20part/cc1_key_dates) including submission deadline.
-
-<!-- ## What evaluation data is provided?
-
-The evaluation data consists of 1500 scenes. For each scene, you are provided with the signals received at each of the three microphones on the left and right hearing aid device. You will also be provided with JSON or csv formatted metadata consisting of
-
-  1. the audiograms and DTT results for a set of listeners and
-  2. a mapping of which listeners will listen to which scenes.
-
-There will also be some clean audio examples for the target talker, that are not the same as the target utterance.
-
-For the stage 1 HAAQI evalution, there will be one listener per scene and the scene-listener mapping will be the same for all teams.
-
-For the stage 2 listening test evaluation, there will be five listeners per scene and each team will have a separate scene-listener mapping. The file formats will be the same as used for the development data; for details see the [Data Overview](./Data/cc1_data_overview) page. 
--->
 
 ## 1. What audio do I need to submit?
 
-Signals should be submitted as 16-bit FLAC files with a 24 kHz or 32 kHz sampling rate depending on the signal (details below),
-and 0 dB FS corresponds to 100 dB SPL, given the capabilities of the headsets used by the listening panel.
-See the page on [listening tests](../data/cc1_listening_tests) for more information about reproduction levels from the headset.
-When playing signals to listeners we will then play them as is.
-The responsibility for the final signal level is therefore yours.
-It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant,
-they may well turn down the volume themselves.
-Also, there may be clipping in the evaluation block in some tasks if the processed signals are too large.
-
-### 1.1. Task 1: Headphones
-
 You must submit the following audio for all the signals in the evaluation set:
-- The VDBO (vocal, drums, bass, other) demixed signals for both left and right.
-    - Predefined 30-second segment.
-    - 16-bit
-    - 24 kHz sampling rate
-    - Compressed using the lossless FLAC compressor
 - The remixed stereo signal.
     - Predefined 15-second segment.
     - 16-bit
     - 32 kHz sampling rate
-    - Compressed using the lossless FLAC compressor
-
-For those replacing the whole enhancement block with another approach, just the left and right output signals from your enhancement processer are required.
-
-### 1.2. Task 2: Car
-
-You must submit the following audio for all the signals in the evaluation set:
-- The output processed music enhanced by the car stereo.
-    - 16-bit
-    - 32 kHz sampling rate
-    - Compressed using the lossless FLAC compressor
+    - Compressed using the lossless FLAC compressor 
+	- 0 dB FS corresponds to 100 dB SPL
 
 ## 2. Code
 
@@ -74,7 +34,7 @@ We encourage you to make your code open source.
     - Your report should include an abstract and introduction and sections on experimental setup/methodology including system information
       and model/network architecture, evaluation/results, discussion, conclusion and references.
       Please provide an estimation of the computational resources needed. You must describe any external data and pre-existing tools, software and models used.
-    - You can use the Interspeech 2023 [template](https://interspeech2023.org/wp-content/uploads/2023/01/INTERSPEECH_2023_Paper_Kit.zip).
+    - You can use the ICASSP 2024 2-page template.
 
 ## 4. Where do I submit the signals?
 
@@ -84,12 +44,7 @@ Materials uploaded will be visible to the Cadenza Team but not to other entrants
 
 Your processed signals should be named using the conventions used by the baseline system:
 
-* Task 1: `<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_<Channel>_<Stem>.flac` and
-`<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_remix.wav` as explained in
-[Task1 data page](../Data/cc1_data_overview_headphone)
-* Task 2: `<Dataset Split>/<Listener ID>/<Scene_ID>_<Listener ID>_<Song ID>.flac` as explained in [Task2 data page](../Data/cc1_data_overview_car).
+* Task 1: `<Listener ID>/<Song Name>/<Listener ID>_<Song Name>_remix.wav`
+
 These should be placed in a directory whose name is the unique team ID that you will be sent, e.g., `submission_E001` and  then packaged using `zip` or `tar` or any standard packaging tool.
-
-The resulting files should be about 21 GB for Task 1 and 7.3 GB for Task 2.
-
 

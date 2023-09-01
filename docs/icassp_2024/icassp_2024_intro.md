@@ -24,20 +24,80 @@ As Figure 1 shows, the baseline first demixes stereo tracks into a VDBO (vocal, 
 
 The block that can be changed by you is labelled *Enhancement* in Figure 1. While the baseline frames the problem as demixing/remixing, alternative approaches are very welcome. We are interested in systems that are either: (i) causal and low latency for live music, and (ii) non-causal for recorded music.
 
-# What is provided
+## Data
 
-* Music datasets for training and evaluation.
-* Listener characteristics, including audiograms.
-* Target gains for the remix.
-* Software including tools for augmenting training data, a baseline system, and code for scoring signals using the HAAQI metric.
+In the enhancement stage, you have access to:
 
-# Organizers
+1. Full length songs from MUSDB18-HQ dataset.
+2. Music data for augmentation, if needed. 
+3. Listeners characteristics (audiograms). [Listener Data](data/data_listener)
+4. Target gains for the VDBO stems used to mix the target stereo
 
-* Professor Trevor Cox, Dr Simone Graetzer, Dr Gerardo Roa, Dr Rebecca Vos, Dr Bruno Fazenda  
-  **Acoustic Engineering, University of Salford**
-* Professor Jon Barker  
-  **Computer Science, University of Sheffield**
-* Professor Michael Akeroyd, Dr Bill Whitmer, Dr Jenny Firth  
-  **School of Medicine, University of Nottingham**
-* Professor Alinka Greasley, Dr Scott Bannister  
-  **School of Music, University of Leeds** 
+Please refer to [data page](data/data_overview) and the [baseline readme](https://github.com/claritychallenge/clarity/tree/main/recipes/cad1/task1/baseline) for details.
+
+To download the datasets, please visit [download data and software](take_part/download).
+
+## Output
+
+1. One stereo remixed signal
+    - Sample rate = 32000 Hz
+    - Precision: 16bit integer
+    - Compressed using FLAC
+
+For more details about the format of the submission, please refer to the [submission](Take%20part/ICASSP2024_submission) webpage.
+
+:::caution Note
+The responsibility for the final remixed signal level is yours. 
+It’s worth bearing in mind there may be clipping in the evaluation block in some tasks
+if the processed signals are too large.
+:::
+
+## Evaluation Stage
+
+:::danger Warning
+You are not allowed to change the **evaluation** script provided in the baseline.
+Your output signals with be scored using this script.
+:::
+
+The evaluation stage computes HAAQI scores for the remixed stereo. To learn more about HAAQI, please refer to our [Learning Resources](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech)
+and to our Python [HAAQI implementation](https://github.com/claritychallenge/clarity/blob/cad1task1-baseline2/clarity/evaluator/haaqi/haaqi.py). 
+
+The output of the evaluation stage is a CSV file with all the HAAQI scores. 
+
+## 3. Software
+
+All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza 
+GitHub repository](https://github.com/claritychallenge/clarity).
+
+The official code for the first challenge was released in version `v0.3.4`. 
+To avoid any conflict, we highly recommend for you to work using version v0.3.4 and 
+not with the code from the `main` branch. To install this version:
+
+1. Download the files of the release v0.3.4 from:
+https://github.com/claritychallenge/clarity/releases/tag/v0.3.4
+
+2. Clone the repository and checkout version v0.3.4
+
+```bash
+git clone https://github.com/claritychallenge/clarity.git
+git checkout tags/v0.3.4
+```
+
+3. Install pyclarity from PyPI as:
+
+```bash
+pip install pyclarity==0.3.4
+```
+
+## 4. Baselines
+
+In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide two baselines.
+Both baseline systems work in a similar way. Using a music source separation model, the systems
+decompose the music into the target eight stems. Both models were trained exclusively on MUSDB18-HQ training set and no
+extra data was used for augmentation.
+
+1. `Demucs`: This baseline system uses the `Hybrid Demucs` model. This is a time-domain-based model.
+2. `Open-UnMix`: This baseline system uses the `umxhq` model from Open-UnMix. This is a spectrogram-based model.
+
+Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task1/baseline)
+and [Baseline](Software/cc1_baseline#1-task-1-headphones) links to read more about the baselines and learn how to run them.

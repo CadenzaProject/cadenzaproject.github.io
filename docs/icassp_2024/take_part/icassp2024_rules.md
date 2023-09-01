@@ -5,26 +5,23 @@ sidebar_label: Rules
 sidebar_position: 2.5
 ---
 
-
 ## 1. Teams
 
-- Teams must have [pre-registered](cc1_registration.mdx) and nominated a contact person.
+- Teams must have [pre-registered](icassp2024_registration.mdx) and nominated a contact person.
 - Teams can be from one or more institutions.
-- The organisers may enter the challenge themselves but will not be eligible to win any prizes.
 
 ## 2. Transparency
 
 - Teams must provide a technical document of up to 2 pages describing the system/model and any external data and pre-existing tools, software and models used.
 - We will publish all technical documents (anonymous or otherwise).
 - Teams are encouraged to make their code open source.
-- Anonymous entries are allowed but will not be eligible for any prizes.
-- Teams may reserve the right to be referred to using anonymous code names in the published rank ordering.
+- Anonymous entries are allowed.
 
 ## 3. What information can I use?
 
 ### 3.1. Training and development
 
-There is no limit on the amount of training data that can be generated using our tools and training data sets. Teams can also expand the training data through simple automated modifications. However, teams that do this must make a second submission using only the official audio files and signal generation tool. All the audio or metadata can be used during training and development.
+There is no limit on the amount of training data that can be generated using our tools and the provided training data sets. You may not use other datasets or start with models pretrained on private datasets. Teams can also expand the training data through simple automated modifications. However, teams that do this must make a second submission using only the official audio files and signal generation tool. All the audio or metadata can be used during training and development.
 
 You should **not** use the evaluation data set for training or tuning the system.
 
@@ -34,50 +31,30 @@ The only data that can be used to *enhance* the evaluation data are:
 
 #### Task 1: Headphones
 
-- The listener characterisation (e.g. audiogram).
-- The stereo music input signals to the headphones.
-
-#### Task 2: Car
-
-- The listener characterisation (e.g. audiogram).
-- The audio input signals to the car stereo.
-- The metadata for the car noise generator (e.g. the speed).
-- The SNR of the music and the car noise at the hearing aid's microphones.
-- The angle of the listener's head rotation.
+- The listener characterisation (e.g. audiogram) to allow personalisation.
+- The stereo music input signals to the headphones or hearing aid.
 
 ## 4. Computational restrictions
 
-- There is no need for processing to be causal, as both scenarios are for recorded music.
-- There is no limit on computational cost.
-- Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement* in [Figure 1](../cc1_intro#track-1-headphones) and [Figure 2](../cc1_intro#track-2-car) in the first challenge [Overview](/docs/cadenza1/cc1_intro#overview). These are:
-	- Task 1: the headphone demixer/remixer. 
-	- Task 2 the car stereo processer.
-- While HAAQI is being used to complement the listening panel evaluation, other metrics and approaches can be used by the teams.
+- Systems must either be:
+-- causal and low latency to allow them to work with live music, or
+-- non-causal, for use with recorded music.
+- There is no limit on computational cost, but entrants must report model size.
+
+- Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement*
+- While HAAQI is being used for evaluation, other metrics and approaches can be used by the teams during training.
 
 ## 5. Submitting multiple entries
 
-You can submit two entries, where one is optimised for HAAQI and the other for listening tests if you wish. In this case:
-
-- You must register two teams, submitting each entry as a different team.
-- In your documentation, you must make it clear, which has been optimised for listening tests and the relationship between the two entries.
-- Both systems will be evaluated via HAAQI.
+This will be allowed if very different approaches are used.
 
 ## 6. Evaluation of systems
 
-### 6.1. Stage 1: Objective evaluation
+Music: we will use the MUSDB18-HQ's evaluation set which is made up of 50 songs. We will ask teams to submit defined 15-30 second segments from the remixed stereo for each track.
+Gains: We will provide metadata giving the target mix for the VDBO tracks for the evaluation.
+Listener audiograms: we will use 50 real measured audiograms that have been collected as part of the Cadenza project.
 
-Entries will be ranked according to average HAAQI score across all signals in the evaluation dataset. We will use the HAAQI implementation in the baseline system. For Task 1 headphones, the HAAQI evaluation will be on the demixed signals, for Task 2 car, the HAAQI evaluation is on the output of the hearing aid.
-
-For anyone entering Task 1 by a different approach to demixing/remixing, their entries will not be objectively evaluated, because no suitable metric currently exists.
-
-### 6.2. Stage 2: Listening test evaluation
-
-- There is a limit on how many systems can be evaluated by the listener panel.
-- The expectation is that only one entry can go through to the listener panel from any entrant.
-- We will choose which ones will go to the listener panel based on:
-   - The scores by the objective metric HAAQI.
-   - The approach detailed in the technical report.
-   - Informal listening by the Cadenza team.
+Entries will be ranked according to average HAAQI score across all signals in the evaluation dataset. We will also report whether the systems are causal or non-causal in the rank order table and model size.
 
 ## 7. Intellectual property
 
