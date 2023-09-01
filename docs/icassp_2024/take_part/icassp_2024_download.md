@@ -2,7 +2,7 @@
 id: download
 title: Download data and software
 sidebar_label: Download data and software
-sidebar_position: 2.5
+sidebar_position: 2.2
 ---
 
 ## 1. Software
