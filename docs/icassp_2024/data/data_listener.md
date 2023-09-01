@@ -2,7 +2,7 @@
 id: ICASSP_data_listener
 title: Listener metadata
 sidebar_label: Listener data
-sidebar_position: 4.5
+sidebar_position: 4.2
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

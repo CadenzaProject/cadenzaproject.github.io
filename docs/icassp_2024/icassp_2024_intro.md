@@ -14,11 +14,12 @@ Someone with a hearing loss is listening to music via their hearing aids or head
 There is a global challenge of an ageing population, which will contribute to 1 in 10 people having disabling hearing loss by 2050. Hearing loss causes problems when listening to music. It can make picking out lyrics more difficult, with music becoming duller as high frequencies disappear. This reduces the enjoyment of music and can lead to disengagement from listening and music-making, reducing the health and well-being effects people otherwise get from music. We want to get more of the ICASSP community to consider diverse hearing and so allow those with a hearing loss to benefit from the latest signal processing advances.
 
 ## The Task 
+
 As Figure 1 shows, the baseline first demixes stereo tracks into a VDBO (vocal, drums, bass and other) representation. This then allows a personalised remixing for the listener by changing the level of the different elements of the music. We provide the desired gains for the remixing. The "NAL-R" amplification is a standard way of compensating for the hearing loss of listeners. To evaluate the quality of the remixing, we will use the objective metric 
 [HAAQI (Hearing aid audio quality index)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index).
 
 <figure id="fig1">
-<img width="800" src={useBaseUrl('/img/headphone_simple_v3.png')} />
+<img width="950" src={useBaseUrl('/img/icassp_2024/task_diagram.png')} />
 <figcaption>Figure 1, The baseline system.</figcaption>
 </figure>
 
