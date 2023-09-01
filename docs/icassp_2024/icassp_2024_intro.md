@@ -1,24 +1,35 @@
 ---
 id: intro
-title: The ICASSP 2024 Grand Challenge
+title: The ICASSP 2024 Cadenza Grand Challenge
 sidebar_label: ICASSP 2024 Introduction
 sidebar_position: 1
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
+# Overview
+Someone with a hearing loss is listening to music via their hearing aids or headphones. The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to improve the listening experience, for example by amplifying the vocals relative to the sound of the band. One approach to this would be to a demix the music and then apply gains to the separated tracks to change the balance of the remixed music.
 
-This ICASSP SP Cadenza Challenge is about improving the **perceived audio quality of recorded and/or live music for people with a hearing loss**.
-Hearing loss is a growing global problem. The WHO estimate that 430 million have moderate or severe impairment, 
-with this forecast to grow to 1 billion by 2050. 
-Only 17% of people with a disabling loss are receiving treatment such as hearing aids.
+## Why this challenge?
+There is a global challenge of an ageing population, which will contribute to 1 in 10 people having disabling hearing loss by 2050. Hearing loss causes problems when listening to music. It can make picking out lyrics more difficult, with music becoming duller as high frequencies disappear. This reduces the enjoyment of music and can lead to disengagement from listening and music-making, reducing the health and well-being effects people otherwise get from music. We want to get more of the ICASSP community to consider diverse hearing and so allow those with a hearing loss to benefit from the latest signal processing advances.
 
-:::tip What do we mean by audio quality?
-Imagine listening to the same music track in two different ways.
-First listening via a low quality mp3 played on a cheap cell phone, and then via a high quality wav heard over
-studio-grade loudspeaker monitors. The underlying music is the same in both cases, but the *audio quality* is very
-different - this is what we are interested in.
-:::
+## The Task 
+As Figure 1 shows, the baseline first demixes stereo tracks into a VDBO (vocal, drums, bass and other) representation. This then allows a personalised remixing for the listener by changing the level of the different elements of the music. We provide the desired gains for the remixing. The "NAL-R" amplification is a standard way of compensating for the hearing loss of listeners. To evaluate the quality of the remixing, we will use the objective metric 
+[HAAQI (Hearing aid audio quality index)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index).
+
+<figure id="fig1">
+<img width="800" src={useBaseUrl('/img/headphone_simple_v3.png')} />
+<figcaption>Figure 1, The baseline system.</figcaption>
+</figure>
+
+The block that can be changed by you is labelled *Enhancement* in Figure 1. While the baseline frames the problem as demixing/remixing, alternative approaches are very welcome. We are interested in systems that are either: (i) causal and low latency for live music, and (ii) non-causal for recorded music.
+
+# What is provided
+
+* Music datasets for training and evaluation.
+* Listener characteristics, including audiograms.
+* Target gains for the remix.
+* Software including tools for augmenting training data, a baseline system, and code for scoring signals using the HAAQI metric.
 
 # Organizers
 
@@ -29,49 +40,4 @@ different - this is what we are interested in.
 * Professor Michael Akeroyd, Dr Bill Whitmer, Dr Jenny Firth  
   **School of Medicine, University of Nottingham**
 * Professor Alinka Greasley, Dr Scott Bannister  
-  **School of Music, University of Leeds**
-
-# Overview
-
-Consider someone with a hearing loss listening to music via headphones without their hearing aids.
-The challenge is to develop a system that can allow a personalised remixing of the music to
-improve the audio quality for someone with a hearing loss.
-
-Signal processing of music generates hundreds of papers each year, yet only 0.4% of papers in this area over the 
-last 5 years have considered hearing loss, hearing aids or cochlear implants. 
-There are critical barriers preventing signal processing researchers considering hearing loss:
-* Insufficient awareness of the growing importance of hearing loss. 
-* Lack of relevant open-source databases, software and benchmarking cases.
-* Lack of free-to-enter challenges to drive innovation.
-* Researchers not having the knowledge to work with hearing impairment.
-* Insufficient conference sessions considering aural diversity.
-
-In this ICASSP SP Cadenza Challenge will help lower these barriers. Consequently, this challenge is designed to:
-* Get the latest advancements in music signal processing applied to the situation where a listeners have a hearing loss.
-* Increase the number of music signal processing researchers in academia and industry who engaging with hearing difference.
-
-## The Task 
-
-Someone with a hearing loss is listening via headphones, not using their hearing aids. 
-As Figure 1 shows, the machine learning challenge here is to first demix stereo tracks into a 
-VDBO (vocal, drums, bass and other) representation. 
-This then allows a personalised remixing for the listener that has better audio quality. 
-For example, for some music you might amplify the vocals to improve the audibility of the lyrics.
-
-To evaluate the quality of the remixing, we will use the objective metric 
-[HAAQI (Hearing aid audio quality index)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index).
-
-The block that can be changed by you is labelled *Enhancement* in Figure 1.
-While the main focus is on demixing/remixing, we'll accept entries using alternative signal processing approaches
-that can improve music for people with a hearing loss. Your entry would replace the whole box labelled enhancement.
-
-<figure id="fig1">
-<img width="800" src={useBaseUrl('/img/headphone_simple_v3.png')} />
-<figcaption>Figure 1, The baseline system. For simplicity, not all signal paths are shown.</figcaption>
-</figure>
-
-# What is to be provided
-
-* Music dataset (MUSDB18-HQ) for training and evaluation.
-* Listener characteristics, including audiograms.
-* Software including tools for augmenting training data, a baseline system, a fixed hearing aid implementation and code for scoring signals using the HAAQI hearing aid metrics.
+  **School of Music, University of Leeds** 
