@@ -44,7 +44,7 @@ To download the datasets, please visit [download data and software](take_part/do
     - Precision: 16bit integer
     - Compressed using FLAC
 
-For more details about the format of the submission, please refer to the [submission](Take%20part/ICASSP2024_submission) webpage.
+For more details about the format of the submission, please refer to the [submission](take_part/ICASSP2024_submission) webpage.
 
 :::caution Note
 The responsibility for the final remixed signal level is yours. 
