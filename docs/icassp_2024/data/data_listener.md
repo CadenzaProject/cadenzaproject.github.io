@@ -1,5 +1,5 @@
 ---
-id: ICASSP_data_listener
+id: data_listener
 title: Listener metadata
 sidebar_label: Listener data
 sidebar_position: 4.2

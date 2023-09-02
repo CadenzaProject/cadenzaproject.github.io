@@ -15,13 +15,13 @@ If you have more questions that aren't covered, please [contact us](http://caden
 
 
 ### What data can I use?
-You should be able to find the information on the [Rules](/docs/cadenza1/Take%20part/cc1_rules) or the [Data Overview](/docs/cadenza1/Data/cc1_data_overview_headphone) page.
+You should be able to find the information on the [Rules](ICASSP2024_rules) or the [Data Overview](../data/data_overview) page.
 
 ### I want to enter the challenge without using the demixing/remixing approach
-This is fine (see [here](/docs/cadenza1/cc1_intro.md))! We are accepting alternative approaches. Please make sure that your approach is clear in your technical report.
+This is fine (see [here](../intro))! We are accepting alternative approaches. Please make sure that your approach is clear in your technical report.
 
 ### How do I actually enter?
-You should be able to find the information you need about submitting your entry on the [Submission](/docs/cadenza1/Take%20part/cc1_submission.mdx) page. Please make sure you have signed up to our [Google group](https://groups.google.com/g/cadenza-challenge), as this will ensure you get updates about the challenge.
+You should be able to find the information you need about submitting your entry on the [Submission](ICASSP2024_submission) page. Please make sure you have signed up to our [Google group](https://groups.google.com/g/cadenza-challenge), as this will ensure you get updates about the challenge.
 
 
 

@@ -8,14 +8,28 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 # Overview
-Someone with a hearing loss is listening to music via their hearing aids or headphones. The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to improve the listening experience, for example by amplifying the vocals relative to the sound of the band. One approach to this would be to a demix the music and then apply gains to the separated tracks to change the balance of the remixed music.
+Someone with a hearing loss is listening to music via their hearing aids or headphones. 
+The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to 
+improve the listening experience, for example by amplifying the vocals relative to the sound of the band.
+One approach to this would be to a demix the music and then apply gains to the separated tracks to change the balance of the remixed music.
 
 ## Why this challenge?
 There is a global challenge of an ageing population, which will contribute to 1 in 10 people having disabling hearing loss by 2050. Hearing loss causes problems when listening to music. It can make picking out lyrics more difficult, with music becoming duller as high frequencies disappear. This reduces the enjoyment of music and can lead to disengagement from listening and music-making, reducing the health and well-being effects people otherwise get from music. We want to get more of the ICASSP community to consider diverse hearing and so allow those with a hearing loss to benefit from the latest signal processing advances.
 
 ## The Task 
 
-As Figure 1 shows, the baseline first demixes stereo tracks into a VDBO (vocal, drums, bass and other) representation. This then allows a personalised remixing for the listener by changing the level of the different elements of the music. We provide the desired gains for the remixing. The "NAL-R" amplification is a standard way of compensating for the hearing loss of listeners. To evaluate the quality of the remixing, we will use the objective metric 
+As Figure 1 shows, the **Enhancement** block first demixes stereo tracks into a VDBO (vocal, drums, bass and other) representation. 
+This then allows a personalised remixing for the listener by changing the level of the different elements of the music. 
+We provide the desired gains for the remixing. 
+The "NAL-R" amplification is a standard way of compensating for the hearing loss of listeners. 
+
+The **Evaluation** block, first, generates the _reference_ signal using the same gains used in the Enhancement.
+The reference signal corresponds to the _preferred music mixture_ by a listener with a hearing loss.
+
+In the Enhancement and Evaluation blocks, we apply a LUFS normalisation after applying the gains to keep the level of the new mixture
+equal to the level of the original mixture.
+
+To evaluate the quality of the remixing, we will use the objective metric
 [HAAQI (Hearing aid audio quality index)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index).
 
 <figure id="fig1">
@@ -23,7 +37,9 @@ As Figure 1 shows, the baseline first demixes stereo tracks into a VDBO (vocal, 
 <figcaption>Figure 1, The baseline system.</figcaption>
 </figure>
 
-The block that can be changed by you is labelled *Enhancement* in Figure 1. While the baseline frames the problem as demixing/remixing, alternative approaches are very welcome. We are interested in systems that are either: (i) causal and low latency for live music, and (ii) non-causal for recorded music.
+The block that can be changed by you is labelled *Enhancement* in Figure 1. 
+While the baseline frames the problem as demixing/remixing, alternative approaches are very welcome. 
+We are interested in systems that are either: (i) causal and low latency for live music, and (ii) non-causal for recorded music.
 
 ## Data
 
@@ -34,9 +50,11 @@ In the enhancement stage, you have access to:
 3. Listeners characteristics (audiograms). [Listener Data](data/data_listener)
 4. Target gains for the VDBO stems used to mix the target stereo
 
-Please refer to [data page](data/data_overview) and the [baseline readme](https://github.com/claritychallenge/clarity/tree/main/recipes/cad1/task1/baseline) for details.
+Please refer to [data page](data/data_overview) and the [baseline readme](intro#data) for details.
 
-To download the datasets, please visit [download data and software](take_part/download).
+To download the datasets, please visit [download data and software](comming_soon) 
+
+[//]: # (&#40;take_part/download&#41;.)
 
 ## Output
 
@@ -102,3 +120,4 @@ extra data was used for augmentation.
 
 Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task1/baseline)
 and [Baseline](Software/cc1_baseline#1-task-1-headphones) links to read more about the baselines and learn how to run them.
+

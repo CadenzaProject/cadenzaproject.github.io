@@ -7,7 +7,7 @@ sidebar_position: 4.1
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Data and baseline code can be downloaded from the [download](../download) page following this [timeline](../key_dates).
+Data and baseline code can be downloaded from the [download](../take_part/download) page following this [timeline](../key_dates).
 
 
 ## 1 Training/validation datasets
@@ -48,7 +48,7 @@ dataset (https://zenodo.org/record/4995261#.Y_3O1HbP2Hu). This set follows the s
 - The evaluation set will be based on the MUSDB18-HQ's evaluation set which is made up of 50 songs.
 - Tracks will be split into several segments.
 - Teams will need to process all segments.
-- Segments will be evaluated using [HAAQI](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index).
+- Segments will be evaluated using [HAAQI](../../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech).
 
 ***
 
