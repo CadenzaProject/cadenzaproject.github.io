@@ -7,6 +7,14 @@ sidebar_position: 1
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
+:::info
+
+Please, refer to the challenge [timeline](key_dates) to know when the datasets and software will be available.
+Meanwhile, go through our website to familiarise with the challenge.
+
+:::
+
+
 # Overview
 Someone with a hearing loss is listening to music via their hearing aids or headphones. 
 The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to 
@@ -50,9 +58,9 @@ In the enhancement stage, you have access to:
 3. Listeners characteristics (audiograms). [Listener Data](data/data_listener)
 4. Target gains for the VDBO stems used to mix the target stereo
 
-Please refer to [data page](data/data_overview) and the [baseline readme](intro#data) for details.
+Please refer to [data page](data/data_overview) and the [baseline readme](intro#data) in GitHub for details.
 
-To download the datasets, please visit [download data and software](comming_soon) 
+To download the datasets, please visit [download data and software](take_part/download) 
 
 [//]: # (&#40;take_part/download&#41;.)
 
