@@ -1,5 +1,5 @@
 ---
-id: ICASSP2024_rules
+id: rules
 title: Rules
 sidebar_label: Rules
 sidebar_position: 2.5
@@ -7,7 +7,7 @@ sidebar_position: 2.5
 
 ## 1. Teams
 
-- Teams must have [pre-registered](icassp2024_registration.mdx) and nominated a contact person.
+- Teams must have [pre-registered](registration) and nominated a contact person.
 - Teams can be from one or more institutions.
 
 ## 2. Transparency

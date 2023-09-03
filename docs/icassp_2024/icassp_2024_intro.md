@@ -10,7 +10,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 :::info
 
 Please, refer to the challenge [timeline](key_dates) to know when the datasets and software will be available.
-Meanwhile, go through our website to familiarise with the challenge.
+Meanwhile, go through the website to familiarise with the challenge.
 
 :::
 
@@ -26,16 +26,16 @@ There is a global challenge of an ageing population, which will contribute to 1 
 
 ## The Task 
 
-As Figure 1 shows, the **Enhancement** block first demixes stereo tracks ("original mixture") into a VDBO (vocal, drums, bass and other) representation. 
+As Figure 1 shows, the **Enhancement** block first demixes stereo tracks ("original stereo mixture") into a VDBO (vocal, drums, bass and other) representation. 
 This then allows a personalised remixing for the listener by changing the level of the different elements of the music. 
 We provide the desired gains for the remixing. 
 The "NAL-R" amplification is a standard way of compensating for the hearing loss of the listeners. 
 
-The **Evaluation** block, first, generates the _reference_ signal using the same gains used in the Enhancement.
-The reference signal corresponds to the _preferred music mixture_ by a listener with a hearing loss.
+The **Evaluation** block, generates the _reference_ signal by applying the same gains used in the Enhancement.
+This reference signal corresponds to a simulated _preferred music mixture_ by a listener with a hearing loss.
 
 In the Enhancement and Evaluation blocks, we apply a LUFS normalisation after applying the gains to keep the level of the new mixture
-equal to the level of the original mixture.
+equal to the level of the original stereo mixture.
 
 To evaluate the quality of the remixing, we will use the objective metric
 [HAAQI (Hearing aid audio quality index)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index).
@@ -55,10 +55,13 @@ In the enhancement stage, you have access to:
 
 1. Full length songs from MUSDB18-HQ dataset.
 2. Music data for augmentation, if needed. 
-3. Listeners characteristics (audiograms) - see [Listener Data](data/data_listener)
+3. Listeners characteristics (audiograms)
+[//]: # (3. - see [Listener Data]&#40;data/data_listener&#41;)
 4. Target gains for the VDBO stems used to mix the target stereo
 
-Please refer to [data page](data/data_overview) and the [baseline readme](intro#data) in GitHub for details.
+Please refer to [data page](data/data_overview) for details.
+
+[//]: # (and the [baseline readme]&#40;intro#data&#41; in GitHub for details.)
 
 To download the datasets, please visit [download data and software](take_part/download) 
 
@@ -71,7 +74,7 @@ To download the datasets, please visit [download data and software](take_part/do
     - Precision: 16bit integer
     - Compressed using FLAC
 
-For more details about the format of the submission, please refer to the [submission](take_part/ICASSP2024_submission) webpage.
+For more details about the format of the submission, please refer to the [submission](take_part/submission) webpage.
 
 :::caution Note
 The responsibility for the final remixed signal level is yours. 
@@ -87,45 +90,69 @@ Your output signals with be scored using this script.
 :::
 
 The evaluation stage computes HAAQI scores for the remixed stereo. To learn more about HAAQI, please refer to our [Learning Resources](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech)
-and to our Python [HAAQI implementation](https://github.com/claritychallenge/clarity/blob/cad1task1-baseline2/clarity/evaluator/haaqi/haaqi.py). 
+and to our Python [HAAQI implementation](https://github.com/claritychallenge/clarity/blob/main/clarity/evaluator/haaqi/haaqi.py). 
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores. 
 
-## 3. Software
+[//]: # (## 3. Software)
 
-All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza 
-GitHub repository](https://github.com/claritychallenge/clarity).
+[//]: # ()
+[//]: # (All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza )
 
-The official code for the first challenge was released in version `v0.3.4`. 
-To avoid any conflict, we highly recommend for you to work using version v0.3.4 and 
-not with the code from the `main` branch. To install this version:
+[//]: # (GitHub repository]&#40;https://github.com/claritychallenge/clarity&#41;.)
 
-1. Download the files of the release v0.3.4 from:
-https://github.com/claritychallenge/clarity/releases/tag/v0.3.4
+[//]: # ()
+[//]: # (The official code for the first challenge was released in version `v0.3.4`. )
 
-2. Clone the repository and checkout version v0.3.4
+[//]: # (To avoid any conflict, we highly recommend for you to work using version v0.3.4 and )
 
-```bash
-git clone https://github.com/claritychallenge/clarity.git
-git checkout tags/v0.3.4
-```
+[//]: # (not with the code from the `main` branch. To install this version:)
 
-3. Install pyclarity from PyPI as:
+[//]: # ()
+[//]: # (1. Download the files of the release v0.3.4 from:)
 
-```bash
-pip install pyclarity==0.3.4
-```
+[//]: # (https://github.com/claritychallenge/clarity/releases/tag/v0.3.4)
 
-## 4. Baselines
+[//]: # ()
+[//]: # (2. Clone the repository and checkout version v0.3.4)
 
-In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide two baselines.
-Both baseline systems work in a similar way. Using a music source separation model, the systems
-decompose the music into the target eight stems. Both models were trained exclusively on MUSDB18-HQ training set and no
-extra data was used for augmentation.
+[//]: # ()
+[//]: # (```bash)
 
-1. `Demucs`: This baseline system uses the `Hybrid Demucs` model. This is a time-domain-based model.
-2. `Open-UnMix`: This baseline system uses the `umxhq` model from Open-UnMix. This is a spectrogram-based model.
+[//]: # (git clone https://github.com/claritychallenge/clarity.git)
 
-Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task1/baseline)
-and [Baseline](Software/cc1_baseline#1-task-1-headphones) links to read more about the baselines and learn how to run them.
+[//]: # (git checkout tags/v0.3.4)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (3. Install pyclarity from PyPI as:)
+
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (pip install pyclarity==0.3.4)
+
+[//]: # (```)
+
+[//]: # (## 4. Baselines)
+
+[//]: # ()
+[//]: # (In the [Clarity/Cadenza GitHub repository]&#40;https://github.com/claritychallenge/clarity&#41;, we provide two baselines.)
+
+[//]: # (Both baseline systems work in a similar way. Using a music source separation model, the systems)
+
+[//]: # (decompose the music into the target eight stems. Both models were trained exclusively on MUSDB18-HQ training set and no)
+
+[//]: # (extra data was used for augmentation.)
+
+[//]: # ()
+[//]: # (1. `Demucs`: This baseline system uses the `Hybrid Demucs` model. This is a time-domain-based model.)
+
+[//]: # (2. `Open-UnMix`: This baseline system uses the `umxhq` model from Open-UnMix. This is a spectrogram-based model.)
+
+[//]: # ()
+[//]: # (Please, visit the [baseline on the GitHub webpage]&#40;https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task1/baseline&#41;)
+
+[//]: # (and [Baseline]&#40;Software/cc1_baseline#1-task-1-headphones&#41; links to read more about the baselines and learn how to run them.)
 
