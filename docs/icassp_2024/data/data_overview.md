@@ -10,12 +10,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Data and baseline code can be [downloaded from here](../take_part/download) following this [timeline](../take_part/key_dates).
 
 
-## 1 Training/validation datasets
+## 1 Training/development datasets
 
 ### Music
 
 The main training database is the MUSDB18-HQ, which has 100 training songs.
-Teams can split the training dataset into train and validation sets as better suits them.
+Teams can split the training dataset into train and development sets as better suits them.
 However, we recommend using the MUSDB18 proposed split which split the data into 86 songs for training and 14 songs for validation.
 The list of the 14 recommended validation tracks can be found [here](./tracks_details#1-recommended-validation-set) 
 
@@ -33,7 +33,7 @@ For more information on augmenting and supplementing the music training data, pl
 
 ### Listener characteristics
 
-We provide metadata characterising the hearing abilities of listeners, so the audio signals teams generate can be individualised. The same types of data is available for training and validation.
+We provide metadata characterising the hearing abilities of listeners, so the audio signals teams generate can be individualised. The same types of data is available for training and development.
 
 The quantification of the listeners' hearing is done with left and right pure tone air-conduction audiograms. 
 These measure the threshold at which people can hear a pure-tone sound. [More information on what audiograms are and how they're measured](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).

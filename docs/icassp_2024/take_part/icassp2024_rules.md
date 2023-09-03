@@ -21,26 +21,26 @@ sidebar_position: 2.5
 
 ### 3.1. Training and development
 
-There is no limit on the amount of training data that can be generated using our tools and the provided training data sets. You may not use other datasets or start with models pretrained on private datasets. Teams can also expand the training data through simple automated modifications. However, teams that do this must make a second submission using only the official audio files and signal generation tool. All the audio or metadata can be used during training and development.
-
-You should **not** use the evaluation data set for training or tuning the system.
+- There is no limit on the amount of training data that can be generated using our tools and the provided training data sets.
+- You may not use other datasets or start with models pretrained on private datasets.
+- Teams can also expand the training data through simple automated modifications. However, teams that do this must make a second submission using only the official audio files and signal generation tool.
+- All the audio or metadata can be used during training and development.
+- You must **not** use the evaluation data set for training or tuning the system.
 
 ### 3.2. Evaluation
 
 The only data that can be used to *enhance* the evaluation data are:
 
-#### Task 1: Headphones
-
 - The listener characterisation (e.g. audiogram) to allow personalisation.
+- The target gains.
 - The stereo music input signals to the headphones or hearing aid.
 
 ## 4. Computational restrictions
 
-- Systems must either be:
--- causal and low latency to allow them to work with live music, or
--- non-causal, for use with recorded music.
-- There is no limit on computational cost, but entrants must report model size.
-
+* Systems must either be:
+  *  causal and low latency to allow them to work with live music, or
+  *  non-causal, for use with recorded music.
+* There is no limit on computational cost, but entrants must report model size.
 - Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement*
 - While HAAQI is being used for evaluation, other metrics and approaches can be used by the teams during training.
 
@@ -50,9 +50,9 @@ This will be allowed if very different approaches are used.
 
 ## 6. Evaluation of systems
 
-Music: we will use the MUSDB18-HQ's evaluation set which is made up of 50 songs. We will ask teams to submit defined 15-30 second segments from the remixed stereo for each track.
-Gains: We will provide metadata giving the target mix for the VDBO tracks for the evaluation.
-Listener audiograms: we will use 50 real measured audiograms that have been collected as part of the Cadenza project.
+* Music: we will use the MUSDB18-HQ's evaluation set which is made up of 50 songs. We will ask teams to submit defined 15-30 second segments from the remixed stereo for each track.
+* Gains: We will provide metadata giving the target mix for the VDBO tracks for the evaluation.
+* Listener audiograms: we will use 50 real measured audiograms that have been collected as part of the Cadenza project.
 
 Entries will be ranked according to average HAAQI score across all signals in the evaluation dataset. We will also report whether the systems are causal or non-causal in the rank order table and model size.
 

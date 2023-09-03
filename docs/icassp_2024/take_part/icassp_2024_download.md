@@ -6,7 +6,7 @@ sidebar_position: 2.2
 ---
 :::info
 
-The content you wanted to access will be available following the project [timeline](key_dates).
+The content you want will be accessible very soon, see project [timeline](key_dates).
 
 :::
 
