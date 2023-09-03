@@ -11,7 +11,7 @@ Data and baseline code can be [downloaded from here](../take_part/download) foll
 
 :::info
 
-The content you want will be accessible very soon, see the challenge [timeline](key_dates).
+The content you want will be accessible very soon, see the challenge [timeline](../take_part/key_dates).
 
 :::
 

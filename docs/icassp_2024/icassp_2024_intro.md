@@ -9,7 +9,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 :::info
 
-Please, refer to the challenge [timeline](key_dates) to know when the datasets and software will be available.
+Please, refer to the challenge [timeline](take_part/key_dates) to know when the datasets and software will be available.
 Meanwhile, go through the website to familiarise with the challenge.
 
 :::
