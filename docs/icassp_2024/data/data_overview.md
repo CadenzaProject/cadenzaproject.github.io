@@ -7,7 +7,7 @@ sidebar_position: 4.1
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Data and baseline code can be downloaded from the [download](../take_part/download) page following this [timeline](../key_dates).
+Data and baseline code can be [downloaded from here](../take_part/download) following this [timeline](../take_part/key_dates).
 
 
 ## 1 Training/validation datasets
@@ -29,12 +29,14 @@ We leave the teams to decide how to use these as part of the training and develo
 Note, 46 songs from MedleydB version 1 are already part of the training set in MUSDB18-HQ.
 The list of these tracks can be found [here](./tracks_details#tracks-from-medleydb-contained-in-musdb18-hq)
 
-For more information on augmenting and supplementing the music training data, please see the rules.
+For more information on augmenting and supplementing the music training data, please see the [rules](../take_part/ICASSP2024_rules).
 
 ### Listener characteristics
 
-We provide metadata characterising the hearing abilities of listeners, 
-so the audio signals teams generate can be individualised. The same types of data is available for training and validation.
+We provide metadata characterising the hearing abilities of listeners, so the audio signals teams generate can be individualised. The same types of data is available for training and validation.
+
+The quantification of the listeners' hearing is done with left and right pure tone air-conduction audiograms. 
+These measure the threshold at which people can hear a pure-tone sound. [More information on what audiograms are and how they're measured](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
 
 For training, we provide 83 listener audiograms that were collected for the Clarity project (https://claritychallenge.org/).
 
@@ -54,7 +56,25 @@ dataset (https://zenodo.org/record/4995261#.Y_3O1HbP2Hu). This set follows the s
 
 ## 3. Data file formats and naming conventions
 
-### 3.1 Music metadata
+### 3.1 Listener metadata
+Audiograms data is stored in a JSON file per dataset with the following format.
+
+```json
+{
+    "L0001": {
+        "name": "L0001",
+        "audiogram_cfs": [250, 500, 1000, 2000, 3000, 4000, 6000, 8000],
+        "audiogram_levels_l": [10, 10, 20, 30, 40, 55, 55, 60],
+        "audiogram_levels_r": [ ... ],
+    },
+    "L0002": {
+        ...
+    },
+    ...
+}
+```
+
+### 3.2 Music metadata
 
 The MUSDB18-HQ metadata is provided in a single JSON file per dataset.
 
@@ -71,3 +91,5 @@ The MUSDB18-HQ metadata is provided in a single JSON file per dataset.
   ...
 ]
 ```
+
+
