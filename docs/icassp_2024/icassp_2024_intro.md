@@ -55,17 +55,13 @@ In the enhancement stage, you have access to:
 
 1. Full length songs from MUSDB18-HQ dataset.
 2. Music data for augmentation, if needed. 
-3. Listeners characteristics (audiograms)
-[//]: # (3. - see [Listener Data]&#40;data/data_listener&#41;)
+3. Listeners characteristics (audiograms) - see [Listener Data](data/data_listener)
 4. Target gains for the VDBO stems used to mix the target stereo
 
-Please refer to [data page](data/data_overview) for details.
-
+Please refer to [data page](data/icassp2024_data_overview) for details.
 [//]: # (and the [baseline readme]&#40;intro#data&#41; in GitHub for details.)
 
-To download the datasets, please visit [download data and software](take_part/download) 
-
-[//]: # (&#40;take_part/download&#41;.)
+To download the datasets, please visit [download data and software](take_part/download)
 
 ## Output
 

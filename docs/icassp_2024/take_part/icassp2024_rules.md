@@ -4,6 +4,8 @@ title: Rules
 sidebar_label: Rules
 sidebar_position: 2.5
 ---
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 ## 1. Teams
 
@@ -41,8 +43,8 @@ The only data that can be used to *enhance* the evaluation data are:
   *  causal and low latency to allow them to work with live music, or
   *  non-causal, for use with recorded music.
 * There is no limit on computational cost, but entrants must report model size.
-- Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement*
-- While HAAQI is being used for evaluation, other metrics and approaches can be used by the teams during training.
+* Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement*
+* While HAAQI is being used for evaluation, other metrics and approaches can be used by the teams during training.
 
 ## 5. Submitting multiple entries
 

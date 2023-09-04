@@ -2,13 +2,12 @@
 id: tracks_details
 title: Training Dataset Tracks Details
 sidebar_label: Tracks Details
-sidebar_position: 4.3
+sidebar_position: 4.2
 ---
-
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 The challenge uses existing datasets that are in place and ready to use.  
-
 
 ## 1 Recommended validation set 
 
@@ -79,4 +78,3 @@ MUSDB18-HQ already contains the following 46 tracks from the MedleyDB version 1.
 * The Districts - Vermont
 * The Scarlet Brand - Les Fleurs Du Mal
 * The So So Glos - Emergency
-
