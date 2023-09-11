@@ -36,7 +36,7 @@ The only data that can be used during evaluation are:
 
 - The listener characterisation (e.g. audiogram) to allow personalisation.
 - The target gains.
-- The stereo music input signals to the headphones or hearing aid.
+- The stereo music input signals to the hearing aid.
 
 ## 4. Computational restrictions
 

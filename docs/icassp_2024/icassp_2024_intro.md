@@ -15,8 +15,7 @@ Meanwhile, go through the website to familiarise with the challenge.
 :::
 
 # Overview
-Someone with a hearing loss is listening to music via their hearing aids or headphones. 
-The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to 
+Someone with a hearing loss is listening to music via their hearing aids. The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to 
 improve the listening experience, for example by amplifying the vocals relative to the sound of the band.
 One approach to this would be to a demix the music and then apply gains to the separated tracks to change the balance when the music is downmixed to stereo.
 
