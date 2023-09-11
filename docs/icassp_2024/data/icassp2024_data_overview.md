@@ -14,9 +14,7 @@ Data and baseline code can be [downloaded from here](../take_part/download) foll
 ### Music
 
 The main training database is the MUSDB18-HQ, which has 100 training songs.
-Teams can split the training dataset into train and development sets as better suits them.
-However, we recommend using the MUSDB18 proposed split which split the data into 86 songs for training and 14 songs for validation.
-The list of the 14 recommended validation tracks can be found [here](./icassp2024_tracks_details#1-recommended-validation-set) 
+We recommend using the MUSDB18 standard which divides the data into 86 songs for training and [14 songs for validation](./icassp2024_tracks_details#1-recommended-validation-set).
 
 Teams can supplement the training and validation data using the following resources:
 
@@ -32,15 +30,14 @@ For more information on augmenting and supplementing the music training data, pl
 
 ### Listener characteristics
 
-We provide metadata characterising the hearing abilities of listeners, so the audio signals teams generate can be individualised. The same types of data is available for training and development.
-
-The quantification of the listeners' hearing is done with left and right pure tone air-conduction audiograms.
+We provide metadata characterising the hearing abilities of listeners, so the audio signals can be individualised. The quantification of the listeners' hearing is done with left and right pure tone air-conduction audiograms.
 These measure the threshold at which people can hear a pure-tone sound. [More information on what audiograms are and how they're measured](/docs/learning_resources/Hearing_impairment/edu_measuring_HI#audiograms).
 
-For training, we provide 83 listener audiograms that were collected for the Clarity project (https://claritychallenge.org/).
+- For training, we provide 83 listener audiograms that were collected for the [Clarity project](https://claritychallenge.org/).
+- For validation, we constructed a new set of 50 listener audiograms from the [_von Gablenz and Holube (2019)_
+dataset](https://zenodo.org/record/4995261#.Y_3O1HbP2Hu).
 
-For validation, we constructed a new set of 50 listener audiograms from the _von Gablenz and Holube (2019)_
-dataset (https://zenodo.org/record/4995261#.Y_3O1HbP2Hu). This set follows the same distribution as the training audiograms.
+You can enter the challenges without using the audiograms. Improving the demixing of the signals, and using the default baseline NAL-R amplifications, is a reasonable approach.
 
 ***
 

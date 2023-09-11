@@ -22,17 +22,15 @@ All participants will require the **core** data packages.
 
 Participants wishing to extend the training set can use either of the **augmentation** data packages.
 
-The data is available for [download here](https://forms.gle/WGdiFGYhVE4XRfQv6).
-
-On the download site you will see five data packages are available,
-
 :::caution Core  Data
 
 If you already have a copy of the MUSDB18-HQ, you won't need to download it from our mirror.
 However, you still need to request access to the dataset to download the metadata package.
 This package contains the listeners' audiograms.
-
 :::
+
+The data is available in five packages [from here](https://forms.gle/WGdiFGYhVE4XRfQv6).
+
 
 * `cadenza_cad1_task1_core_musdb18hq.v1.0.tar.gz` **[21.1 GB]** - core audio data for training, validation.
 * `cadenza_cad1_task1_core_metadata.v1.0.tar.gz` **[7 KB]** - core metadata for training and validation.
