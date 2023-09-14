@@ -30,11 +30,12 @@ Occasionally audiograms are equal across frequency, or show better hearing at hi
 audiogram for an older adult shows worse hearing at higher frequencies, sometimes by as much as 60 dB or more (see Figure 1 
 for examples of real audiograms). 
 
+<div style={{textAlign:'center'}}>
 <figure id="fig1">
 <img width="800" src={useBaseUrl('../img/real_audiograms.png')} />
 <figcaption>Figure 1, Examples of real Audiograms.</figcaption>
 </figure>
-
+</div>
 
 It is usual to calculate an average across frequency to give a single-number value for
 hearing loss. Many rules for choice and weighting of frequencies have been proposed or used. We use the popular “four-frequency” average:
@@ -60,10 +61,12 @@ this person would be categorised as having a mild hearing loss (average 36 dB HL
 In general, hearing loss tends to be greater (worse) with increasing frequency for older 
 adults [and worsens with age at a rate of roughly 1 dB/year](https://pubs.asha.org/doi/10.1044/2020_JSLHR-20-00274).
 
+<div style={{textAlign:'center'}}>
 <figure id="fig1">
 <img width="800" src={useBaseUrl('../img/audiogram_example.png')} />
 <figcaption>Figure 2, An example Audiogram.</figcaption>
 </figure>
+</div>
 
 The threshold values of the audiogram defines how much gain the hearing aid needs to apply, 
 with the calculation typically done by one of a group of "prescription rules", 

@@ -19,7 +19,7 @@ improve the listening experience, for example by amplifying the vocals relative 
 One approach to this would be to a demix the music and then apply gains to the separated tracks to change the balance when the music is downmixed to stereo.
 
 ## What makes the demix different to previous demix challenges?
-The left and right signals you are working with are those picked up by a microphone at each ear when the person is listening to a pair of stereo loudspeakers. This means the signals at the ear that you have for demix, is a combination of both the right and left stereo signals because of cross-talk (see Figure 1). This cross-talk will be strongest at low frequency, when the wavelength is largest. This means that the spatial distribution of an instrument will be different in the microphone signals at the ear, compared to the original left-right music signals. Stereo demix algorithms will need to be revised to allow for this frequency-dependent change. We will model the cross-talk using HRTFs (Head Related Transfer Functions), assuming the music comes from a pair of stereo loudspeakers in a dead room.
+The left and right signals you are working with are those picked up by a microphone at each ear when the person is listening to a pair of stereo loudspeakers. This means the signals at the ear that you have for demix, is a combination of both the right and left stereo signals because of cross-talk (see [Figure 1](#fig1)). This cross-talk will be strongest at low frequency, when the wavelength is largest. This means that the spatial distribution of an instrument will be different in the microphone signals at the ear, compared to the original left-right music signals. Stereo demix algorithms will need to be revised to allow for this frequency-dependent change. We will model the cross-talk using HRTFs (Head Related Transfer Functions), assuming the music comes from a pair of stereo loudspeakers in a dead room.
 
 <div style={{textAlign:'center'}}>
     <figure id="fig1">
@@ -52,7 +52,7 @@ No. We provide code for a standard amplification that is done by simple hearing 
     * Then, it remixes the signal using the gains.
     * Lastly, applies listener-specific amplification following a standard hearing aid fitting.
 * Listener characteristics. i.e. an audiogram (green oval) are supplied to both the enhancement and scoring.
-* The enhancement outputs are evaluated by computing the [Hearing-Aid Audio Quality Index (HAAQI)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) [[1](#refs)] (orange boxe) which are estimates of the quality of the music.
+* The enhancement outputs are evaluated by computing the [Hearing-Aid Audio Quality Index (HAAQI)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) [[1](#refs)] (orange box) which are estimates of the quality of the music.
   Note, HAAQI is an 'intrusive' measure which require a reference signal as indicated in the figure.
 
 <div style={{textAlign:'center'}}>
@@ -77,7 +77,7 @@ You will have access to:
 5. Listeners characteristics (audiograms) - see [Listener Data](data/data_listener)
 6. Target gains for the VDBO stems used to mix the target stereo
 
-Please refer to [data page](data/icassp2024_data_overview) and the [baseline readme](.) in GitHub for details.
+Please refer to [data page](data/data_overview) and the [baseline readme](.) in GitHub for details.
 To download the datasets, please visit [download data and software](take_part/download)
 
 ## The systems' output

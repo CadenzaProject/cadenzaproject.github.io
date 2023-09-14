@@ -10,8 +10,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ## HASPI and HASQI
 Below is a by James Kates on two objective measures used for evaluating the intelligibility and quality of hearing-aid processed *speech*. These metrics have much in common with the metric we're using in the first challenges for music, HAAQI [1].
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hp9NT1zkGz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+<div style={{textAlign:'center'}}>
+<iframe width="750" height="500" src="https://www.youtube.com/embed/hp9NT1zkGz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 <details>
 <summary>Click here for synopsis</summary>
 
@@ -25,10 +26,12 @@ HAAQI was developed by James Kates and Kathryn Arehart and is an intrusive (doub
 
 A schematic for the rest of HAAQI is shown Figure 1. HAAQI involves an auditory model including hearing thresholds to allow for hearing loss via the audiogram and gain. HAAQI then compares the temporal fine-structure (BM Vib in Fig. 1) and the envelope of the two signals (Env) using correlation (Corr) and quantifying spectal differences. (The processes are similar to HASQI; see video above). The main difference to HASQI is the way the separate linear and non-linear terms are combined to predict perceived quality ("combine terms"). The metric has been shown to predict well the effects of additive noise (e.g., background noise and/or artefacts) as well as noise reduction, nonlinearities (e.g., compression) and spectral shifts. But it has not been used before to explore demixed signals, as is being done in Task 1 of the 2023 challenge.
 
+<div style={{textAlign:'center'}}>
 <figure id="fig1">
 <img width="800" src={useBaseUrl('../img/haaqi_schematic.gif')} />
 <figcaption>Figure 1, Schematic for HAAQI [1].</figcaption>
 </figure>
+</div>
 
 ## User's Guide
 
