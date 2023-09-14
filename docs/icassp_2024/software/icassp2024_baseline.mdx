@@ -1,0 +1,79 @@
+---
+id: baseline
+title: Baseline
+sidebar_label: Baseline
+sidebar_position: 7.1
+---
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+Challenge entrants are supplied with a fully functioning baseline system.
+
+[Figure 2](#fig2) shows a detailed schematic of the baseline system:
+
+<div style={{textAlign:'center'}}>
+    <figure id="fig2">
+        <img width="900" src={useBaseUrl('/img/icassp_2024/task_diagram_hrtf.png')} />
+        <figcaption>Figure 2, Detailed schematic of the baseline system.</figcaption>
+    </figure>
+</div>
+
+where:
+* Green boxes represent audio signals.
+* Blue boxes represent operations applied to the audio signals.
+* Blue database box is the anechoic HRTF dataset (audio signals).
+* Red database box is the listener characteristics dataset (metadata information).
+* White 'Weight and sum' box is the downmix operation.
+* Yellow database box is the gains dataset (metadata information).
+* Solid lines are signals transferred from one state of process to the next.
+* Dashed lines are metadata information enter the process.
+
+### The **Pre-Process** blocks
+The system starts by applying HRTFs to the music of MUSDB18-HQ dataset, simulating the music as it is picked up by the hearing aids' microphones.
+This stage is illustrated by the "pre-process enhancement" and "pre-process evaluation" boxes. However, in practical, both boxes
+correspond to the output of the `generate_at_mic_musdb18.py` script.
+
+* First, it takes the `Scene` details:
+    * MUSDB18-HQ music (mixture, vocal, drums, bass, other).
+    * Subject head and loudspeaker position (HRTFs).
+* The, it applies the HRTFs to the left and right side of all signals (mixture and VDBO components) [[Figure 2](#fig2)]
+* The HRTFd mixture corresponds to the output of the "pre-process enhancement" block.
+* HRTFd VDBO signals correspond to the output of the "pre-process evaluation" block.
+
+<div style={{textAlign:'center'}}>
+    <figure id="fig2">
+        <img width="500" src={useBaseUrl('/img/icassp_2024/cross-talk-hrtf.png')} />
+        <figcaption>Figure 3, The scenario.</figcaption>
+    </figure>
+</div>
+
+
+### The **Enhancement** block
+The enhancement takes a mixture signal as it is picked up by the hearing aids' microphones and attempts to output a personalized rebalanced music.
+
+* First, it takes stereo tracks ("mixture at the hearing aid mics") and demixes them into their VDBO (vocal, drums, bass and other) representation. This is done by using an out-of-the-box audio source separation system.
+* Then, using the gains provided, the music is remix/downmix by changing the level of the different elements of the music using LUFS.
+* Next, the remixed signal is normalised to match the LUFS level of the input mixture.
+* NAL-R amplification is applied to the normalised remixed signal, allowing for a personalised remix for the listener.
+* The NAL-Rd amplified signal is the output of the system: `Processed signal`
+
+The <i>NAL-R</i> is an amplification block,
+and is a standard way of compensating for the hearing loss of listeners.
+
+### The **Evaluation** block
+The evaluation generates takes the reference and processed signals and computes the HAAQI score.
+
+* First, it takes the HRTFd VDBO signals (these are the VDBO components provided by MUSDB18-HQ with the HRTF applied to them) and remix the signals using the same gains used in the enhancement.
+* Then, it normalises the remix to the same LUFS level as the "mixture at the hearing aid mics".
+* Next, it applies the NAL-R amplification.
+* This process results in the `Reference signal` for HAAQI, which simulates a "listener preferred mixture". The reference signal corresponds to an "ideal" rebalanced of the signal when we have access to the clean VDBO components.
+* As HAAQI is an intrusive metric, the score is computed by comparing the `Processed signal` (downmixed music) with the `Reference signal`, focussing on changes to time-frequency envelope modulation, temporal fine structure and long-term spectrum.
+
+In the Enhancement and Evaluation blocks, we apply a loudness normalisation (in [LUFS](https://www.izotope.com/en/learn/what-are-lufs.html)) after applying the gains.
+This is to keep the loudness of the remix at the same levels as the mixture at the hearing aid mics.
+
+
+## References
+
+<a name="refs"></a>
+
+[1] Kates, J.M.  and Arehart, K.H., 2016. The Hearing-Aid Audio Quality Index (HAAQI), in IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 24, no. 2, pp. 354-365, doi: 10.1109/TASLP.2015.2507858.

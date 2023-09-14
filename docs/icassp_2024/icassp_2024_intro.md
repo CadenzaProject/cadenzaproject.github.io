@@ -10,7 +10,6 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 :::info
 
 Please, refer to the challenge [timeline](take_part/key_dates) to know when the datasets and software will be available.
-Meanwhile, go through the website to familiarise with the challenge.
 
 :::
 
@@ -40,40 +39,34 @@ There is a global challenge of an ageing population, which will contribute to 1 
 ## Do I need to know about hearing loss and hearing aids?
 No. We provide code for a standard amplification that is done by simple hearing aids. The challenge is mostly about rebalancing the music. We use a metric developed for hearing aids, but you could use another quality metric like Signal to Distortion Ratio (SDR) to develop your systems if you prefer.
 
-## The Task 
+## The task
 
-Figure 2 shows the baseline system process. The system starts by applying HRTFs to the original tracks
-of the MUSDB18-HQ dataset. This is illustrated by the **Pre-Process Enhancement** and 
-**Pre-Process Evaluation** blocks. 
+[Figure 2](#fig2) shows a simplified schematic of the baseline system:
 
-The **Enhancement** block, which first demixes stereo tracks ("mixture at the hearing aid mics") 
-into a VDBO (vocal, drums, bass and other) representation. 
-This then allows a personalised remix/downmix for the listener by changing the level of the different elements of the music. 
-We provide the target <i>gains</i> for the downmix. The <i>NAL-R</i> is an amplification block, 
-and is a standard way of compensating for the hearing loss of listeners.
-
-The **Evaluation** block generates the _reference_ signal using the HRTF-ed VDBO signals. 
-It applies the same gains used in the Enhancement.
-The reference signal simulates a _listener preferred music_ rebalance.
-
-In the Enhancement and Evaluation blocks, we apply a loudness normalisation (in [LUFS](https://www.izotope.com/en/learn/what-are-lufs.html)) after applying the gains. This is to keep the loudness of the new mixture
-the same as the mixture ath the hearing aid mics.
-
-To evaluate the quality of the remixing, we will use the objective metric
-[HAAQI (Hearing aid audio quality index)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index). This compares the downmixed music to the reference, focussing on changes to time-frequency envelope modulation, temporal fine structure and long-term spectrum.
+* A scene generator (blue box) creates the scene characteristics:
+    * Music signal at the hearing aids' microphones.
+    * A required gain for the output signal.
+    * The reference rebalanced signal for scoring.
+* The music enhancement stage (pink box) takes the music at the microphones as inputs and attempts to generate the rebalanced output:
+    * It estimates the vocal, drums, bass and other components from the mixture.
+    * Then, it remixes the signal using the gains.
+    * Lastly, applies listener-specific amplification following a standard hearing aid fitting.
+* Listener characteristics. i.e. an audiogram (green oval) are supplied to both the enhancement and scoring.
+* The enhancement outputs are evaluated by computing the [Hearing-Aid Audio Quality Index (HAAQI)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) [[1](#refs)] (orange boxe) which are estimates of the quality of the music.
+  Note, HAAQI is an 'intrusive' measure which require a reference signal as indicated in the figure.
 
 <div style={{textAlign:'center'}}>
-    <figure id="fig1">
-        <img width="900" src={useBaseUrl('/img/icassp_2024/task_diagram_hrtf.png')} />
-        <figcaption>Figure 2, The baseline system.</figcaption>
+    <figure id="fig2">
+        <img width="900" src={useBaseUrl('/img/icassp_2024/baseline_simplify.png')} />
+        <figcaption>Figure 2, The simplified baseline schematics. For simplicity, not all signal paths are shown.</figcaption>
     </figure>
 </div>
 
-The block that can be changed by you is labelled *Enhancement* in Figure 2. 
+Your challenge is to improve what happens in the pink music enhancement. The rest of the baseline is fixed and should not be changed.
 
 We are interested in systems that are either: (i) causal and low latency for live music, and (ii) non-causal for recorded music.
 
-## Data
+## What is being provided
 
 You will have access to:
 
@@ -84,15 +77,14 @@ You will have access to:
 5. Listeners characteristics (audiograms) - see [Listener Data](data/data_listener)
 6. Target gains for the VDBO stems used to mix the target stereo
 
-
 Please refer to [data page](data/icassp2024_data_overview) and the [baseline readme](.) in GitHub for details.
 To download the datasets, please visit [download data and software](take_part/download)
 
-## Output
+## The systems' output
 
-Stereo downmixed signal
+Stereo downmixed signals
 - Sample rate: 32,000 Hz
-- Precision: 16 bit integer
+- Precision: 16-bit integer
 - Compression: FLAC
 
 For more details about the format of the submission, please refer to the [submission](take_part/submission) webpage.
@@ -113,42 +105,4 @@ Your output signals with be scored using this script.
 The evaluation stage computes [HAAQI](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech) 
 scores for the remixed stereo - see [Python HAAQI implementation](https://github.com/claritychallenge/clarity/blob/main/clarity/evaluator/haaqi/haaqi.py). 
 
-The output of the evaluation stage is a CSV file with all the HAAQI scores. 
-
-## Software
-
-All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza
-GitHub repository](https://github.com/claritychallenge/clarity).
-
-The official code for the ICASSP 2024 Cadenza Challenge was released in version `v0.4.0`.
-To avoid any conflict, we highly recommend for you to work using version v0.4.0 and
-not with the code from the `main` branch. To install this version:
-
-1. Download the files of the release v0.4.0 from:
-
-https://github.com/claritychallenge/clarity/releases/tag/v0.4.0
-
-2. Clone the repository and checkout version v0.4.0
-
-```bash
-git clone https://github.com/claritychallenge/clarity.git
-git checkout tags/v0.4.0
-```
-
-3. Install pyclarity from PyPI as:
-
-```bash
-pip install pyclarity==0.4.0
-```
-
-## 4. Baselines
-
-In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide a baseline that
-uses a pre-trained music source separation model to estimate the VDBO components before rebalance and downmix. 
-The baseline allows to select what separation model to use:
-
-1. `Demucs`: This baseline system uses the `Hybrid Demucs` model. This is a time-domain-based model.
-2. `Open-UnMix`: This baseline system uses the `umxhq` model from Open-UnMix. This is a spectrogram-based model.
-
-Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task1/baseline)
-and [Baseline](Software/cc1_baseline#1-task-1-headphones) links to read more about the baselines and learn how to run them.
+The output of the evaluation stage is a CSV file with all the HAAQI scores.
