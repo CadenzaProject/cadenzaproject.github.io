@@ -65,14 +65,11 @@ All participants will require the **core** data packages.
 
 Participants wanting to extend the training data can use either of the **augmentation** data packages.
 
-* **Core packages**
-  * `cadenza_cad1_task1_core_musdb18hq.v1.0.tgz` **[21.1 GB]** - core audio data for training, validation.
-  * `cadenza_cad1_task1_core_metadata.v1.0.tgz` **[7 KB]** - core metadata for training and validation.
-
-* **Augmentation Packages**
-  * `cadenza_cad1_task1_augmentation_medleydb.v1.0.tgz` **[38.1 GB]** - optional augmentation audio data for training.
-  * `cadenza_cad1_task1_augmentation_bach10.v1.0.tgz` **[125 MB]** - optional augmentation audio data for training.
-  * `cadenza_cad1_task1_augmentation_fma_small.v1.0.tgz` **[7.1 GB]** - optional augmentation audio data for training.
+* `cad_icassp_2024_core.v1.0.tgz` **[1.4 GB]** - metadata and validation set.
+* `cad_icassp_2024_train.v1.0.tgz` **[7 KB]** - scenes and audio data for training systems.
+* `cad_icassp_2024_medleydb.v1.0.tgz` **[38.1 GB]** - optional audio data for training augmentation.
+* `cad_icassp_2024_bach10.v1.0.tgz` **[125 MB]** - optional audio data for training augmentation.
+* `cad_icassp_2024_fma_small.v1.0.tgz` **[7.1 GB]** - optional audio data for training augmentation.
 
 ### B.2 Unpack the packages
 
