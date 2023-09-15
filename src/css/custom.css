@@ -42,16 +42,18 @@ figure {
     border: 1px dotted gray;
     padding: 10px;
     margin: 20px;
-        margin-left: auto;
-        margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     /* adjust as needed */
 }
 
 
 
-  figcaption {
-border: 1px dotted lightgray;
-font: italic smaller sans-serif;
-      padding: 3px;
-      text-align: center;
+figcaption {
+    border: 1px dotted lightgray;
+    font-style: italic;
+    font-size: larger;
+    font-family: sans-serif;
+    padding: 3px;
+    text-align: center;
 }
