@@ -7,19 +7,13 @@ sidebar_position: 1
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::info
-
-Please, refer to the challenge [timeline](take_part/key_dates) to know when the datasets and software will be available.
-
-:::
-
 # Overview
 Someone with a hearing loss is listening to music via their hearing aids. The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to 
 improve the listening experience, for example by amplifying the vocals relative to the sound of the band.
-One approach to this would be to a demix the music and then apply gains to the separated tracks to change the balance when the music is downmixed to stereo.
+One approach would be to a demix the music and then apply gains to the separated tracks to change the balance when the music is downmixed to stereo.
 
 ## What makes the demix different to previous demix challenges?
-The left and right signals you are working with are those picked up by a microphone at each ear when the person is listening to a pair of stereo loudspeakers. This means the signals at the ear that you have for demix, is a combination of both the right and left stereo signals because of cross-talk (see [Figure 1](#fig1)). This cross-talk will be strongest at low frequency, when the wavelength is largest. This means that the spatial distribution of an instrument will be different in the microphone signals at the ear, compared to the original left-right music signals. Stereo demix algorithms will need to be revised to allow for this frequency-dependent change. We will model the cross-talk using HRTFs (Head Related Transfer Functions), assuming the music comes from a pair of stereo loudspeakers in a dead room.
+The left and right signals you are working with are those picked up by a microphone at each ear when the person is listening to a pair of stereo loudspeakers. This means the signals at the ear that you have for demix is a combination of both the right and left stereo signals because of cross-talk (see [Figure 1](#fig1)). This cross-talk will be strongest at low frequency when the wavelength is largest. This means that the spatial distribution of an instrument will be different in the microphone signals at the ear compared to the original left-right music signals. Stereo demix algorithms will need to be revised to allow for this frequency-dependent change. We will model the cross-talk using HRTFs (Head Related Transfer Functions), assuming the music comes from a pair of stereo loudspeakers in a dead room.
 
 <div style={{textAlign:'center'}}>
     <figure id="fig1">
@@ -28,7 +22,7 @@ The left and right signals you are working with are those picked up by a microph
     </figure>
 </div>
 
-In the long term, any demix approaches will need to be causal and low latency. For ICASSP 2024, we are allowing causal <u>and</u> non-causal approaches. Attempting a low latency solution for demix is novel. There are increasing number of DNN approaches for causal signal processing that could be adapted for this.
+Although in the long term demixing on hearing aids would need to be causal and low latency, for ICASSP 2024 we are allowing causal <u>and</u> non-causal approaches. If you produce a low latency solution that will be great and very novel. There are increasing number of DNN approaches for causal signal processing from other areas such as speech that could be adapted for this.
 
 ## Do I have to demix and then downmix to stereo?
 Our baseline does demixing, but you don't have to. You could create an end-to-end system without an explicit demixing stage if you want.
@@ -37,7 +31,7 @@ Our baseline does demixing, but you don't have to. You could create an end-to-en
 There is a global challenge of an ageing population, which will contribute to 1 in 10 people having disabling hearing loss by 2050. Hearing loss causes problems when listening to music. It can make picking out lyrics more difficult, with music becoming duller as high frequencies disappear. This reduces the enjoyment of music and can lead to disengagement from listening and music-making, reducing the health and well-being effects people otherwise get from music. We want to get more of the ICASSP community to consider diverse hearing and so allow those with a hearing loss to benefit from the latest signal processing advances.
 
 ## Do I need to know about hearing loss and hearing aids?
-No. We provide code for a standard amplification that is done by simple hearing aids. The challenge is mostly about rebalancing the music. We use a metric developed for hearing aids, but you could use another quality metric like Signal to Distortion Ratio (SDR) to develop your systems if you prefer.
+Not really. We provide code for a standard amplification that is done by simple hearing aids. The challenge is mostly about rebalancing the music. We use a metric developed for hearing aids, but you could use another quality metric like Signal to Distortion Ratio (SDR) to develop your systems if you prefer. If you want to learn more about hearing loss and aids, however, there is lots of information in our [learning resources](../learning_resources/learning_intro).
 
 ## The task
 
@@ -45,15 +39,14 @@ No. We provide code for a standard amplification that is done by simple hearing 
 
 * A scene generator (blue box) creates the scene characteristics:
     * Music signal at the hearing aids' microphones.
-    * A required gain for the output signal.
+    * The required gains for the output signal for the vocals, drums, bass and other (VDBO).
     * The reference rebalanced signal for scoring.
 * The music enhancement stage (pink box) takes the music at the microphones as inputs and attempts to generate the rebalanced output:
-    * It estimates the vocal, drums, bass and other components from the mixture.
+    * It estimates the VDBO components from the mixture.
     * Then, it remixes the signal using the gains.
-    * Lastly, applies listener-specific amplification following a standard hearing aid fitting.
-* Listener characteristics. i.e. an audiogram (green oval) are supplied to both the enhancement and scoring.
-* The enhancement outputs are evaluated by computing the [Hearing-Aid Audio Quality Index (HAAQI)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) [[1](#refs)] (orange box) which are estimates of the quality of the music.
-  Note, HAAQI is an 'intrusive' measure which require a reference signal as indicated in the figure.
+    * Lastly, it applies listener-specific amplification following a standard hearing aid fitting.
+* Listener characteristics (green oval) are audiograms and are supplied to both the enhancement and evaluation.
+* The enhancement outputs are evaluated for audio quality via the [Hearing-Aid Audio Quality Index (HAAQI)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) [[1](#refs)] (orange box). Note, HAAQI is an intrusive measure that requires a reference signal.
 
 <div style={{textAlign:'center'}}>
     <figure id="fig2">
@@ -62,7 +55,7 @@ No. We provide code for a standard amplification that is done by simple hearing 
     </figure>
 </div>
 
-Your challenge is to improve what happens in the pink music enhancement. The rest of the baseline is fixed and should not be changed.
+Your challenge is to improve what happens in the pink music enhancement box. The rest of the baseline is fixed and should not be changed.
 
 We are interested in systems that are either: (i) causal and low latency for live music, and (ii) non-causal for recorded music.
 
@@ -72,7 +65,7 @@ You will have access to:
 
 1. Full length songs from MUSDB18-HQ dataset.
 2. HRTFs to model the propagation of sound from the loudspeakers to the hearing aid microphones.
-3. Script to pre-process the music and construct the HRTF-ed music signals.
+3. Scripts to pre-process the music and construct the music signals at the hearing aid microphones with HRTF applied.
 4. Music data for augmentation, if needed. 
 5. Listeners characteristics (audiograms) - see [Listener Data](data/data_listener)
 6. Target gains for the VDBO stems used to mix the target stereo

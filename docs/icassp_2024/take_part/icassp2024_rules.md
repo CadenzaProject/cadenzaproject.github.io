@@ -34,18 +34,20 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 The only data that can be used during evaluation are:
 
-- The listener characterisation (e.g. audiogram) to allow personalisation.
+- The audiograms giving the listener characterisation for personalisation.
 - The target gains.
 - The stereo music input signals to the hearing aid.
 
 ## 4. Computational restrictions
 
 * Systems must either be:
-  *  causal and low latency to allow them to work with live music, or
-  *  non-causal, for use with recorded music.
+  *  <b>causal and low latency</b> to allow them to work with live music, or
+  *  <b>non-causal</b>, for use with recorded music.
+* The latency restrictions for <b>causal entries</b> are that the output from the hearing aid at time <i>t</i> must not use any information from input samples more than 5 ms into the future i.e., no information from input samples <i>>t+5 ms</i>. See this [blog post](https://claritychallenge.org/blog/Latency,%20computation%20time%20and%20real-time%20operation) from our sister Clarity project for more.
 * There is no limit on computational cost, but entrants must report model size.
 * Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement*
 * While HAAQI is being used for evaluation, other metrics and approaches can be used by the teams during training.
+
 
 ## 5. Submitting multiple entries
 

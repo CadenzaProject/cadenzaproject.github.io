@@ -19,7 +19,7 @@ You should be able to find the information on the [Rules](rules) or the [Data Ov
 
 ### I want to enter the challenge without using the demixing/remixing approach
 
-This is fine (see [here](../intro#the-task))! We are accepting alternative approaches. Please make sure that your approach is clear in your technical report.
+This is fine and we welcome alternative approaches. Please make sure that your method is clear in your technical report.
 
 ### How do I actually enter?
 
