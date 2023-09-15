@@ -5,7 +5,7 @@ sidebar_label: Measuring Hearing Impairment
 sidebar_position: 2.4
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
-
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 # Measuring the degree of hearing impairment 
 

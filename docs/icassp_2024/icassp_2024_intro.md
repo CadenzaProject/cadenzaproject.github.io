@@ -71,7 +71,7 @@ You will have access to:
 5. Listeners characteristics (audiograms) - see [Listener Data](data/data_listener)
 6. Target gains for the VDBO stems used to mix the target stereo
 
-Please refer to [data page](data/data_overview) and the [baseline readme](.) in GitHub for details.
+Please refer to [data page](data/data_overview) and the [baseline readme](https://github.com/claritychallenge/clarity/blob/main/recipes/cad_icassp_2024/baseline/README.md) in GitHub for details.
 To download the datasets, please visit [download data and software](take_part/download)
 
 ## The systems' output
@@ -100,3 +100,9 @@ The evaluation stage computes [HAAQI](../learning_resources/Hearing_aid_processi
 scores for the remixed stereo - see [Python HAAQI implementation](https://github.com/claritychallenge/clarity/blob/main/clarity/evaluator/haaqi/haaqi.py).
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores.
+
+## References
+
+<a name="refs"></a>
+
+**[1]** Kates, J.M.  and Arehart, K.H., 2016. The Hearing-Aid Audio Quality Index (HAAQI), in IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 24, no. 2, pp. 354-365, doi: 10.1109/TASLP.2015.2507858.
