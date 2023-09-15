@@ -59,7 +59,7 @@ pip install pyclarity==0.4.0
 
 ### B.1 Download the packages
 
-The data is available in five packages, please complete [this form](https://forms.gle/WGdiFGYhVE4XRfQv6) to request access.
+The data is available in five packages, please complete [this form](https://forms.gle/cQwCZeeCX7cm6PoH6) to request access.
 
 All participants will require the **core** data packages.
 
