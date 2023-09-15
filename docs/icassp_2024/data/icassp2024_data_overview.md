@@ -50,7 +50,7 @@ This process will create:
 
 ### A.2 Validation data
 
-The validation data is provided as a downloadable package in [download data and software](download). No generation is required. It was constructed by randomly taking 2 10-second excepts from each of the 100 tracks of the MUSDB18-HQ train split. Then, to each excerpt, a random left and right HRTF were applied. This means that 2 excerpts from the same track will have a different HRTF applied.
+The validation data is provided as a downloadable package in [download data and software](download). No generation is required. It was constructed by randomly taking 2 10-second excepts from each of the 100 tracks of the MUSDB18-HQ train split. Then, to each excerpt, a random left and right HRTF were applied. This means that 2 excerpts from the same track will have a different pair of HRTFs applied.
 
 * 200 samples
 * 10-second duration
@@ -108,7 +108,7 @@ python3 generate_train_scenes.py \
 
 
 :::warning Consider that ...
-Generating new scenes will not preserve the scene_id from the **core** package. This is because the id is assigned correlatively.
+Generating new scenes will not preserve the scene_id from the **core** package. This is because the id is assigned incrementally.
 However, this does not have any significance in the process as these scenes are used exclusively for training separation models.
 :::
 
