@@ -9,7 +9,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 
 # Overview
-Someone with a hearing loss is listening to music via their hearing aids. The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to 
+Someone with a hearing loss is listening to music via their hearing aids. The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to
 improve the listening experience, for example by amplifying the vocals relative to the sound of the band.
 One approach would be to a demix the music and then apply gains to the separated tracks to change the balance when the music is downmixed to stereo.
 
@@ -28,19 +28,6 @@ Although in the long term demixing on hearing aids would need to be causal and l
 ## Do I have to demix and then downmix to stereo?
 Our baseline does demixing, but you don't have to. You could create an end-to-end system without an explicit demixing stage if you want.
 
-## What makes the demix more difficult than previous demix challenges?
-The left and right signals you are working with are those picked up by a microphone at each ear when the person is listening to a pair of stereo loudspeakers. This means the signals at the ear that you have for demix, is a combination of both the right and left stereo signals because of cross-talk (see Figure 1). This cross-talk will be strongest at low frequency, when the wavelength is largest. This means that the spatial distribution of an instrument will be different in the microphone signals at the ear, compared to the original left-right music signals. Stereo demix algorithms will need to be revised to allow for this frequency-dependent change. We will model the cross-talk using HRTFs (Head Related Transfer Functions).
-
-<div style={{textAlign:'center'}}>
-<figure id="fig1">
-<img width="540" src={useBaseUrl('/img/icassp_2024/cross-talk-hrtf.png')} />
-<figcaption>Figure 1, The scenario.</figcaption>
-</figure>
-</div>
-
-In the long term, any demix approaches will need to be causal and low latency. For ICASSP 2024, we are allowing causal <u>and</u> non-causal approaches. For those attempting to make a low latency solution, this is much more challenging!
-
-
 ## Why this challenge?
 There is a global challenge of an ageing population, which will contribute to 1 in 10 people having disabling hearing loss by 2050. Hearing loss causes problems when listening to music. It can make picking out lyrics more difficult, with music becoming duller as high frequencies disappear. This reduces the enjoyment of music and can lead to disengagement from listening and music-making, reducing the health and well-being effects people otherwise get from music. We want to get more of the ICASSP community to consider diverse hearing and so allow those with a hearing loss to benefit from the latest signal processing advances.
 
@@ -52,13 +39,13 @@ Not really. We provide code for a standard amplification that is done by simple 
 [Figure 2](#fig2) shows a simplified schematic of the baseline system:
 
 * A scene generator (blue box) creates the scene characteristics:
-    * Music signal at the hearing aids' microphones.
-    * The required gains for the output signal for the vocals, drums, bass and other (VDBO).
-    * The reference rebalanced signal for scoring.
+  * Music signal at the hearing aids' microphones.
+  * The required gains for the output signal for the vocals, drums, bass and other (VDBO).
+  * The reference rebalanced signal for scoring.
 * The music enhancement stage (pink box) takes the music at the microphones as inputs and attempts to generate the rebalanced output:
-    * It estimates the VDBO components from the mixture.
-    * Then, it remixes the signal using the gains.
-    * Lastly, it applies listener-specific amplification following a standard hearing aid fitting.
+  * It estimates the VDBO components from the mixture.
+  * Then, it remixes the signal using the gains.
+  * Lastly, it applies listener-specific amplification following a standard hearing aid fitting.
 * Listener characteristics (green oval) are audiograms and are supplied to both the enhancement and evaluation.
 * The enhancement outputs are evaluated for audio quality via the [Hearing-Aid Audio Quality Index (HAAQI)](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech#haaqi-hearing-aid-audio-quality-index) [[1](#refs)] (orange box). Note, HAAQI is an intrusive measure that requires a reference signal.
 
@@ -80,7 +67,7 @@ You will have access to:
 1. Full length songs from MUSDB18-HQ dataset.
 2. HRTFs to model the propagation of sound from the loudspeakers to the hearing aid microphones.
 3. Scripts to pre-process the music and construct the music signals at the hearing aid microphones with HRTF applied.
-4. Music data for augmentation, if needed. 
+4. Music data for augmentation, if needed.
 5. Listeners characteristics (audiograms) - see [Listener Data](data/data_listener)
 6. Target gains for the VDBO stems used to mix the target stereo
 
@@ -97,7 +84,7 @@ Stereo downmixed signals
 For more details about the format of the submission, please refer to the [submission](take_part/submission) webpage.
 
 :::caution Note
-The responsibility for the final remixed signal level is yours. 
+The responsibility for the final remixed signal level is yours.
 It’s worth bearing in mind there may be clipping in the evaluation block in some tasks
 if the processed signals are too large.
 :::
@@ -109,7 +96,7 @@ You are not allowed to change the **evaluation** script provided in the baseline
 Your output signals with be scored using this script.
 :::
 
-The evaluation stage computes [HAAQI](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech) 
-scores for the remixed stereo - see [Python HAAQI implementation](https://github.com/claritychallenge/clarity/blob/main/clarity/evaluator/haaqi/haaqi.py). 
+The evaluation stage computes [HAAQI](../learning_resources/Hearing_aid_processing/edu_HAP_HA_processed_speech)
+scores for the remixed stereo - see [Python HAAQI implementation](https://github.com/claritychallenge/clarity/blob/main/clarity/evaluator/haaqi/haaqi.py).
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores.
