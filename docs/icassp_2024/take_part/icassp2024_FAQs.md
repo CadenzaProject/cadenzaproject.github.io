@@ -15,7 +15,7 @@ If you have more questions that aren't covered, please [contact us](http://caden
 
 ### What data can I use?
 
-You should be able to find the information on the [Rules](rules) or the [Data Overview](../data/icassp2024_data_overview) page.
+You should be able to find the information on the [Rules](rules) or the [Data Overview](../data/data_overview) page.
 
 ### I want to enter the challenge without using the demixing/remixing approach
 
