@@ -25,7 +25,9 @@ Then, we divided the data into BEA bands of 20-29, 30-39, 40-49 and 50-59 dB, an
 band the necessary number of audiograms to give the same distribution per band as in
 the original Clarity dataset (namely 11, 37, 34 and 18). This gave an unequal male:female distribution
 (63 to 37), so 13 males were then randomly selected and replaced by females with the same BEA.
-Of the 100 audiograms, only 50 (25 per gender) were randomly selected to be part of the development set.
+Of the 100 audiograms, only 50 (25 per gender) were randomly selected to be part of the development set. 
+Additionally to the 50 audiograms, we are including a _"normal hearing"_ audiogram (`L5999`). Results using this 
+audiogram can be used to evaluate the performance of systems when no amplification prescription is applied.
 
 * **Evaluation**
 We use a set of 52 listeners audiograms collected for the listener panel in the First Cadenza Challenge. 
