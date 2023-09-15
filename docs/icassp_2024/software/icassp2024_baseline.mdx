@@ -68,9 +68,11 @@ The evaluation generates takes the reference and processed signals and computes 
 * This process results in the `Reference signal` for HAAQI, which simulates a "listener preferred mixture". The reference signal corresponds to an "ideal" rebalanced of the signal when we have access to the clean VDBO components.
 * As HAAQI is an intrusive metric, the score is computed by comparing the `Processed signal` (downmixed music) with the `Reference signal`, focussing on changes to time-frequency envelope modulation, temporal fine structure and long-term spectrum.
 
-In the Enhancement and Evaluation blocks, we apply a loudness normalisation (in [LUFS](https://www.izotope.com/en/learn/what-are-lufs.html)) after applying the gains.
+:::info Note
+* In the Enhancement and Evaluation blocks, we apply a loudness normalisation (in [LUFS](https://www.izotope.com/en/learn/what-are-lufs.html)) after applying the gains.
 This is to keep the loudness of the remix at the same levels as the mixture at the hearing aid mics.
-
+* To match the HAAQI working sample rate, we do resampling to both, the reference and processed signal, before computing the score.
+:::
 
 ## References
 
