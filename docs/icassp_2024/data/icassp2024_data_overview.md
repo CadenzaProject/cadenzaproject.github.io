@@ -47,22 +47,39 @@ This process will create:
 * The directory `.../icassp_2024/audio/at_mic_music`, where the at-the-microphone signals will be saved (88 GB). This location can be changed by setting the `path.output_music_dir` parameter.
 * The file `.../icassp_2024/metadata/at_mic_music.train.json` with the scenes metadata necessary to run the baseline. This location can be changed by setting the `path.output_music_file` parameter.
 
-
 ### A.2 Validation data
 
-The validation data is provided as a downloadable package in [download data and software](../take_part/download). No generation is required. It was constructed by randomly taking 2 10-second excepts from each of the 100 tracks of the MUSDB18-HQ train split. Then, to each excerpt, a random left and right HRTF were applied. This means that 2 excerpts from the same track will have a different pair of HRTFs applied.
+Entrants are free to split the MUSDB18 train split into a training/validation set as they see fit.
 
-* 200 samples
+:::info
+We will be releasing an independent validation set based on the MoisesDB [[2](#refs)] dataset in the following days.  
+This set will have the same structure as the evaluation (test) set:
+
 * 10-second duration
 * 44,100 Hz
 * 16-bit
+:::
 
-The validation samples are extracted from the same MUSDB18-HQ split used to generate the training set. However, the samples 
-have a different HRTF applied, forcing separation models to be robust under different HRTF conditions.
+
+[//]: # (The validation data is provided as a downloadable package in [download data and software]&#40;../take_part/download&#41;. No generation is required. It was constructed by randomly taking 2 10-second excepts from each of the 100 tracks of the MUSDB18-HQ train split. Then, to each excerpt, a random left and right HRTF were applied. This means that 2 excerpts from the same track will have a different pair of HRTFs applied.)
+
+[//]: # ()
+[//]: # (* 200 samples)
+
+[//]: # (* 10-second duration)
+
+[//]: # (* 44,100 Hz)
+
+[//]: # (* 16-bit)
+
+[//]: # ()
+[//]: # (The validation samples are extracted from the same MUSDB18-HQ split used to generate the training set. However, the samples )
+
+[//]: # (have a different HRTF applied, forcing separation models to be robust under different HRTF conditions.)
 
 ### A.3 Evaluation (test) set
 
-:::info
+:::tip Evaluation package release
 Please, refer to the challenge [**timeline**](../take_part/key_dates) to know when the evaluation set will be released.
 :::
 
@@ -330,3 +347,4 @@ The at_the_mic metadata is provided in a JSON file with the following structure.
 
 **[1]** Rafii, Z., Liutkus, A., Stöter, F.-R., Mimilakis, S. I., and Bittner, R. (2019). MUSDB18-HQ - an Uncompressed Version of MUSDB18. [Dataset]. doi:10.5281/zenodo.3338373  
 **[2]** F. Denk, S.M.A. Ernst, S.D. Ewert and B. Kollmeier, (2018): Adapting hearing devices to the individual ear acoustics: Database and target response correction functions for various device styles. Trends in Hearing, vol 22, p. 1-19. DOI:10.1177/2331216518779313
+**[3]** Pereira, I., Araújo, F., Korzeniowski, F., & Vogl, R. (2023). Moisesdb: A dataset for source separation beyond 4-stems. arXiv preprint arXiv:2307.15913.
