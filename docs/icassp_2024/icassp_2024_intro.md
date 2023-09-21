@@ -9,10 +9,13 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 
 # Overview
-Someone with a hearing loss is listening to music via their hearing aids. The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to
-improve the listening experience, for example by amplifying the vocals relative to the sound of the band.
-One approach would be to a demix the music and then apply gains to the separated tracks to change the balance when the music is downmixed to stereo.
+There is a global challenge of an ageing population. According to The World Health Organization (WHO), over 1.5 billion people worldwide have hearing loss. and is projected to increase to 1 in 10 people having disabling hearing loss by 2050. Hearing loss causes problems when listening to music. It can make picking out lyrics more difficult, with music becoming duller as high frequencies disappear. This reduces the enjoyment of music and can lead to disengagement from listening and music-making, reducing the health and well-being effects people otherwise get from music. We want to get more of the ICASSP community to consider diverse hearing and so allow those with a hearing loss to benefit from the latest signal processing advances.
 
+In this challenge, someone with a hearing loss is listening to music via their hearing aids. The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to improve the listening experience, for example by amplifying the vocals relative to the sound of the band. One approach would be to a demix the music and then apply gains to the separated tracks to change the balance when the music is downmixed to stereo.
+
+<div style={{textAlign:'center'}}>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EniPRT-GgNk?si=LS-c8D6RyWqjLNhi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 ## What makes the demix different to previous demix challenges?
 The left and right signals you are working with are those picked up by a microphone at each ear when the person is listening to a pair of stereo loudspeakers. This means the signals at the ear that you have for demix is a combination of both the right and left stereo signals because of cross-talk (see [Figure 1](#fig1)). This cross-talk will be strongest at low frequency when the wavelength is largest. This means that the spatial distribution of an instrument will be different in the microphone signals at the ear compared to the original left-right music signals. Stereo demix algorithms will need to be revised to allow for this frequency-dependent change. We will model the cross-talk using HRTFs (Head Related Transfer Functions), assuming the music comes from a pair of stereo loudspeakers in a dead room.
 
@@ -27,9 +30,6 @@ Although in the long term demixing on hearing aids would need to be causal and l
 
 ## Do I have to demix and then downmix to stereo?
 Our baseline does demixing, but you don't have to. You could create an end-to-end system without an explicit demixing stage if you want.
-
-## Why this challenge?
-There is a global challenge of an ageing population, which will contribute to 1 in 10 people having disabling hearing loss by 2050. Hearing loss causes problems when listening to music. It can make picking out lyrics more difficult, with music becoming duller as high frequencies disappear. This reduces the enjoyment of music and can lead to disengagement from listening and music-making, reducing the health and well-being effects people otherwise get from music. We want to get more of the ICASSP community to consider diverse hearing and so allow those with a hearing loss to benefit from the latest signal processing advances.
 
 ## Do I need to know about hearing loss and hearing aids?
 Not really. We provide code for a standard amplification that is done by simple hearing aids. The challenge is mostly about rebalancing the music. We use a metric developed for hearing aids, but you could use another quality metric like Signal to Distortion Ratio (SDR) to develop your systems if you prefer. If you want to learn more about hearing loss and aids, however, there is lots of information in our [learning resources](../learning_resources/learning_intro).
