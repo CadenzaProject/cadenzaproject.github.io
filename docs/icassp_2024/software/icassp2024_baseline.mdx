@@ -71,8 +71,26 @@ This is to keep the loudness of the remix at the same levels as the mixture at t
 * As required by HAAQI, we resample both the reference and processed signal before computing the score.
 :::
 
+### Baseline Scores
+
+Two baseline systems are proposed by employing two out-of-the-box audio source separation systems in the `enhancement` block.
+
+- Hybrid Demucs [[2](#refs)] distributed on TorchAudio
+- Open-Unmix [[3](#refs)]  distributed through Pytorch hub.
+
+The average HAAQI scores are:
+
+| System    | Left HAAQI | Right HAAQI | Overall |
+|-----------|:----------:|:-----------:|:-------:|
+| Demucs    |   0.6690   |   0.6665    | 0.6677  |
+| OpenUnmix |   0.5986   |   0.5940    | 0.5963  |
+
 ## References
 
 <a name="refs"></a>
 
-[1] Kates, J.M.  and Arehart, K.H., 2016. The Hearing-Aid Audio Quality Index (HAAQI), in IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 24, no. 2, pp. 354-365, doi: 10.1109/TASLP.2015.2507858.
+**[1]** Kates, J.M.  and Arehart, K.H., 2016. The Hearing-Aid Audio Quality Index (HAAQI), in IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 24, no. 2, pp. 354-365, doi: 10.1109/TASLP.2015.2507858
+
+**[2]** Défossez, A. "Hybrid Spectrogram and Waveform Source Separation". Proceedings of the ISMIR 2021 Workshop on Music Source Separation. doi:10.48550/arXiv.2111.03600
+
+**[3]** Stöter, F. R., Liutkus, A., Ito, N., Nakashika, T., Ono, N., & Mitsufuji, Y. (2019). "Open-Unmix: A Reference Implementation for Music Source Separation". Journal of Open Source Software, 4(41), 1667. doi:10.21105/joss.01667

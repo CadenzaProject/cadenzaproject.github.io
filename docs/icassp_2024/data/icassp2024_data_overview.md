@@ -49,33 +49,41 @@ This process will create:
 
 ### A.2 Validation data
 
-Entrants are free to split the MUSDB18 train split into a training/validation set as they see fit.
+An independent validation set was constructed based on the new MoisesDB dataset [[2](#refs)].
+Songs from MoisesDB were randomly selected to match the number of tracks per genre in the MUSDB18-HQ test set.
 
-:::info
-We will be releasing an independent validation set based on the MoisesDB [[2](#refs)] dataset in the following days.  
-This set will have the same structure as the evaluation (test) set:
+:::info Genres
+Note that MUSDB18-HQ and MoisesDB don't share the same genres for all classes. 
+While MUSDB18-HQ includes a compound genre, _Pop/Rock_, MoisesDB distinguishes between _Pop_ and _Rock_ genres more explicitly. 
+Additionally, unlike MUSDB18-HQ, MoiseDB does not feature a _Heavy Metal_ class.
+:::
 
+| Genre       | Validation Set | MUSDB18 Test |
+|-------------|:--------------:|:------------:|
+| Reggae      |       2        |      2       |
+| Rap         |       3        |      3       |
+| Pop         |       20       |      -       |
+| Rock        |       21       |      -       |
+| Pop/Rock    |       -        |      37      |
+| Heavy Metal |       -        |      4       |        
+| Electronic  |       4        |      4       |
+| Total       |       50       |      50      |
+
+The validation dataset is available as a downloadable package in the [download data and software](../take_part/download) section.
+No data generation is required.
+
+Each track was divided into several consecutive 10-second excerpts, ensuring that no silent segments were selected. 
+Then, a random Head-Related Transfer Function (HRTF) was applied to each excerpt. 
+This means that two excerpts from the same track will have different pairs of HRTFs applied,
+thus requiring separation models to be robust under varying HRTF conditions and for different songs
+
+* 967 samples
 * 10-second duration
 * 44,100 Hz
 * 16-bit
-:::
 
-
-[//]: # (The validation data is provided as a downloadable package in [download data and software]&#40;../take_part/download&#41;. No generation is required. It was constructed by randomly taking 2 10-second excepts from each of the 100 tracks of the MUSDB18-HQ train split. Then, to each excerpt, a random left and right HRTF were applied. This means that 2 excerpts from the same track will have a different pair of HRTFs applied.)
-
-[//]: # ()
-[//]: # (* 200 samples)
-
-[//]: # (* 10-second duration)
-
-[//]: # (* 44,100 Hz)
-
-[//]: # (* 16-bit)
-
-[//]: # ()
-[//]: # (The validation samples are extracted from the same MUSDB18-HQ split used to generate the training set. However, the samples )
-
-[//]: # (have a different HRTF applied, forcing separation models to be robust under different HRTF conditions.)
+Note that for the validation dataset, only two listeners were assigned per scene in the scene_listeners.json file. 
+For more details about the scene_listener metadata file, please refer to section [C.5 Scene-listeners](#C.5 Scene-listeners) below. 
 
 ### A.3 Evaluation (test) set
 
@@ -83,13 +91,27 @@ This set will have the same structure as the evaluation (test) set:
 Please, refer to the challenge [**timeline**](../take_part/key_dates) to know when the evaluation set will be released.
 :::
 
-The evaluation set is based in the MUSDB18-HQ test split (50 tracks). Each track is split into several consecutive 10-second excerpts.
-To each excerpt, a randomly selected HRTF is applied. Note that steps were taken to ensure that all 10-second samples from the same track have a different HRTF applied.
+The evaluation set is based in the MUSDB18-HQ test set (50 tracks). 
+The MUSDB18-HQ has the following genre distribution:
 
-* About 900 samples
+| Genre       | Tracks |
+|-------------|:------:|
+| Reggae      |   2    |
+| Rap         |   3    |
+| Pop/Rock    |   37   |
+| Heavy Metal |   4    |
+| Electronic  |   4    |
+| Total       |   50   |
+
+Following the same procedure as the validation set, each track is divided into several consecutive 10-second excerpts, 
+ensuring that no silent segments are selected. Then, a randomly selected HRTF is applied to each excerpt. 
+
+* 1,085 samples
 * 10-second duration
 * 44,100 Hz
 * 16-bit
+
+Unlike the validation set, each scene in the test set should be processed for all the test listeners (53 listeners).
 
 ## B. Training augmentation data
 
@@ -346,5 +368,5 @@ The at_the_mic metadata is provided in a JSON file with the following structure.
 <a name="refs"></a>
 
 **[1]** Rafii, Z., Liutkus, A., Stöter, F.-R., Mimilakis, S. I., and Bittner, R. (2019). MUSDB18-HQ - an Uncompressed Version of MUSDB18. [Dataset]. doi:10.5281/zenodo.3338373  
-**[2]** F. Denk, S.M.A. Ernst, S.D. Ewert and B. Kollmeier, (2018): Adapting hearing devices to the individual ear acoustics: Database and target response correction functions for various device styles. Trends in Hearing, vol 22, p. 1-19. DOI:10.1177/2331216518779313
-**[3]** Pereira, I., Araújo, F., Korzeniowski, F., & Vogl, R. (2023). Moisesdb: A dataset for source separation beyond 4-stems. arXiv preprint arXiv:2307.15913.
+**[2]** F. Denk, S.M.A. Ernst, S.D. Ewert and B. Kollmeier, (2018): Adapting hearing devices to the individual ear acoustics: Database and target response correction functions for various device styles. Trends in Hearing, vol 22, p. 1-19. DOI:10.1177/2331216518779313  
+**[3]** Pereira, I., Araújo, F., Korzeniowski, F., & Vogl, R. (2023). Moisesdb: A dataset for source separation beyond 4-stems. arXiv preprint arXiv:2307.15913

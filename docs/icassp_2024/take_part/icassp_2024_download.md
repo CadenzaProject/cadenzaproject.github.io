@@ -16,14 +16,14 @@ We suggest starting with the installation of the software and then proceeding to
 All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza
 GitHub repository](https://github.com/claritychallenge/clarity).
 
-The official code for the ICASSP 2024 Cadenza Challenge was released in version `v0.4.0`.
+The official code for the ICASSP 2024 Cadenza Challenge was released in version `v0.4.1`.
 To avoid any conflict, we highly recommend for you to work using this version and
 not with the code from the `main` branch. To install this version you have three options
 
 <details>
-  <summary>1. Download the files of the release v0.4.0</summary>
+  <summary>1. Download the files of the release v0.4.1</summary>
 
-* download from https://github.com/claritychallenge/clarity/releases/tag/v0.4.0
+* download from https://github.com/claritychallenge/clarity/releases/tag/v0.4.1
 * unpacked the package
 
 From inside the directory, run:
@@ -35,11 +35,11 @@ pip install -e .
 </details>
 
 <details>
-  <summary>2. Clone the repository and checkout version v0.4.0</summary>
+  <summary>2. Clone the repository and checkout version v0.4.1</summary>
 
 ```bash
 git clone https://github.com/claritychallenge/clarity.git
-git checkout tags/v0.4.0
+git checkout tags/v0.4.1
 
 cd clarity
 pip install -e .
@@ -47,10 +47,10 @@ pip install -e .
 </details>
 
 <details>
-  <summary>3. Install pyclarity version 0.4.0 from PyPI</summary>
+  <summary>3. Install pyclarity version 0.4.1 from PyPI</summary>
 
 ```bash
-pip install pyclarity==0.4.0
+pip install pyclarity==0.4.1
 ```
 
 </details>
@@ -67,6 +67,7 @@ Participants wanting to extend the training data can use either of the **augment
 
 * `cad_icassp_2024_core.v1.1.tgz` **[230 KB]** - metadata and hrtf signals.
 * `cad_icassp_2024_train.v1.0.tgz` **[14.8 GB]** - audio data for training systems.
+* `cad_icassp_2024_validation.v1.0.tgz` **[5.9 GB]** - audio and metadata data for validation.
 * `cad_icassp_2024_medleydb.v1.0.tgz` **[38.1 GB]** - optional audio data for training augmentation.
 * [`bach10.zip`](https://labsites.rochester.edu/air/resource.html) **[125 MB]** - optional audio data for training augmentation.
 * [`fma_small.zip`](https://os.unil.cloud.switch.ch/fma/fma_small.zip) **[7.2 GB]** - optional audio data for training augmentation.
