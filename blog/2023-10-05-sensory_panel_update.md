@@ -33,7 +33,7 @@ These samples have been tailored for the hearing profiles of our listener panel 
 **We will be releasing the main online listening experiment over the coming days!**
 
 On 20th September, we ran a webinar for our listener panel. In the first part, we gave a short talk summarising the aims and results of the sensory panel study.
-You can watch the recording of the event in the next video.
+You can watch the recording of this event in the next video.
 
 <div style={{textAlign:'center'}}>
 <iframe width="750" height="500" src="https://www.youtube.com/embed/-DW3S5yjU90?si=UMc1FjMIGovgBXsO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
