@@ -28,7 +28,7 @@ We presented our study findings at the International Conference of Music Percept
 </div>
 
 Second, the entrants in the [First Cadenza Challenge](https://cadenzachallenge.org/docs/cadenza1/cc1_intro) have now submitted systems they devised to improve the audio quality of various music samples. 
-These samples have been tailored for the hearing profiles of our listener panel participants and are currently being prepared for our online listening software, NOTE.
+These samples have been tailored for the hearing profiles of our listener panel participants and are currently being prepared for our online software.
 
 **We will be releasing the main online listening experiment over the coming days!**
 
