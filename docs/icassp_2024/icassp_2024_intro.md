@@ -105,7 +105,7 @@ The output of the evaluation stage is a CSV file with all the HAAQI scores.
 ## Cite as
 
 ```text
-@misc{dabike2023cadenza,
+@misc{roa2023cadenza,
     title={The Cadenza ICASSP 2024 Grand Challenge},
     author={Gerardo Roa Dabike and Michael A. Akeroyd and Scott Bannister and Jon Barker and 
             Trevor J. Cox and Bruno Fazenda and Jennifer Firth and Simone Graetzer and 
