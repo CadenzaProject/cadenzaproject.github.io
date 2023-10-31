@@ -66,7 +66,15 @@ module.exports = {
                         to: '/docs/icassp_2024/intro/',
                         label: 'Challenge ICASSP 2024',
                     }]
-                }, {
+                },{
+                type: 'dropdown',
+                label: 'Workshops',
+                position: 'right',
+                items: [{
+                    to: 'https://cadenzachallenge.org/cadenza2023-workshop/',
+                    label: 'Cadenza Workshop 2023',
+                }]
+            }, {
                     to: '/docs/learning_resources/learning_intro/',
                     label: 'Learning Resources',
                     position: 'right'
