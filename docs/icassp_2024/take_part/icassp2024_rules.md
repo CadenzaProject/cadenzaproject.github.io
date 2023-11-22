@@ -43,7 +43,7 @@ Added clarification regarding the use of data augmentation and data supplementat
   - Using supplemented data: submit 2 systems, one without the supplemented data and one with the supplemented data.
   - Using both augmentation and supplemented data: submit four systems, one only with the official data, one with the supplemented data, one with the data augmentation and one with both supplemented and data augmentation.
 - Systems using the data augmentation and/or the data supplementation will be scored and ranked in the challenge.
-- Systems trained using any other source for data supplementation not explicitly mention here will **not** enter the ranking.
+- Systems trained using any other source for data supplementation not explicitly mentioned here will **not** enter the ranking.
 
 |                              | Official data           | Official data + supplementation |
 |------------------------------|-------------------------|---------------------------------|
