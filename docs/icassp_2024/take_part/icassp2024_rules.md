@@ -8,6 +8,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 :::note Page Updated: November 22, 2023
+
+Added clarification regarding the use of data augmentation and data supplementation to increase the training data.
+
 :::
 
 ## 1. Teams
