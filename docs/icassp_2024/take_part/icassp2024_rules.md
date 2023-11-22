@@ -38,7 +38,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 - Teams that decide to use data augmentation and/or supplemented data must:
   - Using data augmentation: submit 2 systems, one without the augmentations and one with the augmentations.
   - Using supplemented data: submit 2 systems, one without the supplemented data and one with the supplemented data.
-  - Using both augmentation and supplemented data: submit four systems, one with official data, one with supplemented data, one with data augmentation and one with both supplemented and data augmentation.
+  - Using both augmentation and supplemented data: submit four systems, one only with the official data, one with the supplemented data, one with the data augmentation and one with both supplemented and data augmentation.
 - Systems trained using any source of supplementation data not explicitly mention here will **not** enter the ranking.  
 
 |                              | Official data           | Official data + supplementation |
