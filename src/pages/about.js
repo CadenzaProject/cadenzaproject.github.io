@@ -165,13 +165,6 @@ const PersonList = [
     avatar: "/img/avatar/greasley.jpeg",
   },
   {
-    name: "Graham Naylor",
-    department: "School of Medicine",
-    affiliation: "University of Nottingham",
-    url: "https://www.nottingham.ac.uk/medicine/people/graham.naylor",
-    avatar: "/img/avatar/naylor.jpeg",
-  },
-  {
     name: "Gerardo Roa",
     department: "Department of Computer Science",
     affiliation: "University of Sheffield",
