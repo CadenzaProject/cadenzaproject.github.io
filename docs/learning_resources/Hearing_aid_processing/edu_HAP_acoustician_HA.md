@@ -10,6 +10,7 @@ sidebar_position: 3.3
 <div style={{textAlign:'center'}}>
 <iframe width="750" height="500" src="https://www.youtube.com/embed/IiGRmm8PBHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+
 # Abstract
 This is a personal account of the experiences of wearing a hearing aid to control Tinnitus. It is a description by a non-expert, who however, comes from a career in engineering acoustics, both as a researcher and teacher. The Tinnitus has been of long duration (45 years), is high-frequency and broad-band in character, and is confined to the right ear. With the onset of presbycusis the Tinnitus became progressively louder, again only in the right ear. On the recommendation of the NHS, a hearing aid was fitted three years ago, which, after some adjustments, suppressed the Tinnitus quite well. A year later, a purchased digital hearing aid provided more control of both the volume and frequency content. However, the use of these devices has compromised my binaural perception, which I might be able to explain, but also speech perception and classical music appreciation, which members of the audience might be able to explain.
 
