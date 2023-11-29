@@ -37,7 +37,7 @@ A schematic for the rest of HAAQI is shown Figure 1. HAAQI involves an auditory 
 
 For more information about the design and use of HASPI, HASQI and HAAQI, please refer to the official [user's guide](/documents/Users_Guide_ver3.docx).
 
-:::warning Note to users
+:::warning[Note to users]
 
 In the HAAQI Python implementation, the parameter `equalisation` indicates if the `reference signal` already includes 
 an amplification or not. If the reference signal does not include an amplification, one have to set the parameter

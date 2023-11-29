@@ -7,14 +7,14 @@ sidebar_position: 3
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-::::::tip Participate
+::::::tip[Participate]
 Can you improve music for people with a hearing loss and hearing aid, listening to music in a noisy car? We invite you to make a copy of the baseline, adapt the enhancement script and experiment with your ideas. 
 Then, you can run the whole system to obtain the HAAQI scores.
 
 After the objective evaluation, we will run a subjective evaluation using a listeners panel of people with a hearing loss.
 We will share the results of your system with you so you can use them in a paper. 
 
-:::danger Note
+:::danger[Note]
 This is like a near-end speech enhancement task, but the signal to be processed is music. The hearing aid being used by the listener is fixed by us.
 
 :::
@@ -89,7 +89,7 @@ The output of this stage is one stereo signal:
 
 For more details about the format of the submission, please refer to [submission](Take%20part/cc1_submission) webpage.
 
-:::caution Note
+:::caution[Note]
 The responsibility for the final signal level is yours.
 It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to someone in the listening panel,
 they may well turn down the volume. Also, there may be clipping in the evaluation block if the processed signals are too large.
@@ -97,7 +97,7 @@ they may well turn down the volume. Also, there may be clipping in the evaluatio
 
 ### 2.2 Evaluation Stage
 
-:::danger Bear in mind
+:::danger[Bear in mind]
 You are not allowed to change the **evaluation** script provided in the baseline.
 Your output signals with be scored using this script.
 :::

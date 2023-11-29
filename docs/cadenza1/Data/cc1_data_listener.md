@@ -14,7 +14,7 @@ For training, we will use the same 83 [audiograms](../../learning_resources/Hear
 
 We constructed a new set of listeners to separate the training from the development listeners. 
 The development [audiograms](../../learning_resources/Hearing_impairment/edu_measuring_HI) are a filtered, pseudo-random, selection from the
-von Gablenz and Holube (2019) dataset (https://zenodo.org/record/4995261#.Y_3O1HbP2Hu).
+[von Gablenz and Holube (2019) dataset](https://zenodo.org/record/4995261#.Y_3O1HbP2Hu).
 We first filtered the audiograms to better-ear 4-frequency hearing loss between 25 and 60 dB.
 Then, we divided the data into BEA bands of 20-29, 30-39, 40-49 and 50-59 dB, and randomly chose from each
 band the necessary number of audiograms to give the same distribution per band as in

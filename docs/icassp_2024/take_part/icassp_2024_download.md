@@ -7,7 +7,7 @@ sidebar_position: 2.2
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::info How to start
+:::info[How to start]
 We suggest starting with the installation of the software and then proceeding to follow the instructions for downloading and extracting the data.
 :::
 

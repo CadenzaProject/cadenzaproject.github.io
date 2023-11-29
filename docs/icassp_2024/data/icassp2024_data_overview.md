@@ -52,7 +52,7 @@ This process will create:
 An independent validation set was constructed based on the new MoisesDB dataset [[2](#refs)].
 Songs from MoisesDB were randomly selected to match the number of tracks per genre in the MUSDB18-HQ test set.
 
-:::info Genres
+:::info[Genres]
 Note that MUSDB18-HQ and MoisesDB don't share the same genres for all classes. 
 While MUSDB18-HQ includes a compound genre, _Pop/Rock_, MoisesDB distinguishes between _Pop_ and _Rock_ genres more explicitly. 
 Additionally, unlike MUSDB18-HQ, MoiseDB does not feature a _Heavy Metal_ class.
@@ -87,7 +87,7 @@ For more details about the scene_listener metadata file, please refer to section
 
 ### A.3 Evaluation (test) set
 
-:::tip Evaluation package release
+:::tip[Evaluation package release]
 Please, refer to the challenge [**timeline**](../take_part/key_dates) to know when the evaluation set will be released.
 :::
 
@@ -146,7 +146,7 @@ python3 generate_train_scenes.py \
 ```
 
 
-:::warning Consider that ...
+:::warning[Consider that ...]
 Generating new scenes will not preserve the scene_id from the **core** package. This is because the id is assigned incrementally.
 However, this does not have any significance in the process as these scenes are used exclusively for training separation models.
 :::

@@ -29,7 +29,7 @@ The data is available for [download here](https://forms.gle/UQkuCxqQVxZtGggPA).
 
 On the download site you will see five data packages are available,
 
-:::caution Core  Data
+:::caution[Core Data]
 In case you already have a copy of the MUSDB18-HQ, you won't need to download it from our mirror.
 However, you still need to request access to the dataset to download the metadata package.
 This package contains the listeners' audiograms, key information for the HAAQI evaluation.
