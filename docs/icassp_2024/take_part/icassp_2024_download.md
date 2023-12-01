@@ -68,6 +68,7 @@ Participants wanting to extend the training data can use either of the **augment
 * `cad_icassp_2024_core.v1.1.tgz` **[230 KB]** - metadata and hrtf signals.
 * `cad_icassp_2024_train.v1.0.tgz` **[14.8 GB]** - audio data for training systems.
 * `cad_icassp_2024_validation.v1.0.tgz` **[5.9 GB]** - audio and metadata data for validation.
+* `cad_icassp_2024_evaluation.v1.0.tgz` **[1.4 GB]** - audio and metadata data for evaluation (only mixtures).
 * `cad_icassp_2024_medleydb.v1.0.tgz` **[38.1 GB]** - optional audio data for training augmentation.
 * [`bach10.zip`](https://labsites.rochester.edu/air/resource.html) **[125 MB]** - optional audio data for training augmentation.
 * [`fma_small.zip`](https://os.unil.cloud.switch.ch/fma/fma_small.zip) **[7.2 GB]** - optional audio data for training augmentation.
