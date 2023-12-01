@@ -106,7 +106,7 @@ The MUSDB18-HQ has the following genre distribution:
 Following the same procedure as the validation set, each track is divided into several consecutive 10-second excerpts, 
 ensuring that no silent segments are selected. Then, a randomly selected HRTF is applied to each excerpt. 
 
-* 1,085 samples
+* 960 samples
 * 10-second duration
 * 44,100 Hz
 * 16-bit
