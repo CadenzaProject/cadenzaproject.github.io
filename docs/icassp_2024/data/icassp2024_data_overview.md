@@ -87,7 +87,8 @@ For more details about the scene_listener metadata file, please refer to section
 
 ### A.3 Evaluation (test) set
 
-The evaluation set is based in the MUSDB18-HQ test set (50 tracks). 
+The evaluation set is based in the MUSDB18-HQ test set (50 tracks).  
+
 The MUSDB18-HQ has the following genre distribution:
 
 | Genre       | Tracks |
