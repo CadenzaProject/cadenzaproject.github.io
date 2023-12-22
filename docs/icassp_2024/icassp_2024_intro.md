@@ -92,7 +92,7 @@ if the processed signals are too large.
 
 ## Evaluation Stage
 
-:::danger Warning
+:::danger[Warning]
 You are not allowed to change the **evaluation** script provided in the baseline.
 Your output signals with be scored using this script.
 :::

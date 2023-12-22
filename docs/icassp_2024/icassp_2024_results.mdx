@@ -1,0 +1,21 @@
+---
+id: icassp_2024_results
+title: Results
+sidebar_label: Results
+sidebar_position: 11
+---
+
+import { EmojiEvents } from "@mui/icons-material";
+
+import ResultsDisplay from "/src/components/ResultsDisplay";
+
+The 2024 ICASSP SP Cadenza Challenge: Music Demixing/Remixing for Hearing Aids is now complete.
+Results are shown below along with links to the system description papers.
+
+import all_data from "/icassp_2024_results.json";
+
+The table below reports the HAAQI score for all the submitted systems.
+Where a system ID ends with '_aug', data augmentations techniques has been used. Those that end with '_sup'
+has used supplemented data. Links to the system reports are also provided when available.
+
+<ResultsDisplay all_data={ all_data } />
