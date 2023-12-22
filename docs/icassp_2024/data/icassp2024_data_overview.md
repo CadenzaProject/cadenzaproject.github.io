@@ -87,10 +87,6 @@ For more details about the scene_listener metadata file, please refer to section
 
 ### A.3 Evaluation (test) set
 
-:::tip[Evaluation package release]
-Please, refer to the challenge [**timeline**](../take_part/key_dates) to know when the evaluation set will be released.
-:::
-
 The evaluation set is based in the MUSDB18-HQ test set (50 tracks). 
 The MUSDB18-HQ has the following genre distribution:
 
@@ -106,12 +102,18 @@ The MUSDB18-HQ has the following genre distribution:
 Following the same procedure as the validation set, each track is divided into several consecutive 10-second excerpts, 
 ensuring that no silent segments are selected. Then, a randomly selected HRTF is applied to each excerpt. 
 
-* 1,085 samples
+* 960 samples
 * 10-second duration
 * 44,100 Hz
 * 16-bit
 
-Unlike the validation set, each scene in the test set should be processed for all the test listeners (53 listeners).
+In the evaluation, each scene will be processed for 20 random test listeners.
+
+:::note
+
+The evaluation set only contains the mixture signal. This is to ensure it is not use for refining the systems.
+
+:::
 
 ## B. Training augmentation data
 
