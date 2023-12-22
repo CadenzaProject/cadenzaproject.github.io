@@ -6,7 +6,6 @@ import styles from "./index.module.css";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import { Mermaid } from "mdx-mermaid/Mermaid";
 
 function ContactHeader() {
   const { siteConfig } = useDocusaurusContext();

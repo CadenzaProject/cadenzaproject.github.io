@@ -7,7 +7,7 @@ sidebar_position: 2
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-::::::tip Participate
+::::::tip[Participate]
 If you have a pretrained music source separation trained only using the allowed datasets, you can easily enter our challenge.
 
 We invite you to make a copy of the baseline, adapt the enhancement script to use your separation model and
@@ -15,7 +15,7 @@ run the whole system to obtain HAAQI scores. You might need to amplify your sepa
 
 Then, you can explore ways to improve the remix stage to generate better and personalised signals for listeners.
 
-:::danger Remember
+:::danger[Remember]
 After the objective evaluation we will run subjective evaluation using a listeners panel of 50 listeners.
 We will share the results of your system with you so you can use them in a paper.
 :::
@@ -86,7 +86,7 @@ The output of this stage are:
 
 For more details about the format of the submission, please refer to the [submission](Take%20part/cc1_submission) webpage.
 
-:::caution Note
+:::caution[Note]
 The responsibility for the final remixed signal level is yours. 
 It’s worth bearing in mind that should your signals overall seem too loud to be comfortable to a participant, 
 they may well turn down the volume themselves. Also, there may be clipping in the evaluation block in some tasks
@@ -95,7 +95,7 @@ if the processed signals are too large.
 
 ### 2.2 Evaluation Stage
 
-:::danger Warning
+:::danger[Warning]
 You are not allowed to change the **evaluation** script provided in the baseline.
 Your output signals with be scored using this script.
 :::

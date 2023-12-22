@@ -1,9 +1,13 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const math = require('remark-math');
-const katex = require('rehype-katex');
-const {
-    MailRounded
-} = require('@mui/icons-material');
+// const math = require('remark-math');
+// const katex = require('rehype-katex');
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import {themes as prismThemes} from 'prism-react-renderer';
+
+// const {
+//     MailRounded
+// } = require('@mui/icons-material');
 
 module.exports = {
     title: 'The Cadenza Project',
@@ -17,12 +21,42 @@ module.exports = {
     projectName: 'cadenzaproject.github.io', // Usually your repo name.
     trailingSlash: false,
     deploymentBranch: "gh-pages",
+    markdown: {
+        format: 'mdx',
+        mermaid: true,
+        mdx1Compat: {
+            comments: false,
+            admonitions: false,
+            headingIds: false,
+        },
+    },
+    themes: ['@docusaurus/theme-mermaid'],
+    // stylesheets: [{
+    //     href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css',
+    //     type: 'text/css',
+    //     integrity: 'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
+    //     crossorigin: 'anonymous',
+    // }, "https://fonts.googleapis.com/icon?family=Material+Icons", ],
     stylesheets: [{
         href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css',
         type: 'text/css',
         integrity: 'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
         crossorigin: 'anonymous',
-    }, "https://fonts.googleapis.com/icon?family=Material+Icons", ],
+    }, "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "/js-datatable/css.min/bootstrap-table.min.css",
+        "/js-datatable/css.min/datatable.min.css",
+        "/react-bootstrap-table2.min.css"
+    ],
+    scripts: [
+        {
+            src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js',
+            async: false,
+        },
+        {
+            src: '/bootstrap/bootstrap.bundle.min.js',
+            async: false,
+        }
+    ],
     plugins: [
         [
             '@docusaurus/plugin-google-gtag',
@@ -36,6 +70,9 @@ module.exports = {
         }], './sitePlugin', require.resolve("docusaurus-plugin-image-zoom")
     ],
     themeConfig: {
+        prism: {
+            additionalLanguages: ['json']
+        },
         navbar: {
             title: 'Cadenza',
             hideOnScroll: true,
@@ -128,12 +165,12 @@ module.exports = {
         },
         zoom: {
             selector: '.markdown img',
+            background: {
+                light: 'rgb(255, 255, 255)',
+                dark: 'rgb(50, 50, 50)'
+            },
             config: {
                 // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
-                background: {
-                    light: 'rgb(255, 255, 255)',
-                    dark: 'rgb(50, 50, 50)'
-                }
             }
         }
     },
@@ -148,9 +185,9 @@ module.exports = {
                 },
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    remarkPlugins: [require('mdx-mermaid'), math],
+                    remarkPlugins: [remarkMath],
                     rehypePlugins: [
-                        [katex, {
+                        [rehypeKatex, {
                             strict: false
                         }]
                     ],
@@ -160,10 +197,12 @@ module.exports = {
                     showReadingTime: true,
                     // Please change this to your repo.
                     blogTitle: 'Latest',
-                    blogDescription: 'News and updates about our challenges and workshops',
+                    blogDescription: 'News and updates about our Challenges and Workshops',
                     postsPerPage: 'ALL',
                     blogSidebarTitle: 'Recent posts',
                     blogSidebarCount: 10,
+                    remarkPlugins: [remarkMath],
+                    rehypePlugins: [rehypeKatex]
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),

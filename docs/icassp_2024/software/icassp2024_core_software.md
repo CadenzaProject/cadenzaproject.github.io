@@ -16,7 +16,7 @@ This will be used in the stage 1 evaluation of entrants (see [Rules](/docs/caden
 Note that HAAQI is not a binaural metric, instead, each channel must be processed separately. We average the left and right 
 scores to produce a final overall score.
 
-:::caution Instructions and recommendations on the use of HAAQI
+:::caution[Instructions and recommendations on the use of HAAQI]
 
 You can call the HAAQI metric using the `clarity.evaluator.haaqi.compute_haaqi` function as:
 
@@ -41,11 +41,11 @@ compute_haaqi(
 7. Set the `level1` parameter to the level of the reference signal before applying the hearing aid amplification (NAL-R).
 Recommended to set it as `65 - 20 * log10(RMS(reference signal before NAL-R))`
 
-::::::danger Note
+::::::danger[Note]
 Please note that the `level1` parameter uses the reference signal without NAL-R amplification. 
 And, the `reference_signal` expects the amplified version of the same signal used in `level1`.
 ::::::
-:::
+
 
 ## 4. References
 <a name="refs"></a>

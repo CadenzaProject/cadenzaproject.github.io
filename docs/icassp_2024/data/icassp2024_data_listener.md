@@ -19,7 +19,7 @@ from the [Clarity project](https://claritychallenge.org/).
 * **Validation**
 We constructed a new set of listeners to separate the training from the validation listeners. 
 The validation audiograms are a filtered, pseudo-random, selection from the
-von Gablenz and Holube (2019) dataset (https://zenodo.org/record/4995261#.Y_3O1HbP2Hu). Additionally, we include a _"normal hearing"_ audiogram (`L5999`). Results using this 
+[von Gablenz and Holube (2019) dataset](https://zenodo.org/record/4995261#.Y_3O1HbP2Hu). Additionally, we include a _"normal hearing"_ audiogram (`L5999`). Results using this 
 audiogram can be used to evaluate the performance of systems when no amplification prescription is applied.
 
 * **Evaluation**

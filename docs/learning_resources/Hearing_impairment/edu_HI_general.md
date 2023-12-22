@@ -18,8 +18,8 @@ There are many different types and degrees of hearing impairment, and a recent i
 These impairments cause different types of hearing deficits, One of the most common effects of hearing disorders is a hearing threshold shift or a worsening of people’s ability to hear quiet sounds, including the subtle details of speech and music. Impairments can also cause distortions such as smearing which can increase difficulties understanding speech and appreciating music. 
 
 
-<!-- 
+{/*
 - Bit about intro to hearing loss
 - state the obvious stuff: frequency smearing, loss of loudness etc
 - talk about how hearing loss is complex and different, lots of different types (Aural diversity links)
--->
+*/}
