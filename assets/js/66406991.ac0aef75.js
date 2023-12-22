@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcadenza=self.webpackChunkcadenza||[]).push([[110],{70711:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/hello","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"News and updates about our Challenges and Workshops","blogTitle":"Latest"}')}}]);
