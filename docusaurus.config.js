@@ -80,47 +80,63 @@ module.exports = {
                 alt: 'Cadenza Logo',
                 src: 'img/logo.png',
             },
-            items: [{
+            items: [
+                {
                     type: 'dropdown',
                     label: 'About Us',
                     position: 'right',
-                    items: [{
-                        to: '/about/',
-                        label: 'About Us',
-                    }, {
-                        to: '/contact/',
-                        label: 'Contact Us',
-
-                    }, ]
-                }, {
+                    items: [
+                        {
+                            to: '/about/',
+                            label: 'About Us',
+                        },
+                        {
+                            to: '/contact/',
+                            label: 'Contact Us',
+                        },
+                    ]
+                },
+                {
                     type: 'dropdown',
                     label: 'Challenges',
                     position: 'right',
-                    items: [{
-                        to: '/docs/cadenza1/cc1_intro/',
-                        label: 'Challenge 1',
-                    }, {
-                        to: '/docs/icassp_2024/intro/',
-                        label: 'Challenge ICASSP 2024',
-                    }]
-                },{
-                type: 'dropdown',
-                label: 'Workshops',
-                position: 'right',
-                items: [{
-                    to: 'https://cadenzachallenge.org/cadenza2023-workshop/',
-                    label: 'Cadenza Workshop 2023',
-                }]
-            }, {
+                    items: [
+                        {
+                            to: '/docs/cadenza1/cc1_intro/',
+                            label: 'Challenge 1',
+                        },
+                        {
+                            to: '/docs/icassp_2024/intro/',
+                            label: 'Challenge ICASSP 2024',
+                        }
+                    ]
+                },
+                {
+                    to: 'publications',
+                    label: 'Publications',
+                    position: 'right',
+                },
+                {
+                    type: 'dropdown',
+                    label: 'Workshops',
+                    position: 'right',
+                    items: [
+                        {
+                            to: 'https://cadenzachallenge.org/cadenza2023-workshop/',
+                            label: 'Cadenza Workshop 2023',
+                        }
+                    ]
+                },
+                {
                     to: '/docs/learning_resources/learning_intro/',
                     label: 'Learning Resources',
                     position: 'right'
-                }, {
+                },
+                {
                     to: '/blog/',
                     label: 'Latest',
                     position: 'right'
                 },
-
             ],
         },
         footer: {
