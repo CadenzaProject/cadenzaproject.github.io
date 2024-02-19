@@ -52,7 +52,7 @@ at the front microphone of the Hearing Aid (HA).
 5. The HA output is the signal use for evaluation.
 
 
-## 3. HAAQI Speech Intelligibility model
+## 3. HAAQI Audio Qiality model
 
 This is a python implementation of the Hearing Aid Audio Quality Index (HAAQI) model which is used for objective estimation.
 This will be used in the stage 1 evaluation of entrants (see [Rules](/docs/cadenza1/Take%20part/cc1_rules#stage-1-objective-evaluation)).

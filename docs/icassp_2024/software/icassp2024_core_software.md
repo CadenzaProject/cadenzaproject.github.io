@@ -8,7 +8,7 @@ sidebar_position: 7.2
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
-## HAAQI Speech Intelligibility model
+## HAAQI Audio Quality model
 
 This is a python implementation of the Hearing Aid Audio Quality Index (HAAQI) model which is used for objective estimation.
 This will be used in the stage 1 evaluation of entrants (see [Rules](/docs/cadenza1/Take%20part/cc1_rules#stage-1-objective-evaluation)).
