@@ -16,7 +16,7 @@ function PublicationsHeader() {
   return (
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title"> The Clarity Project </h1>{" "}
+          <h1 className="hero__title"> The Cadenza Project </h1>{" "}
           <p className="hero__subtitle"> Publications </p>{" "}
           <div className={styles.buttons}> </div>{" "}
         </div>{" "}
