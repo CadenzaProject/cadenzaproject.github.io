@@ -14,17 +14,21 @@ const Cite = require("citation-js");
 function PublicationsHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title"> The Clarity Project </h1>{" "}
-        <p className="hero__subtitle"> Publications </p>{" "}
-        <div className={styles.buttons}> </div>{" "}
-      </div>{" "}
-    </header>
+      <header className={clsx("hero hero--primary", styles.heroBanner)}>
+        <div className="container">
+          <h1 className="hero__title"> The Clarity Project </h1>{" "}
+          <p className="hero__subtitle"> Publications </p>{" "}
+          <div className={styles.buttons}> </div>{" "}
+        </div>{" "}
+      </header>
   );
 }
 
 const renderCitation = (publication) => {
+  const url = publication.entryTags.url;
+  publication.entryTags.url = "";
+  publication.entryTags.doi = "";
+
   const citationString = bibtexParse.toBibtex([publication], false);
   const citation = new Cite(citationString);
   const formattedCitation = citation.format("bibliography", {
@@ -32,13 +36,13 @@ const renderCitation = (publication) => {
     template: "apa",
     lang: "en-US",
   });
-  const url = publication.entryTags.url;
   if (url) {
+    publication.entryTags.url = "";
     return (
-      <div>
-        <div dangerouslySetInnerHTML={{ __html: formattedCitation }} />
-        <a href={url}>Link to Publication</a>
-      </div>
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: formattedCitation }} />
+          <a href={url}>{url}</a>
+        </div>
     );
   } else {
     return <div dangerouslySetInnerHTML={{ __html: formattedCitation }} />;
@@ -50,22 +54,22 @@ const PublicationsList = ({ year }) => {
 
   useEffect(() => {
     fetch("publications.bib")
-      .then((response) => response.text())
-      .then((data) => {
-        const parsedData = bibtexParse.toJSON(data);
-        const filteredData = parsedData.filter(
-          (publication) => publication.entryTags.year === year.toString()
-        );
-        setPublications(filteredData);
-      });
+        .then((response) => response.text())
+        .then((data) => {
+          const parsedData = bibtexParse.toJSON(data);
+          const filteredData = parsedData.filter(
+              (publication) => publication.entryTags.year === year.toString()
+          );
+          setPublications(filteredData);
+        });
   }, [year]);
 
   return (
-    <ul>
-      {publications.map((publication, index) => (
-        <li key={index}>{renderCitation(publication)}</li>
-      ))}
-    </ul>
+      <ul>
+        {publications.map((publication, index) => (
+            <li key={index}>{renderCitation(publication)}</li>
+        ))}
+      </ul>
   );
 };
 
@@ -75,38 +79,38 @@ export default function Home() {
 
   useEffect(() => {
     fetch("publications.bib")
-      .then((response) => response.text())
-      .then((data) => {
-        const parsedData = bibtexParse.toJSON(data);
-        const uniqueYears = [
-          ...new Set(
-            parsedData.map((publication) => publication.entryTags.year)
-          ),
-        ]
-          .sort()
-          .reverse();
-        setYears(uniqueYears);
-      });
+        .then((response) => response.text())
+        .then((data) => {
+          const parsedData = bibtexParse.toJSON(data);
+          const uniqueYears = [
+            ...new Set(
+                parsedData.map((publication) => publication.entryTags.year)
+            ),
+          ]
+              .sort()
+              .reverse();
+          setYears(uniqueYears);
+        });
   }, []);
 
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <main>
-        <PublicationsHeader />
-        <div className="container">
-          <Paper sx={{ p: 2, m: 4 }}>
-            {years.map((year) => (
-              <React.Fragment key={year}>
-                <h2>{year}</h2>
-                <PublicationsList year={year} />
-              </React.Fragment>
-            ))}
-          </Paper>
-        </div>
-      </main>{" "}
-    </Layout>
+      <Layout
+          title={`Hello from ${siteConfig.title}`}
+          description="Description will go into a meta tag in <head />"
+      >
+        <main>
+          <PublicationsHeader />
+          <div className="container">
+            <Paper sx={{ p: 2, m: 4 }}>
+              {years.map((year) => (
+                  <React.Fragment key={year}>
+                    <h2>{year}</h2>
+                    <PublicationsList year={year} />
+                  </React.Fragment>
+              ))}
+            </Paper>
+          </div>
+        </main>{" "}
+      </Layout>
   );
 }
