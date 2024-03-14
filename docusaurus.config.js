@@ -3,7 +3,7 @@
 // const katex = require('rehype-katex');
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import {themes as prismThemes} from 'prism-react-renderer';
+//import {themes as prismThemes} from 'prism-react-renderer';
 
 // const {
 //     MailRounded

@@ -4,10 +4,10 @@ import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
-import HomepageFeatures from "../components/HomepageFeatures";
+//import HomepageFeatures from "../components/HomepageFeatures";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import CodeBlock from "@theme/CodeBlock";
+//import Paper from "@mui/material/Paper";
+//import CodeBlock from "@theme/CodeBlock";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
