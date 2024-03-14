@@ -103,11 +103,15 @@ module.exports = {
                     items: [
                         {
                             to: '/docs/cadenza1/cc1_intro/',
-                            label: 'Challenge 1',
+                            label: 'CAD1',
                         },
                         {
                             to: '/docs/icassp_2024/intro/',
-                            label: 'Challenge ICASSP 2024',
+                            label: 'ICASSP 2024 Grand Challenge',
+                        },
+                        {
+                            to: '/docs/cadenza2/intro',
+                            label: 'CAD2',
                         }
                     ]
                 },
