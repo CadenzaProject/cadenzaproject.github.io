@@ -30,7 +30,9 @@ music-listening issues for people with hearing loss. The first arm focus on impr
 when listening to music over headphones while preserving or enhancing the music quality. 
 The second arm focus on rebalancing the level of the instruments from a music ensembles of up to five instruments to 
 match the balance preference of hearing aids users. 
-Further details of the tracks are presented below.
+
+Since listeners may be experiencing live music, CAD2 will accommodate both causal and non-causal approaches in both arms. 
+And, a causal and non-causal baseline will be provided. Further details of the tracks are presented below.
 
 ### Arm 1: Lyrics Intelligibility
 
