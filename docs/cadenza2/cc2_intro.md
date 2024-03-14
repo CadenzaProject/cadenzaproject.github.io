@@ -32,12 +32,12 @@ ensembles of up to five instruments. Further details of the tracks are presented
 
 ### Arm 1: Lyrics Intelligibility
 
-Lyrics intelligibility can be defined as to the extent to which a listener understands a singer's message [1](#refs).
+Lyrics intelligibility can be defined as to the extent to which a listener understands a singer's message [[1]](#refs).
 According to [Fine et al.](#refs), exist four group of factors that can lead to lyrics misunderstanding:
 
 1. Performer-related factors: includes _articulation_, _voice quality_ and _diction_.
 2. Music-to-singer balance: includes _music genre_, _song speed_ and _composition style_.
-3. Listener-related factors: includes _listener attention_ and _hearing ability_ of the listener. 
+3. Listener-related factors [[2]](#refs): includes _listener attention_ and _hearing ability_ of the listener. 
 4. Environmental-related factors: includes _acoustics of the location_, _proximity to performer_ and _use or abuse of amplification_.
 
 As, in this arm, listeners are listening to the music over headphones, factors (4) are not explicitly include. 
@@ -56,14 +56,27 @@ illustrates how the background accompaniment can mask the singing line, affectin
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/rock_loud.mp3' />
 
 The third group of factors, listener-related factors, will be covered by providing listeners' hearing characteristics 
-or [Audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI). Participant will be provided with different 
-sets of audiograms for training, development and evaluation.
+or [Audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI). 
+
+Participant will be provided with appropriate music datasets and with sets of audiograms for training, development and evaluation.
 
 
 ### Arm 2: Rebalancing Classical Music
+
+In a survey made by [[Alinka et al.]](#refs), hearing aids users reported several issues when listening to 
+music with their hearing aids, including: distortion created to the bass; difficulties to hear the range of the music, 
+specially high frequency pitches; and tendency to miss the impact of quiet part of the composition. 
+
+In a pilot study, we found that having the ability of rebalancing different instruments from a classical music 
+ensemble is a very desirable tool for hearing aids users. Therefore, in this second arm of the challenge, we
+tackle this issue by presenting a classical music rebalancing. The music datasets contain ensembles of two to five instruments (mostly strings).
+
+Participants will be given with classical music datasets, listener characteristics and expected gains for each instrument 
+in the ensemble. Participants will be asked to produce the rebalanced track from the original mixture. 
 
 
 ### References
 <a name="refs"></a>
 
-[1] Fine, P. A., & Ginsborg, J. (2014). Making myself understood: perceived factors affecting the intelligibility of sung text. Frontiers in psychology, 5, 809.
+**[1]** Fine, P. A., & Ginsborg, J. (2014). "Making myself understood: perceived factors affecting the intelligibility of sung text," Frontiers in psychology, 5, 809.  
+**[2]** A. Greasley, H. Crook, and R. Fulford, "Music listening and hearing aids: perspectives from audiologists and their patients," International Journal of Audiology, vol. 59, no. 9, pp. 694–706, 2020.
