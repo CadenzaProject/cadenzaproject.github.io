@@ -42,7 +42,8 @@
     "remark-math": "6",
     "unist-util-visit": "^2.0.0",
     "citation-js": "^0.7.5",
-    "bibtex-parse-js": "^0.0.24"
+    "bibtex-parse-js": "^0.0.24",
+    "react-player":  "^2.15.1"
   },
   "engines": {
     "node": ">=18.0"
