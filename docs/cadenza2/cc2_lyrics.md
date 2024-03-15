@@ -80,7 +80,7 @@ original signal with the corresponding amplification applied. The second segment
 the original text lyrics as reference. 
 
 The system will be evaluated for quality and intelligibility using a series of objective metrics. 
-Audio quality will be scored using HAAQI [[3]](#refs), HAAQI-Net [[4]](#refs). and an audio quality metric we are developing. 
+Audio quality will be scored using HAAQI [[3]](#refs), HAAQI-Net [[4]](#refs), and an audio quality metric we are developing. 
 Intelligibility will be scored using Word Error Rate (WER) and other metrics such as Singing Adapted STOI [[5]](#refs). 
 Note that this is not an exhaustive list of the metrics we will use, and we may not use some of the metrics mentioned above. 
 The definitive list will be published in July with the launch of the challenge. As most of these metrics have never been
