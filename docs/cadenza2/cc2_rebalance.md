@@ -31,7 +31,7 @@ by 10 dB while keeping the rest unchanged.
 
 ## Overview
 
-Entrants are given a piece of classical music, featuring ensembles comprising from two to five instruments, 
+Entrants will be given a piece of classical music, featuring ensembles comprising from two to five instruments, 
 and asked to rebalance the instruments for a short extract. The target gains for the rebalancing will be randomly created.
 Signals will be scored objectively by HAAQI and subjectively by a listener test.
 
