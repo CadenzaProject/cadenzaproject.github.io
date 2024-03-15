@@ -32,9 +32,10 @@ The second arm focus on rebalancing the level of the instruments from a music en
 match the balance preference of hearing aids users. 
 
 Since listeners may be experiencing live music, CAD2 will accommodate both causal and non-causal approaches in both arms. 
-And, a causal and non-causal baseline will be provided. Further details of the tracks are presented below.
+And, a causal and non-causal baseline will be provided. Further details of the tracks are presented in 
+[Lyrics Intelligibility](lyrics) and [Rebalancing Classical Music](rebalancing).
 
-
+To stay up to date please sign up for the [Cadenza Challenge's Google group](https://groups.google.com/g/cadenza-challenge).
 
 
 
