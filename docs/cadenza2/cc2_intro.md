@@ -37,8 +37,7 @@ match the balance preference of hearing aids users. A more detailed description 
 [Rebalancing Classical Music](rebalancing) page
 
 Since listeners may be experiencing live music, CAD2 will accommodate both causal and non-causal approaches in both arms. 
-And, a causal and non-causal baseline will be provided. Further details of the tracks are presented in 
-[Lyrics Intelligibility](lyrics) and [Rebalancing Classical Music](rebalancing).
+And, a causal and non-causal baseline will be provided. 
 
 To stay up to date please sign up for the [Cadenza Challenge's Google group](https://groups.google.com/g/cadenza-challenge).
 
