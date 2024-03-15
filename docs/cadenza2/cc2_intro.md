@@ -34,63 +34,9 @@ match the balance preference of hearing aids users.
 Since listeners may be experiencing live music, CAD2 will accommodate both causal and non-causal approaches in both arms. 
 And, a causal and non-causal baseline will be provided. Further details of the tracks are presented below.
 
-### Arm 1: Lyrics Intelligibility
-
-The first arm of the CAD2 challenge aim to improve the intelligibility of lyrics for people with hearing loss when
-listening to music over headphones, without affecting the quality of the music. 
-
-Lyrics intelligibility can be defined as to "_the extent to which a listener understands a singer's message_" [[1]](#refs).
-According to [Fine et al.](#refs), exist four groups of factors that can lead to lyrics misunderstanding:
-
-1. Performer-related factors: includes _articulation_, _voice quality_ and _diction_.
-2. Music-to-singer balance: includes _music genre_, _song speed_ and _composition style_.
-3. Listener-related factors [[2]](#refs): includes _listener attention_ and _hearing ability_ of the listener. 
-4. Environmental-related factors: includes _acoustics of the location_, _proximity to performer_ and _use or abuse of amplification_.
-
-As listeners are using headphones in this scenario, environmental-related factors are not explicitly include. 
-From the first three factors, factors (1), (2) are addressed by including several samples with different singing and
-background accompaniment characteristics from open Pop/Rock datasets.
-In these datasets, one can find samples of music tracks where the background is not prominent and
-the singing style is more easily understandable. This is illustrated by the following example extracted from the training set
-from MUSDB18-HQ dataset:
-
-<ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/pop_slow.mp3' />
-
-These datasets include tracks where the singing can be more difficult to understand, either because the background level
-is higher than the singing level and/or the singing is difficult to understand. The next example, also drawn from MUSDB18-HQ dataset, 
-illustrates how the background accompaniment can mask the singing line, affecting the intelligibility.
-
-<ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/rock_loud.mp3' />
-
-The third group of factors, listener-related factors, will be covered by providing listeners' hearing characteristics 
-or [Audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI). Participant will be provided with 
-appropriate music datasets and sets of audiograms for training, development and evaluation.
 
 
-### Arm 2: Rebalancing Classical Music
 
-In a survey conducted by [Alinka et al.](#refs), users of hearing aids reported several issues when listening to music,
-including distortion in the bass, difficulties in perceiving the full range of the music, especially high-frequency pitches, 
-and a tendency to miss the impact of quieter parts of compositions.
 
-In a pilot study conducted by the Cadenza Team,we found that tools enabling users to rebalance different instruments 
-in a classical music ensemble are highly desirable for those with hearing aids. Therefore, in this second arm, 
-we present a classical music rebalancing challenge.
 
-Participants will be provided with classical music datasets featuring ensembles comprising two to five instruments, 
-as well as listeners' hearing characteristics or [Audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI).
-Additionally, participants will receive information regarding the expected gains for each instrument in the ensemble. 
-They will then be tasked with producing a rebalanced track from the original mixture.
-
-The following example illustrates how changing the level of one instrument can change the listening experience.
-The piece corresponds to an ensemble of 5 instruments of Bass, Cello, Viola, Violin 1 and Violin 2 drawn from the
-EnsembleSet dataset. The first sample corresponds to the original mixture. The second sample is the original track 
-with the Violin 1 levels increased in 6 dB and keeping the rest unchanged. The last sample shows the original track 
-with the Viola levels increased in 10 dB keeping the rest unchanged.
-
-|          |                                                                                                                   |
-|----------|-------------------------------------------------------------------------------------------------------------------|
-| Original | <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/classical_original.mp3' />  |
-| Violin 1 | <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/classical_violin.mp3' />    |
-| Viola    | <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/classical_viola.mp3'/>      |
 
