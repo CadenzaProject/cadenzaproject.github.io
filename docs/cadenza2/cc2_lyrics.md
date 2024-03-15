@@ -71,11 +71,38 @@ More information about causality can be found on Computational Restrictions sect
 
 ## Evaluation
 
-The listener panel arm will be evaluated 
+Participants will be asked to submit two signals per song-listener pair: a segment of 15-20 seconds corresponding to a verse or chorus of a song,
+and a smaller segment corresponding a lyric phrase for transcription. Both segments may not correspond to the same part of the
+song. That is, the small segment may be a phrase from the first verse and the 15-20 second segment may correspond to a chorus or verse 2. 
 
+The first segment will be scored for quality and intelligibility. For intrusive metrics the reference will be the 
+original signal with the corresponding amplification applied. The second segment will be score for transcription using 
+the original text lyrics as reference. 
+
+The system will be evaluated for quality and intelligibility using a series of objective metrics. 
+Audio quality will be scored using HAAQI [[3]](#refs), HAAQI-Net [[4]](#refs). and an audio quality metric we are developing. 
+Intelligibility will be scored using Word Error Rate (WER) and other metrics such as Singing Adapted STOI [[5]](#refs). 
+Note that this is not an exhaustive list of the metrics we will use, and we may not use some of the metrics mentioned above. 
+The definitive list will be published in July with the launch of the challenge. As most of these metrics have never been
+tested under challenge conditions, systems will be scored but not ranked. 
+Therefore, the systems included in the listener test will be selected using criteria, which can include the originality 
+of the system or selection by a pilot listener test.
+
+### Listener Test
+
+In the listener test, listeners will be presented with the same both segments and perform the same three evaluations:
+1. Score the Audio Quality of the 15-20 second segment.
+2. Score the Intelligibility of the 15-20 second segment.
+3. Transcribe the lyrics of the smaller segment.
+
+The audio quality and intelligibility scores will be weighted using the same &alpha; used in the processing.
+However, the listener panel will not know what was the expected &alpha; for that sample. 
 
 ### References
 <a name="refs"></a>
 
 **[1]** Fine, P. A., & Ginsborg, J. (2014). "Making myself understood: perceived factors affecting the intelligibility of sung text," Frontiers in psychology, 5, 809.  
-**[2]** A. Greasley, H. Crook, and R. Fulford, "Music listening and hearing aids: perspectives from audiologists and their patients," International Journal of Audiology, vol. 59, no. 9, pp. 694–706, 2020.
+**[2]** A. Greasley, H. Crook, and R. Fulford, "Music listening and hearing aids: perspectives from audiologists and their patients," International Journal of Audiology, vol. 59, no. 9, pp. 694–706, 2020.  
+**[3]** Kates, J. M., & Arehart, K. H. (2015). The hearing-aid audio quality index (HAAQI). IEEE/ACM transactions on audio, speech, and language processing, 24(2), 354-365.  
+**[4]** Wisnu, D. A., Pratiwi, E., Rini, S., Zezario, R. E., Wang, H. M., & Tsao, Y. (2024). HAAQI-Net: A non-intrusive neural music quality assessment model for hearing aids. arXiv preprint arXiv:2401.01145.   
+**[5]** Sharma, B., & Wang, Y. (2019). Automatic evaluation of song intelligibility using singing adapted STOI and vocal-specific features. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, 319-331.  
