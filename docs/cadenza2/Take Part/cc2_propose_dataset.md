@@ -1,7 +1,7 @@
 ---
-id: new_dataset
-title: Datasets Proposal
-sidebar_label: Datasets Proposal
+id: list_dataset
+title: List of Datasets
+sidebar_label: List of Datasets
 sidebar_position: 2.2
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -14,39 +14,46 @@ please ensure that it is not already included in the current list and that it co
 
 Please take into consideration that some datasets won't be allowed to use for training if we are planning to use it for evaluation.
 
-### Official Datasets
+### Datasets
 
 The next table shows the complete list of evaluated datasets. 
+
 Description of the columns:
 
 - **Dataset**: indicates the name of the dataset.
-- **Lyrics Intelligibility**: indicates if the dataset can be used for training on this arm.
-- **Rebalancing Music**: indicates if the dataset can be used for training on this arm.
+- **Lyrics Intelligibility**: indicates if the dataset can be used for training in this arm.
+- **Rebalancing Music**: indicates if the dataset can be used for training in this arm.
 - **Comments**: Extra comments.
 
-Datasets that we are reserving for evaluation **CANNOT** be used for training. 
+1. Dataset names in bold corresponds to the _Official Data_.
+2. Dataset names that are not in bold but are marked as _Yes_ for "Lyrics Intelligibility" and/or "Rebalancing Music" arms correspond to
+the datasets that can be used as _Supplementary Data_.
 
-| Dataset                | Lyrics Intelligibility | Rebalancing Music | Comments                     |
-|------------------------|:----------------------:|:-----------------:|------------------------------|
-| MUSDB18-HQ train split |          Yes           |        Yes        | We will mirror it            |
-| MUSDB18-HQ test split  |           No           |        Yes        | We will mirror it            |
-| DALI                   |          Yes           |        Yes        | Check if you can download it |
-| JamendoLyrics          |       No (Eval)        |         -         | We will mirror it            |
-| CCMixter               |       No (Eval)        |        Yes        | We will mirror it            |
-| EnsembleSet            |           -            |        Yes        |                              |
-| AAM                    |           -            |        Yes        |                              |
-| URMP                   |           -            |     No (Eval)     | We will mirror it            |
-| BACH10                 |           -            |        Yes        |                              |
-| TRIOS dataset          |           -            |        Yes        |                              |
+| Dataset                    | Lyrics Intelligibility | Rebalancing Music | Comments                     |
+|----------------------------|:----------------------:|:-----------------:|------------------------------|
+| **MUSDB18-HQ train split** |          Yes           |        Yes        | We will mirror it            |
+| MUSDB18-HQ test split      |           No           |        Yes        | We will mirror it            |
+| DALI                       |          Yes           |        Yes        | Check if you can download it |
+| **JamendoLyrics**          |       No (Eval)        |         -         | We will mirror it            |
+| **CCMixter**               |       No (Eval)        |        Yes        | We will mirror it            |
+| **EnsembleSet**            |           -            |        Yes        |                              |
+| AAM                        |           -            |        Yes        |                              |
+| **URMP**                   |           -            |     No (Eval)     | We will mirror it            |
+| BACH10                     |           -            |        Yes        |                              |
+| TRIOS dataset              |           -            |        Yes        |                              |
 
 
 
-### Dataset proposal rules
+### Dataset proposal
 
-1. The dataset cannot be a private dataset.
-2. The dataset must be freely available for all participants.
-3. The dataset must be easily accessible for all participants.
-4. The dataset must not contain copyrights restrictions that prevents their use.
+#### Rules for Dataset Proposal
+
+1. The dataset cannot be a private.
+2. The dataset must be freely available to all participants.
+3. The dataset must be easily accessible to all participants.
+4. The dataset must not contain copyright restrictions that prevent its use.
+
+#### Form
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYyrhxsbmx9C4hLCWOfnnHC9hdOKAvVVLrzgPHR8wjjcpFyQ/viewform?embedded=true" width="640" height="1072" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
