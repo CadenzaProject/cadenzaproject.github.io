@@ -2,7 +2,7 @@
 id: rules
 title: Rules
 sidebar_label: Rules
-sidebar_position: 2.5
+sidebar_position: 4.3
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";

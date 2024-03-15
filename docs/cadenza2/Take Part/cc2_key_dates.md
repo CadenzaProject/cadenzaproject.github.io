@@ -2,7 +2,7 @@
 id: key_dates
 title: Important Dates
 sidebar_label: Important dates
-sidebar_position: 2.1
+sidebar_position: 4.1
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
