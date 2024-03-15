@@ -26,10 +26,15 @@ Participants are asked to process the music signals to achieve the expected targ
 The challenge is evaluated using objective metrics and with a listener tests with hearing-impaired listeners.
 
 This challenge extend from the [Task 1 of the 1st Cadenza Challenge](../cadenza1/cc1_intro) and focused on two 
-music-listening issues for people with hearing loss. The first arm focus on improving the lyrics intelligibility of Pop/Rock music
-when listening to music over headphones while preserving or enhancing the music quality. 
-The second arm focus on rebalancing the level of the instruments from a music ensembles of up to five instruments to 
-match the balance preference of hearing aids users. 
+music-listening issues for people with hearing loss. 
+
+1. The first arm focus on improving the lyrics intelligibility of Pop/Rock music
+when listening to music over headphones while preserving or enhancing the music quality. More details
+of this Arm can be found on the [Lyrics Intelligibility](lyrics)page,
+
+2. The second arm focus on rebalancing the level of the instruments from a music ensembles of up to five instruments to 
+match the balance preference of hearing aids users. A more detailed description of this arm can be found on the 
+[Rebalancing Classical Music](rebalancing) page
 
 Since listeners may be experiencing live music, CAD2 will accommodate both causal and non-causal approaches in both arms. 
 And, a causal and non-causal baseline will be provided. Further details of the tracks are presented in 
