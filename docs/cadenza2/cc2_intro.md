@@ -25,7 +25,7 @@ The challenge provides participants with music signals and targets that represen
 Participants are asked to process the music signals to achieve the expected target.
 The challenge is evaluated using objective metrics and with a listener tests with hearing-impaired listeners.
 
-This challenge extend from the [Task 1 of the 1st Cadenza Challenge](../cadenza1/cc1_intro) and focused on two 
+This challenge extend from the [Task 1 of the 1st Cadenza Challenge](../cadenza1/cc1_intro) (CAD1) and focused on two 
 music-listening issues for people with hearing loss. 
 
 1. The first arm focus on improving the lyrics intelligibility of Pop/Rock music
@@ -41,7 +41,15 @@ And, a causal and non-causal baseline will be provided.
 
 To stay up to date please sign up for the [Cadenza Challenge's Google group](https://groups.google.com/g/cadenza-challenge).
 
+## Audio quality metric
 
+In the CAD1 challenge listener test, we collected several subjectives scores from a panel of more than 50 listeners with symmetric hearing loss.
+This panel scored several audio signals processed/optimised to their hearing characteristics. The panel scored the signals
+across several dimensions, including the general audio quality, the frequency balance, the distortion and the clarity. 
+You can watch a summary of the panel study [here](../../../blog/Listener%20panel%20study%20update).
 
+Using the data we collected, we are developing an audio quality metric that we will use to evaluate the systems.
+This data will be released so participants will be able to develop and/or test their own audio quality metrics.
+It is expected that any metric developed using with our data will be released as open source.
 
 

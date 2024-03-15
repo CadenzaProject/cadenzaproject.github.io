@@ -69,7 +69,9 @@ We will accept causal and non-causal systems. A baseline will be provided for ea
 The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future.
 More information about causality can be found on Computational Restrictions section of the [Rules](Take%20Part/rules) page.
 
+## Evaluation
 
+The listener panel arm will be evaluated 
 
 
 ### References
