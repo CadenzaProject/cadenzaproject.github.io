@@ -39,7 +39,7 @@ the datasets that can be used as _Supplementary Data_.
 | **EnsembleSet**            |           -            |        Yes        |                              |
 | AAM                        |           -            |        Yes        |                              |
 | **URMP**                   |           -            |     No (Eval)     | We will mirror it            |
-| BACH10                     |           -            |        Yes        |                              |
+| BACH10                     |           -            |     No (Eval)     | We will mirror it            |
 | TRIOS dataset              |           -            |        Yes        |                              |
 
 
