@@ -8,48 +8,37 @@ import ReactPlayer from 'react-player'
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-The Cadenza Challenges are about improving the **perceived audio quality of recorded music for people with a hearing loss**.
-According to The World Health Organization (WHO), 430 million people worldwide have a disabling hearing loss, 
-with this number increasing as the population ages. WHO projects that this number will increase to 1 in 10 by 2050. 
-Hearing loss causes various problems when listening to music. 
-It can make picking out lyrics more difficult, with music becoming duller as high frequencies disappear. 
-This reduces the enjoyment of music and can lead to disengagement from listening and music-making, 
-reducing the health and well-being effects people otherwise get from music. 
+The Cadenza Challenges are about improving the **perceived audio quality of music for people with a hearing loss**.
+According to The World Health Organization (WHO), 430 million people worldwide have a disabling hearing loss. 
+Hearing loss causes various problems when listening to music such as making picking out lyrics more difficult. 
+This reduces the enjoyment of music and can lead to disengagement from listening and music-making. 
 
-The 2nd Cadenza Challenge (CAD2) presents two arms: improving lyrics intelligibility while preserving the music quality, and
-improving classical music listening by rebalancing the instruments according to the listener's preferences.  
+The 2nd Cadenza Challenge (CAD2) starting in 2024 presents two tasks:
 
-## Overview of the challenge
+1. Improving the intelligibility of lyrics for pop/rock music while not harming audio quality. The scenario is listening over headphones. More details
+of this task can be found on the [Lyrics Intelligibility](lyrics)page.
 
-The challenge provides participants with music signals and targets that represented the listener's preferences for an improved music experience. 
-Participants are asked to process the music signals to achieve the expected target.
-The challenge is evaluated using objective metrics and with a listener tests with hearing-impaired listeners.
+2. Rebalancing the level of the instruments from a music ensembles of up to five instruments to 
+match the balance preference of hearing aids users. A more detailed description of this can be found on the 
+[Rebalancing Classical Music](rebalancing) page.
 
-This challenge extend from the [Task 1 of the 1st Cadenza Challenge](../cadenza1/cc1_intro) (CAD1) and focused on two 
-music-listening issues for people with hearing loss. 
+For both tasks a demix / remix approach could be used. Gains could be applied to the demixed signals before remixing back to stereo to achieve the aims of the challenge. For lyric intelligibility, a simple amplification of the vocals could increase intelligibility, but there are other ways to achieve this that might cause less harm to audio quality. It would also be possible to use other approaches than demix/remix e.g. end-to-end.
 
-1. The first arm focus on improving the lyrics intelligibility of Pop/Rock music
-when listening to music over headphones while preserving or enhancing the music quality. More details
-of this Arm can be found on the [Lyrics Intelligibility](lyrics)page,
+Cadenza will provide challenge entrants with music signals and targets that represented the listener's preferences for an improved music experience. 
+Entrants are asked to process the music signals to achieve the expected target. The challenge is evaluated using objective metrics and with a perceptual tests with listeners who have hearing loss. We will provide software tools, metrics and baselines to aid your work.
 
-2. The second arm focus on rebalancing the level of the instruments from a music ensembles of up to five instruments to 
-match the balance preference of hearing aids users. A more detailed description of this arm can be found on the 
-[Rebalancing Classical Music](rebalancing) page
-
-Since listeners may be experiencing live music, CAD2 will accommodate both causal and non-causal approaches in both arms. 
-And, a causal and non-causal baseline will be provided. 
+Since listeners may be experiencing live music, CAD2 welcomes both causal and non-causal approaches in both tasks. (A causal and non-causal baseline will be provided.)
 
 To stay up to date please sign up for the [Cadenza Challenge's Google group](https://groups.google.com/g/cadenza-challenge).
 
+{/*
+
 ## Audio quality metric
 
-In the CAD1 challenge listener test, we collected several subjectives scores from a panel of more than 50 listeners with symmetric hearing loss.
+In the CAD1 challenge listener test, we collected several subjectives scores from a panel of more than 50 listeners with hearing loss.
 This panel scored several audio signals processed/optimised to their hearing characteristics. The panel scored the signals
 across several dimensions, including the general audio quality, the frequency balance, the distortion and the clarity. 
-You can watch a summary of the panel study [here](../../../blog/Listener%20panel%20study%20update).
+You can watch a summary of the panel study [here](../../../blog/Listener%20panel%20study%20update). Using the data we collected, we are developing an audio quality metric that we will plan to use to evaluate the systems.
 
-Using the data we collected, we are developing an audio quality metric that we will use to evaluate the systems.
-This data will be released so participants will be able to develop and/or test their own audio quality metrics.
-It is expected that any metric developed using with our data will be released as open source.
-
+*/}
 

@@ -1,6 +1,6 @@
 ---
 id: lyrics
-title: "Arm 1: Lyrics Intelligibility"
+title: "Task 1: Lyrics Intelligibility"
 sidebar_label: Lyrics Intelligibility
 sidebar_position: 2
 ---
@@ -8,20 +8,30 @@ import ReactPlayer from 'react-player'
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-The first arm of the CAD2 challenge aim to improve the intelligibility of lyrics for people with hearing loss when
-listening to music over headphones, without affecting the quality of the music.
+Studies show that not being able to understand lyrics is an important problem to tackle for those with hearing loss.
+
+Consequently, this task is about improving the intelligibility of lyrics when
+listening to pop/rock over headphones. But this needs to be done without losing too much audio quality - you can't improve intelligibility just by turning off the rest of the band! We will be using one metric for intelligibility and another metric for audio quality, and giving you different targets to explore the balance between these metrics.
+
+This task could be tackled in many different ways using machine learning. A few examples:
+- Within speech technology, there are many different approaches to improving speech intelligibility that have been developed. Can these methods be adapted for listening to vocals?
+- Within demixing, technologies allow the separation of music into different components, this would then allow processing and remixing to improve intelligibility.
+- End-to-end approaches allow the transformation of audio from one style to another. How can this be adapted for this CAD2 task?
+But we'd welcome other approaches as well.
+
+## What is lyric intelligibility?
 
 Lyrics intelligibility can be defined as to "_the extent to which a listener understands a singer's message_" [[1]](#refs).
-According to [Fine et al.](#refs), exist four groups of factors that can lead to lyrics misunderstanding:
+According to [Fine et al.](#refs), there are four groups of factors that can lead to lyric misunderstanding:
 
-1. Performer-related factors: includes _articulation_, _voice quality_ and _diction_.
+1. Performer: includes _articulation_, _voice quality_ and _diction_.
 2. Music-to-singer balance: includes _music genre_, _song speed_ and _composition style_.
-3. Listener-related factors [[2]](#refs): includes _listener attention_ and _hearing ability_ of the listener.
-4. Environmental-related factors: includes _acoustics of the location_, _proximity to performer_ and _use or abuse of amplification_.
+3. Listener [[2]](#refs): includes _listener attention_ and _hearing ability_.
+4. Environmental: includes _acoustics of the location_, _proximity to performer_ and _use or abuse of amplification_.
 
-As listeners are using headphones in this scenario, environmental-related factors are not explicitly include.
+As listeners are using headphones in our scenario, environmental factors are not included.
 From the first three factors, factors (1), (2) are addressed by including several samples with different singing and
-background accompaniment characteristics from open Pop/Rock datasets.
+background accompaniment characteristics from open pop/rock datasets.
 In these datasets, one can find samples of music tracks where the background is not prominent and
 the singing style is more easily understandable. This is illustrated by the following example extracted from the training set
 from MUSDB18-HQ dataset:
@@ -34,18 +44,16 @@ illustrates how the background accompaniment can mask the singing line, affectin
 
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/rock_loud.mp3' />
 
-The third group of factors, listener-related factors, will be covered by providing listeners' hearing characteristics
-or [Audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI). Participant will be provided with
+Factor (3) will be covered by us providing listeners' hearing characteristics
+as [Audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI).
+
+Challenge entrants will be provided with
 appropriate music datasets and sets of audiograms for training, development and evaluation.
 
-## Overview
+## Task overview
 
-Entrants will be given a small segment of a song (e.g.: the chorus of a Pop/Rock) and asked to process the segment 
-to increase the intelligibility of the segment while keeping the music quality. The balance between the intelligibility 
-and audio quality will be given by a randomly selected &alpha; (alpha) value between 0 (prioritise intelligibility) and 1 (prioritise audio quality).
+Entrants will process part of a pop/rock track to increase the intelligibility with least loss of audio quality. Two metrics will guage the systems, one for quality _Q_ and the other for intelligibility _I_. The balance between the intelligibility and audio quality will be given by a randomly selected &alpha; (alpha) value between 0 (prioritise intelligibility) and 1 (prioritise audio quality). Thus the overall metric is &alpha;Q+[1-&alpha;]I.
 
-This &alpha; value will impact on the overall score
-System that only focused on audio quality will perform poorly on intelligibility for low &alpha;
 <figure id="fig1">
 <img width="350" src={useBaseUrl('/img/cad2/lowI_highQ.png')} />
 <figcaption>Figure 1, Simulation of a system focused only on Audio Quality.</figcaption>
@@ -57,7 +65,7 @@ System that only focused on lyrics intelligibility will perform poorly on qualit
 <figcaption>Figure 2, Simulation of a system focused only on Audio Quality.</figcaption>
 </figure>
 
-System that balance a qgodd music quality with enhanced intelligibility will perform good for all &alpha;
+System that balance a qood audio quality with enhanced intelligibility will perform good for all &alpha;
 <figure id="fig3">
 <img width="350" src={useBaseUrl('/img/cad2/highI_highQ.png')} />
 <figcaption>Figure 3, Simulation of a system performing good for quality and intelligibility.</figcaption>
@@ -65,9 +73,9 @@ System that balance a qgodd music quality with enhanced intelligibility will per
 
 ## Causality
 
-We will accept causal and non-causal systems. A baseline will be provided for each case.
+We will accept causal and non-causal systems. Non-causal systems could be used for recorded music, whereas causal systems could also work for live listening. A baseline will be provided for each case.
 The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future.
-More information about causality can be found on Computational Restrictions section of the [Rules](Take%20Part/rules) page.
+More information about causality can be found in Computational Restrictions section of the [Rules](Take%20Part/rules) page.
 
 ## Evaluation
 

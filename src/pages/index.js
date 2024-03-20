@@ -54,15 +54,14 @@ export default function Home() {
             <p />
             <b>
               How can we process and remix music so it sounds best for those
-              with a hearing loss? The Cadenza project aims to better define
+              with a hearing loss? The Cadenza project is defining
               what music personalised for someone with a hearing loss should
-              sound like and exploit the latest in machine learning to create
+              sound like and exploiting the latest in machine learning to create
               improved listening experiences.
             </b>
             <p />
-            The improvement in music will be achieved by running a series of
-            open signal processing challenges. Competitors will be ask to personalise and enhance music, through
-            processing and/or remixing.
+            The improvement in music is being achieved by running a series of
+            open signal processing challenges. Competitors are asked to personalise and enhance music, through processing and/or remixing.
             <p />
             <blockquote>
               “Running competitions is a great approach, because it will grow a
@@ -95,9 +94,7 @@ export default function Home() {
             Research Council (EPSRC). Industrial partners are BBC R&D, Google
             and Logitech; user engagement via Royal National Institute for
             the Deaf (RNID), and additional academic input from Oldenburg University.			
-            <p />
-			The first challenge starts Spring 2023.
-            <p />
+                        <p />
             Sign up to our{" "}
             <a href="https://groups.google.com/g/cadenza-challenge">
               Google group
