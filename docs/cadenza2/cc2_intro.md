@@ -16,7 +16,7 @@ This reduces the enjoyment of music and can lead to disengagement from listening
 The 2nd Cadenza Challenge (CAD2) starting in 2024 presents two tasks:
 
 1. Improving the intelligibility of lyrics for pop/rock music while not harming audio quality. The scenario is listening over headphones. More details
-of this task can be found on the [Lyrics Intelligibility](lyrics)page.
+of this task can be found on the [Lyrics Intelligibility](lyrics) page.
 
 2. Rebalancing the level of the instruments from a music ensembles of up to five instruments to 
 match the balance preference of hearing aids users. A more detailed description of this can be found on the 

@@ -62,13 +62,13 @@ Entrants will process part of a pop/rock track to increase the intelligibility w
 System that only focused on lyrics intelligibility will perform poorly on quality for high &alpha;
 <figure id="fig2">
 <img width="350" src={useBaseUrl('/img/cad2/highI_lowQ.png')} />
-<figcaption>Figure 2, Simulation of a system focused only on Audio Quality.</figcaption>
+<figcaption>Figure 2, Simulation of a system focused only on Lyrics Intelligibility.</figcaption>
 </figure>
 
 System that balance a qood audio quality with enhanced intelligibility will perform good for all &alpha;
 <figure id="fig3">
 <img width="350" src={useBaseUrl('/img/cad2/highI_highQ.png')} />
-<figcaption>Figure 3, Simulation of a system performing good for quality and intelligibility.</figcaption>
+<figcaption>Figure 3, Simulation of a system performing good for Quality and Intelligibility.</figcaption>
 </figure>
 
 ## Causality
