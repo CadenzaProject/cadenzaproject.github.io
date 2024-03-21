@@ -56,3 +56,8 @@ figcaption {
     padding: 3px;
     text-align: center;
 }
+
+/* To hide a whole page from the sidebar */
+.hidden {
+    display: none !important;
+}
