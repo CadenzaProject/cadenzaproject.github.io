@@ -21,6 +21,10 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 - Teams may reserve the right to be referred to using anonymous code names in the published rank ordering.
 
 ## 3. What information can I use?
+The datasets to be used for training, development and evaluation are under being collated. 
+
+
+{/*
 
 The list of the datasets to participants can use are listed on [List Datasets](list_dataset) page.
 
@@ -32,6 +36,8 @@ The list of the datasets to participants can use are listed on [List Datasets](l
    - `Official data`: refers to the official training/evaluation datasets for each arm.
    - `Data augmentation`: refers to traditional data augmentation techniques, such as, flipping right and left channels, applying SpecAugmentation, pitch shifting, etc.
    - `Supplememented data`: refers to the use of additional music samples during training. The datasets that can be used for supplementing are specified on [List Datasets](list_dataset) page.
+   
+*/}
 
 ### 3.1. Training and development
 
