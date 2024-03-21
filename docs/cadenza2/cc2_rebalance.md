@@ -1,6 +1,6 @@
 ---
 id: rebalancing
-title: "Arm 2: Rebalancing Classical Music"
+title: "Task 2: Rebalancing Classical Music"
 sidebar_label: Rebalancing Classical Music
 sidebar_position: 3
 ---
@@ -12,9 +12,8 @@ Hearing aid users report several issues when listening to music, including disto
 perceiving the full range of the music, especially high-frequency pitches, and a tendency to miss the impact of quieter 
 parts of compositions [[1]](#refs).
 
-In a pilot study conducted by the Cadenza Team, we found that tools enabling users to rebalance different instruments
-in a classical music ensemble are highly desirable for those with hearing aids. The second arm of the CAD2 taps into 
-this issue presenting a classical music rebalancing challenge.
+In a pilot study conducted by the Cadenza Team, we found giving listeners sliders to allow them to rebalance different instruments
+in a classical music ensemble was desirable.
 
 The following example illustrates how changing the level of one instrument can alter the listening experience. 
 The piece consists of an ensemble of five instruments: Bass, Cello, Viola, Violin 1, and Violin 2, drawn from the EnsembleSet dataset. 
@@ -28,30 +27,27 @@ by 10 dB while keeping the rest unchanged.
 | Violin 1 | <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/classical_violin.mp3' />    |
 | Viola    | <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/classical_viola.mp3'/>      |
 
+This task could be tackled by demixing the stereo into the separate instruments, applying the requested gains and downmixing. Compared to previous demix challenges a novelty is doing this for classical music instead of pop/rock. Additional novelty could also come from a causal algorithm, if you decide to make something that works for live music. Of course there are other approaches such as end-to-end that might be adapted for the task.
 
 ## Overview
 
-Entrants will be given a piece of classical music, featuring ensembles comprising from two to five instruments, 
-and asked to rebalance the instruments for a short extract. The target gains for the rebalancing will be randomly created.
-Signals will be scored objectively by HAAQI and subjectively by a listener test.
+Entrants will be given a piece of classical music in stereo, featuring ensembles comprising between two and five instruments. They will be asked to rebalance the instruments using target gains that we will specify. Signals will be scored objectively by HAAQI and subjectively by a listener test.
 
 ## Causality
 
-We will accept causal and non-causal systems. A baseline will be provided for each case.
-The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future.
-More information about causality can be found on Computational Restrictions section of the [Rules](Take%20Part/rules) page.
+We will accept causal and non-causal systems. Non-causal systems could be used for recorded music, whereas causal systems would also work for live listening. A baseline will be provided for each case. The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future. More information about causality can be found in Computational Restrictions section of the [Rules](Take%20Part/rules) page.
 
 ## Evaluation
 
-Entrants will be asked to submit a 15-second segment of a song and will be score using HAAQI and an audio quality metric we are developing.
-Note that this is not an exhaustive list of the metrics we will use, and we may not use some of the metrics mentioned above.
-The definitive list will be published in July with the launch of the challenge.
+### Objective metrics
 
-Entrants are free to use any metric they may find useful during training.
+Entrants will be asked to submit musical extracts for evaluation by HAAQI or an audio quality metric we are developing. For intrusive metrics, the reference will be formed by remixing the original stems with the target gains applied to each instrument. Note, we are currently working on the metrics, and a definitive list will be published when we launch the challenge. Entrants are free to use any metric they may find useful during training as well.
 
 ### Listener Test
 
-In the listener test, participants will be presented with the rebalanced signal and asked to score its audio quality.
+Listeners will be presented with the rebalanced signal and asked to score its audio quality. The exact form of the test is currently being designed.
+
+{/*
 
 At the challenge launch, entrants will be given random gains for development. 
 However, using random gains can lead to a rebalance that listeners may not prefer 
@@ -61,6 +57,8 @@ potentially resulting in a good system being scored poorly.
 To address this issue, we will conduct a study with our listener panel to determine their preferred gains. 
 This study will inform the gains used in a second development test, which will be released halfway through the challenge, 
 and the evaluation set.
+
+*/}
 
 ### References
 <a name="refs"></a>

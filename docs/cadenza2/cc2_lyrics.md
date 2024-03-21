@@ -48,6 +48,8 @@ Challenge entrants will be provided with appropriate music datasets and sets of 
 
 Entrants will process part of a pop/rock track to increase the intelligibility with least loss of audio quality. Two metrics will guage the systems, one for quality _Q_ and the other for intelligibility _I_. The balance between the intelligibility and audio quality will be given by a randomly selected &alpha; (alpha) value between 0 (prioritise intelligibility) and 1 (prioritise audio quality). Thus the overall metric is &alpha;Q+[1-&alpha;]I.
 
+{/*
+
 Figures 1-3 show how systems might prioritise different aspects. Figure 1 is as system that prioritises quality and performs poorly on intelligibility. Figure 2 is a system that prioritises intelligibility. We're looking for systems like Figure 3 that improve intelligibility while maintaining good quality.
 
 <figure id="fig1">
@@ -65,10 +67,29 @@ Figures 1-3 show how systems might prioritise different aspects. Figure 1 is as 
 <figcaption>Figure 3, Simulation of a system performing good for Quality and Intelligibility.</figcaption>
 </figure>
 
+*/}
+
 ## Causality
 
 We will accept causal and non-causal systems. Non-causal systems could be used for recorded music, whereas causal systems would also work for live listening. A baseline will be provided for each case.
 The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future. More information about causality can be found in Computational Restrictions section of the [Rules](Take%20Part/rules) page.
+
+## Evaluation
+
+### Objective metrics
+The plan is to score audio quality using either HAAQI [[3]](#refs), HAAQI-Net [[4]](#refs) or an audio quality metric we are developing based on the CAD1 results.
+
+Intelligibility might be scored using Word Error Rate (WER) or other metrics such as Singing Adapted STOI [[5]](#refs). 
+
+For intrusive metrics the reference will be the original signal with a corresponding amplification applied to the vocal signal to achieve the target intelligibility.
+
+Note, we are currently working on the metrics, and a definitive list will be published when we launch the challenge. As most of these metrics have never been
+tested under challenge conditions, systems will probably be scored but not ranked by these. Entrants are free to use any metric they may find useful during training as well.
+
+### Listening tests
+The systems included in the listener test will be selected using criteria such as the originality of the system or selection by a pilot listener test. Listeners will be asked to transcribe some short extracts as well as rating longer ones for quality and intelligibilty, probably as a MOS.
+
+{/*
 
 ## Evaluation
 
@@ -98,6 +119,8 @@ In the listener test, listeners will be presented with the same both segments an
 
 The audio quality and intelligibility scores will be weighted using the same &alpha; used in the processing.
 However, the listener panel will not know what was the expected &alpha; for that sample. 
+
+*/}
 
 ### References
 <a name="refs"></a>
