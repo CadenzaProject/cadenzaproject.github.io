@@ -1,22 +1,21 @@
 ---
 id: lyrics
-title: "Task 1: Lyrics Intelligibility"
-sidebar_label: Lyrics Intelligibility
+title: "Task 1: Lyric Intelligibility"
+sidebar_label: Lyric Intelligibility
 sidebar_position: 2
 ---
 import ReactPlayer from 'react-player'
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-Studies show that not being able to understand lyrics is an important problem to tackle for those with hearing loss.
-
-Consequently, this task is about improving the intelligibility of lyrics when
+Studies show that not being able to understand lyrics is an important problem to tackle for those with hearing loss. Consequently, this task is about improving the intelligibility of lyrics when
 listening to pop/rock over headphones. But this needs to be done without losing too much audio quality - you can't improve intelligibility just by turning off the rest of the band! We will be using one metric for intelligibility and another metric for audio quality, and giving you different targets to explore the balance between these metrics.
 
 This task could be tackled in many different ways using machine learning. A few examples:
-- Within speech technology, there are many different approaches to improving speech intelligibility that have been developed. Can these methods be adapted for listening to vocals?
-- Within demixing, technologies allow the separation of music into different components, this would then allow processing and remixing to improve intelligibility.
-- End-to-end approaches allow the transformation of audio from one style to another. How can this be adapted for this CAD2 task?
+- Within speech technology, there are many different approaches to improving speech intelligibility that have been developed. Can these methods be adapted to improve listening to vocals?
+- Within demixing, technologies allow the separation of music into different components including a vocal track. This then allow processing of the vocals and remixing to improve intelligibility.
+- End-to-end approaches allow the transformation of audio from one style to another. How can this be adapted for this task?
+
 But we'd welcome other approaches as well.
 
 ## What is lyric intelligibility?
@@ -27,45 +26,40 @@ According to [Fine et al.](#refs), there are four groups of factors that can lea
 1. Performer: includes _articulation_, _voice quality_ and _diction_.
 2. Music-to-singer balance: includes _music genre_, _song speed_ and _composition style_.
 3. Listener [[2]](#refs): includes _listener attention_ and _hearing ability_.
-4. Environmental: includes _acoustics of the location_, _proximity to performer_ and _use or abuse of amplification_.
+4. Environmental: includes _room acoustics_, _proximity to performer_ and _use or abuse of amplification_.
 
 As listeners are using headphones in our scenario, environmental factors are not included.
-From the first three factors, factors (1), (2) are addressed by including several samples with different singing and
-background accompaniment characteristics from open pop/rock datasets.
-In these datasets, one can find samples of music tracks where the background is not prominent and
-the singing style is more easily understandable. This is illustrated by the following example extracted from the training set
-from MUSDB18-HQ dataset:
+
+
+From the first three factors, (1) and(2) are addressed in the task by including samples with different singing styles and background accompaniment. For example, in the challenge datasets, one can find samples of music tracks where the background is not prominent and the singing style is more easily understandable. This is illustrated by the following example extracted from the training set from MUSDB18-HQ dataset:
 
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/pop_slow.mp3' />
 
-These datasets include tracks where the singing can be more difficult to understand, either because the background level
-is higher than the singing level and/or the singing is difficult to understand. The next example, also drawn from MUSDB18-HQ dataset,
-illustrates how the background accompaniment can mask the singing line, affecting the intelligibility.
+The datasets also include tracks where the singing can be more difficult to understand, either because the background level is higher than the singing level and/or the singing is difficult to understand. The next example, also drawn from MUSDB18-HQ dataset, illustrates how the background accompaniment can mask the singing line, affecting the intelligibility.
 
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/rock_loud.mp3' />
 
-Factor (3) will be covered by us providing listeners' hearing characteristics
+Listener issues (factor 3) will be covered by us providing listeners' hearing characteristics
 as [Audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI).
 
-Challenge entrants will be provided with
-appropriate music datasets and sets of audiograms for training, development and evaluation.
+Challenge entrants will be provided with appropriate music datasets and sets of audiograms for training, development and evaluation.
 
 ## Task overview
 
 Entrants will process part of a pop/rock track to increase the intelligibility with least loss of audio quality. Two metrics will guage the systems, one for quality _Q_ and the other for intelligibility _I_. The balance between the intelligibility and audio quality will be given by a randomly selected &alpha; (alpha) value between 0 (prioritise intelligibility) and 1 (prioritise audio quality). Thus the overall metric is &alpha;Q+[1-&alpha;]I.
+
+Figures 1-3 show how systems might prioritise different aspects. Figure 1 is as system that prioritises quality and performs poorly on intelligibility. Figure 2 is a system that prioritises intelligibility. We're looking for systems like Figure 3 that improve intelligibility while maintaining good quality.
 
 <figure id="fig1">
 <img width="350" src={useBaseUrl('/img/cad2/lowI_highQ.png')} />
 <figcaption>Figure 1, Simulation of a system focused only on Audio Quality.</figcaption>
 </figure>
 
-System that only focused on lyrics intelligibility will perform poorly on quality for high &alpha;
 <figure id="fig2">
 <img width="350" src={useBaseUrl('/img/cad2/highI_lowQ.png')} />
 <figcaption>Figure 2, Simulation of a system focused only on Lyrics Intelligibility.</figcaption>
 </figure>
 
-System that balance a qood audio quality with enhanced intelligibility will perform good for all &alpha;
 <figure id="fig3">
 <img width="350" src={useBaseUrl('/img/cad2/highI_highQ.png')} />
 <figcaption>Figure 3, Simulation of a system performing good for Quality and Intelligibility.</figcaption>
@@ -73,9 +67,8 @@ System that balance a qood audio quality with enhanced intelligibility will perf
 
 ## Causality
 
-We will accept causal and non-causal systems. Non-causal systems could be used for recorded music, whereas causal systems could also work for live listening. A baseline will be provided for each case.
-The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future.
-More information about causality can be found in Computational Restrictions section of the [Rules](Take%20Part/rules) page.
+We will accept causal and non-causal systems. Non-causal systems could be used for recorded music, whereas causal systems would also work for live listening. A baseline will be provided for each case.
+The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future. More information about causality can be found in Computational Restrictions section of the [Rules](Take%20Part/rules) page.
 
 ## Evaluation
 
