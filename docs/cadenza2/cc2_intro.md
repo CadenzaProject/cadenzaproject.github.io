@@ -4,9 +4,13 @@ title: The 2nd Cadenza Challenge
 sidebar_label: CAD2 Announcement
 sidebar_position: 1
 ---
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
+
+<Image img={require('../../static/img/cad2/abstract.png')} />
+
 
 The Cadenza Challenges are improving the **perceived audio quality of music for people with a hearing loss**.
 According to The World Health Organization, 430 million people worldwide have a disabling hearing loss. 
