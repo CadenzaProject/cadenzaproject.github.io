@@ -102,17 +102,17 @@ module.exports = {
                     position: 'right',
                     items: [
                         {
-                            to: '/docs/cadenza1/cc1_intro/',
-                            label: 'CAD1',
+                            to: '/docs/cadenza2/intro',
+                            label: 'CAD2',
                         },
                         {
                             to: '/docs/icassp_2024/intro/',
                             label: 'ICASSP 2024 Grand Challenge',
                         },
                         {
-                            to: '/docs/cadenza2/intro',
-                            label: 'CAD2',
-                        }
+                            to: '/docs/cadenza1/cc1_intro/',
+                            label: 'CAD1',
+                        },
                     ]
                 },
                 {

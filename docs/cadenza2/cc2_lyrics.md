@@ -34,10 +34,34 @@ As listeners are using headphones in our scenario, environmental factors are not
 From the first three factors, (1) and(2) are addressed in the task by including samples with different singing styles and background accompaniment. For example, in the challenge datasets, one can find samples of music tracks where the background is not prominent and the singing style is more easily understandable. This is illustrated by the following example extracted from the training set from MUSDB18-HQ dataset:
 
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/pop_slow.mp3' />
+<details>
+<summary>Did you pick up the lyrics?</summary>
+
+**Track Name:** Actions - South Of The Water  
+**Lyrics:**  
+&nbsp;&nbsp;my skin's falling off i'm breaking at the seeps  
+&nbsp;&nbsp;he's holding me under and i can't breath
+
+
+Transcriptions made by [[Schulze-Forster et al.]](#refs)
+
+</details>
 
 The datasets also include tracks where the singing can be more difficult to understand, either because the background level is higher than the singing level and/or the singing is difficult to understand. The next example, also drawn from MUSDB18-HQ dataset, illustrates how the background accompaniment can mask the singing line, affecting the intelligibility.
 
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/rock_loud.mp3' />
+<details>
+<summary>Did you pick up the lyrics?</summary>
+
+**Track Name:** Dark Ride - Burning Bridges  
+**Lyrics:**  
+&nbsp;&nbsp;burning bridges fire in my soul burning bridges forget about control  
+&nbsp;&nbsp;burn those witches i am the only one  
+&nbsp;&nbsp;burn the bridges i relied upon
+
+Transcriptions made by [[Schulze-Forster et al.]](#refs)
+
+</details>
 
 Listener issues (factor 3) will be covered by us providing listeners' hearing characteristics
 as [Audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI).
@@ -72,8 +96,10 @@ Figures 1-3 show how systems might prioritise different aspects. Figure 1 is as 
 ## Causality
 
 We will accept causal and non-causal systems. Non-causal systems could be used for recorded music, whereas causal systems would also work for live listening. A baseline will be provided for each case.
-The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future. More information about causality can be found in Computational Restrictions section of the [Rules](Take%20Part/rules) page.
-
+The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future.
+{/*
+More information about causality can be found in Computational Restrictions section of the [Rules](Take%20Part/rules) page.
+*/}
 ## Evaluation
 
 ### Objective metrics
@@ -87,7 +113,7 @@ Note, we are currently working on the metrics, and a definitive list will be pub
 tested under challenge conditions, systems will probably be scored but not ranked by these. Entrants are free to use any metric they may find useful during training as well.
 
 ### Listening tests
-The systems included in the listener test will be selected using criteria such as the originality of the system or selection by a pilot listener test. Listeners will be asked to transcribe some short extracts as well as rating longer ones for quality and intelligibilty, probably as a MOS.
+The systems included in the listener test will be selected using criteria such as the originality of the system or selection by a pilot listener test. Listeners will be asked to transcribe some short extracts as well as rating longer ones for quality and intelligibilty, probably on a scale.
 
 {/*
 
@@ -130,3 +156,4 @@ However, the listener panel will not know what was the expected &alpha; for that
 **[3]** Kates, J. M., & Arehart, K. H. (2015). The hearing-aid audio quality index (HAAQI). IEEE/ACM transactions on audio, speech, and language processing, 24(2), 354-365.  
 **[4]** Wisnu, D. A., Pratiwi, E., Rini, S., Zezario, R. E., Wang, H. M., & Tsao, Y. (2024). HAAQI-Net: A non-intrusive neural music quality assessment model for hearing aids. arXiv preprint arXiv:2401.01145.   
 **[5]** Sharma, B., & Wang, Y. (2019). Automatic evaluation of song intelligibility using singing adapted STOI and vocal-specific features. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, 319-331.  
+**[6]** Schulze-Forster, K., Doire, C. S., Richard, G., & Badeau, R. (2021). Phoneme level lyrics alignment and text-informed singing voice separation. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 29, 2382-2395.  
