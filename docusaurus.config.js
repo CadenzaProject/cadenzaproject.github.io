@@ -3,7 +3,7 @@
 // const katex = require('rehype-katex');
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import {themes as prismThemes} from 'prism-react-renderer';
+//import {themes as prismThemes} from 'prism-react-renderer';
 
 // const {
 //     MailRounded
@@ -102,13 +102,17 @@ module.exports = {
                     position: 'right',
                     items: [
                         {
-                            to: '/docs/cadenza1/cc1_intro/',
-                            label: 'Challenge 1',
+                            to: '/docs/cadenza2/intro',
+                            label: 'CAD2',
                         },
                         {
                             to: '/docs/icassp_2024/intro/',
-                            label: 'Challenge ICASSP 2024',
-                        }
+                            label: 'ICASSP 2024 Grand Challenge',
+                        },
+                        {
+                            to: '/docs/cadenza1/cc1_intro/',
+                            label: 'CAD1',
+                        },
                     ]
                 },
                 {

@@ -24,7 +24,9 @@
     "@mui/icons-material": "^5.14.15",
     "@mui/material": "^5.14.15",
     "@openspacelabs/react-native-zoomable-view": "^2.1.5",
+    "bibtex-parse-js": "^0.0.24",
     "chart.js": "^4.4.0",
+    "citation-js": "^0.7.5",
     "clsx": "^1.2.1",
     "docusaurus-lunr-search": "https://github.com/praveenn77/docusaurus-lunr-search#0f83df127f671c478da90d0b993deb2253b38ae3",
     "docusaurus-plugin-image-zoom": "^1.0.1",
@@ -37,12 +39,11 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-medium-image-zoom": "^5.1.8",
+    "react-player": "^2.15.1",
     "react-twitter-embed": "^4.0.4",
     "rehype-katex": "7",
     "remark-math": "6",
-    "unist-util-visit": "^2.0.0",
-    "citation-js": "^0.7.5",
-    "bibtex-parse-js": "^0.0.24"
+    "unist-util-visit": "^2.0.0"
   },
   "engines": {
     "node": ">=18.0"
