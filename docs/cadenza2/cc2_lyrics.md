@@ -9,7 +9,8 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-<Image img={require('../../static/img/cad2/pop_rock_band.jpg')} />
+<Image img={require('../../static/img/cad2/pop_rock_band.jpg')} alt="hostile band rock guitar show" />
+Image by <a href="https://pixabay.com/users/marcisio-1043956/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=886041" target="_blank">Marcísio Coelho Mac Hostile</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=886041" target="_blank">Pixabay</a>
 
 Studies show that not being able to understand lyrics is an important problem to tackle for those with hearing loss. Consequently, this task is about improving the intelligibility of lyrics when
 listening to pop/rock over headphones. But this needs to be done without losing too much audio quality - you can't improve intelligibility just by turning off the rest of the band! We will be using one metric for intelligibility and another metric for audio quality, and giving you different targets to explore the balance between these metrics.

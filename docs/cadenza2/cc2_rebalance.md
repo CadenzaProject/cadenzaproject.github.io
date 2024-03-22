@@ -9,7 +9,9 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-<Image img={require('../../static/img/cad2/classical_music.jpeg')} />
+<Image img={require('../../static/img/cad2/classical_music.jpeg')} alt="Danish String Quartet Sebastian Manz Klarinette Heidelberger Frühling 2013" />
+Image by Port(u*o)s oder Phil Ortenau from <a href="https://commons.wikimedia.org/wiki/File:Danish_String_Quartet_Sebastian_Manz_Klarinette_Heidelberger_Fr%C3%BChling_2013_Bild_15.JPG" target="_blank">Wikimedia Commons</a>
+
 
 Hearing aid users report several issues when listening to music, including distortion in the bass, difficulties in 
 perceiving the full range of the music, especially high-frequency pitches, and a tendency to miss the impact of quieter 
