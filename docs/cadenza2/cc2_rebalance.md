@@ -4,9 +4,12 @@ title: "Task 2: Rebalancing Classical Music"
 sidebar_label: Rebalancing Classical Music
 sidebar_position: 3
 ---
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
+
+<Image img={require('../../static/img/cad2/classical_music.jpeg')} />
 
 Hearing aid users report several issues when listening to music, including distortion in the bass, difficulties in 
 perceiving the full range of the music, especially high-frequency pitches, and a tendency to miss the impact of quieter 

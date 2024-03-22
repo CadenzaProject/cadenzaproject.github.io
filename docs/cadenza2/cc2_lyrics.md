@@ -4,9 +4,12 @@ title: "Task 1: Lyric Intelligibility"
 sidebar_label: Lyric Intelligibility
 sidebar_position: 2
 ---
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
+
+<Image img={require('../../static/img/cad2/pop_rock_band.jpg')} />
 
 Studies show that not being able to understand lyrics is an important problem to tackle for those with hearing loss. Consequently, this task is about improving the intelligibility of lyrics when
 listening to pop/rock over headphones. But this needs to be done without losing too much audio quality - you can't improve intelligibility just by turning off the rest of the band! We will be using one metric for intelligibility and another metric for audio quality, and giving you different targets to explore the balance between these metrics.
@@ -33,7 +36,8 @@ As listeners are using headphones in our scenario, environmental factors are not
 
 From the first three factors, (1) and(2) are addressed in the task by including samples with different singing styles and background accompaniment. For example, in the challenge datasets, one can find samples of music tracks where the background is not prominent and the singing style is more easily understandable. This is illustrated by the following example extracted from the training set from MUSDB18-HQ dataset:
 
-<ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/pop_slow.mp3' />
+<ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/pop_slow.mp3' />  
+
 <details>
 <summary>Did you pick up the lyrics?</summary>
 
@@ -50,6 +54,7 @@ Transcriptions made by [[Schulze-Forster et al.]](#refs)
 The datasets also include tracks where the singing can be more difficult to understand, either because the background level is higher than the singing level and/or the singing is difficult to understand. The next example, also drawn from MUSDB18-HQ dataset, illustrates how the background accompaniment can mask the singing line, affecting the intelligibility.
 
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/rock_loud.mp3' />
+
 <details>
 <summary>Did you pick up the lyrics?</summary>
 
