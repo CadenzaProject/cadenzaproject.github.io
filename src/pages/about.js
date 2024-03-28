@@ -166,8 +166,8 @@ const PersonList = [
   },
   {
     name: "Gerardo Roa",
-    department: "Department of Computer Science",
-    affiliation: "University of Sheffield",
+    department: "School of Science, Engineering and Environment",
+    affiliation: "University of Salford",
     url: "https://www.salford.ac.uk/our-staff/gerardo-roa-dabike",
     avatar: "/img/avatar/roa.jpeg",
   },
