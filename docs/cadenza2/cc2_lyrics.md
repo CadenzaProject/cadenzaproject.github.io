@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-<Image img={require('../../static/img/cad2/pop_rock_band.jpg')} alt="hostile band rock guitar show" width="2400"/>
+<Image img={require('../../static/img/cad2/pop_rock_band.jpg')} alt="hostile band rock guitar show" />
 Image by <a href="https://pixabay.com/users/marcisio-1043956/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=886041" target="_blank">Marcísio Coelho Mac Hostile</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=886041" target="_blank">Pixabay</a>
 
 Studies show that not being able to understand lyrics is an important problem to tackle for those with hearing loss. Consequently, this task is about improving the intelligibility of lyrics when
@@ -44,8 +44,8 @@ From the first three factors, (1) and(2) are addressed in the task by including 
 
 **Track Name:** Actions - South Of The Water  
 **Lyrics:**  
-&nbsp;&nbsp;My skin's falling off I'm breaking at the seeps  
-&nbsp;&nbsp;He's holding me under and I can't breath
+&nbsp;&nbsp;my skin's falling off i'm breaking at the seeps  
+&nbsp;&nbsp;he's holding me under and i can't breath
 
 
 Transcriptions made by [[Schulze-Forster et al.]](#refs)
@@ -61,9 +61,9 @@ The datasets also include tracks where the singing can be more difficult to unde
 
 **Track Name:** Dark Ride - Burning Bridges  
 **Lyrics:**  
-&nbsp;&nbsp;bBrning bridges fire in my soul burning bridges forget about control  
-&nbsp;&nbsp;Burn those witches I am the only one  
-&nbsp;&nbsp;Burn the bridges I relied upon
+&nbsp;&nbsp;burning bridges fire in my soul burning bridges forget about control  
+&nbsp;&nbsp;burn those witches i am the only one  
+&nbsp;&nbsp;burn the bridges i relied upon
 
 Transcriptions made by [[Schulze-Forster et al.]](#refs)
 
@@ -78,7 +78,7 @@ Challenge entrants will be provided with appropriate music datasets and sets of 
 
 Entrants will process part of a pop/rock track to increase the intelligibility with least loss of audio quality. Two metrics will guage the systems, one for quality _Q_ and the other for intelligibility _I_. The balance between the intelligibility and audio quality will be given by a randomly selected &alpha; (alpha) value between 0 (prioritise intelligibility) and 1 (prioritise audio quality). Thus the overall metric is &alpha;Q+[1-&alpha;]I.
 
-
+{/*
 
 Figures 1-3 show how systems might prioritise different aspects. Figure 1 is as system that prioritises quality and performs poorly on intelligibility. Figure 2 is a system that prioritises intelligibility. We're looking for systems like Figure 3 that improve intelligibility while maintaining good quality.
 
@@ -97,7 +97,7 @@ Figures 1-3 show how systems might prioritise different aspects. Figure 1 is as 
 <figcaption>Figure 3, Simulation of a system performing good for Quality and Intelligibility.</figcaption>
 </figure>
 
-
+*/}
 
 ## Causality
 
@@ -121,29 +121,38 @@ tested under challenge conditions, systems will probably be scored but not ranke
 ### Listening tests
 The systems included in the listener test will be selected using criteria such as the originality of the system or selection by a pilot listener test. Listeners will be asked to transcribe some short extracts as well as rating longer ones for quality and intelligibilty, probably on a scale.
 
+{/*
+
 ## Evaluation
 
-Participants will be asked to submit a signal per song-listener pair, this will correspond to a 15 seconds segment from a random part the song.
-The segment will be scored for quality and intelligibility. For intrusive metrics the reference will be the 
-original signal with the corresponding amplification applied. 
+Participants will be asked to submit two signals per song-listener pair: a segment of 15-20 seconds corresponding to a verse or chorus of a song,
+and a smaller segment corresponding a lyric phrase for transcription. Both segments may not correspond to the same part of the
+song. That is, the small segment may be a phrase from the first verse and the 15-20 second segment may correspond to a chorus or verse 2. 
 
-The system will be evaluated for quality and intelligibility using objective metrics and by a listener panel. 
-For objective evaluation, audio quality will be scored using HAAQI [[3]](#refs). 
-Intelligibility will be scored as the ratio of correctly transcribe words using Whisper ASR model `base.en`.  
-As most of these metrics have never been tested under the challenge conditions, systems will be scored but not ranked. 
+The first segment will be scored for quality and intelligibility. For intrusive metrics the reference will be the 
+original signal with the corresponding amplification applied. The second segment will be score for transcription using 
+the original text lyrics as reference. 
+
+The system will be evaluated for quality and intelligibility using a series of objective metrics. 
+Audio quality will be scored using HAAQI [[3]](#refs), HAAQI-Net [[4]](#refs), and an audio quality metric we are developing. 
+Intelligibility will be scored using Word Error Rate (WER) and other metrics such as Singing Adapted STOI [[5]](#refs). 
+Note that this is not an exhaustive list of the metrics we will use, and we may not use some of the metrics mentioned above. 
+The definitive list will be published in July with the launch of the challenge. As most of these metrics have never been
+tested under challenge conditions, systems will be scored but not ranked. 
 Therefore, the systems included in the listener test will be selected using criteria, which can include the originality 
 of the system or selection by a pilot listener test.
 
 ### Listener Test
 
-In the listener test, listeners will be presented with the same segments and perform the same evaluations:
-1. Score the Audio Quality of the 15 second segment.
-2. Score the Intelligibility of the 15 second segment.
+In the listener test, listeners will be presented with the same both segments and perform the same three evaluations:
+1. Score the Audio Quality of the 15-20 second segment.
+2. Score the Intelligibility of the 15-20 second segment.
 3. Transcribe the lyrics of the smaller segment.
 
 The audio quality and intelligibility scores will be weighted using the same &alpha; used in the processing.
 However, the listener panel will not know what was the expected &alpha; for that sample. 
 
+*/}
 
 ### References
 <a name="refs"></a>

@@ -1,7 +1,7 @@
 ---
 id: intro
 title: The 2nd Cadenza Challenge
-sidebar_label: Cadenza 2 Introduction
+sidebar_label: CAD2 Announcement
 sidebar_position: 1
 ---
 import ReactPlayer from 'react-player';
@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-<Image img={require('../../static/img/cad2/abstract.png')} alt="Cadenza Challenge 2 - CAD2" width="2400"/>
+<Image img={require('../../static/img/cad2/abstract.png')} alt="Cadenza Challenge 2 - CAD2"/>
 Image by <a href="http://monseag.wordpress.com/" target="_blank">Monserrat Arenas Gana</a>
 
 The Cadenza Challenges are improving the **perceived audio quality of music for people with a hearing loss**.

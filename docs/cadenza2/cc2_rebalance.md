@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-<Image img={require('../../static/img/cad2/classical_music.jpeg')} alt="Danish String Quartet Sebastian Manz Klarinette Heidelberger Frühling 2013" width="2400"/>
+<Image img={require('../../static/img/cad2/classical_music.jpeg')} alt="Danish String Quartet Sebastian Manz Klarinette Heidelberger Frühling 2013" />
 Image by Port(u*o)s oder Phil Ortenau from <a href="https://commons.wikimedia.org/wiki/File:Danish_String_Quartet_Sebastian_Manz_Klarinette_Heidelberger_Fr%C3%BChling_2013_Bild_15.JPG" target="_blank">Wikimedia Commons</a>
 
 
