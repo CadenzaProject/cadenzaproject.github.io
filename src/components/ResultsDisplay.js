@@ -8,23 +8,23 @@ import { Bar } from "react-chartjs-2";
 import React, { useState, useEffect } from 'react';
 
 
-  
+
 export function makeColumns(format) {
     const LinkFormatter = (cell, row, rowIndex, extraData) => {
         return(row.paper ? <a href={row.paper}>Link</a>: null)
     }
-    
+
     for (const row of format) {
         if (row.type === "Link") {
             row.formatter = LinkFormatter
         }
     }
-    
+
     return format
 }
 
 export default function ResultsDisplay({ all_data }) {
-    
+
     const data = all_data["data"]
     const [barData, setBarData] = useState({
         labels: data.map((row) => row.id),
@@ -38,36 +38,36 @@ export default function ResultsDisplay({ all_data }) {
             }
         ],
     });
-      
+
 
     const [sortState, setSortState] = useState({
         field: all_data.defaultSort.field,
         direction: all_data.defaultSort.direction,
     });
 
-    
+
     const options = {
         responsive: true,
         elements: {
-          bar: {
-            borderWidth: 2,
-          },
+            bar: {
+                borderWidth: 2,
+            },
         },
         scales: {
-          y: {
-               type: 'linear',
-               min:  (all_data.format.find(obj => obj.dataField === sortState.field) || { min: 0 }).min,
-               position: 'left',
-               title: {
-                display: true,
-                text: (all_data.format.find(obj => obj.dataField === sortState.field) || { text: 0 }).text,
-                font: {
-                  size: 18,
-                }},  
-          }
+            y: {
+                type: 'linear',
+                min:  (all_data.format.find(obj => obj.dataField === sortState.field) || { min: 0 }).min,
+                position: 'left',
+                title: {
+                    display: true,
+                    text: (all_data.format.find(obj => obj.dataField === sortState.field) || { text: 0 }).text,
+                    font: {
+                        size: 18,
+                    }},
+            }
         }
     };
-    
+
     const onTableChange = (type, newState) => {
         console.log(type);
         console.log(newState);
@@ -77,7 +77,7 @@ export default function ResultsDisplay({ all_data }) {
             newState.data.sort((a, b) => {
                 const fieldA = a[sortField];
                 const fieldB = b[sortField];
-    
+
                 if (fieldA === null && fieldB === null) {
                     return 0; // Treat both null values as equal
                 } else if (fieldA === null) {
@@ -94,7 +94,7 @@ export default function ResultsDisplay({ all_data }) {
             newState.data.sort((a, b) => {
                 const fieldA = a[sortField];
                 const fieldB = b[sortField];
-    
+
                 if (fieldA === null && fieldB === null) {
                     return 0; // Treat both null values as equal
                 } else if (fieldA === null) {
@@ -136,37 +136,37 @@ export default function ResultsDisplay({ all_data }) {
 
     const styles = {
         chartAndTableContainer: {
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center', // Optional, for centering text within elements
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center', // Optional, for centering text within elements
         }
-      };
-      
+    };
+
     const tableColumns = makeColumns(all_data.format);
 
 
     useEffect(() => {
         // Trigger the onTableChange event with initial parameters
-        const initialEventType = 'sort'; 
+        const initialEventType = 'sort';
         const initialEventNewState = {
-          sortField: sortState.field, 
-          sortOrder: sortState.direction,
-          data: all_data.data, 
+            sortField: sortState.field,
+            sortOrder: sortState.direction,
+            data: all_data.data,
         };
-    
+
         onTableChange(initialEventType, initialEventNewState);
-      }, []);
-    
+    }, []);
+
 
     return (
         <div style={styles.chartAndTableContainer}>
-         
+
             <Bar data={barData} options={options} />
 
             <p style={{ paddingTop: 40 }} />
-            
+
             <BootstrapTable bootstrap4 keyField='id' remote={remote} data={data} columns={tableColumns} onTableChange={onTableChange} />
         </div>
     );
