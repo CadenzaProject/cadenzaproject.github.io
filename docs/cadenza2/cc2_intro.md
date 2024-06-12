@@ -12,23 +12,22 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 <Image img={require('../../static/img/cad2/abstract.png')} alt="Cadenza Challenge 2 - CAD2"/>
 Image by <a href="http://monseag.wordpress.com/" target="_blank">Monserrat Arenas Gana</a>
 
-The Cadenza Challenges are improving the **perceived audio quality of music for people with a hearing loss**.
-According to The World Health Organization, 430 million people worldwide have a disabling hearing loss. 
-Hearing loss causes various problems when listening to music such as making picking out lyrics more difficult.
+The Cadenza Challenges are improving music for people with a hearing loss. According to The World Health Organization, 430 million people worldwide have a disabling hearing loss. 
+Hearing loss causes various problems such as quieter passages being inaudible, poor and anomalous pitch perception, difficulties identifying and picking out instruments, and problems
+hearing out lyrics.
 
-The 2nd Cadenza Challenge (CAD2) starting in 2024 has two tasks:
+The 2nd Cadenza Challenge (CAD2) starting in July 2024 has two tasks:
 
 1. Improving the intelligibility of lyrics for pop/rock music while not harming audio quality. The scenario is listening over headphones. More details
 of this task can be found on the [Lyrics Intelligibility](lyrics) page.
 
-2. Rebalancing the level of instruments within a music ensemble (e.g. string quartet) to 
-match the preference of hearing aids users. A more detailed description of this can be found on the 
+2. Rebalancing the level of instruments within a small classical music ensemble (e.g. string quartet) to 
+allow personal remixing for hearing aids users. A more detailed description of this can be found on the 
 [Rebalancing Classical Music](rebalancing) page.
 
 For both tasks, a demix / remix approach could be used. Gains could be applied to the demixed signals before remixing back to stereo to achieve the aims of the challenge. For lyric intelligibility, a simple amplification of the vocals could increase intelligibility, but there are other ways to achieve this that might cause less harm to audio quality. It would also be possible to use other machine learning approaches such as end-to-end transformation.
 
-Cadenza will provide challenge entrants with music signals and targets that represented the listener's preferences for an improved music experience. 
-Entrants are asked to process the music signals to achieve the expected target. The challenge is evaluated using objective metrics and with a perceptual tests with listeners who have hearing loss. We will provide software tools, metrics and baselines to aid your work.
+We will provide you with music signals, software tools, objective metrics and baselines. The two tasks are evaluated using objective metrics. For lyric intelligibility, there will also be perceptual tests with listeners who have hearing loss.
 
 Since listeners may be experiencing live or recorded music, CAD2 welcomes both causal and non-causal approaches.
 
