@@ -1,7 +1,7 @@
 ---
 id: lyric_data
 title: "Lyric Intelligibility: Data"
-sidebar_label: Lyrics Data
+sidebar_label: "Lyrics: Data"
 sidebar_position: 2.2
 ---
 import ReactPlayer from 'react-player';
