@@ -12,8 +12,10 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 <Image img={require('../../static/img/cad2/pop_rock_band.jpg')} alt="hostile band rock guitar show" />
 Image by <a href="https://pixabay.com/users/marcisio-1043956/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=886041" target="_blank">Marcísio Coelho Mac Hostile</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=886041" target="_blank">Pixabay</a>
 
+## Introduction
+
 Studies show that not being able to understand lyrics is an important problem to tackle for those with hearing loss. Consequently, this task is about improving the intelligibility of lyrics when
-listening to pop/rock over headphones. But this needs to be done without losing too much audio quality - you can't improve intelligibility just by turning off the rest of the band! We will be using one metric for intelligibility and another metric for audio quality, and giving you different targets to explore the balance between these metrics.
+listening to pop/rock over headphones. But this needs to be done without losing too much audio quality - you can't improve intelligibility just by turning off the rest of the band! We will be evaluating both intelligibility and audio quality, and giving you different targets to explore the balance between these attributes.
 
 This task could be tackled in many different ways using machine learning. A few examples:
 - Within speech technology, there are many different approaches to improving speech intelligibility that have been developed. Can these methods be adapted to improve listening to vocals?
@@ -22,7 +24,7 @@ This task could be tackled in many different ways using machine learning. A few 
 
 But we'd welcome other approaches as well.
 
-## What is lyric intelligibility?
+### What is lyric intelligibility?
 
 Lyrics intelligibility can be defined as to "_the extent to which a listener understands a singer's message_" [[1]](#refs).
 According to [Fine et al.](#refs), there are four groups of factors that can lead to lyric misunderstanding:
@@ -35,7 +37,7 @@ According to [Fine et al.](#refs), there are four groups of factors that can lea
 As listeners are using headphones in our scenario, environmental factors are not included.
 
 
-From the first three factors, (1) and(2) are addressed in the task by including samples with different singing styles and background accompaniment. For example, in the challenge datasets, one can find samples of music tracks where the background is not prominent and the singing style is more easily understandable. This is illustrated by the following example extracted from the training set from MUSDB18-HQ dataset:
+From the first three factors, (1) and (2) are addressed in the task by including samples with different singing styles and background accompaniment. For example, in the challenge datasets, one can find samples of music tracks where the background is not prominent and the singing style is more easily understandable. This is illustrated by the following example extracted from the training set from MUSDB18-HQ dataset:
 
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/pop_slow.mp3' />  
 
