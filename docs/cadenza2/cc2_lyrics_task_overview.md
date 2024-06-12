@@ -1,7 +1,7 @@
 ---
 id: lyric_overview
 title: "Lyric Intelligibility: Overview"
-sidebar_label: Lyrics: Overview
+sidebar_label: Lyrics Overview
 sidebar_position: 2.1
 ---
 import ReactPlayer from 'react-player';
