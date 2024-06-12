@@ -13,7 +13,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 Image by <a href="http://monseag.wordpress.com/" target="_blank">Monserrat Arenas Gana</a>
 
 The Cadenza Challenges are improving music for people with a hearing loss. According to The World Health Organization, 430 million people worldwide have a disabling hearing loss. 
-Hearing loss causes various problems such as quieter passages being inaudible, poor and anomalous pitch perception, difficulties identifying and picking out instruments, and problems
+Hearing loss causes various problems such as quieter music passages being inaudible, poor and anomalous pitch perception, difficulties identifying and picking out instruments, and problems
 hearing out lyrics.
 
 The 2nd Cadenza Challenge (CAD2) starting in July 2024 has two tasks:
