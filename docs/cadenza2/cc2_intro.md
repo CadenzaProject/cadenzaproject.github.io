@@ -12,11 +12,11 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 <Image img={require('../../static/img/cad2/abstract.png')} alt="Cadenza Challenge 2 - CAD2"/>
 Image by <a href="http://monseag.wordpress.com/" target="_blank">Monserrat Arenas Gana</a>
 
-The Cadenza Challenges are improving music for people with a hearing loss. According to The World Health Organization, 430 million people worldwide have a disabling hearing loss. 
-Hearing loss causes various problems such as quieter music passages being inaudible, poor and anomalous pitch perception, difficulties identifying and picking out instruments, and problems
-hearing out lyrics.
+The Cadenza Challenges are improving music for people with a hearing loss. Hearing loss causes various problems such as quieter music passages being inaudible, poor and anomalous pitch perception, difficulties identifying and picking out instruments, and problems hearing out lyrics.
 
-The 2nd Cadenza Challenge (CAD2) starting in July 2024 has two tasks:
+:memo: **CAD2** is part of the [IEEE SPS Challenge Program](https://signalprocessingsociety.org/publications-resources/challenges-and-data-collections)
+
+The 2nd Cadenza Challenge (CAD2) open from July 2024 has two tasks:
 
 1. Improving the intelligibility of lyrics for pop/rock music while not harming audio quality. The scenario is listening over headphones. More details
 of this task can be found on the [Lyrics Intelligibility](lyrics) page.
@@ -33,14 +33,5 @@ Since listeners may be experiencing live or recorded music, CAD2 welcomes both c
 
 To stay up to date please sign up for the [Cadenza Challenge's Google group](https://groups.google.com/g/cadenza-challenge).
 
-{/*
-
-## Audio quality metric
-
-In the CAD1 challenge listener test, we collected several subjectives scores from a panel of more than 50 listeners with hearing loss.
-This panel scored several audio signals processed/optimised to their hearing characteristics. The panel scored the signals
-across several dimensions, including the general audio quality, the frequency balance, the distortion and the clarity. 
-You can watch a summary of the panel study [here](../../../blog/Listener%20panel%20study%20update). Using the data we collected, we are developing an audio quality metric that we will plan to use to evaluate the systems.
-
-*/}
+:memo: **CAD2 now has cash prizes.**
 
