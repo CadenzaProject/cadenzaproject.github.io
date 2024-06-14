@@ -11,11 +11,14 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 We have [extensive resources](../../learning_resources/learning_intro) that provide background information on many aspects: [hearing loss](../../category/hearing-impairment), [hearing aid processing](../../category/hearing-aid-processing), [mixing/remixing](../../category/audio-mixing), and [perceptual testing](../../category/perceptual-testing).
 To see current discussions of the challenge, please join the [Google group](https://groups.google.com/g/cadenza-challenge).
-If you have more questions that aren't covered, please [contact us](http://cadenzachallenge.org/contact).
+
+### I'm unclear if my approach is within the rules
+
+Please contact the Cadenza Team via cadenzachallengecontact@gmail.com with details of what you want to do so we can advise.
 
 ### What data can I use?
 
-You should be able to find the information on the [Rules](rules) or the [Data Overview](../data/data_overview) page.
+You should be able to find the information on the [Rules](rules) page.
 
 ### I want to enter the challenge without using the demixing/remixing approach
 
@@ -23,4 +26,4 @@ This is fine and we welcome alternative approaches. Please make sure that your m
 
 ### How do I actually enter?
 
-You should be able to find the information you need about submitting your entry on the [Submission](submission) page. Please make sure you have signed up to our [Google group](https://groups.google.com/g/cadenza-challenge), as this will ensure you get updates about the challenge.
+See the [Submission](submission) page. Please make sure you have signed up to our [Google group](https://groups.google.com/g/cadenza-challenge), as this will ensure you get updates about the challenge.
