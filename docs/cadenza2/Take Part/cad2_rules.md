@@ -52,12 +52,15 @@ We will also report whether the systems are causal or non-causal in the rank ord
 
 ## 4. Prizes
 
-We will be awarding three prizes of $300 for the best performing systems:
-- Best objective score for lyric intelligibility
-- Best listening panel score for lyric intelligibility
-- Best objective score for rebalancing classical music
+We will be awarding prizes for the best systems in our rankings:
 
-Team prizes have been made available by the generosity of the IEEE SPS.
+- Objective score for lyric intelligibility
+- Listening panel score for lyric intelligibility
+- Objective score for rebalancing classical music
+
+A prize pot of $1000 has been made available by the generosity of the IEEE SPS.
+
+Anonymous entries and those with direct links to the Cadenza project team are ineligible for cash prizes, sorry.
 
 ## 5. Computational restrictions
 
