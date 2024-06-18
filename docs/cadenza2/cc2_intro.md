@@ -14,7 +14,8 @@ Image by <a href="http://monseag.wordpress.com/" target="_blank">Monserrat Arena
 
 The Cadenza Challenges are improving music for people with a hearing loss. Hearing loss causes various problems such as quieter music passages being inaudible, poor and anomalous pitch perception, difficulties identifying and picking out instruments, and problems hearing out lyrics.
 
-:memo: **CAD2** is part of the [IEEE SPS Challenge Program](https://signalprocessingsociety.org/publications-resources/challenges-and-data-collections)
+<Image img={require('../../static/img/cad2/SPS_Logo_Color_RGB.png')} alt="IEEE SPS logo" />
+CAD2 is part of the [IEEE SPS Challenge Program](https://signalprocessingsociety.org/publications-resources/challenges-and-data-collections)
 
 The 2nd Cadenza Challenge (CAD2) open from July 2024 has two tasks:
 
