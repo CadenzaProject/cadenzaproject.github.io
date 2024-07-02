@@ -53,9 +53,32 @@ We provide metadata characterising the hearing abilities of listeners so the aud
 
 ** ** MISSING** **
 
+---
+
 ## Appendix A: CadenzaWoodwind
 
-The scores for the dataset came from the [OpenScore String Quartet Corpus](https://github.com/OpenScore/StringQuartets/)) [5]. These were interpretted using [Dorico music notation software](https://www.steinberg.net/dorico/). The four string parts were allocated to flute, oboe, clarinet and bassoon and a professional sample library used to create the audio. Reverberation was added using a convolution reverb, using an impulse response from the Royal Tropical Institute, Amsterdam in [Avid's Space Impulse Response] (IR) Library(https://www.avid.com/plugins/space-impulse-response-library).
+The scores for the dataset came from the [OpenScore String Quartet Corpus](https://github.com/OpenScore/StringQuartets/)) [5]. 21 of these were selected at random. The dice was weighted according to the length of the pieces so that longer scores with multiple movements were more likely to be chosen. This was done because there were manual steps in the subsequent rendering process, and having many small scores would make the process much longer. A maximum of two pieces per composer were chosen. Two of the scores would not render in the music notation software and so were excluded. The 19 scores selected were:
+ - Arriaga, Juan Crisostomo de; String Quartet No.3 in E-flat Major; sq7383977
+ - Beethoven, Ludwig van; String Quartet No.3, Op.18 No.3; sq8907120
+ - Beethoven, Ludwig van; String Quartet No.5, Op.18 No.5; sq9396439
+ - Boccherini, Luigi; String Quartet in A major, G.213 (Op.39); sq8454356
+ - Busoni, Ferruccio; String Quartet No.1, Op.19, BV 208; sq11154985
+ - Grieg, Edvard; String Quartet No.1, Op.27; sq9631717
+ - Haydn, Joseph; String Quartet in B-flat major, Hob.III67, Op.64 No.3; sq7123582
+ - Haydn, Joseph; String Quartet in D major, Hob.III3, Op.1 No.3; sq8806746
+ - Hensel, Fanny (Mendelssohn); String Quartet in E-flat major, Op. 277; sq7577795
+ - Mayer, Emilie; String Quartet in A Major; sq8818128
+ - Mayer, Emilie; String Quartet in D Major; sq7588853
+ - Mendelssohn, Felix; String Quartet No.4 in E minor, Op.44 No.2; sq8623643
+ - Moeran, Ernest John; String Quartet in A minor; sq9071492
+ - Mozart, Wolfgang Amadeus; String Quartet No.15 in D minor, K.421417b (Op. 10, No. 2); sq7294793
+ - Mozart, Wolfgang Amadeus; String Quartet No.16 in E-flat major, K.428421b (Op. 10, No. 4); sq7302710
+ - Saint-Georges, Joseph Bologne; String Quartet in D major, Op.1 No.6; sq10490761
+ - Schulhoff, Erwin; String Quartet No.1; sq8630159
+ - Schumann, Robert; String Quartet No.3, Op.41 No.3; sq9529900
+ - Smyth, Ethel; String Quartet in E minor; sq7555331
+
+These were interpretted using [Dorico music notation software](https://www.steinberg.net/dorico/). The four string parts were allocated to flute, oboe, clarinet and bassoon and a professional sample library used to create the audio. Reverberation was added using a convolution reverb, using an impulse response from the Royal Tropical Institute, Amsterdam in [Avid's Space Impulse Response IR Library](https://www.avid.com/plugins/space-impulse-response-library).
 
 ## Appendix B: Adding reverberation to URMP and BACH10
 
