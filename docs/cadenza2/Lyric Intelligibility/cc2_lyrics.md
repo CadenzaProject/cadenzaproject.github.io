@@ -14,7 +14,7 @@ Image by <a href="https://pixabay.com/users/marcisio-1043956/?utm_source=link-at
 
 ## Introduction
 
-Studies show that not being able to understand lyrics is an important problem to tackle for those with hearing loss [2]. Consequently, this task is about improving the intelligibility of lyrics when
+Studies show that not being able to hear the lyrics in music is an important problem to tackle for those with hearing loss [2]. Consequently, this task is about improving the intelligibility of lyrics when
 listening to pop/rock over headphones. But this needs to be done without losing too much audio quality - you can't improve intelligibility just by turning off the rest of the band! For this reason, we will be evaluating both intelligibility and audio quality, and giving you different targets to explore the balance between these attributes.
 
 This task could be tackled in many different ways using machine learning. A few examples:
@@ -26,18 +26,17 @@ But we'd welcome other approaches as well.
 
 ### What is lyric intelligibility?
 
-Lyrics intelligibility can be defined as to "_the extent to which a listener understands a singer's message_" [[1]](#refs).
-According to [Fine et al.](#refs), there are four groups of factors that can lead to lyric misunderstanding:
+Lyric intelligibility, as defined by Cadenza's sensory panel of hearing aid users, refers to "how clearly and effortlessly the words in the music can be heard".  Across this sensory panel and work by Fine et al. [[1]](#refs), there are four groups of factors that can affect lyric intelligibility:
 
 1. Performer: includes _articulation_, _voice quality_ and _diction_.
-2. Music-to-singer balance: includes _music genre_, _song speed_ and _composition style_.
-3. Listener [[2]](#refs): includes _listener attention_ and _hearing ability_.
+2. Music-to-singer balance: includes _balance in dynamics or pitch_, _music genre_, _song speed_ and _composition style_.
+3. Listener [[2]](#refs): includes _listener attention_, _familiarity_, _expectation_ and _hearing ability_.
 4. Environmental: includes _room acoustics_, _proximity to performer_ and _use or abuse of amplification_.
 
 As listeners are using headphones in our scenario, environmental factors are not included.
 
 
-From the first three factors, (1) and (2) are addressed in the task by including samples with different singing styles and background accompaniment. For example, in the challenge datasets, one can find samples of music tracks where the background is not prominent and the singing style is more easily understandable. This is illustrated by the following example extracted from the training set from MUSDB18-HQ dataset:
+From the first three factors, (1) and (2) are addressed in the task by including samples with different singing styles and background accompaniment. For example, in the challenge datasets, one can find samples of music tracks where the background is not prominent and the sung words are more easily heard. This is illustrated by the following example extracted from the training set from MUSDB18-HQ dataset:
 
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/pop_slow.mp3' />  
 
@@ -54,7 +53,7 @@ Transcriptions made by [[Schulze-Forster et al.]](#refs)
 
 </details>
 
-The datasets also include tracks where the singing can be more difficult to understand, either because the background level is higher than the singing level and/or the singing is difficult to understand. The next example, also drawn from MUSDB18-HQ dataset, illustrates how the background accompaniment can mask the singing line, affecting the intelligibility.
+The datasets also include tracks where the singing can be more difficult to hear, either because the background level is higher than the singing level and/or the singing style makes the lyrics difficult to hear. The next example, also drawn from MUSDB18-HQ dataset, illustrates how the background accompaniment can mask the singing line, affecting the lyric intelligibility.
 
 <ReactPlayer pip controls volume="0.25" width="300px" height="50px" url='/audios/cad2/rock_loud.mp3' />
 

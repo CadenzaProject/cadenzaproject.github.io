@@ -41,11 +41,18 @@ There will be two rank lists, one based on listening tests and the other on obje
 
 ### Listening tests
 
-The listener panel will score the music for both audio quality and intelligibility. To rank the teams, the intelligibility L<sub>I</sub> and quality Q ratings from the listening tests will be combined in a weighted average to get an overall score:
+The listener panel will score the music for both audio quality and intelligibility. Listeners will be asked to rate music extracts using the follow definitions:
+- Lyric Intelligibility: “Lyric intelligibility refers to how clearly and effortlessly the words in the music can be heard.”
+- Basic Audio Quality: “Results from judgments of the sound of the music, in relation to a person’s expectations of how the music should ideally sound to them.”
+
+To rank the teams, the intelligibility L<sub>I</sub> and quality Q ratings from the listening tests will be combined in a weighted average to get an overall score:
 
 𝑠𝑐𝑜𝑟𝑒 = 𝛼 𝑧 (𝑄) + (1 − 𝛼) 𝑧 (𝐿<sub>𝐼</sub>)<div align="right">(1)</div>
 
 Where the weighting 𝛼 will allow the balance between intelligibility and quality to be varied, and z() indicates a z-normalisation to make the two metrics compatible for the weighted average.
+
+
+
 
 ### Objective metrics
 
