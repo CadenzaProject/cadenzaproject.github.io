@@ -20,10 +20,13 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 ### 2.1. Training and development
 
-- There is no limit on the amount of training data that can be generated using our tools and the provided training data sets.
+- There is no limit on the amount of training data that can be generated using our tools.
+- Each task lists what data can be used for developing the systems:
+  - [Lyric intelligibility data](../Lyric%20Intelligibility/lyric_data).
+  - [Rebalancing classical data](../Rebalancing%20Classical/rebalancing_data).
 - You can use standard augmentation techniques such as: randomizing the stems, flipping right and left channels, applying SpecAugmentation [1], pitch shifting, etc.
   - If you are unclear whether an augmentation technique is acceptable, please contact the Cadenza team.
-- You may <b>not</b> use other datasets.
+- You may <b>not</b> use other datasets without prior approval by the Cadenza team.
   - If you think there is a public dataset that would be a good addition to the challenge then please propose it to the Cadenza team. If we agree, we will then make it available to all teams.
 - Pretrained models
   - These can only have been developed with public databases.

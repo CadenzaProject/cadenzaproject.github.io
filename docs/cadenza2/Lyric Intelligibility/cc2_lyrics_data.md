@@ -2,14 +2,15 @@
 id: lyric_data
 title: "Lyric Intelligibility Data"
 sidebar_label: Data
-sidebar_position: 2.2
+sidebar_position: 2.3
 ---
 import ReactPlayer from 'react-player';
 import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-To obtain the data and baseline code, please see the [download page](../Take%20Part/download).
+- To obtain the data and baseline code, please see the [download page](../Take%20Part/download).
+- For instructions on what data and pretrained models can be used in the challenges, please see [rules](../Take%20Part/rules).
 
 ## A. Training, validation and evaluation data
 

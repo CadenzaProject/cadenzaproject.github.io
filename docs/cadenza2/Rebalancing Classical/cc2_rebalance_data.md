@@ -9,7 +9,8 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-To obtain the data and baseline code, please see the [download page](../Take%20Part/download).
+- To obtain the data and baseline code, please see the [download page](../Take%20Part/download).
+- For instructions on what data and pretrained models can be used in the challenges, please see [rules](../Take%20Part/rules).
 
 ## A. Training, validation and evaluation data
 
@@ -23,8 +24,12 @@ Training requires a large amount of audio data and there is not enough recording
   - This contains 80 pieces from classical 17 composers. EnsembleSet has renders for 11 different instruments. We're using the string parts.
 - CadenzaWoodwind  
   - A new data set we've created in a similar way to EnsembleSet but for five woodwind instruments (flute, clarinet, oboe, alto saxophone and bassoon). See Appendix A below.
+  
+### A.2 Real data tuning set
 
-### A.2 Evaluation (test) set
+This is a small data base of real recordings created in the same way as the evaluation set. It is intended to help you cope with any mismatch between the synthesised training+validation data and the real-recording evaluation set. It is not statistically balanced in terms of what instruments it includes. Consequently, caution is needed when using it to fine tune a machine learning model.
+
+### A.3 Evaluation (test) set
 
 The evaluation dataset are created using:
 - BACH10 [2], and
