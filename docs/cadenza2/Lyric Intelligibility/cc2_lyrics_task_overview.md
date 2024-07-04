@@ -13,7 +13,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 Entrants will process pop/rock music to increase the intelligibility with least loss of audio quality. Audio will be evaluated for their intelligibility and audio quality.
 
-<Image img={require('../../../static/img/cad2/SimpleTaskDiagramCAD2.png')} alt="A diagram of the baseline as described in main text"/>
+<Image img={require('../../../static/img/cad2/baseline_lyric_intelligibility_overview.png')} alt="A diagram of the baseline as described in main text"/>
 Figure 1. A simplified schematic of the baseline system.
 
 - A scene generator (blue box):
@@ -21,7 +21,7 @@ Figure 1. A simplified schematic of the baseline system.
   - Gives a value of 𝛼 (metadata) that sets the balance between intelligibility and audio quality (see evaluation below).
 - The music enhancement stage (pink box) takes the music as inputs and attempts to improve the intelligibility.
 - Listener characteristics (green oval) are audiograms to allow personalised processing in the enhancement stage and are also used in objective evaluation.
-- The enhancement outputs are evaluated (orange box):
+- The enhancement outputs are evaluated (orange boxes):
   - For intelligibility using a metric based on Whisper.
   - For audio quality via the Hearing-Aid Audio Quality Index (HAAQI) [1].
   - By our listening panel.
@@ -52,16 +52,15 @@ To rank the teams, the intelligibility L<sub>I</sub> and quality Q ratings from 
 Where the weighting 𝛼 will allow the balance between intelligibility and quality to be varied, and z() indicates a z-normalisation to make the two metrics compatible for the weighted average.
 
 
-
-
 ### Objective metrics
 
-Our quality and intelligibility metrics will be combined using Equation (1) as for the listening tests. Audio quality is evaluated using HAAQI [[1]](#refs). Intelligibility is scored using word correction ratio using a lyric transcription algorithm. HAAQI is an intrusive metrics and the reference will be the original signal with a corresponding amplification applied to the vocal signal that the baseline uses to achieve the target intelligibility.
+Our quality and intelligibility metrics will be combined using Equation (1) as for the listening tests. Audio quality is evaluated using HAAQI [[1]](#refs). Intelligibility is scored using word correction ratio using a lyric transcription algorithm based on Whisper. HAAQI is an intrusive metrics and the reference will be the original signal with a 1 dB amplification applied to the vocal signal and -1dB to the accompaniment because that has been shown to be preferred by wearers of hearing aids **[3]**.
 
 Objective metrics are always an approximation and you may want to use other approaches and metrics to optimise a system for the listening panel (for example, you could use singing-adapted STOI [[2]](#refs)). It is fine to submit two systems, one optimised for the listening panel and one for the objective metrics.
 
 ### References
 <a name="refs"></a>
-
-**[1]** Kates, J. M., & Arehart, K. H. (2015). The hearing-aid audio quality index (HAAQI). IEEE/ACM transactions on audio, speech, and language processing, 24(2), 354-365.  
-**[2]** Sharma, B., & Wang, Y. (2019). Automatic evaluation of song intelligibility using singing adapted STOI and vocal-specific features. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, 319-331.  
+   
+**[1]** Kates, J. M., & Arehart, K. H. (2015). The hearing-aid audio quality index (HAAQI). IEEE/ACM transactions on audio, speech, and language processing, 24(2), 354-365.    
+**[2]** Sharma, B., & Wang, Y. (2019). Automatic evaluation of song intelligibility using singing adapted STOI and vocal-specific features. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, 319-331.    
+**[3]** Benjamin, A.J. and Siedenburg, K., 2023. Exploring level-and spectrum-based music mixing transforms for hearing-impaired listeners. The Journal of the Acoustical Society of America, 154(2), pp.1048-1061.  
