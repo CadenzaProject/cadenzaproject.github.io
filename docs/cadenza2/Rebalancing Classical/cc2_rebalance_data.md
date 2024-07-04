@@ -25,6 +25,10 @@ Training requires a large amount of audio data and there is not enough recording
 - CadenzaWoodwind  
   - A new data set we've created in a similar way to EnsembleSet but for five woodwind instruments (flute, clarinet, oboe, alto saxophone and bassoon). See Appendix A below.
   
+We permit the use of the following non-classical music datasets in training: [MUSDB18-HQ](https://sigsep.github.io/datasets/musdb.html), [FMA](https://github.com/mdeff/fma), [MedleydB version 1 and version 2](https://medleydb.weebly.com/), [MTG-Jamendo](https://mtg.github.io/mtg-jamendo-dataset/) and [MousesDB](https://music.ai/blog/news/introducing-moisesdb-the-ultimate-multitrack-dataset-for-source-separation-beyond-4-stems/). We also permit the use of pre-trained models that might have been developed using these databases.
+
+You should not use pre-trained models that were trained on the evaluation data (BACH10 and URMP datasets).
+ 
 ### A.2 Real data tuning set
 
 This is a small data base of real recordings created in the same way as the evaluation set. It is intended to help you cope with any mismatch between the synthesised training+validation data and the real-recording evaluation set. It is not statistically balanced in terms of what instruments it includes. Consequently, caution is needed when using it to fine tune a machine learning model.

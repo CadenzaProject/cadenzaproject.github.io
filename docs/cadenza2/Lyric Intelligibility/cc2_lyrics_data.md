@@ -21,6 +21,10 @@ The training and validation data are provided at challenge launch. The evaluatio
 The dataset uses the transcription extension [1] of the training split of MUSDB18-HQ [2]. This extension comprises 96 manual transcriptions of English songs by
 non-native English speakers, totalling 366 minutes of audio.
 
+We permit the use of the following additional datasets in training: [FMA](https://github.com/mdeff/fma), [MedleydB version 1 and version 2](https://medleydb.weebly.com/), and [MousesDB](https://music.ai/blog/news/introducing-moisesdb-the-ultimate-multitrack-dataset-for-source-separation-beyond-4-stems/). We also permit the use of pre-trained models that might have been developed using these databases.
+
+You should not use pre-trained models that were trained on our evaluation data.
+
 ### A.2 Evaluation (test) set
 
 The music dataset combines the English subset of the JamendoLyrics dataset (20 songs) [3] with the 46 transcribed songs from the evaluation split of the
