@@ -51,6 +51,7 @@ To rank the teams, the intelligibility L<sub>I</sub> and quality Q ratings from 
 
 Where the weighting 𝛼 will allow the balance between intelligibility and quality to be varied, and z() indicates a z-normalisation to make the two metrics compatible for the weighted average.
 
+We are likely to also ask listeners to rate the samples for Clarity, Distortion and Preference to better understand the results from the perceptual evaluation. But these scales will not be used for rank ordering the systems.
 
 ### Objective metrics
 
