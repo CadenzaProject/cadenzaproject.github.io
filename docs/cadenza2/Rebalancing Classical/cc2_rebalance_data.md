@@ -59,7 +59,87 @@ We provide metadata characterising the hearing abilities of listeners so the aud
 
 ### B.2 Gains
 
-** ** MISSING** **
+We provide metadata giving the gains to use for rebalancing the mixture. There are 4 gains per music sample, but we also provide code to create more. The gains applied to each instrument are chosen as follows:
+
+* Choosing how many sources instruments have their gain altered: 1 ... N-1 (when N is the number of instrument). So for quartet 1, 2, or 3.
+* Choosing the gain for those tracks: [-10, -6, -3, 3, 6, 10] dB.
+* The other sources instruments have gains of 0 dB.
+
+In the metadata, this is then reported as the gain for each source instrument. An example for a duet would be:
+
+```json
+{
+"gain_0001": {
+    "source_1": -10,
+    "source_2": 0
+},
+"gain_0002": {
+    "source_1": -6,
+    "source_2": 0
+},
+"gain_0003": {
+    "source_1": -3,
+    "source_2": 0
+},
+}
+```
+
+An example of the music metadata for quartet is:
+
+```json
+{
+"anitrasdance_001": {
+    "source_1": {
+        "source_dataset": "EnsembleSet",
+        "instrument": "Cello",
+        "track": "anitrasdance/Mix_1/Cello.flac",
+        "start": 46,
+        "duration": 15
+    },
+    "source_2": {
+        "source_dataset": "EnsembleSet",
+        "instrument": "Viola",
+        "track": "anitrasdance/Mix_1/Viola.flac",
+        "start": 46,
+        "duration": 15
+    },
+    "source_3": {
+        "source_dataset": "EnsembleSet",
+        "instrument": "Violin_1",
+        "track": "anitrasdance/Mix_1/Violin_1.flac",
+        "start": 46,
+        "duration": 15
+    },
+    "source_4": {
+        "source_dataset": "EnsembleSet",
+        "instrument": "Violin_2",
+        "track": "anitrasdance/Mix_1/Violin_2.flac",
+        "start": 46,
+        "duration": 15
+    },
+    "mixture": {
+        "source_dataset": "EnsembleSet",
+        "instrument": "Mixture",
+        "track": "anitrasdance/Mix_1/mix_anitrasdance.flac",
+        "start": 46,
+        "duration": 15
+    }
+}
+```
+
+The scenes are then:
+```json
+{
+"S50001": {
+    "music": "anitrasdance_000",
+    "gain": "gain_0645"
+},
+"S50002": {
+    "music": "anitrasdance_000",
+    "gain": "gain_0713"
+},
+}
+```
 
 ## References
 
