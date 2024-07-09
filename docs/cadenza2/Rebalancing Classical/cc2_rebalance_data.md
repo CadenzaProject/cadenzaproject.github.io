@@ -65,6 +65,12 @@ We provide metadata giving the gains to use for rebalancing the mixture. There a
 * Choosing the gain for those tracks: [-10, -6, -3, 3, 6, 10] dB.
 * The other sources instruments have gains of 0 dB.
 
+We also apply an additional gain to all tracks to ensure the above process does not result in large amplification or attenuation of the mix. This gain is:
+
+G  = -10*log10( (1/N)(10<sup>(dbi/10)</sup>) ) (dB) <div align="right">(1)</div>
+
+Where there are N tracks and the gain for the i<sup>th</sup> track is dBi.
+
 In the metadata, this is then reported as the gain for each source instrument. An example for a duet would be:
 
 ```json
