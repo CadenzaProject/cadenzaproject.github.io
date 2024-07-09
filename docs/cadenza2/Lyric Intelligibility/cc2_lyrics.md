@@ -71,7 +71,7 @@ Transcriptions made by [[Schulze-Forster et al.]](#refs)
 </details>
 
 Listener issues (factor 3) will be covered by us providing listeners' hearing characteristics
-as [Audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI).
+as [Audiograms](../../learning_resources/Hearing_impairment/edu_measuring_HI).
 
 Challenge entrants will be provided with appropriate music datasets and sets of audiograms for training, development and evaluation.
 

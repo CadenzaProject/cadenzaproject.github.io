@@ -21,12 +21,13 @@ Figure 1. A simplified schematic of the baseline system.
   - Gives a value of 𝛼 (metadata) that sets the balance between intelligibility and audio quality (see evaluation below).
 - The music enhancement stage (pink box) takes the music as inputs and attempts to improve the intelligibility.
 - Listener characteristics (green oval) are audiograms to allow personalised processing in the enhancement stage and are also used in objective evaluation.
-- The enhancement outputs are evaluated (orange boxes):
+- The enhancement outputs are evaluated using objective metrics (orange boxes):
   - For intelligibility using a metric based on Whisper.
   - For audio quality via the Hearing-Aid Audio Quality Index (HAAQI) [1].
-  - By our listening panel.
+  
+Systems will also be evaluated by our listening panel.
 
-Your challenge is to improve what happens in the pink music enhancement box. The rest of the baseline is fixed and should not be changed.
+Your challenge is to improve what happens in the pink, music enhancement box. The rest of the baseline is fixed and should not be changed.
 
 ## Causality
 
@@ -37,7 +38,7 @@ More information about causality can be found in Computational Restrictions sect
 
 ## Evaluation
 
-There will be two rank lists, one based on listening tests and the other on objective metrics.
+There will be two rank lists, one based on listening tests and the other on objective metrics. It is fine to submit two systems, one optimised for the listening panel and one for the objective metrics.
 
 ### Listening tests
 
@@ -55,9 +56,9 @@ We are likely to also ask listeners to rate the samples for Clarity, Distortion 
 
 ### Objective metrics
 
-Our quality and intelligibility metrics will be combined using Equation (1) as for the listening tests. Audio quality is evaluated using HAAQI [[1]](#refs). Intelligibility is scored using word correction ratio using a lyric transcription algorithm based on Whisper. HAAQI is an intrusive metrics and the reference will be the original signal with a 1 dB amplification applied to the vocal signal and -1dB to the accompaniment because that has been shown to be preferred by wearers of hearing aids **[3]**.
+Our quality and intelligibility metrics will be combined using Equation (1) as for the listening tests. Audio quality is evaluated using HAAQI [[1]](#refs). Intelligibility is scored using word correction ratio using a lyric transcription algorithm based on Whisper. HAAQI is an intrusive metrics and the reference will be the original signal with a 1 dB amplification applied to the vocal signal and -1dB to the accompaniment, because that has been shown to be preferred by wearers of hearing aids [3].
 
-Objective metrics are always an approximation and you may want to use other approaches and metrics to optimise a system for the listening panel (for example, you could use singing-adapted STOI [[2]](#refs)). It is fine to submit two systems, one optimised for the listening panel and one for the objective metrics.
+Objective metrics are always an approximation and you may want to use other approaches and metrics to optimise a system for the listening panel (for example, you could use singing-adapted STOI [[2]](#refs)).
 
 ### References
 <a name="refs"></a>
