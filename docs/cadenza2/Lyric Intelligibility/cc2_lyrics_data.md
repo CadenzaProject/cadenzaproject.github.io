@@ -118,7 +118,6 @@ This provides the list of listeners for each scene.
 
 ```
 
-
 ## References
 <a name="refs"></a>
 

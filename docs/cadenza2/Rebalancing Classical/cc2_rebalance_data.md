@@ -1,8 +1,8 @@
 ---
 id: rebalancing_data
 title: "Rebalancing Classical Music Data"
-sidebar_label: Rebalancing Data
-sidebar_position: 3.1
+sidebar_label: Data
+sidebar_position: 3.3
 ---
 import ReactPlayer from 'react-player';
 import Image from '@theme/IdealImage';
@@ -20,7 +20,7 @@ The training and validation data are provided at challenge launch. The evaluatio
 
 Training requires a large amount of audio data and there is not enough recordings of classical music ensembles with isolated instruments. Consequently, for training we are providing music ensembles synthesised from scores.
 
-- EnsembleSet [1]
+- EnsembleSet [[1]](refs)
   - This contains 80 pieces from classical 17 composers. EnsembleSet has renders for 11 different instruments. We're using the string parts.
 - CadenzaWoodwind  
   - A new data set we've created in a similar way to EnsembleSet but for five woodwind instruments (flute, clarinet, oboe, alto saxophone and bassoon). There are two quartet orchestrations: (a) flute, clarinet, oboe, and bassoon and (b) flute, alto saxophone, oboe and bassoon. The stems for each solo instrument are presented along with the two mixtures. See our [Zenodo archive for the dataset](https://zenodo.org/records/12664932) for more details.
@@ -29,15 +29,19 @@ We permit the use of the following non-classical music datasets in training: [MU
 
 You should not use pre-trained models that were trained on the evaluation data (BACH10 and URMP datasets).
  
+**Validation** We provide a split of the training set for validation. The audio tracks are divided into consecutive 15-second segments to match how the 
+evaluation set will be provided. The validation samples are a collection of correct mixtures (strings quartets from EnsembleSet and woodwind quartets from CadenzaWoodwind) and
+random mixtures to account for mixtures that contains strings and woodwind instruments. 
+
 ### A.2 Real data tuning set
 
-This is a small data base of real recordings created in the same way as the evaluation set - see below. It is intended to help you cope with any mismatch between the synthesised training+validation data and the real-recording evaluation set. It is not statistically balanced in terms of what instruments it includes. Consequently, caution is needed when using it to fine tune a machine learning model.
+This is a small dataset of real recordings created in the same way as the evaluation set - see below. It is intended to help you cope with any mismatch between the synthesised training+validation data and the real-recording evaluation set. It is not statistically balanced in terms of what instruments it includes. Consequently, caution is needed when using it to fine tune a machine learning model.
 
 ### A.3 Evaluation (test) set
 
 The evaluation dataset are created using:
-- BACH10 [2], and
-- University of Rochester multi-modal music performance (URMP) [3].
+- BACH10 [[2]](refs), and
+- University of Rochester multi-modal music performance (URMP) [[3]](refs).
 
 BACH10 has 10 four-part J.S. Bach chorales performed on bassoon, clarinet, alto saxophone and violin. The URMP dataset a total of 44 duets, trios, quartets and quintets. The pieces are from 19 composers, including: Mozart, Tchaikovsky and Beethoven. The pieces are performed by a combination of 14 different instruments. Due to their low representation in the evaluation datasets we excluded pieces featuring double bass, horn, trombone, trumpet and tuba.
 
@@ -45,7 +49,7 @@ Both databases have mono recordings of isolated instruments in anechoic conditio
 
 In the evaluation, each scene will be processed for a number of random test listeners.
 
-:::note
+:::danger
 
 The evaluation set should not be used for refining the system.
 
@@ -57,6 +61,20 @@ The evaluation set should not be used for refining the system.
 
 We provide metadata characterising the hearing abilities of listeners so the audio signals can be personalised. This is common for both tasks, so please see [Listener Metadata](../data_listener) for more details.
 
+```json
+{
+  "L0001": {
+    "name": "L0001",
+    "audiogram_cfs": [250, 500, 1000, 2000, 3000, 4000, 6000, 8000],
+    "audiogram_levels_l": [45, 45, 35, 45, 60, 65, 70, 65],
+    "audiogram_levels_r": [40, 40, 45, 45, 60, 65, 80, 80]
+  },
+  "L0002": {
+    "name": "L0002",
+    ...
+  }
+```
+
 ### B.2 Gains
 
 We provide metadata giving the gains to use for rebalancing the mixture. There are 4 gains per music sample, but we also provide code to create more. The gains applied to each instrument are chosen as follows:
@@ -67,7 +85,15 @@ We provide metadata giving the gains to use for rebalancing the mixture. There a
 
 We also apply an additional gain to all tracks to ensure the above process does not result in large amplification or attenuation of the mix. This gain is:
 
+$$
+\begin{align}
+G = -10  log_{10} (\frac{1}{N} * (10^{\frac{dbi}{10}}))  \tag{1}
+\end{align}
+$$
+
+{/*
 G  = -10*log10( (1/N)(10<sup>(dbi/10)</sup>) ) (dB) <div align="right">(1)</div>
+*/}
 
 Where there are N tracks and the gain for the i<sup>th</sup> track is dBi.
 
@@ -90,7 +116,8 @@ In the metadata, this is then reported as the gain for each source instrument. A
 }
 ```
 
-An example of the music metadata for quartet is:
+### B.3 Music
+This provide information of details of the composition
 
 ```json
 {
@@ -133,6 +160,8 @@ An example of the music metadata for quartet is:
 }
 ```
 
+### B.4 Scene
+
 The scenes are then:
 ```json
 {
@@ -146,6 +175,17 @@ The scenes are then:
 },
 }
 ```
+
+### B.5 Scene-listener
+
+```json
+{
+    "S10001": ["L0051", "L0001"],
+    "S10002": ["L0028", "L0012"]
+```
+
+
+
 
 ## References
 

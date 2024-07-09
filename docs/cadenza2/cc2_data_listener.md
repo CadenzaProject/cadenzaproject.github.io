@@ -44,6 +44,19 @@ Audiogram data is stored in a JSON file per dataset with the following format.
 ```
 
 
+**Compressor params** are provided for the final signal amplification.
+This file contains individualised compression ratios and gains per band.
+
+```json
+ "L0001": {
+        "frequencies": [250, 500, 1000, 2000, 4000, 8000],
+        "cr_l": [2.1, 1.5, 1.3, 1.5, 2.4, 3.7],
+        "gain_l": [9.6, 11.9, 12.9, 16.4, 19.0, 28.0],
+        "cr_r": [...]
+        "gain_r": [...]
+    },
+```
+
 
 
 

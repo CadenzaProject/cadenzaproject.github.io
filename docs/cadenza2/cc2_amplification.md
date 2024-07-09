@@ -22,7 +22,7 @@ Note, if you are making a <strong>causal</strong> system, be careful your normal
 
 ## References
 
-[1] Moore, B.C.J., Glasberg, B.R. and Stone, M.A., 1999. Use of a loudness model for hearing aid fitting: III. A general method for deriving initial fittings for hearing aids with multi-channel compression. British Journal of Audiology, 33(4), pp.241-258.  
-[2] Whitmer, W.M. and Akeroyd, M.A., 2011. Level discrimination of speech sounds by hearing-impaired individuals with and without hearing amplification. Ear and hearing, 32(3), pp.391-398. 
+**[1]** Moore, B.C.J., Glasberg, B.R. and Stone, M.A., 1999. Use of a loudness model for hearing aid fitting: III. A general method for deriving initial fittings for hearing aids with multi-channel compression. British Journal of Audiology, 33(4), pp.241-258.  
+**[2]** Whitmer, W.M. and Akeroyd, M.A., 2011. Level discrimination of speech sounds by hearing-impaired individuals with and without hearing amplification. Ear and hearing, 32(3), pp.391-398. 
 
 
