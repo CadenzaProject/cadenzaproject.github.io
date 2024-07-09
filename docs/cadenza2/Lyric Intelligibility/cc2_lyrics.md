@@ -12,9 +12,9 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 <Image img={require('../../../static/img/cad2/pop_rock_band.jpg')} alt="hostile band rock guitar show" />
 Image by <a href="https://pixabay.com/users/marcisio-1043956/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=886041" target="_blank">Marcísio Coelho Mac Hostile</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=886041" target="_blank">Pixabay</a>
 
-## Introduction
+## A. Introduction
 
-Studies show that not being able to hear the lyrics in music is an important problem to tackle for those with hearing loss [2]. Consequently, this task is about improving the intelligibility of lyrics when
+Studies show that not being able to hear the lyrics in music is an important problem to tackle for those with hearing loss [[1]](#refs). Consequently, this task is about improving the intelligibility of lyrics when
 listening to pop/rock over headphones. But this needs to be done without losing too much audio quality - you can't improve intelligibility just by turning off the rest of the band! For this reason, we will be evaluating both intelligibility and audio quality, and giving you different targets to explore the balance between these attributes.
 
 This task could be tackled in many different ways using machine learning. A few examples:
@@ -24,13 +24,13 @@ This task could be tackled in many different ways using machine learning. A few 
 
 But we'd welcome other approaches as well.
 
-### What is lyric intelligibility?
+### A.1 What is lyric intelligibility?
 
-Lyric intelligibility, as defined by Cadenza's sensory panel of hearing aid users, refers to "how clearly and effortlessly the words in the music can be heard".  Across this sensory panel and work by Fine et al. [[1]](#refs), there are four groups of factors that can affect lyric intelligibility:
+Lyric intelligibility, as defined by Cadenza's sensory panel of hearing aid users, refers to "how clearly and effortlessly the words in the music can be heard".  Across this sensory panel and work by Fine et al. [[2]](#refs), there are four groups of factors that can affect lyric intelligibility:
 
 1. Performer: includes _articulation_, _voice quality_ and _diction_.
 2. Music-to-singer balance: includes _balance in dynamics or pitch_, _music genre_, _song speed_ and _composition style_.
-3. Listener [[2]](#refs): includes _listener attention_, _familiarity_, _expectation_ and _hearing ability_.
+3. Listener [[1]](#refs): includes _listener attention_, _familiarity_, _expectation_ and _hearing ability_.
 4. Environmental: includes _room acoustics_, _proximity to performer_ and _use or abuse of amplification_.
 
 As listeners are using headphones in our scenario, environmental factors are not included.
@@ -75,7 +75,7 @@ as [Audiograms](../../learning_resources/Hearing_impairment/edu_measuring_HI).
 
 Challenge entrants will be provided with appropriate music datasets and sets of audiograms for training, development and evaluation.
 
-### References
+## References
 <a name="refs"></a>
 
 **[1]** Fine, P. A., & Ginsborg, J. (2014). "Making myself understood: perceived factors affecting the intelligibility of sung text," Frontiers in psychology, 5, 809.  
