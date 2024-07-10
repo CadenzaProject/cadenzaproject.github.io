@@ -24,7 +24,7 @@ Figure 1. The Lyric Intelligibility Baseline
   - Selects the stereo music signal.
   - Gives a value of $\alpha$ (metadata) that sets the balance between intelligibility and audio quality (see evaluation below).
 - The music enhancement stage (pink box) takes the music as inputs and attempts to improve the intelligibility.
-- Listener characteristics (green oval) are audiograms to allow personalised processing in the enhancement stage and are also used in objective evaluation.
+- Listener characteristics (green oval) are audiograms and compressor settings to allow personalised processing in the enhancement stage and are also used in objective evaluation.
 - The enhancement outputs are evaluated using objective metrics (orange boxes):
   - For intelligibility using a metric based on Whisper (correct transcribed words ratio).
   - For audio quality via the Hearing-Aid Audio Quality Index (HAAQI) [1].
