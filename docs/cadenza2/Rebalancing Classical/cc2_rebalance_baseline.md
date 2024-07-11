@@ -29,5 +29,21 @@ Figure 1. A simplified schematic of the baseline system.
 - The enhancement outputs are evaluated (orange box) for audio quality using the Hearing-Aid Audio Quality Index (HAAQI)
 
 Your challenge is to improve what happens in the pink music enhancement box. The rest of the baseline is fixed and should not be changed.
-
 </details>
+
+## B. Music Enhancer
+
+Figure 2 shows the music enhancer supplied in the baseline. Your task is to improve this.
+
+<div style={{textAlign:'center'}}>
+<Image img={require('../../../static/img/cad2/classical_music_enhancer.png')} alt="A diagram of the baseline as described in main text"/>
+Figure 2. A simplified schematic of the baseline system.
+</div>
+
+The baseline approach is to demix the stereo music into the number of instruments in the ensemble. The specified gains are applied to each instrument before recombining the signals. An amplification is applied to ensure the downmix stereo is roughly the same level as the original. The final stage is to apply a frequency-dependent amplification to correct for the hearing loss - see [amplification](../amplification) for more details.
+
+The output is FLAC format 16-bit, 44.1 kHz.
+
+## C. Objective Evaluation
+
+The enhanced audio is evaluating using the HAAQI implementation in pyClarity. This is an intrusive metric and requires a reference. The reference signal is constructed by applying the specified gains to the isolated instrument stems and summing the result. A gain is applied to ensure the reference mix is not amplified. The reference is also amplified using a simulation of a simple hearing-aid - see [amplification](../amplification) for more details.

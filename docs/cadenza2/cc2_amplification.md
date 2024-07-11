@@ -21,7 +21,7 @@ For each listener (e.g. L001) the compressor parameter json gives the compressio
 
 ## Levels and clipping
 
-The original mixes from the scene generator are set to a level of -40 LUFS. This is the level designed to work well with the non-linear amplification. Consequently, when outputting signals from the music enhancer make sure they are roughly at this level. It is also good practice to monitor whether clipping is happening due to the amplification.
+The original mixes from the scene generator are set to a level of -40 LUFS. This is the level designed to work well with the non-linear amplification. Consequently, when outputting signals from the music enhancer make sure they are roughly at this level. It is also good practice to monitor whether clipping is happening due to the amplification. A small amount of clipping might be acceptable to allow sufficient amplification for those with hearing loss, too much and there will be audible distortion.
 
 Note, if you are making a <strong>causal</strong> system, be careful your normalisation process does not use information from the future i.e. you can't calculate the rms for the whole extract of music because that involves samples in the future.
 
