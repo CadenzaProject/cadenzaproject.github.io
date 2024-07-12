@@ -47,7 +47,7 @@ Next, the specified gains are applied to each instrument before recombining the 
 Then, an amplification is applied to ensure the downmix stereo is roughly the same level as the original. 
 The final stage is to apply a frequency-dependent amplification to correct for the hearing loss - see [amplification](../amplification) for more details.
 
-The output is FLAC format 16-bit, 44.1 kHz.
+The output is FLAC format 16-bit, 32 kHz.
 
 ## C. Objective Evaluation
 

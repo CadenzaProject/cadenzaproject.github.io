@@ -9,9 +9,11 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
+
 The Cadenza Challenges are improving music for people with a hearing loss. Hearing loss causes various problems such as quieter music passages being inaudible, poor and anomalous pitch perception, difficulties identifying and picking out instruments, and problems hearing out lyrics.
+
 <div style={{textAlign:'center'}}>
-    <Image img={require('../../static/img/cad2/SPS_Logo_Color_RGB.png')} alt="IEEE SPS logo" />
+<img src={useBaseUrl('/img/cad2/SPS_Logo_Color_RGB.png')} alt="IEEE SPS logo" style={{width: 400}} />
 </div>
 
 The 2nd Cadenza Challenge (CAD2) is part of the [IEEE SPS Challenge Program](https://signalprocessingsociety.org/publications-resources/challenges-and-data-collections). Open from July 2024 it has two tasks:
