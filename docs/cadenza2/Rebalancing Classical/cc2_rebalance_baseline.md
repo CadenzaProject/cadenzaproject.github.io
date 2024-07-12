@@ -40,7 +40,12 @@ Figure 2 shows the music enhancer supplied in the baseline. Your task is to impr
 Figure 2. A simplified schematic of the baseline system.
 </div>
 
-The baseline approach is to demix the stereo music into the number of instruments in the ensemble. The specified gains are applied to each instrument before recombining the signals. An amplification is applied to ensure the downmix stereo is roughly the same level as the original. The final stage is to apply a frequency-dependent amplification to correct for the hearing loss - see [amplification](../amplification) for more details.
+The baseline approach is to demix the stereo music into the number of instruments in the ensemble.
+For this, the baseline uses eight audio source separation model, each trained for a specific target instrument.
+During the separation, a percentage of the residual is added back to the estimated target to reduce any distortion resulting from the separation.
+Next, the specified gains are applied to each instrument before recombining the signals. 
+Then, an amplification is applied to ensure the downmix stereo is roughly the same level as the original. 
+The final stage is to apply a frequency-dependent amplification to correct for the hearing loss - see [amplification](../amplification) for more details.
 
 The output is FLAC format 16-bit, 44.1 kHz.
 
