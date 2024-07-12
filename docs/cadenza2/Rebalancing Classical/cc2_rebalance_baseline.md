@@ -52,3 +52,10 @@ The output is FLAC format 16-bit, 44.1 kHz.
 ## C. Objective Evaluation
 
 The enhanced audio is evaluating using the HAAQI implementation in pyClarity. This is an intrusive metric and requires a reference. The reference signal is constructed by applying the specified gains to the isolated instrument stems and summing the result. A gain is applied to ensure the reference mix is not amplified. The reference is also amplified using a simulation of a simple hearing-aid - see [amplification](../amplification) for more details.
+
+## D. Baseline Results
+
+| Baseline  | HAAQI  | 
+|:----------|:------:|
+| Causal    |   -    |  
+| NonCausal | 0.4594 |   

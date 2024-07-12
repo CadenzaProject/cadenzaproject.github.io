@@ -93,7 +93,7 @@ score = \alpha ~ 𝑄 + (1 − \alpha) ~ 𝐿_𝐼  \tag{5}
 \end{align}
 $$
 
-### D. Baseline Results
+## D. Baseline Results
 
 | Baseline  | HAAQI  | Correctness | Overall | Z_Normalized |
 |:----------|:------:|:-----------:|:-------:|:------------:|
