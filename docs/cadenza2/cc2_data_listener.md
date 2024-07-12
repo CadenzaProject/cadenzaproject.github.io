@@ -9,11 +9,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The same listener metadata is used for both tasks. These characterise the hearing abilities of the listeners, so the audio signals you 
 generate can be individualised. The same types of data are available for training, validation and evaluation. 
-More on [hearing loss](../../learning_resources/Hearing_impairment/edu_HI_general) and 
-[how it is measured](../../learning_resources/Hearing_impairment/edu_measuring_HI).
+More on [hearing loss](../learning_resources/Hearing_impairment/edu_HI_general) and 
+[how it is measured](../learning_resources/Hearing_impairment/edu_measuring_HI).
 
 * **Training**
-For training, we will use the same 83 [audiograms](../../learning_resources/Hearing_impairment/edu_measuring_HI) 
+For training, we will use the same 83 [audiograms](../learning_resources/Hearing_impairment/edu_measuring_HI) 
 from the [Clarity project](https://claritychallenge.org/).
 
 * **Validation**

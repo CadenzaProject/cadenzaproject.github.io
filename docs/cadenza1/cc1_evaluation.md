@@ -6,7 +6,7 @@ sidebar_position: 4
 ---
 :::info
 If you haven't received your **TEAM ID** and you already registered, please contact the team [here](https://groups.google.com/u/1/g/cadenza-challenge).
-If you still don't register your team, please go [here](Take%20Part/cc1_registration).
+If you still don't register your team, please go [here](./Take%20part/cc1_registration).
 
 Please, to run the evaluation, first ensure you updated your code to pyclarity version 0.3.4
 and downloaded the data for,

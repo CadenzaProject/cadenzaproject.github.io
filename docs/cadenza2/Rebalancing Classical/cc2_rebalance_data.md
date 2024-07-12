@@ -20,7 +20,7 @@ The training and validation data are provided at challenge launch. The evaluatio
 
 Training requires a large amount of audio data and there is not enough recordings of classical music ensembles with isolated instruments. Consequently, for training we are providing music ensembles synthesised from scores.
 
-- EnsembleSet [[1]](refs)
+- EnsembleSet [[1]](#refs)
   - This contains 80 pieces from classical 17 composers. EnsembleSet has renders for 11 different instruments. We're using the string parts.
 - CadenzaWoodwind  
   - A new data set we've created in a similar way to EnsembleSet but for five woodwind instruments (flute, clarinet, oboe, alto saxophone and bassoon). There are two quartet orchestrations: (a) flute, clarinet, oboe, and bassoon and (b) flute, alto saxophone, oboe and bassoon. The stems for each solo instrument are presented along with the two mixtures. See our [Zenodo archive for the dataset](https://zenodo.org/records/12664932) for more details.
@@ -40,8 +40,8 @@ This is a small dataset of real recordings created in the same way as the evalua
 ### A.3 Evaluation (test) set
 
 The evaluation dataset are created using:
-- BACH10 [[2]](refs), and
-- University of Rochester multi-modal music performance (URMP) [[3]](refs).
+- BACH10 [[2]](#refs), and
+- University of Rochester multi-modal music performance (URMP) [[3]](#refs).
 
 BACH10 has 10 four-part J.S. Bach chorales performed on bassoon, clarinet, alto saxophone and violin. The URMP dataset a total of 44 duets, trios, quartets and quintets. The pieces are from 19 composers, including: Mozart, Tchaikovsky and Beethoven. The pieces are performed by a combination of 14 different instruments. Due to their low representation in the evaluation datasets we excluded pieces featuring double bass, horn, trombone, trumpet and tuba.
 
@@ -180,14 +180,22 @@ The scenes are then:
 
 ```json
 {
-    "S10001": ["L0051", "L0001"],
-    "S10002": ["L0028", "L0012"]
+  "S10001": [
+    "L0051",
+    "L0001"
+  ],
+  "S10002": [
+    "L0028",
+    "L0012"
+  ]
+}
 ```
 
 
 
 
 ## References
+<a name="refs"></a>
 
 [1] Sarkar, S., Benetos, E. and Sandler, M., 2022. Ensembleset: A new high-quality synthesised dataset for chamber ensemble separation.  
 [2] Duan, Z. and Pardo, B., 2011. Soundprism: An online system for score-informed source separation of music audio. IEEE Journal of Selected Topics in Signal Processing, 5(6), pp.1205-1215.  

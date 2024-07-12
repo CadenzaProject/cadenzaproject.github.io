@@ -9,7 +9,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 ## 1. Teams
 
-- Teams must [pre-register](registration) and nominate a contact person.
+- Teams must [pre-register](./cc2_registration) and nominate a contact person.
 - Teams can be from one or more institution.
 - Anonymous entries are allowed.
 - You must provide a technical document of up to 2 pages describing the system/model, what data and pre-existing tools, software and models used.

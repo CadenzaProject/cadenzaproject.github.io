@@ -34,7 +34,7 @@ More information about causality can be found in Computational Restrictions sect
 
 ## C. Evaluation
 
-Systems will be evaluated using HAAQI [[1]](refs) objective metric. HAAQI is an intrusive metrics and the reference 
+Systems will be evaluated using HAAQI [[1]](#refs) objective metric. HAAQI is an intrusive metrics and the reference 
 will be the mixture of the original isolated sources rebalanced using the target gains. 
 
 ## References
