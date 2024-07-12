@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcadenza=self.webpackChunkcadenza||[]).push([[2628],{44427:a=>{a.exports=JSON.parse('{"permalink":"/blog/tags/cadenza","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"News and updates about our Challenges and Workshops","blogTitle":"Latest"}')}}]);

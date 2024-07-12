@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcadenza=self.webpackChunkcadenza||[]).push([[4192],{87958:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/sensory-panel","page":1,"postsPerPage":3,"totalPages":1,"totalCount":3,"blogDescription":"News and updates about our Challenges and Workshops","blogTitle":"Latest"}')}}]);
