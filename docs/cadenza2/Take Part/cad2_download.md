@@ -11,21 +11,19 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 We suggest starting with the installation of the software and then proceeding to follow the instructions for downloading and extracting the data.
 :::
 
-**FROM ICASSP NEEDS UPDATING**
-
 ## A. Software
 
 All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza
 GitHub repository](https://github.com/claritychallenge/clarity).
 
-The official code for the ICASSP 2024 Cadenza Challenge was released in version `v0.4.1`.
+The official code for the Second Cadenza Challenge was released in version `v0.6.0`.
 To avoid any conflict, we highly recommend for you to work using this version and
 not with the code from the `main` branch. To install this version you have three options
 
 <details>
-  <summary>1. Download the files of the release v0.4.1</summary>
+  <summary>1. Download the files of the release v0.6.0</summary>
 
-* download from https://github.com/claritychallenge/clarity/releases/tag/v0.4.1
+* download from https://github.com/claritychallenge/clarity/releases/tag/v0.6.0
 * unpacked the package
 
 From inside the directory, run:
@@ -37,11 +35,11 @@ pip install -e .
 </details>
 
 <details>
-  <summary>2. Clone the repository and checkout version v0.4.1</summary>
+  <summary>2. Clone the repository and checkout version v0.6.0</summary>
 
 ```bash
 git clone https://github.com/claritychallenge/clarity.git
-git checkout tags/v0.4.1
+git checkout tags/v0.6.0
 
 cd clarity
 pip install -e .
@@ -49,33 +47,23 @@ pip install -e .
 </details>
 
 <details>
-  <summary>3. Install pyclarity version 0.4.1 from PyPI</summary>
+  <summary>3. Install pyclarity version 0.6.0 from PyPI</summary>
 
 ```bash
-pip install pyclarity==0.4.1
+pip install pyclarity==0.6.0
 ```
 
 </details>
 
 ## B. Data
 
-### B.1 Download the packages
+### B.1 Download the data for Task 1
 
-The data is available in five packages, please complete [this form](https://forms.gle/cQwCZeeCX7cm6PoH6) to request access.
+The data is available in one packages, please complete [this form](https://forms.gle/p6qQGydbpnJ1ESjC6) to request access.
 
-All participants will require the **core** data packages.
+* `cadenza_cad2_task1_train.v1_0.tar.gz` **[15 GB]** - audio data and metadata.
 
-Participants wanting to extend the training data can use either of the **augmentation** data packages.
-
-* `cad_icassp_2024_core.v1.1.tgz` **[230 KB]** - metadata and hrtf signals.
-* `cad_icassp_2024_train.v1.0.tgz` **[14.8 GB]** - audio data for training systems.
-* `cad_icassp_2024_validation.v1.0.tgz` **[5.9 GB]** - audio and metadata data for validation.
-* `cad_icassp_2024_evaluation.v1.0.tgz` **[1.4 GB]** - audio and metadata data for evaluation (only mixtures).
-* `cad_icassp_2024_medleydb.v1.0.tgz` **[38.1 GB]** - optional audio data for training augmentation.
-* [`bach10.zip`](https://labsites.rochester.edu/air/resource.html) **[125 MB]** - optional audio data for training augmentation.
-* [`fma_small.zip`](https://os.unil.cloud.switch.ch/fma/fma_small.zip) **[7.2 GB]** - optional audio data for training augmentation.
-
-### B.2 Unpack the packages
+**Unpack the packages**
 
 After downloading the packages
 Unpack the packages under the same root directory as:
@@ -83,3 +71,17 @@ Unpack the packages under the same root directory as:
 ```bash
 tar -xvzf <PACKAGE_NAME>
 ```
+
+### B.2 Download the data for Task 2
+
+The data is available in several packages, please complete [this form](https://forms.gle/CtBJNRAmmsrXptAj7) to request access.
+
+* `CadenzaWoodwind.zip` **[7.5 GB]** - CadenzaWoodwind audio dataset.
+* `EnsembleSet_Mix_1.zip` **[5.2 GB]** - Small subset of EnsembleSet.
+* `metadat.zip` **[209 kB]** - metadata for the system.
+* `Stereo_Reverb_Real_Data_For_Tuning.zip` **[182 MB]** - Small subset of real recordings for tuning.
+
+**Unpack the packages**
+
+After downloading the packages, save them in the same directory
+and run the script `process_zenodo_download.py` found with the baseline on [GitHub](https://github.com/claritychallenge/clarity).
