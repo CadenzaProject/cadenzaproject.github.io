@@ -63,7 +63,9 @@ where $\beta$ = $\alpha$, the balance parameter given in the metadata. Eqns (1) 
 ## C. Objective Evaluation
 
 ### C.1 Intelligibility
-The enhanced audio is first passed through the MSBG hearing loss simulator in the pyClarity codebase [[2]](#refs). It is then passed through the [Whisper ASR algorithm (size: base)](https://huggingface.co/openai/whisper-small) [[3]](#refs) to gain a text transcription. The objective score is the ratio of correct transcribed words compared to the correct transcript of the lyrics.
+The enhanced audio is first passed through the MSBG hearing loss simulator in the pyClarity codebase [[2]](#refs). 
+It is then passed through the [Whisper ASR algorithm (size: base)](https://huggingface.co/openai/whisper-small) [[3]](#refs) to gain a text transcription. 
+The objective score will be the transcription correctness computed as the ratio of correct transcribed words compared to the correct transcript of the lyrics.
 
 $$
 \begin{align}
@@ -90,6 +92,13 @@ $$
 score = \alpha ~ 𝑄 + (1 − \alpha) ~ 𝐿_𝐼  \tag{5}
 \end{align}
 $$
+
+### D. Baseline Results
+
+| Baseline  | HAAQI  | Correctness | Overall | Z_Normalized |
+|:----------|:------:|:-----------:|:-------:|:------------:|
+| Causal    | 0.7755 |   0.3732    | 0.6514  |    0.2486    |
+| NonCausal | 0.7841 |   0.3857    | 0.6649  |    0.2597    |
 
 ## References
 <a name="refs"></a>
