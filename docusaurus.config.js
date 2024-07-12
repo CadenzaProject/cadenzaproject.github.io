@@ -55,6 +55,10 @@ module.exports = {
         {
             src: '/bootstrap/bootstrap.bundle.min.js',
             async: false,
+        },
+        {
+            src: 'https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js',
+            async: false,
         }
     ],
     plugins: [
@@ -75,9 +79,7 @@ module.exports = {
                 disableInDev: true,
             },
         ],
-        [require.resolve('docusaurus-lunr-search'), {
-            indexBaseUrl: true
-        }], './sitePlugin', require.resolve("docusaurus-plugin-image-zoom")
+        [require.resolve('docusaurus-lunr-search'), {indexBaseUrl: true}],
     ],
     themeConfig: {
         prism: {
