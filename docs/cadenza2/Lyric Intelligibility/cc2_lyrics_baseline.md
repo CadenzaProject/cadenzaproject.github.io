@@ -95,7 +95,35 @@ $$
 
 ## D. Baseline Results
 
-| Baseline  | HAAQI  | Correctness | Overall | Z_Normalized |
+The average validation set scores computed:
+
+* **HAAQI**: average of all average left and right scores
+
+$$
+\text{HAAQI} = \sum_{i=1}^{\text{nsamples}} \frac{(\text{left score}_i + \text{right score}_i)/2}{\text{nsamples}}  
+$$
+where:  
+$\text{left score}_i$ = haaqi score for left ear  
+$\text{right score}_i$ = haaqi score for right ear  
+$\text{nsamples}$ = total number of samples to evaluate  
+
+* **Correctness**: average of correctness of each sentence computed as the sum of correct transcribed words over the total words in the sentence for the better ear.
+
+$$
+\text{Correctness} = \sum_{i=1}^{nsamples} \frac{\max(\text{Correct left}_i, \text{Correct right}_i) / \text{TWords}_i}{\text{nsamples}} \\
+$$
+where:  
+$\text{Correct left}_i$ = number of correct transcribed words in sentence $i$ for left ear  
+$\text{Correct right}_i$ = number of correct transcribed words in sentence $i$ for right ear  
+$\max(\text{Correct left}_i, \text{Correct right}_i)$ = correct transcribed words in sentence $i$ for the better ear    
+$\text{TWords}_i$ = total number of words in sentence $i$  
+$\text{nsamples}$ = total number of samples to evaluate  
+
+* **Overall**: See section [C.3 Overall Score above](#c3-overall-score)
+
+* **Z Normalized**: Z normalized **HAAQI** and **Correctness** scores per sample before computing the Overall score 
+
+| Baseline  | HAAQI  | Correctness | Overall | Z Normalized |
 |:----------|:------:|:-----------:|:-------:|:------------:|
 | Causal    | 0.7755 |   0.3732    | 0.6514  |    0.2486    |
 | NonCausal | 0.7841 |   0.3857    | 0.6649  |    0.2597    |

@@ -55,7 +55,17 @@ The enhanced audio is evaluating using the HAAQI implementation in pyClarity. Th
 
 ## D. Baseline Results
 
+The average validation set HAAQI score computed as the average of all average left and right scores
+
+$$
+ \text{HAAQI} = \sum_{i=1}^{\text{nsamples}} \frac{(\text{left score}_i + \text{right score}_i)/2}{\text{nsamples}} 
+$$
+
+where:
+
+nsamples = total number of validation set samples
+
 | Baseline  | HAAQI  | 
 |:----------|:------:|
-| Causal    |   -    |  
-| NonCausal | 0.4594 |   
+| Causal    | 0.5065 |  
+| NonCausal | 0.5288 |   
