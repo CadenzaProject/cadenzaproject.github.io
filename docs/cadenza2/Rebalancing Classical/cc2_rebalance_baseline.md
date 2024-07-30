@@ -42,28 +42,39 @@ Figure 2. A simplified schematic of the baseline system.
 
 The baseline approach is to demix the stereo music into the number of instruments in the ensemble.
 For this, the baseline uses eight audio source separation model, each trained for a specific target instrument.
-During the separation, a percentage of the residual is added back to the estimated target to reduce any distortion resulting from the separation.
-Next, the specified gains are applied to each instrument before recombining the signals. 
-Then, an amplification is applied to ensure the downmix stereo is roughly the same level as the original. 
+During the separation, a 10% of the residual is added back to the estimated target to reduce any distortion resulting from the separation.
+Next, the specified gains are applied to each instrument before recombining the signals.
+Then, an amplification is applied to ensure the downmix stereo is roughly -40 dB. 
 The final stage is to apply a frequency-dependent amplification to correct for the hearing loss - see [amplification](../amplification) for more details.
 
 The output is FLAC format 16-bit, 32 kHz.
 
+:::note
+
+The audio source separation models were designed to separate a target instrument, not to separate two voices of the same instrument. 
+Therefore, if the mixture contains two voices of the same instrument, the baseline calculates the average gain between the two and applies this same gain to both voices.
+
+:::
+
 ## C. Objective Evaluation
 
-The enhanced audio is evaluating using the HAAQI implementation in pyClarity. This is an intrusive metric and requires a reference. The reference signal is constructed by applying the specified gains to the isolated instrument stems and summing the result. A gain is applied to ensure the reference mix is not amplified. The reference is also amplified using a simulation of a simple hearing-aid - see [amplification](../amplification) for more details.
+The enhanced audio is evaluating using the HAAQI implementation in pyClarity. This is an intrusive metric and requires a reference. 
+The reference signal is constructed by applying the specified gains to the isolated instrument stems and summing the result. 
+A gain is applied to ensure the reference mix is not amplified. 
+The reference is also amplified using a simulation of a simple hearing-aid - see [amplification](../amplification) for more details.
 
 ## D. Baseline Results
 
 The average validation set HAAQI score computed as the average of all average left and right scores
 
 $$
- \text{HAAQI} = \sum_{i=1}^{\text{nsamples}} \frac{(\text{left score}_i + \text{right score}_i)/2}{\text{nsamples}} 
+ \text{HAAQI} = \frac{1}{nsamples} \sum_{i=1}^{\text{nsamples}} \frac{\text{left score}_i + \text{right score}_i}{2} 
 $$
 
-where:
-
-nsamples = total number of validation set samples
+where:  
+$\text{left score}_i$ = haaqi score for left ear  
+$\text{right score}_i$ = haaqi score for right ear  
+$\text{nsamples}$ = total number of samples to evaluate
 
 | Baseline  | HAAQI  | 
 |:----------|:------:|

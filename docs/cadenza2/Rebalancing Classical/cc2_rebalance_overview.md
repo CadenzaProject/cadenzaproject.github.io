@@ -25,6 +25,22 @@ Figure 1. A simplified schematic of the baseline system.
 
 Your challenge is to improve what happens in the pink music enhancement box. The rest of the baseline is fixed and should not be changed.
 
+### B.1 Original Mixture
+
+- The original mixture is an ensemble of 2 to 5 instruments.
+
+|         |       |          |        |
+|---------|-------|----------|--------|
+| Bassoon | Cello | Clarinet | Flute  |
+| Oboe    | Sax   | Viola    | Violin |
+
+- Four instruments can have a second voice in the same mixture.
+
+|       |      |       |        |
+|-------|------|-------|--------|
+| Flute | Sax  | Viola | Violin |
+
+
 ## B. Causality
 
 We are interested in both causal and non-causal systems. Non-causal systems could be used for recorded music, whereas causal systems would also work for live listening. The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future.

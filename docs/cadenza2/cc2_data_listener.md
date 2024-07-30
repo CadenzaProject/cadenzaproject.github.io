@@ -22,10 +22,13 @@ The validation audiograms are a filtered, pseudo-random, selection from the
 [von Gablenz and Holube (2019) dataset](https://zenodo.org/record/4995261#.Y_3O1HbP2Hu). Additionally, we include a _"normal hearing"_ audiogram (`L5999`). Results using this 
 audiogram can be used to evaluate the performance of systems when no amplification prescription is applied.
 
-* **Evaluation**
-We use a set of 52 listeners audiograms collected for the listener panel in the first Cadenza challenge. 
-They all have two hearing aids but the hearing loss may be asymmetrical. 
-The average hearing loss was between 25 and about 60 dB in the better ear.
+[//]: # (* **Evaluation**)
+
+[//]: # (We use a set of 52 listeners audiograms collected for the listener panel in the first Cadenza challenge. )
+
+[//]: # (They all have two hearing aids but the hearing loss may be asymmetrical. )
+
+[//]: # (The average hearing loss was between 25 and about 60 dB in the better ear.)
 
 ## Data file formats and naming conventions
 

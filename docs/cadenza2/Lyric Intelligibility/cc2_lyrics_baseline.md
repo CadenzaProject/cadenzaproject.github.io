@@ -100,7 +100,7 @@ The average validation set scores computed:
 * **HAAQI**: average of all average left and right scores
 
 $$
-\text{HAAQI} = \sum_{i=1}^{\text{nsamples}} \frac{(\text{left score}_i + \text{right score}_i)/2}{\text{nsamples}}  
+\text{HAAQI} = \frac{1}{\text{nsamples}}  \sum_{i=1}^{\text{nsamples}} \frac{\text{left score}_i + \text{right score}_i}{2}  
 $$
 where:  
 $\text{left score}_i$ = haaqi score for left ear  
@@ -110,7 +110,7 @@ $\text{nsamples}$ = total number of samples to evaluate
 * **Correctness**: average of correctness of each sentence computed as the sum of correct transcribed words over the total words in the sentence for the better ear.
 
 $$
-\text{Correctness} = \sum_{i=1}^{nsamples} \frac{\max(\text{Correct left}_i, \text{Correct right}_i) / \text{TWords}_i}{\text{nsamples}} \\
+\text{Correctness} = \frac{1}{\text{nsamples}} \sum_{i=1}^{nsamples} \frac{\max(\text{Correct left}_i, \text{Correct right}_i)}{\text{TWords}_i} \\
 $$
 where:  
 $\text{Correct left}_i$ = number of correct transcribed words in sentence $i$ for left ear  
