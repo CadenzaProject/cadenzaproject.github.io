@@ -45,6 +45,7 @@ module.exports = {
         },
         'cadenza2/data_listener',
         'cadenza2/amplification',
+        'cadenza2/causality',
         {   // Take Part
             type: 'category',
             label: 'Take Part',

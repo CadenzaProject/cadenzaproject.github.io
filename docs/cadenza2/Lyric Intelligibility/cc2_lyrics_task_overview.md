@@ -34,6 +34,7 @@ Your challenge is to improve what happens in the pink, music enhancement box. Th
 ## B. Causality
 
 We will accept causal and non-causal systems. Non-causal systems could be used for recorded music, whereas causal systems would also work for live listening. A baseline will be provided for each case. The allowed latency for causal systems will be 5 milliseconds, that is, systems cannot look beyond 5 ms into the future.
+For details about causality, refer to the [Causality](../causality) webpage.
 {/*
 More information about causality can be found in Computational Restrictions section of the [Rules](Take%20Part/rules) page.
 */}

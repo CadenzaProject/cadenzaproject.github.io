@@ -27,7 +27,6 @@ It is also good practice to monitor whether clipping is happening due to the amp
 
 Note, if you are making a <strong>causal</strong> system, be careful your normalisation process does not use information from the future i.e. you can't calculate the rms for the whole extract of music because that involves samples in the future.
 
-
 ## References
 
 **[1]** Moore, B.C.J., Glasberg, B.R. and Stone, M.A., 1999. Use of a loudness model for hearing aid fitting: III. A general method for deriving initial fittings for hearing aids with multi-channel compression. British Journal of Audiology, 33(4), pp.241-258.  
