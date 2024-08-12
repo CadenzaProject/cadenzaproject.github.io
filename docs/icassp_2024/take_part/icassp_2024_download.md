@@ -59,7 +59,7 @@ pip install pyclarity==0.4.1
 
 ### B.1 Download the packages
 
-The data is available in five packages, please complete [this form](https://forms.gle/cQwCZeeCX7cm6PoH6) to request access.
+The data is available [here](https://zenodo.org/records/13285307).
 
 All participants will require the **core** data packages.
 
@@ -68,10 +68,14 @@ Participants wanting to extend the training data can use either of the **augment
 * `cad_icassp_2024_core.v1.1.tgz` **[230 KB]** - metadata and hrtf signals.
 * `cad_icassp_2024_train.v1.0.tgz` **[14.8 GB]** - audio data for training systems.
 * `cad_icassp_2024_validation.v1.0.tgz` **[5.9 GB]** - audio and metadata data for validation.
-* `cad_icassp_2024_evaluation.v1.0.tgz` **[1.4 GB]** - audio and metadata data for evaluation (only mixtures).
-* `cad_icassp_2024_medleydb.v1.0.tgz` **[38.1 GB]** - optional audio data for training augmentation.
-* [`bach10.zip`](https://labsites.rochester.edu/air/resource.html) **[125 MB]** - optional audio data for training augmentation.
-* [`fma_small.zip`](https://os.unil.cloud.switch.ch/fma/fma_small.zip) **[7.2 GB]** - optional audio data for training augmentation.
+* `cad_icassp_2024_evaluation_complete.v1.0.tgz` **[6.3 GB]** - audio and metadata data for evaluation (mixtures and stems).
+
+For data augmentation, you can request from their original source:
+
+* MedleyDB version 1: https://zenodo.org/records/1649325 (access upon request)
+* MedleyDB version 2: https://zenodo.org/records/1715175 (access upon request)
+* BACH10: https://labsites.rochester.edu/air/resource.html (free access)
+* FMA_small: https://os.unil.cloud.switch.ch/fma/fma_small.zip (free access)
 
 ### B.2 Unpack the packages
 

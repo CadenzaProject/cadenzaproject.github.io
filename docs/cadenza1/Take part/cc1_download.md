@@ -25,7 +25,7 @@ Participants wishing to extend the training set can use either of the **augmenta
 
 
 
-The data is available for [download here](https://forms.gle/UQkuCxqQVxZtGggPA).
+The data is available for [download here](https://zenodo.org/records/13285384).
 
 On the download site you will see five data packages are available,
 
@@ -36,10 +36,14 @@ This package contains the listeners' audiograms, key information for the HAAQI e
 :::
 
 * `cadenza_cad1_task1_core_musdb18hq.v1.0.tar.gz` **[21.1 GB]** - core audio data for training, validation and evaluation.
-* `cadenza_cad1_task1_core_metadata.v1.0.tar.gz` **[7 KB]** - core metadata for training and validation. 
-* `cadenza_cad1_task1_augmentation_medleydb.v1.0.tar.gz` **[38.1 GB]** - optional augmentation audio data for training.
-* `cadenza_cad1_task1_augmentation_bach10.v1.0.tar.gz` **[125 MB]** - optional augmentation audio data for training.
-* `cadenza_cad1_task1_augmentation_fma_small.v1.0.tar.gz` **[7.1 GB]** - optional augmentation audio data for training.
+* `cadenza_cad1_task1_core_metadata.v1.0.tar.gz` **[7 KB]** - core metadata for training and validation.
+
+For data augmentation, you can request from their original source:
+
+* MedleyDB version 1: https://zenodo.org/records/1649325 (access upon request)
+* MedleyDB version 2: https://zenodo.org/records/1715175 (access upon request)
+* BACH10: https://labsites.rochester.edu/air/resource.html (free access)
+* FMA_small: https://os.unil.cloud.switch.ch/fma/fma_small.zip (free access)
 
 ### 2.1 Task 2 - Car
 
