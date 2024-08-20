@@ -7,15 +7,28 @@ sidebar_position: 4.6
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+In CAD2, we're looking for both causal and non-causal systems to solve the tasks. For those developing causal systems, here is some additional information.
+
 Causality in time series and sequences are very important in real-time signal processing. Developing a causal 
 DNN system means that, in a time series or sequence, the computation at time $t$ should only depend on the current and previous information.
-For instance, in CAD2 systems, computations cannot look beyond 5 ms into the future.
+For instance, for CAD2 causal systems, computations cannot look beyond 5 ms into the future.
+
 When developing a causal system, especially for time series or sequence modeling, it is crucial to maintain causality throughout the network. 
 If causality is broken at any layer, the system could end up using future information, which is not acceptable in real-time or sequential tasks 
 where predictions must be made based on past and current data only.
 
+One methodology for developing causal and non-causal systems could involve starting with a non-causal implementation 
+that uses traditional layer implementations and then making the model causal by adapting or replacing layers one by one.
+Below, you will find a comparison of causal and non-causal layers that can help you adapt your non-causal models to causal.
 
-## A. Causal Layers
+## A. Non-Causal Layers
+
+* **Standard Convolutional Layers (without causal adjustments)**: In their standard form, convolutional layers apply convolutional kernels symmetrically around the current time step (or spatial location), incorporating information from future time steps or locations. This makes them non-causal for time series or sequential data.
+* **Self-Attention**: In standard transformers, self-attention mechanisms calculate attention scores using the entire sequence, allowing each position to attend to all other positions, including future ones. This makes it non-causal.
+* **Bidirectional LSTM / GRU**: These layers process the input sequence in both forward and backward directions, thus using future information for each time step.
+* **Global Pooling**: These layers operates across the entire temporal (or spatial) dimension, incorporating future information in the process.
+
+## B. Causal Layers
 
 * **Causal Convolutional Layers**: They ensure that the convolution operation at time $t$ only uses data from time $t$ and earlier. This can be achieved by appropriate padding and kernel placement. Standard convolution operations use a symmetric kernel centered on the current time step, which includes future information. Causal convolutions shift the kernel to only include current and past information.
   * **Padding**: The padding is set to **(kernel_size − 1) * dilation**. This ensures that the convolution kernel is shifted such that it does not include future time steps.
@@ -24,13 +37,6 @@ where predictions must be made based on past and current data only.
 * **LSTM (Long Short-Term Memory)**: Maintains a cell state that helps in learning long-term dependencies while processing data in a causal manner.
 * **GRU (Gated Recurrent Unit)**: Similar to LSTMs, GRUs have gating mechanisms that control the flow of information while maintaining causality.
 * **Causal (Masked) Attention**: In transformers and other attention-based models, causal attention mechanisms (also known as masked attention) ensure that each position in the sequence can only attend to previous positions and the current position. This is typically implemented using masks to prevent the model from looking at future positions.
-
-## B. Non-Causal Layers
-
-* **Standard Convolutional Layers (without causal adjustments)**: In their standard form, convolutional layers apply convolutional kernels symmetrically around the current time step (or spatial location), incorporating information from future time steps or locations. This makes them non-causal for time series or sequential data.
-* **Self-Attention**: In standard transformers, self-attention mechanisms calculate attention scores using the entire sequence, allowing each position to attend to all other positions, including future ones. This makes it non-causal.
-* **Bidirectional LSTM / GRU**: These layers process the input sequence in both forward and backward directions, thus using future information for each time step.
-* **Global Pooling**: These layers operates across the entire temporal (or spatial) dimension, incorporating future information in the process.
 
 ## C. Normalization
 
