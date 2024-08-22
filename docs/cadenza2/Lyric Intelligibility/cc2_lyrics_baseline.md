@@ -89,7 +89,7 @@ To rank the teams, the intelligibility L<sub>I</sub> and quality Q ratings are c
 
 $$
 \begin{align}
-score = \alpha ~ 𝑄 + (1 − \alpha) ~ 𝐿_𝐼  \tag{5}
+score = \alpha ~ 𝐿_𝐼 + (1 − \alpha) ~ 𝑄  \tag{5}
 \end{align}
 $$
 
