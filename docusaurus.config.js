@@ -144,6 +144,11 @@ module.exports = {
                     ]
                 },
                 {
+                    to: 'https://cadenzachallenge.org/cadenza_tutorials/intro.html',
+                    label: 'Tutorials',
+                    position: 'right',
+                },
+                {
                     to: '/docs/learning_resources/learning_intro/',
                     label: 'Learning Resources',
                     position: 'right'

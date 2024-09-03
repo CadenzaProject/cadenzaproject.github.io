@@ -17,6 +17,7 @@ module.exports = {
     }],
     tutorialSidebar_cad2: [
         'cadenza2/intro',  // landing
+        'cadenza2/webinar',
         {   // Menu Lyrics Intelligibility
             type: 'category',
             label: 'Task1 - Lyric Intelligibility',
