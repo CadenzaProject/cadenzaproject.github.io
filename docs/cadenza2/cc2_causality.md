@@ -55,7 +55,7 @@ In general, any normalization technique can be made causal with the proper modif
 * **Use Running Averages**: Implement running or exponentially weighted moving averages to keep track of the statistics, which depend only on past and present data.
 * **Sliding Window Approach**: For some applications, a sliding window that includes only past and present data up to the current time step can be used.
 
-A practical example of causal normalization is the causal implementation of ConvTasNet  [[1]](#refs), where the system employs Cumulative Layer Normalization, a causal modification of the non-causal Global Layer Normalization.
+A practical example of causal normalization is the causal implementation of ConvTasNet  [[1]](#references), where the system employs Cumulative Layer Normalization, a causal modification of the non-causal Global Layer Normalization.
 
 ## D. General Tips for Maintaining Causality
 
@@ -64,7 +64,6 @@ A practical example of causal normalization is the causal implementation of Conv
 * **Testing**: Implement rigorous testing to confirm that predictions at each step are only based on past and current data.
 
 ## References
-<a name="refs"></a>
 
 **[1]** Luo, Y. and Mesgarani, N., 2019. Conv-tasnet: Surpassing ideal time–frequency magnitude masking for speech separation. IEEE/ACM transactions on audio, speech, and language processing, 27(8), pp.1256-1266.   
 

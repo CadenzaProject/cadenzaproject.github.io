@@ -51,10 +51,9 @@ More information about causality can be found in Computational Restrictions sect
 
 ## C. Evaluation
 
-Systems will be evaluated using HAAQI [[1]](#refs) objective metric. HAAQI is an intrusive metrics and the reference 
+Systems will be evaluated using HAAQI [[1]](#references) objective metric. HAAQI is an intrusive metrics and the reference 
 will be the mixture of the original isolated sources rebalanced using the target gains. 
 
 ## References
-<a name="refs"></a>
 
 **[1]** Kates, J. M., & Arehart, K. H. (2015). The hearing-aid audio quality index (HAAQI). IEEE/ACM transactions on audio, speech, and language processing, 24(2), 354-365.  

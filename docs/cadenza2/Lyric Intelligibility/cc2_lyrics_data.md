@@ -18,7 +18,7 @@ The training and validation data are provided at challenge launch. The evaluatio
 
 ### A.1 Training and validation data
 
-The dataset uses the transcription extension [[1]](#refs) of the training split of MUSDB18-HQ [[2]](#refs). This extension comprises 96 manual transcriptions of English songs by
+The dataset uses the transcription extension [[1]](#references) of the training split of MUSDB18-HQ [[2]](#references). This extension comprises 96 manual transcriptions of English songs by
 non-native English speakers, totalling 366 minutes of audio.
 
 We permit the use of the following additional datasets in training: [FMA](https://github.com/mdeff/fma), [MedleydB version 1 and version 2](https://medleydb.weebly.com/), and [MousesDB](https://music.ai/blog/news/introducing-moisesdb-the-ultimate-multitrack-dataset-for-source-separation-beyond-4-stems/). We also permit the use of pre-trained models that might have been developed using these databases.
@@ -27,7 +27,7 @@ You should not use pre-trained models that were trained on our evaluation data.
 
 ### A.2 Evaluation (test) set
 
-The evaluation dataset combines the English subset of the JamendoLyrics dataset (20 songs) [[3]](#refs) with the 46 transcribed songs from the evaluation split of the
+The evaluation dataset combines the English subset of the JamendoLyrics dataset (20 songs) [[3]](#references) with the 46 transcribed songs from the evaluation split of the
 MUSDB18-HQ dataset. We will tell you what part of the songs are required, the required value of $\alpha$ and the audiograms of the listeners.
 
 :::danger
@@ -119,7 +119,6 @@ This provides the list of listeners for each scene.
 ```
 
 ## References
-<a name="refs"></a>
 
 **[1]** Schulze-Forster, K., Doire, C.S., Richard, G. and Badeau, R., 2021. Phoneme level lyrics alignment and text-informed singing voice separation. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 29, pp.2382-2395.     
 **[2]** Rafii, Z., Liutkus, A., Stöter, F.-R., Mimilakis, S. I., and Bittner, R. (2019). MUSDB18-HQ - an Uncompressed Version of MUSDB18. [Dataset]. doi:10.5281/zenodo.3338373  

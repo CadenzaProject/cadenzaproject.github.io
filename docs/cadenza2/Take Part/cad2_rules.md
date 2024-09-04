@@ -24,7 +24,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 - Each task lists what data can be used for developing the systems:
   - [Lyric intelligibility data](../Lyric%20Intelligibility/lyric_data).
   - [Rebalancing classical data](../Rebalancing%20Classical/rebalancing_data).
-- You can use standard augmentation techniques such as: randomizing the stems, flipping right and left channels, applying SpecAugmentation [1], pitch shifting, etc.
+- You can use standard augmentation techniques such as: randomizing the stems, flipping right and left channels, applying SpecAugmentation [[1]](#references), pitch shifting, etc.
   - If you are unclear whether an augmentation technique is acceptable, please contact the Cadenza team.
 - You may <b>not</b> use other datasets without prior approval by the Cadenza team.
   - If you think there is a public dataset that would be a good addition to the challenge then please propose it to the Cadenza team. If we agree, we will then make it available to all teams.
@@ -94,4 +94,5 @@ As a condition of submission, Entrant grants the Challenge Organiser, its subsid
 Entrants provide Submissions on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
 
 ## References
+
 [1] Park, D.S., Zhang, Y., Chiu, C.C., Chen, Y., Li, B., Chan, W., Le, Q.V. and Wu, Y., 2020, May. Specaugment on large scale datasets. In ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 6879-6883). IEEE.

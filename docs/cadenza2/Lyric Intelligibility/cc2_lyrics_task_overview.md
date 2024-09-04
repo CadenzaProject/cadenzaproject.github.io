@@ -25,7 +25,7 @@ Entrants will process pop/rock music to increase the intelligibility with least 
 - Listener characteristics (green oval) are audiograms and compressor settings to allow personalised processing in the enhancement stage and are also used in objective evaluation.
 - The enhancement outputs are evaluated using objective metrics (orange boxes):
   - For intelligibility using a metric based on Whisper.
-  - For audio quality via the Hearing-Aid Audio Quality Index (HAAQI) [1].
+  - For audio quality via the Hearing-Aid Audio Quality Index (HAAQI) [[1]](#references).
   
 Systems will also be evaluated by our listening panel.
 
@@ -63,12 +63,11 @@ We are likely to also ask listeners to rate the samples for Clarity, Distortion 
 
 ### C.2 Objective metrics
 
-Our quality and intelligibility metrics will be combined using Equation (1) as for the listening tests. Audio quality is evaluated using HAAQI [[1]](#refs). Intelligibility is scored using correct transcribed words ratio (CTW) using a lyric transcription algorithm based on Whisper. HAAQI is an intrusive metrics and the reference will be the original signal with a 1 dB amplification applied to the vocal signal and -1dB to the accompaniment, because that has been shown to be preferred by wearers of hearing aids [[3]](#refs).
+Our quality and intelligibility metrics will be combined using Equation (1) as for the listening tests. Audio quality is evaluated using HAAQI [[1]](#references). Intelligibility is scored using correct transcribed words ratio (CTW) using a lyric transcription algorithm based on Whisper. HAAQI is an intrusive metrics and the reference will be the original signal with a 1 dB amplification applied to the vocal signal and -1dB to the accompaniment, because that has been shown to be preferred by wearers of hearing aids [[3]](#references).
 
 Objective metrics are always an approximation and you may want to use other approaches and metrics to optimise a system for the listening panel (for example, you could use singing-adapted STOI [[2]](#refs)).
 
 ## References
-<a name="refs"></a>
    
 **[1]** Kates, J. M., & Arehart, K. H. (2015). The hearing-aid audio quality index (HAAQI). IEEE/ACM transactions on audio, speech, and language processing, 24(2), 354-365.    
 **[2]** Sharma, B., & Wang, Y. (2019). Automatic evaluation of song intelligibility using singing adapted STOI and vocal-specific features. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, 319-331.    

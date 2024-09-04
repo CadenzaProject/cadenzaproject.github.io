@@ -41,7 +41,7 @@ Figure 2. The Baseline Music Enhancer
 
 The baseline approach is to demix the stereo music into vocals and instrumentation. To change intelligibility we apply amplification to the vocals and accompaniment before recombining the signals. The final stage is to apply a frequency-dependent amplification to correct for the hearing loss.
 
-**Demixing** uses [Conv-TasNet](https://arxiv.org/abs/1809.07454) [[1]](#refs) as this can be used in either a causal and non-causal form. The overall architecture is Fig 1A in reference [[1]](#refs), encoder-separator-decorer. The implementation is a fully convolutional system.
+**Demixing** uses [Conv-TasNet](https://arxiv.org/abs/1809.07454) [[1]](#references) as this can be used in either a causal and non-causal form. The overall architecture is Fig 1A in reference [[1]](#references), encoder-separator-decorer. The implementation is a fully convolutional system.
 
 **Linear gains** are applied to the vocals ($V_{amp}$) and accompaniment ($A_{amp}$) using the following formulations:
 
@@ -63,8 +63,8 @@ where $\beta$ = $\alpha$, the balance parameter given in the metadata. Eqns (1) 
 ## C. Objective Evaluation
 
 ### C.1 Intelligibility
-The enhanced audio is first passed through the MSBG hearing loss simulator in the pyClarity codebase [[2]](#refs). 
-It is then passed through the [Whisper ASR algorithm (size: base)](https://huggingface.co/openai/whisper-small) [[3]](#refs) to gain a text transcription. 
+The enhanced audio is first passed through the MSBG hearing loss simulator in the pyClarity codebase [[2]](#references). 
+It is then passed through the [Whisper ASR algorithm (size: base)](https://huggingface.co/openai/whisper-small) [[3]](#references) to gain a text transcription. 
 The objective score will be the transcription correctness computed as the ratio of correct transcribed words compared to the correct transcript of the lyrics.
 
 $$
@@ -129,7 +129,6 @@ $\text{nsamples}$ = total number of samples to evaluate
 | NonCausal | 0.7841 |   0.3857    | 0.6649  |    0.2597    |
 
 ## References
-<a name="refs"></a>
 
 **[1]** Luo, Y. and Mesgarani, N., 2019. Conv-tasnet: Surpassing ideal time–frequency magnitude masking for speech separation. IEEE/ACM transactions on audio, speech, and language processing, 27(8), pp.1256-1266.   
 **[2]** Tu, Z., Ma, N. and Barker, J., 2021. Optimising hearing aid fittings for speech in noise with a differentiable hearing loss model. arXiv preprint arXiv:2106.04639.   
