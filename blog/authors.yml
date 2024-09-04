@@ -1,0 +1,38 @@
+alinka:
+  name: Alinka Greasley
+  title: Cadenza Team Member
+  url: https://ahc.leeds.ac.uk/music/staff/286/dr-alinka-greasley
+  image_url: /img/avatar/greasley.jpeg
+scott:
+  name: Scott Bannister
+  title: Cadenza Team Member
+  url: https://ahc.leeds.ac.uk/music/staff/3358/dr-scott-bannister
+  image_url: /img/avatar/bannister.jpeg
+bruno:
+  name: Bruno Fazenda
+  title: Cadenza Team Member
+  url: https://www.salford.ac.uk/our-staff/bruno-fazenda
+  image_url: /img/avatar/fazenda.jpeg
+michael:
+  name: Michael Akeroyd
+  title: Cadenza Team Member
+  url: https://www.nottingham.ac.uk/medicine/people/michael.akeroyd
+  image_url: /img/avatar/akeroyd.jpeg
+bill:
+  name: William Whitmer
+  title: Cadenza Team Member
+  url: https://www.nottingham.ac.uk/medicine/people/bill.whitmer
+  image_url: /img/avatar/whitmer.jpeg
+trevorcox:
+  name: Trevor Cox
+  title: Cadenza Team Member
+  url: http://trevorcox.me/trevor-cox
+  image_url: https://avatars.githubusercontent.com/trevorjcox
+jonbarker:
+  name: Jon Barker
+  title: Clarity Team Member
+  url: http://staffwww.dcs.shef.ac.uk/people/J.Barker/
+  image_url: https://avatars.githubusercontent.com/jonbarker68
+  email: clarity-group@sheffield.ac.uk
+  socials:
+    github: jonbarker68

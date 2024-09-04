@@ -2,14 +2,8 @@
 slug: Listener panel study update
 title: Listener panel study update
 authors: 
-- name: Alinka Greasley
-  title: Cadenza Team Member
-  url: https://ahc.leeds.ac.uk/music/staff/286/dr-alinka-greasley
-  image_url: /img/avatar/greasley.jpeg
-- name: Scott Bannister
-  title: Cadenza Team Member
-  url: https://ahc.leeds.ac.uk/music/staff/3358/dr-scott-bannister
-  image_url: /img/avatar/bannister.jpeg
+  - alinka
+  - scott
 
 tags: [sensory panel]
 ---
@@ -20,6 +14,8 @@ We have two major updates from the Cadenza project.
 
 First, we completed the sensory panel study in which our participants with hearing loss developed audio quality scales for use in our listening experiments. 
 We presented our study findings at the International Conference of Music Perception and Cognition (ICMPC) in Tokyo, Japan in August and at the Basic Auditory Science (BAS) conference in London in September.
+
+{/* truncate */}
 
 <div style={{textAlign:'center'}}>
 <figure id="fig1">

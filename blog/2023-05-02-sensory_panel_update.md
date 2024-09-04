@@ -2,26 +2,11 @@
 slug: Sensory evaluation study update
 title: Sensory evaluation study update
 authors: 
-- name: Alinka Greasley
-  title: Cadenza Team Member
-  url: https://ahc.leeds.ac.uk/music/staff/286/dr-alinka-greasley
-  image_url: /img/avatar/greasley.jpeg
-- name: Scott Bannister
-  title: Cadenza Team Member
-  url: https://ahc.leeds.ac.uk/music/staff/3358/dr-scott-bannister
-  image_url: /img/avatar/bannister.jpeg
-- name: Bruno Fazenda
-  title: Cadenza Team Member
-  url: https://www.salford.ac.uk/our-staff/bruno-fazenda
-  image_url: /img/avatar/fazenda.jpeg
-- name: Michael Akeroyd
-  title: Cadenza Team Member
-  url: https://www.nottingham.ac.uk/medicine/people/michael.akeroyd
-  image_url: /img/avatar/akeroyd.jpeg
-- name: William Whitmer
-  title: Cadenza Team Member
-  url: https://www.nottingham.ac.uk/medicine/people/bill.whitmer
-  image_url: /img/avatar/whitmer.jpeg
+    - alinka
+    - scott
+    - bruno
+    - michael
+    - bill
 
 tags: [sensory panel]
 ---
@@ -31,6 +16,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 We are now reaching the end of our sensory evaluation study, where a panel of twelve listeners who use hearing aids
 have worked across online music listening tasks and three focus groups, to reach a consensus on the important
 perceptual attributes of music audio quality.
+
+{/* truncate */}
 
 Starting from 373 unique terms used by participants to describe music audio quality, a discussion process 
 was completed as outlined in the image below:
