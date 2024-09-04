@@ -16,6 +16,7 @@
         <content type="html"><![CDATA[<p>We have two major updates from the Cadenza project.</p>
 <p>First, we completed the sensory panel study in which our participants with hearing loss developed audio quality scales for use in our listening experiments.
 We presented our study findings at the International Conference of Music Perception and Cognition (ICMPC) in Tokyo, Japan in August and at the Basic Auditory Science (BAS) conference in London in September.</p>
+<!-- -->
 <div style="text-align:center"><figure id="fig1"><img width="400" src="https://cadenzaproject.github.io/img/blog_2023-10-05/apsco.png"></figure></div>
 <p>Second, the entrants in the <a href="https://cadenzachallenge.org/docs/cadenza1/cc1_intro" target="_blank" rel="noopener noreferrer">First Cadenza Challenge</a> have now submitted systems they devised to improve the audio quality of various music samples.
 These samples have been tailored for the hearing profiles of our listener panel participants and are currently being prepared for our online software.</p>
@@ -43,6 +44,7 @@ You can watch the recording of this event in the next video.</p>
         <content type="html"><![CDATA[<p>We are now reaching the end of our sensory evaluation study, where a panel of twelve listeners who use hearing aids
 have worked across online music listening tasks and three focus groups, to reach a consensus on the important
 perceptual attributes of music audio quality.</p>
+<!-- -->
 <p>Starting from 373 unique terms used by participants to describe music audio quality, a discussion process
 was completed as outlined in the image below:</p>
 <figure id="fig1"><img width="1000" src="https://cadenzaproject.github.io/img/Sensory_Eval_Flowchart.jpg"><figcaption>Figure 1, Objectives of each Focus Group session.</figcaption></figure>
@@ -83,6 +85,7 @@ incredible commitment, motivation, and contribution to this research!</p>]]></co
         <updated>2023-01-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Here at Cadenza our sensory evaluation work to define audio quality for hearing impaired listeners is underway. We want to understand better how hearing-impaired listeners perceive audio quality in music and develop quality metrics that will subsequently be used by our listener panel to rate the systems submitted by challenge entrants. Through careful listening tasks and group discussion, the sensory panel will arrive at a consensus about important sound quality attributes and how these should be measured. You can find out more about this process on the Sensory Evaluation page.]]></summary>
         <content type="html"><![CDATA[<p>Here at Cadenza our sensory evaluation work to define audio quality for hearing impaired listeners is underway. We want to understand better how hearing-impaired listeners perceive audio quality in music and develop quality metrics that will subsequently be used by our listener panel to rate the systems submitted by challenge entrants. Through careful listening tasks and group discussion, the sensory panel will arrive at a consensus about important sound quality attributes and how these should be measured. You can find out more about this process on the <a href="https://cadenzaproject.github.io/docs/learning_resources/Perceptual_testing/edu_PT_sensory_Evaluation">Sensory Evaluation page</a>.</p>
+<!-- -->
 <p>The first task was an individual elicitation task in which we asked twelve listeners with hearing impairment to provide single-word perceptual terms to describe various music excerpts provided to them. This resulted in hundreds of unique attributes used to describe sound quality, of which 89 were used more than four times (see  <a href="https://cadenzaproject.github.io/blog/Sensory%20evaluation%20study#fig1">Fig. 1</a>) and 87 were used two or three times (see <a href="https://cadenzaproject.github.io/blog/Sensory%20evaluation%20study#fig2">Fig. 2</a>). This provided the starting point for the first Focus group which sought to identify the most important attributes and to identify ways of grouping the attributes into perceptual dimensions that could be captured in the quality metric.</p>
 <p>The outcome of Focus group one was a spatial mapping of the ways in which the panel grouped attributes together which was used as a starting point for Focus group two (see <a href="https://cadenzaproject.github.io/blog/Sensory%20evaluation%20study#fig3">Fig. 3</a>). The panel then discussed further the meaning and grouping of different terms to reach consensus about important dimensions. In February, we will carry out a third Focus group to arrive at final dimensions, how these can be defined, and how they can be rated or scored in the challenges.</p>
 <p>We would like to thank our Sensory panel group for their ongoing motivation and commitment with this challenging task!</p>
@@ -117,13 +120,15 @@ incredible commitment, motivation, and contribution to this research!</p>]]></co
         <link href="https://cadenzaproject.github.io/blog/welcome"/>
         <updated>2023-01-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the new Cadenza webpage. We will be using this page to post the latest news about our forthcoming machine learning challenges and workshops, as well as posts discussing the tools and techniques that we are using in our baseline systems.]]></summary>
-        <content type="html"><![CDATA[<p>Welcome to the new Cadenza webpage. We will be using this page to post the latest news about our forthcoming machine learning challenges and workshops, as well as posts discussing the tools and techniques that we are using in our baseline systems.</p>]]></content>
+        <content type="html"><![CDATA[<p>Welcome to the new Cadenza webpage. We will be using this page to post the latest news about our forthcoming machine learning challenges and workshops, as well as posts discussing the tools and techniques that we are using in our baseline systems.</p>
+]]></content>
         <author>
             <name>Trevor Cox</name>
             <uri>http://trevorcox.me/trevor-cox</uri>
         </author>
         <author>
             <name>Jon Barker</name>
+            <email>clarity-group@sheffield.ac.uk</email>
             <uri>http://staffwww.dcs.shef.ac.uk/people/J.Barker/</uri>
         </author>
         <category label="cadenza" term="cadenza"/>
