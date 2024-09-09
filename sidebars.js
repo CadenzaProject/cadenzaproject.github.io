@@ -17,6 +17,7 @@ module.exports = {
     }],
     tutorialSidebar_cad2: [
         'cadenza2/intro',  // landing
+        'cadenza2/key_dates',
         'cadenza2/webinar',
         {   // Menu Lyrics Intelligibility
             type: 'category',
@@ -51,7 +52,6 @@ module.exports = {
             type: 'category',
             label: 'Take Part',
             items: [
-                'cadenza2/Take Part/key_dates',
                 'cadenza2/Take Part/download',
                 'cadenza2/Take Part/cc2_registration',
                 'cadenza2/Take Part/rules',
