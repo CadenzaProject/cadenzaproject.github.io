@@ -77,5 +77,13 @@ during the evaluation stage of the challenge.
 If you intend to use a dataset not listed above or want to work with a pretrained model, 
 you can submit a request in the form below, and we will inform you about the decision.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYyrhxsbmx9C4hLCWOfnnHC9hdOKAvVVLrzgPHR8wjjcpFyQ/viewform?embedded=true" width="640" height="1072" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfYyrhxsbmx9C4hLCWOfnnHC9hdOKAvVVLrzgPHR8wjjcpFyQ/viewform?embedded=true" 
+    width="640" 
+    height="1500" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0">
+Loading…
+</iframe>
 
