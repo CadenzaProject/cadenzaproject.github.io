@@ -19,6 +19,7 @@ module.exports = {
         'cadenza2/intro',  // landing
         'cadenza2/key_dates',
         'cadenza2/webinar',
+        'cadenza2/list_dataset',
         {   // Menu Lyrics Intelligibility
             type: 'category',
             label: 'Task1 - Lyric Intelligibility',
