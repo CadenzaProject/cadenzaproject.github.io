@@ -38,12 +38,13 @@ _-_ : Dataset may not be suitable for the task.
 |------------------------|:------:|:------:|----------------------------------------------|
 | MUSDB18-HQ train split |  Yes   |  Yes   |                                              |
 | MUSDB18-HQ test split  |   No   |  Yes   |                                              |
-| DALI                   |  Yes   |  Yes   |                                              |
-| JamendoLyrics          |   No   |  Yes   | Including any dataset derived from it        |
+| DALI                   |  Yes   |  Yes   | https://github.com/gabolsgabs/DALI           |
+| JamendoLyrics          |   No   |  Yes   | https://github.com/f90/jamendolyrics         |
+| Jam-ALT                |   No   |  Yes   | https://audioshake.github.io/jam-alt/        |
 | CCMixter               |   No   |  Yes   |                                              |
 | EnsembleSet            |   -    |  Yes   | We mirror one remix but the rest are allowed |
 | CadenzaWoodwind        |   -    |  Yes   |                                              |
-| AAM                    |   -    |  Yes   |                                              |
+| AAM                    |   -    |  Yes   | https://zenodo.org/records/5794629           |
 | URMP                   |   -    |   No   | Including any dataset derived from it        |
 | BACH10                 |   -    |   No   | Including any dataset derived from it        |
 | TRIOS dataset          |   -    |  Yes   |                                              |
@@ -63,20 +64,18 @@ Description of the columns:
 
 | Dataset                     | Task 1 | Task 2 | Comments                                                                                                |
 |-----------------------------|:------:|:------:|---------------------------------------------------------------------------------------------------------|
-| Whisper                     |   No   |   No   | There is no clarity of what datasets were used for training                                             |
+| Whisper                     |   No   |   No   | Because there is no clarity of what datasets were used for training Whisper                             |
 | OWSM                        |  Yes   |  Yes   | https://www.wavlab.org/activities/2024/owsm/                                                            |
 | Models from DNS-Challenge-4 |  Yes   |  Yes   | https://www.microsoft.com/en-us/research/academic-program/deep-noise-suppression-challenge-icassp-2022/ |
 
 :::info
-Note that although we do not allow the use of Whisper as a pretrained model for building your system, it is used 
-during the evaluation stage of the challenge.
+Note that although we do not allow the use of Whisper as a pretrained model in your system’s Music Enhancer, it is used during the evaluation stage of the challenge.
 :::
 
 ### Request a Dataset or Pretrained model
 
-If you intend to use a dataset not listed above or want to work with a pretrained model, 
-you can submit a request in the form below, and we will inform you about the decision.
-
+If you want to use a dataset not listed above or want to work with a pretrained model, please submit a request in the form below so we can check it is OK. 
+We want to make sure all teams have access to the same data/pre-trained models for a fair challenge.
 <iframe 
     src="https://docs.google.com/forms/d/e/1FAIpQLSfYyrhxsbmx9C4hLCWOfnnHC9hdOKAvVVLrzgPHR8wjjcpFyQ/viewform?embedded=true" 
     width="640" 
