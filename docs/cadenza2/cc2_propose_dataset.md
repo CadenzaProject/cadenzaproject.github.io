@@ -34,21 +34,21 @@ _Yes_ : Dataset can be used for the task.
 _No_ : Dataset cannot be used for the task.  
 _-_ : Dataset may not be suitable for the task.  
 
-| Dataset                | Task 1 | Task 2 | Comments                                     |
-|------------------------|:------:|:------:|----------------------------------------------|
-| MUSDB18-HQ train split |  Yes   |  Yes   |                                              |
-| MUSDB18-HQ test split  |   No   |  Yes   |                                              |
-| DALI                   |  Yes   |  Yes   | https://github.com/gabolsgabs/DALI           |
-| JamendoLyrics          |   No   |  Yes   | https://github.com/f90/jamendolyrics         |
-| Jam-ALT                |   No   |  Yes   | https://audioshake.github.io/jam-alt/        |
-| CCMixter               |   No   |  Yes   |                                              |
-| EnsembleSet            |   -    |  Yes   | We mirror one remix but the rest are allowed |
-| CadenzaWoodwind        |   -    |  Yes   |                                              |
-| AAM                    |   -    |  Yes   | https://zenodo.org/records/5794629           |
-| URMP                   |   -    |   No   | Including any dataset derived from it        |
-| BACH10                 |   -    |   No   | Including any dataset derived from it        |
-| TRIOS dataset          |   -    |  Yes   |                                              |
-| FMA                    |  Yes   |  Yes   |                                              |
+| Dataset                | Task 1 | Task 2 | Comments                                                                        |
+|------------------------|:------:|:------:|---------------------------------------------------------------------------------|
+| MUSDB18-HQ train split |  Yes   |  Yes   |                                                                                 |
+| MUSDB18-HQ test split  |   No   |  Yes   |                                                                                 |
+| DALI                   |  Yes   |  Yes   | https://github.com/gabolsgabs/DALI                                              |
+| JamendoLyrics          |   No   |  Yes   | https://github.com/f90/jamendolyrics                                            |
+| Jam-ALT                |   No   |  Yes   | https://audioshake.github.io/jam-alt/                                           |
+| CCMixter               |   No   |  Yes   | https://members.loria.fr/ALiutkus/kam/                                          |
+| EnsembleSet            |   -    |  Yes   | We mirror one remix but the rest are allowed https://zenodo.org/records/6519024 |
+| CadenzaWoodwind        |   -    |  Yes   |                                                                                 |
+| AAM                    |   -    |  Yes   | https://zenodo.org/records/5794629                                              |
+| URMP                   |   -    |   No   | Including any dataset derived from it                                           |
+| BACH10                 |   -    |   No   | Including any dataset derived from it                                           |
+| TRIOS dataset          |   -    |  Yes   | https://zenodo.org/records/6797837                                              |
+| FMA                    |  Yes   |  Yes   | https://github.com/mdeff/fma                                                    |
 
 ### Pretrained models
 
