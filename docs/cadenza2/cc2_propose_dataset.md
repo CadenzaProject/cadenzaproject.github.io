@@ -40,11 +40,11 @@ _-_ : Dataset may not be suitable for the task.
 | MUSDB18-HQ test split  |   No   |  Yes   |                                                                                      |
 | DALI                   |  Yes   |  Yes   | https://github.com/gabolsgabs/DALI                                                   |
 | JamendoLyrics          |   No   |  Yes   | In Task 1, this includes all datasets that are derived from it, such as **Jam-ALT**. |
-| CCMixter               |   No   |  Yes   | https://members.loria.fr/ALiutkus/kam/                                               |
+| CCMixter               |  Yes   |  Yes   | https://members.loria.fr/ALiutkus/kam/                                               |
 | EnsembleSet            |   -    |  Yes   | We mirror one remix but the rest are allowed https://zenodo.org/records/6519024      |
 | CadenzaWoodwind        |   -    |  Yes   |                                                                                      |
 | AAM                    |   -    |  Yes   | https://zenodo.org/records/5794629                                                   |
-| URMP                   |   -    |   No   | Including any dataset derived from i, such as **Sub-URMP**.                          |
+| URMP                   |   -    |   No   | Including any dataset derived from it, such as **Sub-URMP**.                         |
 | BACH10                 |   -    |   No   | Including any dataset derived from it, such as **BACH10 Sibelius**.                  |
 | TRIOS dataset          |   -    |  Yes   | https://zenodo.org/records/6797837                                                   |
 | FMA                    |  Yes   |  Yes   | https://github.com/mdeff/fma                                                         |
