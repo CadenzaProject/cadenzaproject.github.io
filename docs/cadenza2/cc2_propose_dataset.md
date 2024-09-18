@@ -39,8 +39,8 @@ _-_ : Dataset may not be suitable for the task.
 | MUSDB18-HQ train split |  Yes   |  Yes   |                                                                                 |
 | MUSDB18-HQ test split  |   No   |  Yes   |                                                                                 |
 | DALI                   |  Yes   |  Yes   | https://github.com/gabolsgabs/DALI                                              |
-| JamendoLyrics          |   No   |  Yes   | https://github.com/f90/jamendolyrics                                            |
-| Jam-ALT                |   No   |  Yes   | https://audioshake.github.io/jam-alt/                                           |
+| JamendoLyrics          |   No   |  Yes   |                                                                                 |
+| Jam-ALT                |   No   |  Yes   |                                                                                 |
 | CCMixter               |   No   |  Yes   | https://members.loria.fr/ALiutkus/kam/                                          |
 | EnsembleSet            |   -    |  Yes   | We mirror one remix but the rest are allowed https://zenodo.org/records/6519024 |
 | CadenzaWoodwind        |   -    |  Yes   |                                                                                 |
