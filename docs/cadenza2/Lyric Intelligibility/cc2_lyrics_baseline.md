@@ -36,8 +36,10 @@ Your challenge is to improve what happens in the pink, music enhancement box. Th
 
 Figure 2 shows the music enhancer supplied in the baseline. Your task is to improve this.
 
+<div style={{textAlign:'center'}}>
 <Image img={require('../../../static/img/cad2/baseline_lyric_intelligibility_enhancer.png')} alt="baseline enhancer for lyric intelligibility diagram.png" />
 Figure 2. The Baseline Music Enhancer
+</div>
 
 The baseline approach is to demix the stereo music into vocals and instrumentation. To change intelligibility we apply amplification to the vocals and accompaniment before recombining the signals. The final stage is to apply a frequency-dependent amplification to correct for the hearing loss.
 

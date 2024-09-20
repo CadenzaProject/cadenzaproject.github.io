@@ -34,7 +34,7 @@
     "bibtex-parse-js": "^0.0.24",
     "chart.js": "^4.4.0",
     "citation-js": "0.7.10",
-    "docusaurus-lunr-search": "^3.3.0",
+    "docusaurus-lunr-search": "^3.5.0",
     "docusaurus-plugin-image-zoom": "^2.0.0",
     "mdx-mermaid": "^2.0.0",
     "prism-react-renderer": "^2.1.0",
