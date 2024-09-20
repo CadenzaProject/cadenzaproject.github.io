@@ -1,12 +1,6 @@
 /* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
  * @license MIT */
 
-/*!
-	Copyright (c) 2018 Jed Watson.
-	Licensed under the MIT License (MIT), see
-	http://jedwatson.github.io/classnames
-*/
-
 /*! Bundled license information:
 
 prismjs/prism.js:
@@ -19,6 +13,13 @@ prismjs/prism.js:
    * @public
    *)
 */
+
+/*!***************************************************
+* mark.js v8.11.1
+* https://markjs.io/
+* Copyright (c) 2014–2018, Julian Kühnel
+* Released under the MIT license https://git.io/vwTVl
+*****************************************************/
 
 /**
  * @license React
