@@ -11,14 +11,18 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 **Dr Bruno Fazenda, Cadenza Team**
 
-Music production techniques try to mix the vocal track onto an instrumental mix (henceforth referred to as ‘backing track’) to achieve a blend of the musical instruments and the vocals according to music quality criteria. Within the baseline music enhancer these techniques could be applied after the demix algorithm that separates the vocals from the backing (accompaniment).  
+Music production techniques try to mix the vocal track onto an instrumental mix (henceforth referred to as ‘backing track’) to achieve a 
+blend of the musical instruments and the vocals according to music quality criteria. Within the baseline music enhancer,
+these techniques could be applied after the demix algorithm that separates the vocals from the backing (accompaniment).  
+Any modifications to enhance the intelligibility of the lyrics in the vocals, should try and not affect the overall mix quality too much.
 
 <div style={{textAlign:'center'}}>
 <Image img={require('../../../static/img/cad2/baseline_lyric_intelligibility_enhancer.png')} alt="baseline enhancer for lyric intelligibility diagram.png" />
 **The CAD2 Task1 Baseline Music Enhancer**
 </div>
 
-The baseline enhancer in the Second Cadenza Task 1 challenge simply applies different gains to the vocals and backing. Any modifications to enhance the intelligibility of the lyrics in the vocals, should try and not affect the overall mix quality too much. Here are a number of possible techniques that could lead to better lyric intelligibility:
+The baseline enhancer in the Second Cadenza Task 1 challenge simply applies different gains to the vocals and backing. 
+Here are a number of possible techniques that could lead to better lyric intelligibility:
 
 ## Side chain compressor on vocals to duck the background 
 

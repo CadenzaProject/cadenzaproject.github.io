@@ -12,7 +12,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 :::tip
 
 Dr Bruno Fazenda, from the Cadenza Team, has shared some ideas of how one could improve lyrics intelligibility.
-Please visit the link [How Improve Lyric Intelligibility](../../learning_resources/Audio_mixing/edu_how_improve_lyrics_intelligibility) from our Learning Resources.
+Please visit the link [How to Improve Lyric Intelligibility](../../learning_resources/Audio_mixing/edu_how_improve_lyrics_intelligibility) from our Learning Resources.
 
 :::
 ## A. Task overview
