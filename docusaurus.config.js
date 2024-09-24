@@ -82,6 +82,19 @@ module.exports = {
         [require.resolve('docusaurus-lunr-search'), {indexBaseUrl: true}],
     ],
     themeConfig: {
+        announcementBar: {
+            id: 'current_challenge',
+            content:
+                'Second Cadenza challenge is live now',
+            backgroundColor: '#6ce56c',
+            textColor: '#070707',
+            isCloseable: false,
+        },
+        blog: {
+            sidebar: {
+                groupByYear: true,
+            },
+        },
         prism: {
             additionalLanguages: ['json']
         },

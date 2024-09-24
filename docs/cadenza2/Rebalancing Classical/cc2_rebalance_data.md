@@ -9,6 +9,11 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
+:::warning
+New version of task 2 dataset released on 24 of September 2024.   
+Please ensure you are using the last version.
+:::
+
 - To obtain the data and baseline code, please see the [download page](../Take%20Part/download).
 - For instructions on what data and pretrained models can be used in the challenges, please see [rules](../Take%20Part/rules).
 

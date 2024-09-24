@@ -9,6 +9,10 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
+:::warning
+New version of task 2 dataset released on 24 of September 2024.   
+Please ensure you are using the last version.
+:::
 
 The Cadenza Challenges are improving music for people with a hearing loss. Hearing loss causes various problems such as quieter music passages being inaudible, poor and anomalous pitch perception, difficulties identifying and picking out instruments, and problems hearing out lyrics.
 
