@@ -43,7 +43,7 @@ Figure 2. The Baseline Music Enhancer
 
 The baseline approach is to demix the stereo music into vocals and instrumentation. To change intelligibility we apply amplification to the vocals and accompaniment before recombining the signals. The final stage is to apply a frequency-dependent amplification to correct for the hearing loss.
 
-**Demixing** uses [Conv-TasNet](https://arxiv.org/abs/1809.07454) [[1]](#references) as this can be used in either a causal and non-causal form. The overall architecture is Fig 1A in reference [[1]](#references), encoder-separator-decorer. The implementation is a fully convolutional system.
+**Demixing** uses [Conv-TasNet](https://arxiv.org/abs/1809.07454) [[1]](#references) as this can be used in either a causal and non-causal form. The overall architecture is Fig 1A in reference [[1]](#references), encoder-separator-decoder. The implementation is a fully convolutional system.
 
 **Linear gains** are applied to the vocals ($V_{amp}$) and accompaniment ($A_{amp}$) using the following formulations:
 
