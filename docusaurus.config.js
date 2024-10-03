@@ -85,10 +85,10 @@ module.exports = {
         announcementBar: {
             id: 'current_challenge',
             content:
-                'Second Cadenza challenge is live now',
+                'The second Cadenza challenge is now live',
             backgroundColor: '#6ce56c',
             textColor: '#070707',
-            isCloseable: false,
+            isCloseable: true,
         },
         blog: {
             sidebar: {
