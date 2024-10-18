@@ -127,8 +127,8 @@ $\text{nsamples}$ = total number of samples to evaluate
 
 | Baseline  | HAAQI  | Correctness | Overall | Z Normalized |
 |:----------|:------:|:-----------:|:-------:|:------------:|
-| Causal    | 0.7755 |   0.3744    | 0.6525  |    0.2503    |
-| NonCausal | 0.7841 |   0.3871    | 0.6652  |    0.2587    |
+| Causal    | 0.7755 |   0.3744    | 0.6549  |    0.2676    |
+| NonCausal | 0.7841 |   0.3887    | 0.6737  |    0.2782    |
 
 ## References
 
