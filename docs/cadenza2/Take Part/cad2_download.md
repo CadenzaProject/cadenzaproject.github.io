@@ -16,14 +16,14 @@ We suggest starting with the installation of the software and then proceeding to
 All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza
 GitHub repository](https://github.com/claritychallenge/clarity).
 
-The official code for the Second Cadenza Challenge was released in version `v0.6.1`.
+The official code for the Second Cadenza Challenge was released in version `v0.6.2`.
 To avoid any conflict, we highly recommend for you to work using this version and
 not with the code from the `main` branch. To install this version you have three options
 
 <details>
   <summary>1. Download the files of the release v0.6.1</summary>
 
-* download from https://github.com/claritychallenge/clarity/releases/tag/v0.6.1
+* download from https://github.com/claritychallenge/clarity/releases/tag/v0.6.2
 * unpacked the package
 
 From inside the directory, run:
@@ -35,11 +35,11 @@ pip install -e .
 </details>
 
 <details>
-  <summary>2. Clone the repository and checkout version v0.6.1</summary>
+  <summary>2. Clone the repository and checkout version v0.6.2</summary>
 
 ```bash
 git clone https://github.com/claritychallenge/clarity.git
-git checkout tags/v0.6.1
+git checkout tags/v0.6.2
 
 cd clarity
 pip install -e .
@@ -47,10 +47,10 @@ pip install -e .
 </details>
 
 <details>
-  <summary>3. Install pyclarity version 0.6.1 from PyPI</summary>
+  <summary>3. Install pyclarity version 0.6.2 from PyPI</summary>
 
 ```bash
-pip install pyclarity==0.6.1
+pip install pyclarity==0.6.2
 ```
 
 </details>
