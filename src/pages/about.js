@@ -221,7 +221,7 @@ export default function Home() {
             </Typography>
           </p>
 
-          <p>Text here etc</p>
+          {/*<p>Text here etc</p>*/}
 
           <a id="team" />
           <h2> The Cadenza Team</h2>

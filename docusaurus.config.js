@@ -116,6 +116,10 @@ module.exports = {
                             label: 'About Us',
                         },
                         {
+                            label: 'Social',
+                            to: '/social',
+                        },
+                        {
                             to: '/contact/',
                             label: 'Contact Us',
                         },
