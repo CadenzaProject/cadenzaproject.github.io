@@ -18,6 +18,7 @@ module.exports = {
     tutorialSidebar_cad2: [
         'cadenza2/intro',  // landing
         'cadenza2/key_dates',
+        'cadenza2/evaluation',
         'cadenza2/webinar',
         'cadenza2/list_dataset',
         {   // Menu Lyrics Intelligibility
@@ -49,6 +50,7 @@ module.exports = {
         'cadenza2/data_listener',
         'cadenza2/amplification',
         'cadenza2/causality',
+
         {   // Take Part
             type: 'category',
             label: 'Take Part',

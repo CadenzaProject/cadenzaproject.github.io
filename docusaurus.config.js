@@ -83,10 +83,10 @@ module.exports = {
     ],
     themeConfig: {
         announcementBar: {
-            id: 'current_challenge',
+            id: 'announcement',
             content:
-                'The second Cadenza challenge is now live',
-            backgroundColor: '#6ce56c',
+                'The Evaluation set for the Second Cadenza challenge is now available!!',
+            backgroundColor: '#9ae59a',
             textColor: '#070707',
             isCloseable: true,
         },
