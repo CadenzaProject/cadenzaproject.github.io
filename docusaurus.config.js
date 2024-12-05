@@ -85,7 +85,7 @@ module.exports = {
         announcementBar: {
             id: 'announcement',
             content:
-                'The Evaluation set for the Second Cadenza challenge is now available!!',
+                "🚨 Don't miss the ASA/ICA 2025 Conference abstract deadline: January 6, 2025! 🚨",
             backgroundColor: '#9ae59a',
             textColor: '#070707',
             isCloseable: true,
