@@ -104,8 +104,7 @@ Music data is store in a single JSON per file dataset with the following format.
     "duration": 168,
     "channels": 2,
     "source": "fma"
-  },
-...
+  }
 ```
 
 ### 3.4 HRTFs Metadata
@@ -114,32 +113,32 @@ HRTFs data is stored in a single JSON with the following format.
 
 ```json
 {
-    "train": {
-      "-57.5": {
-        "car": {
-          "left_speaker": {
-            "left_side": "HR13_E03_CH1_Left",
-            "right_side": "HR13_E03_CH1_Right"
-          },
-          "right_speaker": {
-            "left_side": "HR13_E04_CH1_Left",
-            "right_side": "HR13_E04_CH1_Right"
-          }
+  "train": {
+    "-57.5": {
+      "car": {
+        "left_speaker": {
+          "left_side": "HR13_E03_CH1_Left",
+          "right_side": "HR13_E03_CH1_Right"
         },
-        "anechoic": {
-          "left_speaker": {
-            "left_side": "HR5_E02_CH0_Left",
-            "right_side": "HR5_E02_CH0_Right"
-          },
-          "right_speaker": {
-            "left_side": "HR21_E02_CH0_Left",
-            "right_side": "HR21_E02_CH0_Right"
-          }
+        "right_speaker": {
+          "left_side": "HR13_E04_CH1_Left",
+          "right_side": "HR13_E04_CH1_Right"
         }
       },
-      ...
-    ...
+      "anechoic": {
+        "left_speaker": {
+          "left_side": "HR5_E02_CH0_Left",
+          "right_side": "HR5_E02_CH0_Right"
+        },
+        "right_speaker": {
+          "left_side": "HR21_E02_CH0_Left",
+          "right_side": "HR21_E02_CH0_Right"
+        }
+      }
+    }
+  }
 }
+
 ```
 
 ### 3.5 Scenes Metadata
@@ -148,27 +147,50 @@ Scene data is stored in a single JSON with the following format.
 
 ```json
 {
-    "S100000": {
-        "scene": "S100000",
-        "song": "fma_081613",
-        "song_path": "training/Instrumental/081613.mp3",
-        "hr": 25.0,
-        "car_noise_parameters": {
-            "speed": 114.0,
-            "gear": 6,
-            "reference_level_db": 30.9,
-            "engine_num_harmonics": 12,
-            "rpm": 1915.2,
-            "primary_filter": {"order": 1, "btype": "lowpass", "cutoff_hz": 20.3632},
-            "secondary_filter": {"order": 2, "btype": "lowpass", "cutoff_hz": 314.2048},
-            "bump": {"order": 2, "btype": "bandpass", "cutoff_hz": [77, 110]},
-            "dip_low": {"order": 1, "btype": "lowpass", "cutoff_hz": 170},
-            "dip_high": {"order": 1, "btype": "highpass", "cutoff_hz": 455}
-        },
-        "snr": 7.8386,
-        "split": "train"
+  "S100000": {
+    "scene": "S100000",
+    "song": "fma_081613",
+    "song_path": "training/Instrumental/081613.mp3",
+    "hr": 25.0,
+    "car_noise_parameters": {
+      "speed": 114.0,
+      "gear": 6,
+      "reference_level_db": 30.9,
+      "engine_num_harmonics": 12,
+      "rpm": 1915.2,
+      "primary_filter": {
+        "order": 1,
+        "btype": "lowpass",
+        "cutoff_hz": 20.3632
+      },
+      "secondary_filter": {
+        "order": 2,
+        "btype": "lowpass",
+        "cutoff_hz": 314.2048
+      },
+      "bump": {
+        "order": 2,
+        "btype": "bandpass",
+        "cutoff_hz": [
+          77,
+          110
+        ]
+      },
+      "dip_low": {
+        "order": 1,
+        "btype": "lowpass",
+        "cutoff_hz": 170
+      },
+      "dip_high": {
+        "order": 1,
+        "btype": "highpass",
+        "cutoff_hz": 455
+      }
     },
-...
+    "snr": 7.8386,
+    "split": "train"
+  }
+}
 ```
 
 ***

@@ -80,8 +80,7 @@ And, `subjective_evaluation` item is showing the start and end point for the 15-
       "end": 159.64,
       "duration": 30.0
     }
-  },
-  ...
+  }
 }
 ```
 

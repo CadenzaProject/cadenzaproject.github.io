@@ -84,7 +84,6 @@ Music data is store in a single JSON per file dataset with the following format.
     "Source":"MedleyDB",
     "License":"CC BY-NC-SA",
     "Split":"train"
-  },
-  ...
+  }
 ]
 ```
