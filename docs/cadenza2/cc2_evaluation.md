@@ -4,17 +4,33 @@ title: Evaluation Set
 sidebar_label: Evaluation
 sidebar_position: 4.7
 ---
-
+import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## 1. Task 1 - Lyric Intelligibility
+<Image img={require('../../static/img/cad2/34507.jpg')}/>
 
-The evaluation package contains all the audios and metadata necessary to run process the signals. 
-To get access to the data, please download the following package, which is included in the [Zenodo](https://zenodo.org/records/12685820) repository. 
+## 1. Evaluation package
 
-* `cadenza_cad2_task1_evaluation.v1_0.tar.gz` **[1.7 GB]** - audio and metadata evaluation.
+The evaluation packages contains all the audios and metadata necessary to run the evaluations. 
+To get access to the data, please download the package from the corresponding Zenodo repository.
 
-### 1.1 Evaluation Music
+**Lyrics Intelligibility**
+* `cadenza_cad2_task1_eval.v1_0.tar.gz` **[1.5 GB]** - audio and metadata.
+* [Zenodo](https://zenodo.org/records/12685820)  
+
+**Rebalancing Classical Music**
+* `cadenza_cad2_task2_eval.v1_0.tar.gz` **[350 MB]** - audio and metadata.
+* [Zenodo](https://zenodo.org/records/14041297) 
+
+## 2. Listeners Metadata
+
+The evaluation listeners correspond to 50 real audiograms of hearing aid users recruited by the University of Leeds, plus a no-loss audiogram with 0 dB across all frequencies to evaluate systems under no-loss conditions.
+The distribution of these audiograms by hearing loss category is as follows: 18 mild, 16 moderate, 16 moderately severe, and 1 with no loss.
+The same listeners will be used in both the Lyrics Intelligibility and Rebalancing Classical Music tasks.
+
+## 3. Lyrics Intelligibility
+
+### 3.1 Music samples
 
 The evaluation set is derived from the MUSDB18 test split and the English subset of the JamendoLyrics datasets. 
 For MUSDB18, the test split contains 50 tracks, but only 39 were included in our evaluation. 
@@ -34,7 +50,11 @@ For JamendoLyrics, all 20 tracks had lyrics available online together with the [
 Finally, audio segments were manually reviewed and verified by five members of the Cadenza project team to ensure accuracy and consistency.
 The final evaluation set contains 242 segments, each ranging between 10 and 20 seconds.
 
-### 1.2 Metadata
+For the quality score (HAAQI), the reference signal was set as a remix of the original track with the vocals boosted by +2 dB. 
+To achieve this, we generated a Musdb18-like version of the JamendoLyrics dataset using the 
+[HDEMUCS_HIGH_MUSDB_PLUS](https://pytorch.org/audio/main/generated/torchaudio.pipelines.HDEMUCS_HIGH_MUSDB_PLUS.html) pretrained model from torchaudio.
+
+### 3.2 Metadata
 
 The evaluation metadata has the same structure as the training and validation sets described [here](Lyric%20Intelligibility/lyric_data).
 
@@ -42,39 +62,27 @@ There are 242 **scenes**, each corresponding to an audio segment paired with one
 The **scene-listener** file pairs each scene with all 51 evaluation listeners, resulting in a total 12,342 processed signals to submit.
 
 
-## 2. Task 2 - Rebalancing Classical Music
+## 4. Rebalancing Classical
 
-The evaluation package contains all the audios and metadata necessary to run process the signals.
-To get access to the data, please download the following package, which is included in the [Zenodo](https://zenodo.org/records/14041297) repository.
-
-* `cadenza_cad2_task2_evaluation.v1_0.tar.gz` **[X GB]** - audio and metadata evaluation.
-
-### 2.1 Evaluation Music
+### 4.1 Music samples
 
 The evaluation set is based on 8 tracks from the BACH10 and 13 tracks from the URMP datasets. 
 Compositions that intersect with the training sets (EnsembleSet and CadenzaWoodwind) were excluded from the evaluation.
 Note that the **Real Data for Tuning** tracks are also part of the BACH10 and URMP datasets, but they are not included in the evaluation.
+For more details on the evaluation music, please refer to [here](Rebalancing%20Classical/rebalancing_data#a3-evaluation-test-set).
 
 Each track in the evaluation set were split into consecutive 15-second segments with no overlap, resulting in 87 audio segments.
 The segments were then paired with 4 randomly selected gains and each segment-gain pair will be processed for 21 (out of 51) listeners.
 The 21 listeners were randomly selected keeping the same distribution of listeners with moderate, moderately severe, severe and no loss. 
 
-### 2.2 Metadata
+### 4.2 Metadata
 
 The metadata has the same structure as the training and validation sets described [here](http://localhost:3000/docs/cadenza2/Rebalancing%20Classical/rebalancing_data).
 
-The 87 audio segments are pair with 4 randomly selected gains, resulting in 348 scenes. 
-Each scene was paired with 21 listeners, randomly selected to maintain the same distributed by loss category: 8 mild, 6 moderately severe, 6 severe and 1 no loss, resulting in 3,708 scene-listeners pairs.
+The 87 audio segments are pair with 4 randomly selected **gains**, resulting in 348 **scenes**. 
+Each scene was paired with 21 listeners, randomly selected to maintain the same distributed by loss category: 8 mild, 6 moderately severe, 6 severe and 1 no loss, resulting in 3,708 **scene-listeners** pairs.
 
-
-
-## 3. Listeners
-
-The evaluation audiograms correspond to 50 real audiograms of hearing aid users recruited by the University of Leeds, plus a no-loss audiogram with 0 dB across all frequencies to evaluate systems under no-loss conditions.
-The distribution of these audiograms by hearing loss category is as follows: 18 mild, 16 moderate, 16 moderately severe, and 1 with no loss.
-The same audiograms will be used in both the Lyrics Intelligibility and Rebalancing tasks
-
-## 4. Submission
+## 5. Submission
 
 The submission for the challenge must include all the processed audio signals, along with a technical report summarising the approach.
 
