@@ -47,8 +47,8 @@ For data augmentation, you can request from their original source:
 
 ### 2.1 Task 2 - Car
 
-The data is available for [download here](https://forms.gle/2Y7KLZY23i7bH3Lo9).
+The data is available for [download here](https://zenodo.org/records/13329972).
 
 On the download site you will see one data packages available,
 
-* `cadenza_cad1_task2_core.v1_1.tar.gz` **[6.1 GB]** - core audio and metadata for training and validation.
+* `cadenza_cad1_task2_core.v1_1.tar.gz` **[6.5 GB]** - core audio and metadata for training and validation.

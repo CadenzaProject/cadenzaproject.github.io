@@ -7,30 +7,43 @@ sidebar_position: 3
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-::::::tip[Participate]
-Can you improve music for people with a hearing loss and hearing aid, listening to music in a noisy car? We invite you to make a copy of the baseline, adapt the enhancement script and experiment with your ideas. 
-Then, you can run the whole system to obtain the HAAQI scores.
+[//]: # (::::::tip[Participate])
 
-After the objective evaluation, we will run a subjective evaluation using a listeners panel of people with a hearing loss.
-We will share the results of your system with you so you can use them in a paper. 
+[//]: # (Can you improve music for people with a hearing loss and hearing aid, listening to music in a noisy car? We invite you to make a copy of the baseline, adapt the enhancement script and experiment with your ideas. )
 
-:::danger[Note]
-This is like a near-end speech enhancement task, but the signal to be processed is music. The hearing aid being used by the listener is fixed by us.
+[//]: # (Then, you can run the whole system to obtain the HAAQI scores.)
 
-:::
-::::::
+[//]: # ()
+[//]: # (After the objective evaluation, we will run a subjective evaluation using a listeners panel of people with a hearing loss.)
 
-## 1. Leaderboard
+[//]: # (We will share the results of your system with you so you can use them in a paper. )
 
-If you have scores using the validation set, send us the `score.csv` file, and we will include you.
-The score used for the ranking is the total average.
+[//]: # ()
+[//]: # (:::danger[Note])
 
-| Ranking | Team                    | Average score | 
-|:-------:|:------------------------|:-------------:|
-|    1    | Baseline                |    0.1146     |
+[//]: # (This is like a near-end speech enhancement task, but the signal to be processed is music. The hearing aid being used by the listener is fixed by us.)
+
+[//]: # ()
+[//]: # (:::)
+
+[//]: # (::::::)
+
+[//]: # (## 1. Leaderboard)
+
+[//]: # ()
+[//]: # (If you have scores using the validation set, send us the `score.csv` file, and we will include you.)
+
+[//]: # (The score used for the ranking is the total average.)
+
+[//]: # ()
+[//]: # (| Ranking | Team                    | Average score | )
+
+[//]: # (|:-------:|:------------------------|:-------------:|)
+
+[//]: # (|    1    | Baseline                |    0.1146     |)
 
 
-## 2. Description of the Problem
+## 1. Description of the Problem
 
 A person with hearing loss is wearing their hearing aids and sitting in a car. They're listening to recorded music played 
 over the car stereo (see Figure [[1](#fig1)]).
@@ -51,7 +64,7 @@ As shown in Figure [[2](#fig2)], the system is split into two stages; the _enhan
 <figcaption>Figure 2, The baseline for the car listening scenario. For simplicity, not all signal paths are shown.</figcaption>
 </figure>
 
-### 2.1 Enhancement Stage
+### 1.1 Enhancement Stage
 :::info
 You can adapt and modify the baseline **enhancement** script or make your own script.
 :::
@@ -60,7 +73,7 @@ Your task is to process the music in such a way that improves the reproduced qua
 For this, you have access to the car speed and other metadata, which gives an estimation of the power spectrum of the noise. 
 You don't have the noise signal itself, so this is not a noise cancellation task.
 
-#### 2.1.1 Dataset
+#### 1.1.1 Dataset
 
 In the enhancement stage, you have access to:
 
@@ -80,7 +93,7 @@ the [baseline readme](https://github.com/claritychallenge/clarity/tree/main/reci
 
 To download the datasets, please visit [download data and software](Take%20part/cc1_download#21-task-2---car).
 
-#### 2.1.2 Output
+#### 1.1.2 Output
 
 The output of this stage is one stereo signal:
 - Sample rate = 32 kHz
@@ -95,7 +108,7 @@ It’s worth bearing in mind that should your signals overall seem too loud to b
 they may well turn down the volume. Also, there may be clipping in the evaluation block if the processed signals are too large.
 :::
 
-### 2.2 Evaluation Stage
+### 1.2 Evaluation Stage
 
 :::danger[Bear in mind]
 You are not allowed to change the **evaluation** script provided in the baseline.
@@ -109,7 +122,7 @@ As shown in Figure [[2](#fig2)], the evaluation takes the reference music signal
 In this stage, both the enhanced and the reference signal are processed before the HAAQI evaluation. 
 See [Core Software](Software/cc1_core_software#21-car-acoustics-model).
 
-#### 2.2.1 Process on the enhanced signal.
+#### 1.2.1 Process on the enhanced signal.
 
 1. Generate car noise based on the parameters from the metadata.
 2. Apply anechoic HRTFs to the noise.
@@ -117,7 +130,7 @@ See [Core Software](Software/cc1_core_software#21-car-acoustics-model).
 4. Scale the noise to match the SNR ar hearing aids
 5. Add both signal
 
-#### 2.2.2 Process on the reference signal.
+#### 1.2.2 Process on the reference signal.
 
 1. Add anechoic room impulses.
 
@@ -126,7 +139,7 @@ and to our Python [HAAQI implementation](https://github.com/claritychallenge/cla
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores.
 
-## 3. Software
+## 2. Software
 
 All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza
 GitHub repository](https://github.com/claritychallenge/clarity).
@@ -151,7 +164,7 @@ git checkout tags/v0.3.4
 pip install pyclarity==0.3.4
 ```
 
-## 4. Baseline
+## 3. Baseline
 
 In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide a baseline system.
 Please, visit the [baseline on the GitHub webpage](https://github.com/claritychallenge/clarity/tree/cad1task1-baseline2/recipes/cad1/task2/baseline)

@@ -7,32 +7,48 @@ sidebar_position: 2
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-::::::tip[Participate]
-If you have a pretrained music source separation trained only using the allowed datasets, you can easily enter our challenge.
+[//]: # (::::::tip[Participate])
 
-We invite you to make a copy of the baseline, adapt the enhancement script to use your separation model and
-run the whole system to obtain HAAQI scores. You might need to amplify your separated signals to match the amplification of the reference done by HAAQI.
+[//]: # (If you have a pretrained music source separation trained only using the allowed datasets, you can easily enter our challenge.)
 
-Then, you can explore ways to improve the remix stage to generate better and personalised signals for listeners.
+[//]: # ()
+[//]: # (We invite you to make a copy of the baseline, adapt the enhancement script to use your separation model and)
 
-:::danger[Remember]
-After the objective evaluation we will run subjective evaluation using a listeners panel of 50 listeners.
-We will share the results of your system with you so you can use them in a paper.
-:::
-::::::
+[//]: # (run the whole system to obtain HAAQI scores. You might need to amplify your separated signals to match the amplification of the reference done by HAAQI.)
 
-## 1. Leaderboard
+[//]: # ()
+[//]: # (Then, you can explore ways to improve the remix stage to generate better and personalised signals for listeners.)
 
-If you have scores using the validation set, send us the `score.csv` file, and we will include you.
-The score used for the ranking is the average over all examples.
+[//]: # ()
+[//]: # (:::danger[Remember])
 
-| Ranking | Team               | Average score | 
-|:-------:|:-------------------|:-------------:|
-|    1    | Baseline Demucs    |    0.2592     |
-|    2    | Baseline OpenUnMix |    0.2273     |
-|    3    | xumx_slicq_v2      |    0.2046     |
+[//]: # (After the objective evaluation we will run subjective evaluation using a listeners panel of 50 listeners.)
 
-## 2. Description of the Problem
+[//]: # (We will share the results of your system with you so you can use them in a paper.)
+
+[//]: # (:::)
+
+[//]: # (::::::)
+
+[//]: # (## 1. Leaderboard)
+
+[//]: # ()
+[//]: # (If you have scores using the validation set, send us the `score.csv` file, and we will include you.)
+
+[//]: # (The score used for the ranking is the average over all examples.)
+
+[//]: # ()
+[//]: # (| Ranking | Team               | Average score | )
+
+[//]: # (|:-------:|:-------------------|:-------------:|)
+
+[//]: # (|    1    | Baseline Demucs    |    0.2592     |)
+
+[//]: # (|    2    | Baseline OpenUnMix |    0.2273     |)
+
+[//]: # (|    3    | xumx_slicq_v2      |    0.2046     |)
+
+## 1. Description of the Problem
 
 A person with a hearing loss is listening to music via headphones. They're not using their hearing aids. 
 
@@ -48,7 +64,7 @@ As shown in Figure [[1](#fig1)], the system is split into two stages; the _enhan
 </figure>
 
 
-### 2.1 Enhancement Stage
+### 1.1 Enhancement Stage
 :::info
 You can adapt and modify the baseline **enhancement** script or make your own script.
 :::
@@ -58,7 +74,7 @@ right and left `vocal`, `drums`, `bass` and `other` (VDBO), and produce one ster
 remix signal optimised for a target listener. 
 For this, you will have access to relevant datasets that will allow you to explore different approaches to separate the music and/or to remix the signals.  
 
-#### 2.1.1 Dataset
+#### 1.1.1 Dataset
 
 In the enhancement stage, you have access to:
 
@@ -71,7 +87,7 @@ the [baseline readme](https://github.com/claritychallenge/clarity/tree/main/reci
 
 To download the datasets, please visit [download data and software](Take%20part/cc1_download#21-task-1---headphones).
 
-#### 2.1.2 Output
+#### 1.1.2 Output
 
 The output of this stage are:
 
@@ -93,7 +109,7 @@ they may well turn down the volume themselves. Also, there may be clipping in th
 if the processed signals are too large.
 :::
 
-### 2.2 Evaluation Stage
+### 1.2 Evaluation Stage
 
 :::danger[Warning]
 You are not allowed to change the **evaluation** script provided in the baseline.
@@ -109,7 +125,7 @@ and to our Python [HAAQI implementation](https://github.com/claritychallenge/cla
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores. 
 
-## 3. Software
+## 2. Software
 
 All the necessary software to run the recipes and make your own submission is available on our [Clarity-Cadenza 
 GitHub repository](https://github.com/claritychallenge/clarity).
@@ -134,7 +150,7 @@ git checkout tags/v0.3.4
 pip install pyclarity==0.3.4
 ```
 
-## 4. Baselines
+## 3. Baselines
 
 In the [Clarity/Cadenza GitHub repository](https://github.com/claritychallenge/clarity), we provide two baselines.
 Both baseline systems work in a similar way. Using a music source separation model, the systems

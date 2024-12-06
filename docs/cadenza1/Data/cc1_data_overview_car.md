@@ -7,7 +7,7 @@ sidebar_position: 5.2
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Data and baseline code can be downloaded from the [download page](../Take%20part/cc1_download) following this [timeline](../Take%20part/cc1_key_dates).
+[//]: # (Data and baseline code can be downloaded from the [download page]&#40;../Take%20part/cc1_download&#41; following this [timeline]&#40;../Take%20part/cc1_key_dates&#41;.)
 
 ## 1 Training/development
 

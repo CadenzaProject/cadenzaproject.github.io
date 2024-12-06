@@ -7,8 +7,17 @@ sidebar_position: 1
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
+:::tip[Challenge Closed]
+The ICASSP 2024 Grand Challenge concluded in January 2024.
 
-# Overview
+All signals and corresponding HAAQI scores submitted by participants are anonymously and openly accessible on Zenodo at https://zenodo.org/records/13285031
+
+If you are interested in exploring this challenge further or using the submission signals, please cite the following paper:
+> G. Roa Dabike, M. A. Akeroyd, S. Bannister, J. P. Barker, T. J. Cox, B. Fazenda, J. Firth, S. Graetzer, A. Greasley, R. R. Vos and W. M. Whitmer, "The First Cadenza Challenges: Using Machine Learning Competitions to Improve Music for Listeners With a Hearing Loss," in IEEE Open Journal of Signal Processing, under review.
+
+:::
+
+## Overview
 There is a global challenge of an ageing population. According to The World Health Organization (WHO), over 1.5 billion people worldwide have hearing loss. and is projected to increase to 1 in 10 people having disabling hearing loss by 2050. Hearing loss causes problems when listening to music. It can make picking out lyrics more difficult, with music becoming duller as high frequencies disappear. This reduces the enjoyment of music and can lead to disengagement from listening and music-making, reducing the health and well-being effects people otherwise get from music. We want to get more of the ICASSP community to consider diverse hearing and so allow those with a hearing loss to benefit from the latest signal processing advances.
 
 In this challenge, someone with a hearing loss is listening to music via their hearing aids. The challenge is to develop a signal processing system that allows a personalised rebalancing of the music to improve the listening experience, for example by amplifying the vocals relative to the sound of the band. One approach would be to a demix the music and then apply gains to the separated tracks to change the balance when the music is downmixed to stereo.
@@ -17,7 +26,7 @@ In this challenge, someone with a hearing loss is listening to music via their h
 <iframe width="750" height="500" src="https://www.youtube.com/embed/EniPRT-GgNk?si=FaTT9cXvLUMvtSoz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-## What makes the demix different to previous demix challenges?
+### What makes the demix different to previous demix challenges?
 The left and right signals you are working with are those picked up by a microphone at each ear when the person is listening to a pair of stereo loudspeakers. This means the signals at the ear that you have for demix is a combination of both the right and left stereo signals because of cross-talk (see [Figure 1](#fig1)). This cross-talk will be strongest at low frequency when the wavelength is largest. This means that the spatial distribution of an instrument will be different in the microphone signals at the ear compared to the original left-right music signals. Stereo demix algorithms will need to be revised to allow for this frequency-dependent change. We will model the cross-talk using HRTFs (Head Related Transfer Functions), assuming the music comes from a pair of stereo loudspeakers in a dead room.
 
 <div style={{textAlign:'center'}}>
@@ -29,13 +38,13 @@ The left and right signals you are working with are those picked up by a microph
 
 Although in the long term demixing on hearing aids would need to be causal and low latency, for ICASSP 2024 we are allowing causal <u>and</u> non-causal approaches. If you produce a low latency solution that will be great and very novel. There are increasing number of DNN approaches for causal signal processing from other areas such as speech that could be adapted for this.
 
-## Do I have to demix and then downmix to stereo?
+### Do I have to demix and then downmix to stereo?
 Our baseline does demixing, but you don't have to. You could create an end-to-end system without an explicit demixing stage if you want.
 
-## Do I need to know about hearing loss and hearing aids?
+### Do I need to know about hearing loss and hearing aids?
 Not really. We provide code for a standard amplification that is done by simple hearing aids. The challenge is mostly about rebalancing the music. We use a metric developed for hearing aids, but you could use another quality metric like Signal to Distortion Ratio (SDR) to develop your systems if you prefer. If you want to learn more about hearing loss and aids, however, there is lots of information in our [learning resources](../learning_resources/learning_intro).
 
-## The task
+### The task
 
 [Figure 2](#fig2) shows a simplified schematic of the baseline system:
 
@@ -61,7 +70,7 @@ Your challenge is to improve what happens in the pink music enhancement box. The
 
 We are interested in systems that are either: (i) causal and low latency for live music, and (ii) non-causal for recorded music.
 
-## What is being provided
+### What is being provided
 
 You will have access to:
 
@@ -75,7 +84,7 @@ You will have access to:
 Please refer to [data page](data/data_overview) and the [baseline readme](https://github.com/claritychallenge/clarity/blob/main/recipes/cad_icassp_2024/baseline/README.md) in GitHub for details.
 To download the datasets, please visit [download data and software](take_part/download)
 
-## The systems' output
+### The systems' output
 
 Stereo downmixed signals
 - Sample rate: 32,000 Hz
@@ -90,7 +99,7 @@ It’s worth bearing in mind there may be clipping in the evaluation block in so
 if the processed signals are too large.
 :::
 
-## Evaluation Stage
+### Evaluation Stage
 
 :::danger[Warning]
 You are not allowed to change the **evaluation** script provided in the baseline.
@@ -102,7 +111,7 @@ scores for the remixed stereo - see [Python HAAQI implementation](https://github
 
 The output of the evaluation stage is a CSV file with all the HAAQI scores.
 
-## Cite as
+### Cite as
 
 ```text
 @misc{roa2023cadenza,

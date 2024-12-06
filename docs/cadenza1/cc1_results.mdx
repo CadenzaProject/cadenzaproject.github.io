@@ -1,0 +1,21 @@
+---
+id: cc1_results
+title: Results Task1
+sidebar_label: Results
+sidebar_position: 2
+---
+
+import ResultsDisplay from "/src/components/ResultsDisplay";
+
+The First Cadenza Challenge is now complete.
+Results for Task 1: listening over headphones are shown below.
+
+import all_data from "/cad1_results.json";
+
+The table below reports:
+1. HAAQI Average: Average HAAQI of left and right ear
+2. HAAQI Left: HAAQI score of left ear
+3. HAAQI Right: HAAQI score of right ear
+4. Basic Audio Quality (BAQ): Listener panel score of signals scored corresponding to 50% of the tracks,
+
+<ResultsDisplay all_data={ all_data } />
