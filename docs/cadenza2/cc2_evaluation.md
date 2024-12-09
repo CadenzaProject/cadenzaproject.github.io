@@ -9,6 +9,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <Image img={require('../../static/img/cad2/34507.jpg')}/>
 
+:::warning[Submission Information]
+
+If you haven't registered your team, please do so [**here**](Take%20Part/cc2_registration).
+
+Before running the evaluation, please ensure you are using PyClarity version 0.6.3.
+
+More details about the submission, refer to the [**submission information**](Take%20Part/submission) page.
+
+:::
+
 ## 1. Evaluation package
 
 The evaluation packages contains all the audios and metadata necessary to run the evaluations. 
@@ -16,11 +26,11 @@ To get access to the data, please download the package from the corresponding Ze
 
 **Lyrics Intelligibility**
 * `cadenza_cad2_task1_eval.v1_0.tar.gz` **[1.5 GB]** - audio and metadata.
-* [Zenodo](https://zenodo.org/records/12685820)  
+* [Zenodo](https://zenodo.org/records/14288988)  
 
 **Rebalancing Classical Music**
 * `cadenza_cad2_task2_eval.v1_0.tar.gz` **[350 MB]** - audio and metadata.
-* [Zenodo](https://zenodo.org/records/14041297) 
+* [Zenodo](https://zenodo.org/records/14288859) 
 
 ## 2. Listeners Metadata
 
