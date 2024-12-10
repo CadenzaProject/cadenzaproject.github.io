@@ -101,8 +101,8 @@ If participant have issues packaging or submitting a large file, they may divide
 several smaller packages, each no smaller than 2GB.
 
 The total size of the submission package for:
-* Lyrics intelligibility: **XX** GB.
-* Rebalancing Classical Music: **XX** GB
+* Lyrics intelligibility: **16** GB.
+* Rebalancing Classical Music: **7** GB
 
 Participants are allowed to submit several systems. More information on how to submit several systems will be provided along with the Team ID.
 
