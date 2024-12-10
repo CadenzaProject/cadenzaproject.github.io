@@ -25,12 +25,12 @@ The evaluation packages contains all the audios and metadata necessary to run th
 To get access to the data, please download the package from the corresponding Zenodo repository.
 
 **Lyrics Intelligibility**
-* `cadenza_cad2_task1_eval.v1_0.tar.gz` **[1.5 GB]** - audio and metadata.
-* [Zenodo](https://zenodo.org/records/14288988)  
+* `cadenza_cad2_task1_eval.v1_1.tar.gz` **[1.5 GB]** - audio and metadata.
+* [Zenodo](https://zenodo.org/records/14333454)  
 
 **Rebalancing Classical Music**
-* `cadenza_cad2_task2_eval.v1_0.tar.gz` **[350 MB]** - audio and metadata.
-* [Zenodo](https://zenodo.org/records/14288859) 
+* `cadenza_cad2_task2_eval.v1_1.tar.gz` **[94 MB]** - audio and metadata.
+* [Zenodo](https://zenodo.org/records/14335552) 
 
 ## 2. Listeners Metadata
 
