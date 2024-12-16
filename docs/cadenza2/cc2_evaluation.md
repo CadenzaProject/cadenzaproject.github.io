@@ -21,7 +21,10 @@ More details about the submission, refer to the [**submission information**](Tak
 
 ## 1. Evaluation package
 
-The evaluation packages contains all the audios and metadata necessary to run the evaluations. 
+The evaluation packages contains all the audios and metadata necessary to run the enhancing stage. That is,
+only the mixture signals are provided. You need to run your system on this data and submit the output signals
+to us, we will run the evaluation. Personalised instructions on where to submit the data are send to each registered team.
+
 To get access to the data, please download the package from the corresponding Zenodo repository.
 
 **Lyrics Intelligibility**
@@ -105,6 +108,33 @@ The total size of the submission package for:
 * Rebalancing Classical Music: **7** GB
 
 Participants are allowed to submit several systems. More information on how to submit several systems will be provided along with the Team ID.
+
+To submit your results, please follow these steps:
+
+1. Process the signals: 
+   * Download the Evaluation Set and process the audio signals as per the challenge requirements.
+2. Prepare your submission:
+   * Compress the **enhanced_signals** directory into a ZIP file.
+   * Name the file using the following convention, where TeamID is the Team ID sent by email:
+     * Causal System: `submission_<TeamID>_causal.zip`
+     * Non-Causal System: `submission_<TeamID>_noncausal.zip`
+   * If applicable, include the following suffixes:
+     * _aug: for data augmentation (e.g., SpecAugment, pitch shifting, channel swap).
+     * _sup: for data supplementation (e.g., additional datasets).
+     * _aug_sup: for both augmentation and supplementation.
+   * If you use data augmentation and/or supplementation, please submit a separate system without these techniques to facilitate comparison.
+   * Place all files in the same OneDrive directory provided.
+   * Example, Team ID T001 developed a causal system. They used data augmentation and data suplementation. The packages they need to submit are:
+     * `submission_T001_causal.zip` -> results from a system trained solely on the challenge data. 
+     * `submission_T001_causal_aug.zip` -> results of a system trained using data augmentation like pitch shifting
+     * `submission_T001_noncausal_sup.zip` -> results of a system trained on the challenge data plus another dataset like AAM
+     * `submission_T001_noncausal_aug_sup.zip` -> results of a system trained using the challenge data, supplementary data and data augmentation.
+3. Submitting multiple systems:
+   * If you want to submit systems with different architectures or procedures (beyond augmentation or supplementation), please request an additional Team ID.
+   * You can submit results for multiple systems provided they are significantly different.
+4. Include your technical report:
+   * Don't forget to include your brief technical report following the [Submission Guidelines](Take%20Part/submission).
+   * Please include as much detail as possible. 
 
 ## References
 
