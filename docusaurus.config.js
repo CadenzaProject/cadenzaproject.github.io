@@ -81,11 +81,12 @@ module.exports = {
         ],
         [require.resolve('docusaurus-lunr-search'), {indexBaseUrl: true}],
     ],
+    // emoji from https://emojipedia.org/
     themeConfig: {
         announcementBar: {
             id: 'announcement',
             content:
-                "🚨 Don't miss the ASA/ICA 2025 Conference abstract deadline: January 6, 2025! 🚨",
+                "📆 CAD2 submission deadline: January 17th, 2025",
             backgroundColor: '#9ae59a',
             textColor: '#070707',
             isCloseable: true,
