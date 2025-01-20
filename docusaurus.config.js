@@ -83,14 +83,15 @@ module.exports = {
     ],
     // emoji from https://emojipedia.org/
     themeConfig: {
-        announcementBar: {
-            id: 'announcement',
-            content:
-                "📆 CAD2 submission deadline: January 17th, 2025",
-            backgroundColor: '#9ae59a',
-            textColor: '#070707',
-            isCloseable: true,
-        },
+        // Uncomment the following code to add the announcement bar
+        // announcementBar: {
+        //     id: 'announcement',
+        //     content:
+        //         "📆 CAD2 submission deadline: January 17th, 2025",
+        //     backgroundColor: '#9ae59a',
+        //     textColor: '#070707',
+        //     isCloseable: true,
+        // },
         blog: {
             sidebar: {
                 groupByYear: true,

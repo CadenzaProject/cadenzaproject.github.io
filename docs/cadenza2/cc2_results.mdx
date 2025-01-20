@@ -1,0 +1,55 @@
+---
+id: results
+title: The 2nd Cadenza Challenge Results
+sidebar_label: Results
+sidebar_position: 2
+---
+
+import ResultsDisplay from "/src/components/ResultsDisplay";
+import task1_data_causal from "/cad2_results_task1_causal.json";
+import task1_data_noncausal from "/cad2_results_task1_noncausal.json";
+import task2_data_causal from "/cad2_results_task2_causal.json";
+import task2_data_noncausal from "/cad2_results_task2_noncausal.json";
+
+
+The 2nd Cadenza Challenge is now complete.
+Below, you can find the results for each task.
+These tasks focused on improving music accessibility for individuals with hearing loss.
+We thank all participants for their valuable contributions and efforts.
+
+Explore the detailed results per task to learn more about the top solutions and their performance.
+
+## Task 1: Improving Lyrics Intelligibility
+
+The table below reports:
+
+1. HAAQI: Average HAAQI of left and right ear
+2. Corr.: Percentage of correct transcribed words in better ear.
+3. Score: HAAQI and Correctness weighted using alpha
+4. Z Norm: Z normalized HAAQI and Correctness.
+5. BAQ: Audio quality given by listener panel
+6. Intell: Intelligibility score given by listener panel
+7. Score LI: BAQ and Intelligibility weighted using alpha
+8. Z Norm LI: Z normalized BAQ and Intelligibility
+
+### Causal
+
+<ResultsDisplay all_data={ task1_data_causal } />
+
+### NonCausal
+
+<ResultsDisplay all_data={ task1_data_noncausal } />
+
+
+## Task 2: Rebalancing Classical Music
+
+The table below reports:
+1. HAAQI: Average HAAQI of left and right ear
+
+### Causal
+
+<ResultsDisplay all_data={ task2_data_causal } />
+
+### NonCausal
+
+<ResultsDisplay all_data={ task2_data_noncausal } />

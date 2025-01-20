@@ -17,6 +17,7 @@ module.exports = {
     }],
     tutorialSidebar_cad2: [
         'cadenza2/intro',  // landing
+        'cadenza2/results',
         'cadenza2/key_dates',
         'cadenza2/evaluation',
         'cadenza2/webinar',

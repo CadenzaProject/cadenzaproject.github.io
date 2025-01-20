@@ -1,0 +1,79 @@
+{
+    "defaultSort": {
+        "field": "Score",
+        "order": "desc"
+    },
+    "format":
+    [
+        {
+            "dataField": "id",
+            "text": "Team",
+            "sort": false
+        },
+        {
+            "dataField": "HAAQI",
+            "text": "HAAQI",
+            "sort": true
+        },
+        {
+            "dataField": "Correctness",
+            "text": "Corr.",
+            "sort": true
+        },
+        {
+          "dataField": "Score",
+          "text": "Score",
+          "sort": true
+        },
+        {
+            "dataField": "ZNorm",
+            "text": "Z-Norm",
+            "sort": true
+        },
+        {
+            "dataField": "BAQ",
+            "text": "BAQ",
+            "sort": true
+        },
+        {
+            "dataField": "Intell",
+            "text": "Intell.",
+            "sort": true
+        },
+        {
+          "dataField": "ScoreLI",
+          "text": "Score LI.",
+          "sort": true
+        },
+        {
+            "dataField": "ZNormLI",
+            "text": "Z Norm LI",
+            "sort": true
+        }
+    ],
+    "data":
+    [
+        {
+            "id": "Baseline",
+            "HAAQI": 0.6979,
+            "Correctness": 0.5222,
+            "Score": 0.6787,
+            "ZNorm":0.2488,
+            "BAQ": 0,
+            "Intell": 0,
+            "ScoreLI": 0,
+            "ZNormLI": 0
+        },
+        {
+            "id": "T002",
+            "HAAQI": 0.7202,
+            "Correctness": 0.5318,
+            "Score": 0.6859,
+            "ZNorm":0.2090,
+            "BAQ": 0,
+            "Intell": 0,
+            "ScoreLI": 0,
+            "ZNormLI": 0
+        }
+    ]
+}
