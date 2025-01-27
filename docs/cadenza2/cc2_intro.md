@@ -9,13 +9,11 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::tip[ASA/ICA 2025 Conference]
+:::tip[Last news!!]
 
-If you want to join the meeting, don't miss the deadline to submit your [**abstract for ASA/ICA 2025**](https://acousticalsociety.org/new-orleans-2025/)! The deadline is **January 6**
-
-Make sure to say the paper is for the special session, **"Cadenza Machine Learning Challenge (CAD2): Improving Music for People with Hearing Loss."**
-
-ICA Travel grants are available! Check out the [**Young Scientist Conference Attendance Grants**](https://www.icacommission.org/what-we-do/young-scientist-conference-attendance-grants-2025-edition/)
+* Challenge submission window is now closed. Thank you to all participants.
+* [**ASA/ICA 2025**](https://acousticalsociety.org/new-orleans-2025/)
+  * Cadenza special session: **"Cadenza Machine Learning Challenge (CAD2): Improving Music for People with Hearing Loss."**
 :::
 
 The Cadenza Challenges are improving music for people with a hearing loss. Hearing loss causes various problems such as quieter music passages being inaudible, poor and anomalous pitch perception, difficulties identifying and picking out instruments, and problems hearing out lyrics.
