@@ -1,0 +1,90 @@
+{
+    "defaultSort": {
+        "field": "Score",
+        "order": "desc"
+    },
+    "format":
+    [
+        {
+            "dataField": "id",
+            "text": "Team",
+            "sort": true
+        },
+        {
+            "dataField": "HAAQI",
+            "text": "HAAQI",
+            "sort": true
+        },
+        {
+            "dataField": "Correctness",
+            "text": "Corr.",
+            "sort": true
+        },
+        {
+          "dataField": "Score",
+          "text": "Score",
+          "sort": true
+        },
+        {
+            "dataField": "ZNorm",
+            "text": "Z-Norm",
+            "sort": true
+        },
+        {
+            "dataField": "BAQ",
+            "text": "BAQ",
+            "sort": true
+        },
+        {
+            "dataField": "IntellLP",
+            "text": "Intell LP",
+            "sort": true
+        },
+        {
+          "dataField": "ScoreLP",
+          "text": "Score LP",
+          "sort": true
+        },
+        {
+            "dataField": "ZNormLP",
+            "text": "Z-Norm LP",
+            "sort": true
+        }
+    ],
+    "data":
+    [
+        {
+            "id": "Baseline",
+            "HAAQI": 0.6865,
+            "Correctness": 0.5036,
+            "Score": 0.6592,
+            "ZNorm":0.2332,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0,
+            "ZNormLP": 0
+        },
+        {
+            "id": "T002",
+            "HAAQI": 0.7097,
+            "Correctness": 0.5104,
+            "Score": 0.6657,
+            "ZNorm":0.1956,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0,
+            "ZNormLP": 0
+        },
+        {
+            "id": "T018",
+            "HAAQI":  0.6872,
+            "Correctness": 0.5299,
+            "Score": 0.6756,
+            "ZNorm": 0.2451,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0,
+            "ZNormLP": 0
+        }
+    ]
+}

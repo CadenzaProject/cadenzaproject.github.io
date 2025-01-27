@@ -1,0 +1,30 @@
+{
+    "defaultSort": {
+        "field": "HAAQI",
+        "order": "desc"
+    },
+    "format":
+    [
+        {
+            "dataField": "id",
+            "text": "Team",
+            "sort": false
+        },
+        {
+            "dataField": "HAAQI",
+            "text": "HAAQI",
+            "sort": true
+        }
+    ],
+    "data":
+    [
+        {
+            "id": "Baseline",
+            "HAAQI": 0.3265
+        },
+        {
+            "id": "T002",
+            "HAAQI": 0.3580
+        }
+    ]
+}
