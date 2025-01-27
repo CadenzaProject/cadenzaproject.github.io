@@ -8,7 +8,7 @@
         {
             "dataField": "id",
             "text": "Team",
-            "sort": false
+            "sort": true
         },
         {
             "dataField": "HAAQI",
@@ -36,18 +36,18 @@
             "sort": true
         },
         {
-            "dataField": "Intell",
-            "text": "Intell.",
+            "dataField": "IntellLP",
+            "text": "Intell LP",
             "sort": true
         },
         {
-          "dataField": "ScoreLI",
-          "text": "Score LI.",
+          "dataField": "ScoreLP",
+          "text": "Score LP",
           "sort": true
         },
         {
-            "dataField": "ZNormLI",
-            "text": "Z Norm LI",
+            "dataField": "ZNormLP",
+            "text": "Z-Norm LP",
             "sort": true
         }
     ],
@@ -60,9 +60,9 @@
             "Score": 0.6592,
             "ZNorm":0.2332,
             "BAQ": 0,
-            "Intell": 0,
-            "ScoreLI": 0,
-            "ZNormLI": 0
+            "IntellLP": 0,
+            "ScoreLP": 0,
+            "ZNormLP": 0
         },
         {
             "id": "T002",
@@ -71,9 +71,20 @@
             "Score": 0.6657,
             "ZNorm":0.1956,
             "BAQ": 0,
-            "Intell": 0,
-            "ScoreLI": 0,
-            "ZNormLI": 0
+            "IntellLP": 0,
+            "ScoreLP": 0,
+            "ZNormLP": 0
+        },
+        {
+            "id": "T018",
+            "HAAQI":  0.6872,
+            "Correctness": 0.5299,
+            "Score": 0.6756,
+            "ZNorm": 0.2451,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0,
+            "ZNormLP": 0
         }
     ]
 }
