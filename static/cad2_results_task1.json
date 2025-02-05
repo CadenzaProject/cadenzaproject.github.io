@@ -1,0 +1,153 @@
+{
+    "defaultSort": {
+        "field": "Score",
+        "order": "desc"
+    },
+    "format":
+    [
+        {
+            "dataField": "team",
+            "text": "Team",
+            "sort": false
+        },
+        {
+            "dataField": "id",
+            "text": "System",
+            "sort": false
+        },
+        {
+            "dataField": "Score",
+            "text": "Score",
+            "sort": true
+        },
+        {
+            "dataField": "HAAQI",
+            "text": "HAAQI",
+            "sort": true
+        },
+        {
+            "dataField": "Correctness",
+            "text": "Corr.",
+            "sort": true
+        },
+        {
+            "dataField": "ScoreLP",
+            "text": "Score LP",
+            "sort": true
+        },
+        {
+            "dataField": "BAQ",
+            "text": "BAQ",
+            "sort": true
+        },
+        {
+            "dataField": "IntellLP",
+            "text": "Intell LP",
+            "sort": true
+        }
+
+    ],
+    "data":
+    [
+        {
+            "id": "Baseline - Causal",
+            "team": "Baseline",
+            "HAAQI": 0.6865,
+            "Correctness": 0.5036,
+            "Score": 0.6592,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "T002 - Causal",
+            "team": "T002",
+            "HAAQI": 0.7097,
+            "Correctness": 0.5104,
+            "Score": 0.6657,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "T018 - Causal",
+            "team": "T018",
+            "HAAQI":  0.6872,
+            "Correctness": 0.5299,
+            "Score": 0.6756,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "Baseline - NonCausal",
+            "team": "Baseline",
+            "HAAQI": 0.6979,
+            "Correctness": 0.5222,
+            "Score": 0.6787,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "T002 - NonCausal",
+            "team": "T002",
+            "HAAQI": 0.7202,
+            "Correctness": 0.5318,
+            "Score": 0.6859,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "T003 - NonCausal",
+            "team": "T003",
+            "HAAQI": 0.6988,
+            "Correctness": 0.5638,
+            "Score": 0.7103,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "T008 - NonCausal",
+            "team": "T008",
+            "HAAQI": 0.4839,
+            "Correctness": 0.3049,
+            "Score": 0.3890,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "T018 - NonCausal",
+            "team": "T018",
+            "HAAQI": 0.6872,
+            "Correctness": 0.5299,
+            "Score": 0.6756,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "T025 - NonCausal",
+            "team": "T025",
+            "HAAQI": 0.8507,
+            "Correctness": 0.4543,
+            "Score": 0.6511,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "T004 - NonCausal",
+            "team": "T004",
+            "HAAQI": 0.5345,
+            "Correctness": 0.4505,
+            "Score": 0.4935,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        }
+    ]
+}
