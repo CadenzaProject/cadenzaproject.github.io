@@ -72,9 +72,9 @@
         {
             "id": "T018 - Causal",
             "team": "T018",
-            "HAAQI":  0.6872,
-            "Correctness": 0.5299,
-            "Score": 0.6756,
+            "HAAQI":  0.4976,
+            "Correctness": 0.4269,
+            "Score": 0.5072,
             "BAQ": 0,
             "IntellLP": 0,
             "ScoreLP": 0
@@ -145,6 +145,16 @@
             "HAAQI": 0.5345,
             "Correctness": 0.4505,
             "Score": 0.4935,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
+        },
+        {
+            "id": "T026 - NonCausal",
+            "team": "T026",
+            "HAAQI": 0.5085,
+            "Correctness": 0.3153,
+            "Score": 0.4510,
             "BAQ": 0,
             "IntellLP": 0,
             "ScoreLP": 0

@@ -47,6 +47,16 @@
             "id": "T013 - NonCausal",
             "team": "T013",
             "HAAQI": 0.3491
+        },
+        {
+            "id": "T019 - NonCausal",
+            "team": "T019",
+            "HAAQI": 0.3584
+        },
+        {
+            "id": "T040 - NonCausal",
+            "team": "T040",
+            "HAAQI": 0.3647
         }
     ]
 }
