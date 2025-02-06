@@ -148,6 +148,16 @@
             "BAQ": 0,
             "IntellLP": 0,
             "ScoreLP": 0
+        },
+        {
+            "id": "T026 - NonCausal",
+            "team": "T026",
+            "HAAQI": 0.5085,
+            "Correctness": 0.3153,
+            "Score": 0.4510,
+            "BAQ": 0,
+            "IntellLP": 0,
+            "ScoreLP": 0
         }
     ]
 }
