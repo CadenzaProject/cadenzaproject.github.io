@@ -28,7 +28,7 @@ The music will be genres like pop and rock. Some of this will be as-is, other wi
 
 * Training, evaluation and test tests of music.
 * Ground truth lyric intelligibility from listening tests.
-* Software tools including a baseline system based on xxx.
+* Software tools including a baseline system.
 
 ### Important Dates
 

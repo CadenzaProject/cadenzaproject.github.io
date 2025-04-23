@@ -133,10 +133,6 @@ module.exports = {
                     position: 'right',
                     items: [
                         {
-                            to: '/docs/icassp_2025/intro/',
-                            label: 'ICASSP 2025 Grand Challenge',
-                        },
-                        {
                             to: '/docs/cadenza2/intro',
                             label: 'CAD2',
                         },
