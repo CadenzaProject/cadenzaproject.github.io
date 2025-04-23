@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcadenza=self.webpackChunkcadenza||[]).push([[8121],{68070:a=>{a.exports=JSON.parse('{"tags":[{"label":"sensory panel","permalink":"/blog/tags/sensory-panel","count":3},{"label":"cadenza","permalink":"/blog/tags/cadenza","count":1},{"label":"hello","permalink":"/blog/tags/hello","count":1}]}')}}]);

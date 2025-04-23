@@ -2,11 +2,80 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cadenzaproject.github.io/blog</id>
     <title>The Cadenza Project Blog</title>
-    <updated>2023-10-05T00:00:00.000Z</updated>
+    <updated>2025-05-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cadenzaproject.github.io/blog"/>
     <subtitle>The Cadenza Project Blog</subtitle>
     <icon>https://cadenzaproject.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Cadenza Lyric Intelligibility Prediction Challenge (CLIP)]]></title>
+        <id>https://cadenzaproject.github.io/blog/Preannouncing CLIP</id>
+        <link href="https://cadenzaproject.github.io/blog/Preannouncing CLIP"/>
+        <updated>2025-05-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Dear colleague,]]></summary>
+        <content type="html"><![CDATA[<p>Dear colleague,
+It gives us great pleasure to pre-announce the next Cadenza Challenge for music processing and hearing difference.
+This autumn we will be running the Cadenza Lyric Intelligibility Prediction Challenge (CLIP).
+We're hoping this will be accepted as an ICASSP 2026 Grand Challenge.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="the-challenge">The Challenge<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#the-challenge" class="hash-link" aria-label="Direct link to The Challenge" title="Direct link to The Challenge">​</a></h2>
+<p>To develop better music processing through machine learning, we need reliable way to automatically evaluate the audio.
+For music with lyrics, then we need a metric to evaluate the intelligibility of the sung words.
+The metric would come from a predictive model that takes as input audio and estimates the lyric intelligibility score that someone would achieve in a listening test.</p>
+<p>With the development of large language models and foundation models for speech and music, there is great potential to significantly improve the current state-of-the-art.
+The music will be genres like pop and rock. Some of this will be as-is, other will be passed through a hearing loss simulator to mimic listeners with hearing loss but not wearing hearing aids.</p>
+<!-- -->
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="what-will-be-provided">What will be provided<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#what-will-be-provided" class="hash-link" aria-label="Direct link to What will be provided" title="Direct link to What will be provided">​</a></h3>
+<ul>
+<li>Training, evaluation and test tests of music.</li>
+<li>Ground truth lyric intelligibility from listening tests.</li>
+<li>Software tools including a baseline system based on xxx.</li>
+</ul>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="important-dates">Important Dates<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#important-dates" class="hash-link" aria-label="Direct link to Important Dates" title="Direct link to Important Dates">​</a></h3>
+<p>All dates are to be intended anywhere on earth time (AoE) and are provisional.</p>
+<ul>
+<li>1st September 2025: Launch of challenge, release of data.</li>
+<li>1st November 2025: Release of evaluation data and opening of submission window.</li>
+<li>1st December 2025: Submission deadline. All entrants must have submitted their predictions plus a draft of their technical report.</li>
+<li>If this is accepted as an ICASSP Grand Challenge<!-- -->
+<ul>
+<li>7th December 2025. Invited papers for ICASSP session</li>
+<li>2-8 May 2026. Session at ICASSP 2026</li>
+</ul>
+</li>
+</ul>
+<p>We will know whether this is an ICASSP grand challenge in July 2025.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="stay-informed">Stay informed<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#stay-informed" class="hash-link" aria-label="Direct link to Stay informed" title="Direct link to Stay informed">​</a></h3>
+<p>To stay informed please sign up to our <a href="https://groups.google.com/g/cadenza-challenge/" target="_blank" rel="noopener noreferrer">Google Group</a></p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="organisers">Organisers<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#organisers" class="hash-link" aria-label="Direct link to Organisers" title="Direct link to Organisers">​</a></h3>
+<ul>
+<li>Michael A. Akeroyd, University of Nottingham</li>
+<li>Scott Bannister, University of Leeds</li>
+<li>Jon P Barker, University of Sheffield</li>
+<li>Trevor J. Cox, University of Salford</li>
+<li>Bruno Fazenda, University of Salford</li>
+<li>Jennifer Firth, University of Nottingham</li>
+<li>Simone Graetzer, University of Salford</li>
+<li>Alinka Greasley, University of Leeds</li>
+<li>Gerardo Roa-Dabike, University of Sheffield</li>
+<li>Rebecca R. Vos, University of Salford</li>
+<li>William M. Whitmer, University of Nottingham</li>
+</ul>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="funded-by">Funded by<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#funded-by" class="hash-link" aria-label="Direct link to Funded by" title="Direct link to Funded by">​</a></h3>
+<p>Engineering and Physical Sciences Research Council (EPSRC), UK</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="partners">Partners<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#partners" class="hash-link" aria-label="Direct link to Partners" title="Direct link to Partners">​</a></h3>
+<p>RNID, Google, Logitech, Sonova, BBC R&amp;D, Oldenburg University.</p>]]></content>
+        <author>
+            <name>Gerardo Roa</name>
+            <uri>https://www.sheffield.ac.uk/cs/people/research-staff/gerardo-roa-dabike</uri>
+        </author>
+        <author>
+            <name>Trevor Cox</name>
+            <uri>http://trevorcox.me/trevor-cox</uri>
+        </author>
+        <category label="cadenza" term="cadenza"/>
+        <category label="launch" term="launch"/>
+        <category label="CLIP" term="CLIP"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Listener panel study update]]></title>
         <id>https://cadenzaproject.github.io/blog/Listener panel study update</id>
@@ -129,7 +198,7 @@ incredible commitment, motivation, and contribution to this research!</p>]]></co
         <author>
             <name>Jon Barker</name>
             <email>clarity-group@sheffield.ac.uk</email>
-            <uri>http://staffwww.dcs.shef.ac.uk/people/J.Barker/</uri>
+            <uri>https://www.sheffield.ac.uk/cs/people/academic/jon-barker</uri>
         </author>
         <category label="cadenza" term="cadenza"/>
         <category label="hello" term="hello"/>
