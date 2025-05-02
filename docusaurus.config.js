@@ -161,6 +161,10 @@ module.exports = {
                     position: 'right',
                     items: [
                         {
+                            to: 'https://cadenzachallenge.org/cadenza2025-workshop//',
+                            label: 'Cadenza Workshop 2025',
+                        },
+                        {
                             to: 'https://cadenzachallenge.org/cadenza2023-workshop/',
                             label: 'Cadenza Workshop 2023',
                         }
