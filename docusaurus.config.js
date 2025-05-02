@@ -133,6 +133,10 @@ module.exports = {
                     position: 'right',
                     items: [
                         {
+                            to: '/docs/clip1/intro',
+                            label: 'CLIP1',
+                        },
+                        {
                             to: '/docs/cadenza2/intro',
                             label: 'CAD2',
                         },
@@ -183,10 +187,24 @@ module.exports = {
             style: 'dark',
             links: [{
                     title: 'Docs',
-                    items: [{
-                        label: 'Challenge Documentation',
+                    items: [
+                        {
+                            label: 'CLIP1 Documentation',
+                            to: '/docs/clip1/intro',
+                        },
+                        {
+                            label: 'CAD2 Documentation',
+                            to: '/docs/cadenza2/intro',
+                        },
+                        {
+                            label: 'ICASSP 2024 Documentation',
+                            to: '/docs/icassp_2024/intro',
+                        },
+                        {
+                        label: 'CAD1 Documentation',
                         to: '/docs/cadenza1/cc1_intro',
-                    }],
+                        },
+                    ],
                 },
                 {
                     title: 'Community',
@@ -212,7 +230,7 @@ module.exports = {
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/cadenzaproject',
+                            href: 'https://github.com/claritychallenge/clarity',
                         }
                     ],
                 },

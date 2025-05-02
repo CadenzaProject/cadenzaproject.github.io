@@ -23,7 +23,7 @@ function HomepageHeader() {
             About Us{" "}
           </Link>{" "}
           
-          <Link className="button button--secondary button--lg" to="./docs/cadenza2/intro" style={{margin: "10px"}}>
+          <Link className="button button--secondary button--lg" to="./docs/clip1/intro" style={{margin: "10px"}}>
           The Current Challenge{" "}
           </Link>{" "}
           {/*The Current Challenge*/}
