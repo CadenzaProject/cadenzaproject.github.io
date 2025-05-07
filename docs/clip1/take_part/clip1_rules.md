@@ -7,6 +7,10 @@ sidebar_position: 4.5
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
+:::info
+The following rules are provisional.
+:::
+
 ## 1. Teams
 
 - Teams must [pre-register](./registration) and nominate a contact person.
@@ -46,13 +50,10 @@ If a system has broken the rules they will not appear in the official rankings.
 ## 4. Computational restrictions
 
 * There is no limit on computational cost, but entrants must report model size.
-* Teams must start with the baseline, with the blocks that can be changed labelled *Enhancement*
-* While we have provided metrics for evaluation, other metrics and approaches can be used by the teams during training.
 
 ## 6. Submitting multiple entries for a task
 
-This will be allowed in two circumstances:
-- If very different approaches are used.
+This will be allowed if very different approaches are used.
 
 ## 7. Intellectual property
 

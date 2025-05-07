@@ -20,10 +20,6 @@ Please contact the Cadenza Team via cadenzachallengecontact@gmail.com with detai
 
 You should be able to find the information on the [Rules](rules) page.
 
-### I want to enter the challenge without using the demixing/remixing approach
-
-This is fine and we welcome alternative approaches. Please make sure that your method is clear in your technical report.
-
 ### How do I actually enter?
 
 See the [Submission](submission) page. Please make sure you have signed up to our [Google group](https://groups.google.com/g/cadenza-challenge), as this will ensure you get updates about the challenge.

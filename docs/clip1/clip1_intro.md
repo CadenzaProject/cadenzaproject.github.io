@@ -13,8 +13,8 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 Image by <a href="https://pixabay.com/users/sabena206-20184104/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Sabena Costa</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Pixabay</a>
 
 :::info
-CLIP1 will be submitted as a proposal for an ICASSP 2026 Grand Challenge;
-however, the challenge will run regardless of its acceptance as an official ICASSP Grand Challenge.
+CLIP1 will be submitted as a proposal for an ICASSP 2026 SP Grand Challenge;
+however, the challenge will run regardless of its acceptance as an official ICASSP SP Grand Challenge.
 :::
 
 
@@ -26,6 +26,8 @@ Some songs are intrinsically less intelligible than others. Factors that can aff
 * Song genre
 * Mixing and production techniques
 * Listener hearing ability
+
+For speech technologies, intelligibility metrics have played a vital role in improving signal processing and machine learning, we hope the same can be achieved for music.
 
 ## Challenge Overview
 
@@ -44,4 +46,6 @@ simulator to mimic listeners with hearing loss but not wearing hearing aids.
 
 If you are interested in this challenge and intend to participate, please express your interest by filling out the form on the [registration page](take_part/registration).
 By doing so, you will help us better plan for a successful challenge.
+
+You can also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about our challenges.
 
