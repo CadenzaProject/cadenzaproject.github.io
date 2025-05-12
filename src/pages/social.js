@@ -32,11 +32,6 @@ export default function Social() {
       icon: <FaLinkedin size={60} />,
     },
     {
-      name: "Twitter",
-      url: "https://x.com/CadenzaChalleng",
-      icon: <FaTwitter size={60} />,
-    },
-    {
       name: "YouTube",
       url: "https://www.youtube.com/@claritychallenge3895",
       icon: <FaYoutube size={60} />,
@@ -70,7 +65,7 @@ export default function Social() {
 
             <Grid container spacing={4} sx={{ mt: 4 }}>
               {links.map((link, index) => (
-                  <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Grid item xs={12} sm={6} md={true} key={index}>
                     <Paper sx={{ p: 2, textAlign: "center" }}>
                       <a href={link.url} target="_blank" rel="noopener noreferrer">
                         {link.icon}
