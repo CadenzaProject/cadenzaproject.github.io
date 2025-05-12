@@ -8,15 +8,16 @@ import ReactPlayer from 'react-player';
 import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
+import Admonition from '@theme/Admonition';
+
 
 <Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="CLIP1 Challenge" />
 Image by <a href="https://pixabay.com/users/sabena206-20184104/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Sabena Costa</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Pixabay</a>
 
-:::info
-CLIP1 will be submitted as a proposal for an ICASSP 2026 SP Grand Challenge;
+<Admonition type="tip" icon="🎯" title="ICASSP 2026 - Grand Challenge Proposal">
+  CLIP1 will be submitted as a proposal for an ICASSP 2026 SP Grand Challenge;
 however, the challenge will run regardless of its acceptance as an official ICASSP SP Grand Challenge.
-:::
-
+</Admonition>
 
 To develop better music processing through machine learning, we need a reliable way to automatically evaluate audio quality.
 For music with lyrics, this includes a metric to assess the intelligibility of the sung words.
