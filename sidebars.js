@@ -24,6 +24,7 @@ module.exports = {
             items: [
                 'clip1/take_part/registration',
                 'clip1/take_part/rules',
+                'clip1/take_part/submission',
                 'clip1/take_part/FAQs',
             ],
         }
