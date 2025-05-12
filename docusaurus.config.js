@@ -87,7 +87,7 @@ module.exports = {
         announcementBar: {
             id: 'announcement',
             content:
-                "📆 Cadenza CAD2 - ASA/ICA Special Session - 22th May, 15:15-17:00 (GMT-5)",
+                "📆 Cadenza CAD2 - <a href='https://cadenzachallenge.org/cadenza2025-workshop/'>ASA/ICA Special Session</a> - 22th May, 15:15-17:00 (GMT-5) ‼️",
             backgroundColor: '#9ae59a',
             textColor: '#070707',
             isCloseable: true,
