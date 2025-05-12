@@ -84,14 +84,14 @@ module.exports = {
     // emoji from https://emojipedia.org/
     themeConfig: {
         // Uncomment the following code to add the announcement bar
-        // announcementBar: {
-        //     id: 'announcement',
-        //     content:
-        //         "📆 CAD2 submission deadline: January 17th, 2025",
-        //     backgroundColor: '#9ae59a',
-        //     textColor: '#070707',
-        //     isCloseable: true,
-        // },
+        announcementBar: {
+            id: 'announcement',
+            content:
+                "📆 Cadenza CAD2 - ASA/ICA Special Session - 22th May, 15:15-17:00 (GMT-5)",
+            backgroundColor: '#9ae59a',
+            textColor: '#070707',
+            isCloseable: true,
+        },
         blog: {
             sidebar: {
                 groupByYear: true,
