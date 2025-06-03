@@ -84,14 +84,14 @@ module.exports = {
     // emoji from https://emojipedia.org/
     themeConfig: {
         // Uncomment the following code to add the announcement bar
-        announcementBar: {
-            id: 'announcement',
-            content:
-                "📆 <a href='https://cadenzachallenge.org/cadenza2025-workshop/' target='_blank'>Cadenza Workshop 2025</a>  - <a href='https://ica2025neworleans.org/' target='_blank'>ICA 2025 Special Session</a> - 22th May, 15:15-17:00 (GMT-5), New Orleans, Louisiana, USA‼️",
-            backgroundColor: '#a2dea2',
-            textColor: '#070707',
-            isCloseable: false,
-        },
+        // announcementBar: {
+        //     id: 'announcement',
+        //     content:
+        //         "📆 <a href='https://cadenzachallenge.org/cadenza2025-workshop/' target='_blank'>Cadenza Workshop 2025</a>  - <a href='https://ica2025neworleans.org/' target='_blank'>ICA 2025 Special Session</a> - 22th May, 15:15-17:00 (GMT-5), New Orleans, Louisiana, USA‼️",
+        //     backgroundColor: '#a2dea2',
+        //     textColor: '#070707',
+        //     isCloseable: false,
+        // },
         blog: {
             sidebar: {
                 groupByYear: true,
