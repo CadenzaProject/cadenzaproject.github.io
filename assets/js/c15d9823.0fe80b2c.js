@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcadenza=self.webpackChunkcadenza||[]).push([[8146],{29328:a=>{a.exports=JSON.parse('{"metadata":{"permalink":"/blog","page":1,"postsPerPage":6,"totalPages":1,"totalCount":6,"blogDescription":"News and updates about our Challenges and Workshops","blogTitle":"Latest"}}')}}]);

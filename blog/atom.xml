@@ -2,11 +2,60 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cadenzaproject.github.io/blog</id>
     <title>The Cadenza Project Blog</title>
-    <updated>2025-05-01T00:00:00.000Z</updated>
+    <updated>2025-06-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cadenzaproject.github.io/blog"/>
     <subtitle>The Cadenza Project Blog</subtitle>
     <icon>https://cadenzaproject.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[CLIP Challenge Dataset]]></title>
+        <id>https://cadenzaproject.github.io/blog/CLIP Dataset</id>
+        <link href="https://cadenzaproject.github.io/blog/CLIP Dataset"/>
+        <updated>2025-06-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[People with hearing loss can have difficulties to clearly and effortlessly hearing lyrics. In speech technology, having metrics to automatically evaluate intelligibility has driven improvements in speech enhancement through machine learning. We want to do the same for music lyrics. We are busy working on the infrastructure for the Cadenza Lyrics Intelligibility Prediction Challenge (CLIP) that will launch at the start of September.]]></summary>
+        <content type="html"><![CDATA[<p>People with hearing loss can have difficulties to clearly and effortlessly hearing lyrics. In speech technology, having metrics to automatically evaluate intelligibility has driven improvements in speech enhancement through machine learning. We want to do the same for music lyrics. We are busy working on the infrastructure for the Cadenza Lyrics Intelligibility Prediction Challenge (CLIP) that will launch at the start of September.</p>
+<p>Lyric intelligibility prediction is an understudied topic with only a couple of studies available. In speech, we're seeing advancements driven by large Language Models, but the equivalent is not available for music. One of the reasons for this is the lack of data where audio is paired with listener scores for intelligibility. This is what our new CLIP1 database will address.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="poppadom-peach-by-madonna">Poppadom Peach by Madonna<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#poppadom-peach-by-madonna" class="hash-link" aria-label="Direct link to Poppadom Peach by Madonna" title="Direct link to Poppadom Peach by Madonna">​</a></h2>
+<p>One of the challenges were facing is that sung lyrics are often inherently less intelligibile than speech because of the way they're articulated. This is why Misheard lyrics are common and <a href="https://www.wearelyrical.com/misheard-lyrics-from-fatherly-advice-to-flavorful-delights-madonnas-spicy-tribute/" target="_blank" rel="noopener noreferrer">websites gather funny examples</a>. Because we're going to get word correct rates from listener transcriptions, we're going to have to avoid cases where the singer is unclear, but that does bias the dataset. What other challenges do you foresee us having?</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="clip-dataset-construction">CLIP Dataset Construction<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#clip-dataset-construction" class="hash-link" aria-label="Direct link to CLIP Dataset Construction" title="Direct link to CLIP Dataset Construction">​</a></h2>
+<p>Difficulties in constructing a suitable dataset arise because:</p>
+<ul>
+<li>The music must be unknown to listeners, so intelligibility scores are not overestimated due to previous knowledge of the words.</li>
+<li>The music must have the proper license for processing, modifying and sharing.</li>
+<li>The music must have ground truth transcriptions. This is challenging for unknown or non-commercial songs.</li>
+<li>The scale of the data must be large for machine learning.</li>
+</ul>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="the-audio-samples">The Audio Samples<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#the-audio-samples" class="hash-link" aria-label="Direct link to The Audio Samples" title="Direct link to The Audio Samples">​</a></h3>
+<p>These will be taken from the <a href="https://github.com/mdeff/fma" target="_blank" rel="noopener noreferrer">FMA-Full corpus</a> <strong>[1]</strong>. The process of constructing this dataset:</p>
+<ol>
+<li>From the FMA-Full dataset, we filter out all songs with NonDerivative license, and labelled Classical, Instrumental, Experimental and International because these don't have vocals or are not music.</li>
+<li>Then, we discarded all songs that lack vocals (where the RMS of the separated vocals using <a href="https://github.com/facebookresearch/demucs" target="_blank" rel="noopener noreferrer">HTDemucs</a> <strong>[2]</strong> were &lt; 0.01 or no segments were detected with <a href="https://github.com/snakers4/silero-vad" target="_blank" rel="noopener noreferrer">SileroVAD</a>.</li>
+<li>Next, we split the remaining songs into choruses and verses using the <a href="https://github.com/mir-aidj/all-in-one" target="_blank" rel="noopener noreferrer">All-in-one</a> <strong>[3]</strong> model and randomly selected one verse or chorus per song.</li>
+</ol>
+<p>Unfortunately, FMA-full does not include transcriptions. Consequently, we are using <a href="https://labelstud.io/" target="_blank" rel="noopener noreferrer">LabelStudio</a> and human annotators to segment and transcribe coherent lyrics phrases within each verse or chorus. The goal is to get up to 5000 transcribed lyrics phrases that, after a cleaning process, will result in 3500 audio segments.
+These 3500 segments will be augmented by processing them using a hearing loss simulator, generating three versions: as-is and two processed signals (mild and moderate loss), resulting in about 10,000 audio segments.</p>
+<div style="text-align:center"><img src="https://cadenzaproject.github.io/img/blog_2025-06-06/labelstudio.png"><p><strong>Screenshot of one annotation using LabelStudio</strong></p></div>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="the-intelligibility-scores">The Intelligibility Scores<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#the-intelligibility-scores" class="hash-link" aria-label="Direct link to The Intelligibility Scores" title="Direct link to The Intelligibility Scores">​</a></h3>
+<p>To score the audio samples by their intelligibility, we will use Prolific and ask people with normal hearing to transcribe the audio segments
+after one or two listenings. This data will be then split into train and evaluation data for our challenge.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="stay-informed">Stay informed<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#stay-informed" class="hash-link" aria-label="Direct link to Stay informed" title="Direct link to Stay informed">​</a></h2>
+<p>To stay informed about our lyric intelligibility prediction challenge, please sign up to our <a href="https://groups.google.com/g/cadenza-challenge/" target="_blank" rel="noopener noreferrer">Google Group</a></p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="reference">Reference<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#reference" class="hash-link" aria-label="Direct link to Reference" title="Direct link to Reference">​</a></h2>
+<p><strong>[1]</strong> Michael Defferrard, Kirell Benzi, Pierre Vandergheynst, &amp; Xavier Bresson. (2017). FMA: A Dataset for Music Analysis. Proceedings of the 18th International Society for Music Information Retrieval Conference, 316–323. <a href="https://doi.org/10.5281/zenodo.1414728" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.1414728</a><br>
+<strong>[2]</strong> Rouard, Simon and Massa, Francisco and Defossez, Alexandre. (2023). Hybrid Transformers for Music Source Separation<br>
+<strong>[3]</strong> Kim, Taejun and Nam, Juhan. (2023). All-In-One Metrical And Functional Structure Analysis With Neighborhood Attentions on Demixed Audio. IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</p>]]></content>
+        <author>
+            <name>Gerardo Roa</name>
+            <uri>https://www.sheffield.ac.uk/cs/people/research-staff/gerardo-roa-dabike</uri>
+        </author>
+        <author>
+            <name>Trevor Cox</name>
+            <uri>http://trevorcox.me/trevor-cox</uri>
+        </author>
+        <category label="cadenza" term="cadenza"/>
+        <category label="dataset" term="dataset"/>
+        <category label="CLIP" term="CLIP"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Cadenza Lyric Intelligibility Prediction Challenge (CLIP)]]></title>
         <id>https://cadenzaproject.github.io/blog/Preannouncing CLIP</id>
