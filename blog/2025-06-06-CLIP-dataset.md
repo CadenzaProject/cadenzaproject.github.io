@@ -14,6 +14,8 @@ People with hearing loss can have difficulties to clearly and effortlessly heari
 
 Lyric intelligibility prediction is an understudied topic with only a couple of studies available. In speech, we're seeing advancements driven by large Language Models, but the equivalent is not available for music. One of the reasons for this is the lack of data where audio is paired with listener scores for intelligibility. This is what our new CLIP1 database will address.
 
+{/* truncate */}
+
 ## Poppadom Peach by Madonna
 
 One of the challenges were facing is that sung lyrics are often inherently less intelligibile than speech because of the way they're articulated. This is why Misheard lyrics are common and [websites gather funny examples](https://www.wearelyrical.com/misheard-lyrics-from-fatherly-advice-to-flavorful-delights-madonnas-spicy-tribute/). Because we're going to get word correct rates from listener transcriptions, we're going to have to avoid cases where the singer is unclear, but that does bias the dataset. What other challenges do you foresee us having?
