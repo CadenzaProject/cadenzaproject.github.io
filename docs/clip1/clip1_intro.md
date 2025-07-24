@@ -1,6 +1,6 @@
 ---
 id: intro
-title: The 1st Cadenza Lyric Intelligibility Prediction Challenge 
+title: The 1st Cadenza Lyric Intelligibility Prediction Challenge (CLIP1)
 sidebar_label: Introduction
 sidebar_position: 1
 ---
