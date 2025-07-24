@@ -18,7 +18,16 @@ module.exports = {
     tutorialSidebar_clip1: [
         'clip1/intro',
         'clip1/key_dates',
-        {
+        { // Menu Dataset
+            type: 'category',
+            label: 'Dataset & Baseline',
+            items: [
+                'clip1/data_baseline/download_data',
+                'clip1/data_baseline/data',
+                'clip1/data_baseline/baseline',
+            ]
+        },
+        {  // Menu Take Part
             type: 'category',
             label: 'Take Part',
             items: [

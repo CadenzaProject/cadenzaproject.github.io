@@ -14,7 +14,7 @@ import Admonition from '@theme/Admonition';
 <Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="CLIP1 Challenge" />
 Image by <a href="https://pixabay.com/users/sabena206-20184104/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Sabena Costa</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Pixabay</a>
 
-<Admonition type="tip" icon="🎯" title="ICASSP 2026 - Grand Challenge Proposal">
+<Admonition type="tip" icon="🎯" title="ICASSP 2026 - Grand Challenge">
   CLIP1 will be submitted as a proposal for an ICASSP 2026 SP Grand Challenge;
 however, the challenge will run regardless of its acceptance as an official ICASSP SP Grand Challenge.
 </Admonition>
@@ -28,7 +28,8 @@ Some songs are intrinsically less intelligible than others. Factors that can aff
 * Mixing and production techniques
 * Listener hearing ability
 
-For speech technologies, intelligibility metrics have played a vital role in improving signal processing and machine learning, we hope the same can be achieved for music.
+For speech technologies, intelligibility metrics have played a vital role in improving signal processing and machine learning, 
+we hope the same can be achieved for music.
 
 ## Challenge Overview
 
