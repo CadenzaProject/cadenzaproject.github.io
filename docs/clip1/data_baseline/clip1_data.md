@@ -14,7 +14,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 The training and validation data are provided at challenge launch. The evaluation data is provided closer to the submission deadline.
 
-
+**Need to finish the data construction to complete this information**
 ## B. Metadata Information
 
 ## References

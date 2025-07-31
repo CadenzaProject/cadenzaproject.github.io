@@ -22,9 +22,9 @@ module.exports = {
             type: 'category',
             label: 'Dataset & Baseline',
             items: [
-                'clip1/data_baseline/download_data',
                 'clip1/data_baseline/data',
                 'clip1/data_baseline/baseline',
+                'clip1/data_baseline/download_data',
             ]
         },
         {  // Menu Take Part
