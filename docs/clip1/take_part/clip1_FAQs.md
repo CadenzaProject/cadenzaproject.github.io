@@ -22,7 +22,7 @@ The same two views apply to lyric intelligibility. For the Cadenza project, we a
 the percentage of words in a sentence that a listener identified correctly. This percentage is the target for your prediction models.
 
 Lyric intelligibility, as defined by Cadenza's sensory panel of hearing aid users, refers to "how clearly and effortlessly the words in the music can be heard".
-Fine et al. [1] reported that trained and amateur singers (including singing teachers) believe that the understanding of the sung message while hearing a song is very important for their enjoyment.
+Fine et al. [1] reported that trained and amateur singers (including singing teachers) believe that the understanding of the sung message while hearing a song is very important for music enjoyment.
 
 ### 1.2 How is Lyric Intelligibility measured with listeners?
 
