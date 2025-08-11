@@ -28,7 +28,7 @@ using a 13 feature vector (the STOI score combined with the 12 vocal features) a
     <div>Figure 1. Framework of SA-STOI computation (Figure 6 in [1])</div> 
 </div>
 
-### A1. Differences Baseline inplemenattion v/s original SA-STOI
+### A1. Differences Baseline implementation v/s original SA-STOI
 1. The original SA-STOI model is based on a U-NET music source separation model (MSS) and MATLAB functions to compute the vocal features.
 For our baseline, we replaced the U-NET MSS for the HDemucs model which reported higher performance in MUSDB-18 benchmark.
 The model was ported to Python using the functions available to compute the same features as the original SA-STOI.

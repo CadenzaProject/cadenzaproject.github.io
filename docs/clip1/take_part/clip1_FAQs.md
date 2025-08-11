@@ -26,7 +26,7 @@ Fine et al. [1] reported that trained and amateur singers (including singing tea
 
 ### 1.2 How is Lyric Intelligibility measured with listeners?
 
-In the Cadenza project, and vy using Prolific, various listeners with normal hearing transcribed the words from song excerpts processed in various ways,
+In the Cadenza project, using Prolific, various listeners with normal hearing transcribed the words from song excerpts processed in various ways,
 e.g. as-is and passed through a hearing loss simulation. In this project, lyric intelligibility is measured as the number of words identified correctly as a percentage of the total number of words in a sentence.
 
 You might consider looking at [speech intelligibility metrics](https://www.sciencedirect.com/science/article/pii/S1877050918302187), 

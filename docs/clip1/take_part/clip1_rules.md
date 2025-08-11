@@ -7,9 +7,6 @@ sidebar_position: 4.5
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::info
-The following rules are provisional.
-:::
 
 ## 1. Teams
 
