@@ -37,13 +37,13 @@ Our sensory panel of users with hearing loss, refers to Lyric Intelligibility as
 
 ## Learning from Speech Intelligibility prediction
 
-Speech Intelligibility prediction is an established area of research and many different algorithms have been developed. In contrast metrics for lyrics are very rare (e.g. singing adapted STOI [2]). Consequently, there are many techniques from speech intelligibility prediction that could be adapted to the challenge of lyric intelligibility prediction for the first time. For instance, foundation models have made blind (intrusive) speech intelligibility metrics much more accurate. But speech metrics are unreliable for music, because spoken and sung language and intonation are different. Also, sung speech is typically embedded in a music accompaniment which has different characteristics than the independent noise background that spoken speech metrics try to account for. These will pose interesting problems for challenge entrants to overcome.
+Speech Intelligibility prediction is an established area of research and many different algorithms have been developed. In contrast metrics for lyrics are very rare (e.g. singing adapted STOI [2]). Consequently, there are many techniques from speech intelligibility prediction that could be adapted to the challenge of lyric intelligibility prediction for the first time. For instance, foundation models have made blind (non-intrusive) speech intelligibility metrics much more accurate. But speech metrics are unreliable for music, because spoken and sung language and intonation are different. Also, sung speech is typically embedded in a music accompaniment which has different characteristics than the independent noise background that spoken speech metrics try to account for. These will pose interesting problems for challenge entrants to overcome.
 
 ## What will be provided?
 
 * A novel dataset of song excerpts paired with lyric intelligibility scores from listener tests.
 * Software and baseline system.
-* A leaderboard.
+* A leaderboard Eval.AI to allow entrants to track progress.
 
 Some song excerpts willl be provided as-is and others will have been passed through a hearing loss simulator to mimic listeners with hearing loss but not wearing hearing aids. Entrants can treat the audio as-is, no knowledge of hearing loss modelling is needed to take part in the challenge.
 
@@ -53,7 +53,7 @@ The top teams will be invited to submit papers to present during [ICASSP 2026, 4
 
 ## Expressing interest
 
-Please express your interest by filling out the form on the [registration page](take_part/registration). And also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about the challenges.
+Please [register registration](take_part/registration). And also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about the challenges.
 
 ## References
 
