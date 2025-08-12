@@ -10,42 +10,54 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Admonition from '@theme/Admonition';
 
-**CLIP1 is part of the ICASSP 2026 Grand Challenges**
+# ICASSP SPGC Cadenza Challenge 2025: Predicting Lyric Intelligibility
 
-
-<Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="CLIP1 Challenge" />
+<Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="Lead singing in a band singing into a microphone" />
 Image by <a href="https://pixabay.com/users/sabena206-20184104/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Sabena Costa</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Pixabay</a>
 
+## Overview
 
-To develop better music processing through machine learning, we need a reliable way to automatically evaluate audio quality.
-For music with lyrics, this includes a metric to assess the intelligibility of the sung words.
-Some songs are intrinsically less intelligible than others. Factors that can affect intelligibility include:
+People with hearing loss can have difficulties clearly and effortlessly hearing lyrics [1]. In speech technology, having metrics to automatically evaluate intelligibility has driven improvements in speech enhancement. We want to do the same for music with lyrics.
 
-* Vocal style and articulation
-* Song genre
-* Mixing and production techniques
-* Listener hearing ability
+Challenge entrants will be given audio, and their task is to predict the word correct rate from perceptual experiments, where listeners were asked to write down the lyrics they heard. Some of the audio will have been processed by a hearing loss simulator, so diverse hearing characteristics are incorporated into the challenge.
 
-For speech technologies, intelligibility metrics have played a vital role in improving signal processing and machine learning, 
-we hope the same can be achieved for music.
+This challenge will:
+* Develop intelligibility metrics that better reflect human perception of sung lyrics in popular Western music.
+* Develop new knowledge about the intelligibility differences between spoken and sung language and intonation.
+* Catalyse future work into enhancing lyric intelligibility to: (i) improve accessibility of music for listeners with hearing loss, and (ii) improve health and well-being.
 
-## Challenge Overview
+## What is Lyric Intelligibility?
 
-Participants will build models to predict lyrics intelligibility from audio recordings.
-The intelligibility metric would be derived from a predictive model that takes audio as input and 
-estimates the score a listener would likely achieve in a listening test.
+Our sensory panel of users with hearing loss, refers to Lyric Intelligibility as "how clearly and effortlessly the words in the music can be heard." Some songs are intrinsically less intelligible than others. Factors that can affect intelligibility include:
+
+* Vocal style and articulation.
+* Song genre.
+* Mixing and production techniques.
+* Listener hearing ability.
+
+## Learning from Speech Intelligibility prediction
+
+Speech Intelligibility prediction is an established area of research and many different algorithms have been developed. In contrast metrics for lyrics are very rare (e.g. singing adapted STOI [2]). Consequently, there are many techniques from speech intelligibility prediction that could be adapted to the challenge of lyric intelligibility prediction for the first time. For instance, foundation models have made blind (intrusive) speech intelligibility metrics much more accurate. But speech metrics are unreliable for music, because spoken and sung language and intonation are different. Also, sung speech is typically embedded in a music accompaniment which has different characteristics than the independent noise background that spoken speech metrics try to account for. These will pose interesting problems for challenge entrants to overcome.
 
 ## What will be provided?
 
-* A dataset of song excerpts, some excerpts willl be provided as-is and others will be passed through a hearing loss 
-simulator to mimic listeners with hearing loss but not wearing hearing aids.
-* All samples will include lyrics intelligibility scores from listening tests. 
+* A novel dataset of song excerpts paired with lyric intelligibility scores from listener tests.
 * Software and baseline system.
+* A leaderboard.
+
+Some song excerpts willl be provided as-is and others will have been passed through a hearing loss simulator to mimic listeners with hearing loss but not wearing hearing aids. Entrants can treat the audio as-is, no knowledge of hearing loss modelling is needed to take part in the challenge.
+
+## ICASSP
+
+The top teams will be invited to submit papers to present during [ICASSP 2026, 4-8th May 2026, Barcelona, Spain](https://2026.ieeeicassp.org/event/about-conference/).
 
 ## Expressing interest
 
-If you are interested in this challenge and intend to participate, please express your interest by filling out the form on the [registration page](take_part/registration).
-By doing so, you will help us better plan for a successful challenge.
+Please express your interest by filling out the form on the [registration page](take_part/registration). And also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about the challenges.
 
-You can also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about our challenges.
+## References
+
+1. Greasley, A., Crook, H. and Fulford, R., 2020. [Music listening and hearing aids: perspectives from audiologists and their patients](https://www.tandfonline.com/doi/full/10.1080/14992027.2020.1762126). International Journal of Audiology, 59(9), pp.694-706.
+
+2. Sharma, B. and Wang, Y., 2019. [Automatic evaluation of song intelligibility using singing adapted STOI and vocal-specific features](https://ieeexplore.ieee.org/document/8910414). IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, pp.319-331.
 
