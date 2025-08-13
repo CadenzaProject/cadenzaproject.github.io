@@ -11,6 +11,10 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 A baseline non-intrusive lyrics intelligibility system has been provided to help you get started.
 
+:::warning[🚧 Under Construction 🚧]
+This section is under construction and some information may change in the final version.
+:::
+
 ## A. Overview
 
 The baseline is based on the singing adapted STOI and vocal-specific features (SA-STOI) system [1] to make predictions. 
