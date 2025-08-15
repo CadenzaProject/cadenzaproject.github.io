@@ -70,6 +70,21 @@ This account for when transcribers choose for a different transcription of homop
 Intelligibility scores were computed as the ratio of correctly transcribed words.
 For responses with multiple alternatives, the final score corresponds to the maximum score across al alternatives.
 
+**Examples**
+
+| Original Phrase                               | Alternative Phrase                                 | 
+|-----------------------------------------------|----------------------------------------------------|
+| i'm thinking about you now                    | i am thinking about you now                        |
+| when were lost we know where to find it       | when we are lost we know where to find it          |
+| were gonna tell you our names so you remember | we are going to tell you our names so you remember |
+
+
+:::note[Highly Unintelligible Words Case]
+In the ground truth, there are a small number of phrases containing highly unintelligible words where the annotator was unable to pick up the word. These words were marked as **?**.
+We accepted this small number of cases as they represent very unintelligible phrases and with the assumption that that specific word will always be incorrect.
+Note that this is just for a few number of samples where the max intelligibility will never be 1.
+:::
+
 ## B. Training, validation and evaluation data
 
 :::warning[🚧 Under Construction 🚧]
