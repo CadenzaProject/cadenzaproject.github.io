@@ -17,61 +17,58 @@ The evaluation data is provided closer to the submission deadline.
 ## A. Construction of the Dataset
 
 The Cadenza Lyrics Intelligibility Prediction (CLIP) dataset is based on the FMA dataset [1].
-The FMA dataset is a very rich dataset containing thousands of songs from various artists and genres.
+The FMA dataset is a very rich dataset containing thousands of songs from various artists and genres and styles.
 However, FMA dataset cannot be used for lyrics intelligibility out-of-the-box; it does not include ground truth transcription, it contains various copyright levels with several song not allowing derivatives of the data, 
 the labelled genres correspond to inconsistent genres assigned by the artist at submission time, and it does not include separated stems for each component.  
 
+The FMA dataset was processed to extract song that allows us to obtain human intelligibility scores. 
+Efforts were made to obtain a dataset that were rich in singing styles, genres and intelligibility levels. 
+
 ### A.1 Selecting the tracks to use
 
-For the construction of the CLIP dataset, we pass the dataset to several steps to select the most suitable songs for the challenge.
-
-1. We used the FMA-full version which includes all the complete songs (untrimmed).
-2. We filter out all songs not allowing derivatives. 
-3. We excluded all songs labelled as Classical, Instrumental, Experimental and International. This results in a list of English songs.
-4. Using an audio source separation model, we excluded songs all songs that didn't have vocals. This, using a voice activity detection and RMS analysis.
-5. The resulting songs were then segmented by choruses and verses. We kept just one chorus or verse per song.
-
-These steps resulted in a little more than 17000 segments (choruses and verses). 
+For the construction of the CLIP dataset, we applied several steps to select the most suitable songs for the challenge. 
+We began with the FMA-full version, which includes all complete (untrimmed) songs, and filtered out any tracks that did not allow derivative works. 
+Next, we excluded songs labeled as Classical, Instrumental, Experimental, or International, resulting in a list of English songs. 
+Using the [HTDemucs](https://github.com/facebookresearch/demucs?tab=readme-ov-file) audio source separation model [2] combined with the [Silero VAD](https://github.com/snakers4/silero-vad) voice activity detector and RMS analysis, we removed all tracks without vocals. 
+The remaining songs were segmented into choruses and verses using the [All-in-one](https://github.com/mir-aidj/all-in-one) model [3], and we kept only one chorus or verse per song. 
+This process resulted in a little more than 17,000 segments.
 
 ### A.2 Generating Ground Truth Transcriptions
 
-As the FMA dataset does not include ground truth transcriptions, we had to generate these by:
+As the FMA dataset does not include ground truth transcriptions, we generated these through a structured annotation process. 
+We recruited native English-speaking PhD students from the University of Salford and the University of Sheffield as annotators. 
+Using the academic version of [Label Studio](https://labelstud.io), each annotator was assigned 500 random segments (choruses and verses) with no overlap between assignments. 
+For each segment, three versions were presented: the original audio, the separated vocals, and a version with low-frequency components removed to eliminate the bass. 
+Annotators were tasked with transcribing all lyric phrases they could identify in each segment. 
+They were allowed to listen to the tracks as many times as needed to complete their transcriptions.
 
-1. Recruited annotators that are native English speakers PhD students from University of Salford and University of Sheffield.
-2. Each annotator were assigned to 500 random segments. No overlap between annotators.
-3. Each segment was presented in 3 versions; as-is, the separated vocals, and without the low frequency components to remove the bass.
-4. Annotators were task to transcribe all the lyrics phrases they were able to from each segment.
-5. Phrases with offensive vocabulary were excluded.
-6. Annotators were able to listen the tracks as many times they needed.
+The resulting phrases were then post-processed to ensure data consistency and quality. 
+We removed any repeated phrases from the same song and retained only those containing between five and ten words. 
+Phrase boundaries were carefully adjusted so that no words within a phrase were cut off, and no words outside the intended phrase were included in the audio segment.
+This post-processing step resulted in a final set of 3,700 audio excerpts.
 
-The resulted phrases were then post-processed to ensure that:
+### A.3 Generating Human Responses
 
-7. There are no repeated phrases from the same song. 
-8. All phrases have between 5 and 10 words. 
-9. The phrases boundaries are set so:
-   * No words within the lyrics phrase are cut out 
-   * The audio segment is not included words outside the lyrics phrase. 
+To generate the intelligibility scores, we first divided the 3,700 audio excerpts into training, validation, and evaluation sets with an 80/10/10 split, ensuring no artist overlap between sets. 
+Each excerpt was then processed using a hearing loss simulation for mild and moderate hearing loss, different audiograms for each set, producing three versions of every excerpt. 
+This resulted in 11,100 excerpts that were distributed into 111 groups of 100 segments, ensuring that no two versions of the same excerpt appeared in the same group. 
+Using [Prolific](https://www.prolific.com/), we recruited 111 native English speakers with normal hearing to transcribe the excerpts. 
+Each excerpt was presented in two shots, with the first serving to help participants adapt to changes in genre and style. 
+Intelligibility scores were calculated as the percentage of correctly transcribed words.
 
-This process resulted in 3700 audio excerpts.
+### A.4 Generating Intelligibility Scores
 
-### A.3 Generating Intelligibility Scores
+Both, ground truth and responses transcriptions were text normalised before computing the intelligibility scores.
+We started by expanding contractions (e.g. I'm to I am). 
+Next, we corrected any misspellings (e.g. correct remeber with remember)
+Then, and only for the responses, we looked for alternative transcriptions of homophones (e.g. t and tea or, your and you're)
+This process resulted in one alternative for the ground truth and several for the responses.
 
-To generate the intelligibility scores, we:
+All alternative transcriptions were then transcribed using the BEEP pronunciation dictionary. 
+This account for when transcribers choose for a different transcription of homophone word.
 
-1. We distributed the 3700 segments into Train, Validation and Evaluation sets as 80% / 10% / 10%
-2. Processed all excerpt with a hearing loss simulation for mild and moderate hearing loss, resulting in three versions of the same excerpt.
-3. The 11100 resulting excerpts were then distributed into 111 groups of 100 segments, ensuring that no 2 versions of the same excerpt are in the same group.
-4. Using crowdsourcing, we:
-   * Recruited 110 native English speakers with normal hearing
-   * Participants transcribe each excerpt
-   * Excerpt were presented in two-shots. First shot aimed for participants to adapt to changes in genres and styles.
-5. Intelligibility scores correspond to the rate of correctly transcribed words.
-
-:::note
-Ground truth and responses transcriptions were text normalised and transcribe using a pronunciation dictionary.
-We also included alternative transcriptions (Because and Cause) and expanded contractions (I'm to I Am)
-The final score was the maximum obtained after computing the correctness for all transcription alternatives.
-:::
+Intelligibility scores were computed as the ratio of correctly transcribed words.
+For responses with multiple alternatives, the final score corresponds to the maximum score across al alternatives.
 
 ## B. Training, validation and evaluation data
 
@@ -81,6 +78,6 @@ The final score was the maximum obtained after computing the correctness for all
 
 ## References
 
-1. Defferrard, Michaël, Kirell Benzi, Pierre Vandergheynst, and Xavier Bresson., 2017, [FMA: A DATASET FOR MUSIC ANALYSIS](https://archives.ismir.net/ismir2017/paper/000075.pdf), International Society for Music Information Retrieval
-
-
+1. Defferrard, Michaël, Kirell Benzi, Pierre Vandergheynst, and Xavier Bresson., 2017, [FMA: A DATASET FOR MUSIC ANALYSIS](https://archives.ismir.net/ismir2017/paper/000075.pdf), International Society for Music Information Retrieval.
+2. S. Rouard, F. Massa and A. Défossez, 2023, [Hybrid Transformers for Music Source Separation](https://ieeexplore.ieee.org/document/10096956) ICASSP.
+3. T. Kim and J. Nam, 2023, [All-in-One Metrical and Functional Structure Analysis with Neighborhood Attentions on Demixed Audio](https://ieeexplore.ieee.org/document/10248148) WASPAA.
