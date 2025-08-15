@@ -24,7 +24,7 @@ function HomepageHeader() {
           </Link>{" "}
           
           <Link className="button button--secondary button--lg" to="./docs/clip1/intro" style={{margin: "10px"}}>
-          The Current Challenge{" "}
+              ICASSP 2026 Grand Challenge{" "}
           </Link>{" "}
           {/*The Current Challenge*/}
           <Link className="button button--secondary button--lg" to="./blog" style={{margin: "10px"}}>
