@@ -54,6 +54,11 @@ Our dataset considers all these factors by:
 3. Songs have various mixing levels with some having the vocals more prominent and others where the vocals are highly masked by the background accompaniment.
 4. All samples are presented as-is and processed by a hearing loss simulator, including different listener ability.  
 
+| No Loss                                                                                  | Mild                                                                                   | Moderate                                                                                   |
+|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/noloss1.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/mild1.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/moderate1.wav' /> |           
+| <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/noloss2.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/mild2.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/moderate2.wav' /> |           
+| <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/noloss3.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/mild3.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/moderate3.wav' /> |
 ## Learning from Speech Intelligibility prediction
 
 Speech Intelligibility prediction is an established area of research and many different algorithms have been developed. 
