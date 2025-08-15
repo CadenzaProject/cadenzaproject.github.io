@@ -18,7 +18,7 @@ The evaluation data is provided closer to the submission deadline.
 
 The Cadenza Lyrics Intelligibility Prediction (CLIP) dataset is based on the FMA dataset [1].
 The FMA dataset is a very rich dataset containing thousands of songs from various artists and genres.
-However, it does not include ground truth transcription, it contains various copyright levels with several song not allowing derivatives of the data, 
+However, FMA dataset cannot be used for lyrics intelligibility out-of-the-box; it does not include ground truth transcription, it contains various copyright levels with several song not allowing derivatives of the data, 
 the labelled genres correspond to inconsistent genres assigned by the artist at submission time, and it does not include separated stems for each component.  
 
 ### A.1 Selecting the tracks to use
