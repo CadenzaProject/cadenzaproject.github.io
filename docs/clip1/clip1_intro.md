@@ -1,6 +1,6 @@
 ---
 id: intro
-title: The 1st Cadenza Lyric Intelligibility Prediction Challenge 
+title: The 1st Cadenza Lyric Intelligibility Prediction Challenge (CLIP1)
 sidebar_label: Introduction
 sidebar_position: 1
 ---
@@ -10,42 +10,86 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Admonition from '@theme/Admonition';
 
+# ICASSP SPGC Cadenza Challenge 2025: Predicting Lyric Intelligibility
 
-<Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="A lead singer of a band singing into a microphone" />
+:::warning[🚧 Website Under Construction  🚧]
+The full release will be on the 1st of September.
+
+**Last update: 2025-08-18**
+:::
+
+<Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="Lead singing in a band singing into a microphone" />
 Image by <a href="https://pixabay.com/users/sabena206-20184104/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Sabena Costa</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Pixabay</a>
 
-<Admonition type="tip" icon="🎯" title="ICASSP 2026 - Grand Challenge Proposal">
-  CLIP1 has been accepted as an ICASSP 2026 SP Grand Challenge.
-</Admonition>
+## Overview
 
-To develop better music processing through machine learning, we need a reliable way to automatically evaluate audio quality.
-For music with lyrics, this includes a metric to assess the intelligibility of the sung words.
-Some songs are intrinsically less intelligible than others. Factors that can affect intelligibility include:
+Understanding the lyrics in music is key for music enjoyment [1]. 
+People with hearing loss can have difficulties clearly and effortlessly hearing lyrics [2], however. 
+In speech technology, having metrics to automatically evaluate intelligibility has driven improvements in speech enhancement. 
+We want to do the same for music with lyrics.
 
-* Vocal style and articulation
-* Song genre
-* Mixing and production techniques
-* Listener hearing ability
+Challenge entrants will be given thousands of audio segments of accompanied singing, and their task is to predict the word correct rate from perceptual experiments, where normal hearing listeners were asked to write down the lyrics they heard. 
+All audios will be presented as-is and processed by a hearing loss simulator for a mild and moderate hearing loss, so diverse hearing characteristics are incorporated into the challenge.
 
-For speech technologies, intelligibility metrics have played a vital role in improving signal processing and machine learning, we hope the same can be achieved for music.
+This challenge will:
+* Develop intelligibility metrics that better reflect human perception of sung lyrics in popular Western music.
+* Develop new knowledge about the intelligibility differences between spoken and sung language and intonation.
+* Catalyse future work into enhancing lyric intelligibility to: (i) improve accessibility of music for listeners with hearing loss, and (ii) improve health and well-being.
 
-## Challenge Overview
+## What is Lyric Intelligibility?
 
-Participants will build models to predict lyrics intelligibility from audio recordings.
-The intelligibility prediction model will take audio as input and 
-then estimate the score a listener would likely achieve in a listening test.
+Our sensory panel of hearing aids users with hearing loss, refers to Lyric Intelligibility as "how clearly and effortlessly the words in the music can be heard." 
+Some songs are intrinsically less intelligible than others. Factors that can affect intelligibility include [1]:
+
+* Vocal style and articulation.
+* Song genre.
+* Mixing and production techniques.
+* Listener hearing ability.
+
+Our dataset considers all these factors by:
+
+1. It includes different singing styles from rap to rock.
+2. It includes songs from a large range of genres.
+3. Songs have various mixing levels with some having the vocals more prominent and others where the vocals are masked by the background accompaniment.
+4. All samples are presented as-is and processed by a hearing loss simulator, to model different listener ability.  
+
+| No Loss                                                                                  | Mild                                                                                   | Moderate                                                                                   |
+|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/noloss1.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/mild1.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/moderate1.wav' /> |           
+| <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/noloss2.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/mild2.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/moderate2.wav' /> |           
+| <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/noloss3.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/mild3.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/moderate3.wav' /> |
+
+## Learning from Speech Intelligibility prediction
+
+Speech Intelligibility prediction is an established area of research and many different algorithms have been developed. 
+In contrast, metrics for lyrics are very rare (e.g. singing adapted STOI [3]). 
+Consequently, there are many techniques from speech that could be adapted to music to create novel research. 
+For instance, foundation models have made blind (non-intrusive) speech intelligibility metrics much more accurate, can they be adapted for music? 
+Current speech metrics are unreliable for music, because spoken and sung language and intonation are different. 
+Also, sung speech is typically embedded in a music accompaniment which has different characteristics than the independent noise background that spoken speech metrics try to account for. 
+These will pose interesting problems for challenge entrants to overcome.
 
 ## What will be provided?
 
-* A dataset of song excerpts, some excerpts will be provided as-is and others will be passed through a hearing loss 
-simulator to mimic listeners with hearing loss but not wearing hearing aids.
-* All samples will include lyrics intelligibility scores from listening tests. 
+* A novel dataset of song excerpts paired with lyric intelligibility scores from listening tests.
 * Software and baseline system.
+* A leaderboard via Eval.AI to allow entrants to track progress.
+
+Some song excerpts will be passed through a hearing loss simulator.  But entrants can accepted the audio as-is, and no knowledge of hearing loss modelling is needed to take part in the challenge.
+
+## ICASSP
+
+The top teams will be invited to submit papers to present during [ICASSP 2026, 4-8th May 2026, Barcelona, Spain](https://2026.ieeeicassp.org/event/about-conference/).
 
 ## Expressing interest
 
-If you are interested in this challenge and intend to participate, please express your interest by filling out the form on the [registration page](take_part/registration).
-By doing so, you will help us better plan for a successful challenge.
+Please express your interest in our [registration](take_part/registration) form. And also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about the challenges.
 
-You can also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about our challenges.
+## References
+
+1. Fine, P. A. and Ginsborg, J., 2014. [Making myself understood: perceived factors affecting the intelligibility of sung text](https://pmc.ncbi.nlm.nih.gov/articles/PMC4155173/). Frontiers in psychology, 5, 809.
+
+2. Greasley, A., Crook, H. and Fulford, R., 2020. [Music listening and hearing aids: perspectives from audiologists and their patients](https://www.tandfonline.com/doi/full/10.1080/14992027.2020.1762126). International Journal of Audiology, 59(9), pp.694-706.
+
+3. Sharma, B. and Wang, Y., 2019. [Automatic evaluation of song intelligibility using singing adapted STOI and vocal-specific features](https://ieeexplore.ieee.org/document/8910414). IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, pp.319-331.
 
