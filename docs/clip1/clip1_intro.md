@@ -83,13 +83,11 @@ The top teams will be invited to submit papers to present during [ICASSP 2026, 4
 
 ## Expressing interest
 
-Please express your interest in our [registration](take_part/registration) form. And also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about the challenges.
+To register and express your interest, please fill out the [registration](take_part/registration) form. And also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about the challenges.
 
 ## References
 
 1. Fine, P. A. and Ginsborg, J., 2014. [Making myself understood: perceived factors affecting the intelligibility of sung text](https://pmc.ncbi.nlm.nih.gov/articles/PMC4155173/). Frontiers in psychology, 5, 809.
-
 2. Greasley, A., Crook, H. and Fulford, R., 2020. [Music listening and hearing aids: perspectives from audiologists and their patients](https://www.tandfonline.com/doi/full/10.1080/14992027.2020.1762126). International Journal of Audiology, 59(9), pp.694-706.
-
 3. Sharma, B. and Wang, Y., 2019. [Automatic evaluation of song intelligibility using singing adapted STOI and vocal-specific features](https://ieeexplore.ieee.org/document/8910414). IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, pp.319-331.
 
