@@ -13,8 +13,7 @@ import Admonition from '@theme/Admonition';
 # ICASSP SPGC Cadenza Challenge 2025: Predicting Lyric Intelligibility
 
 :::warning[🚧 Website Under Construction  🚧]
-The site is under construction. The full release will be available the 1st of September.
-Check the [Key Dates](key_dates) for more details on the challenge timeline.
+The full release will be on the 1st of September.
 
 **Last update: 2025-08-13**
 :::
@@ -49,10 +48,10 @@ Some songs are intrinsically less intelligible than others. Factors that can aff
 
 Our dataset considers all these factors by:
 
-1. It includes different singing styles from "spoken" singing to rock and rap.
+1. It includes different singing styles from rap to rock.
 2. It includes songs from a large range of genres.
-3. Songs have various mixing levels with some having the vocals more prominent and others where the vocals are highly masked by the background accompaniment.
-4. All samples are presented as-is and processed by a hearing loss simulator, including different listener ability.  
+3. Songs have various mixing levels with some having the vocals more prominent and others where the vocals are masked by the background accompaniment.
+4. All samples are presented as-is and processed by a hearing loss simulator, to model different listener ability.  
 
 | No Loss                                                                                  | Mild                                                                                   | Moderate                                                                                   |
 |------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -63,20 +62,19 @@ Our dataset considers all these factors by:
 
 Speech Intelligibility prediction is an established area of research and many different algorithms have been developed. 
 In contrast, metrics for lyrics are very rare (e.g. singing adapted STOI [3]). 
-Consequently, there are many techniques from speech intelligibility prediction that could be adapted to the challenge of lyric intelligibility prediction for the first time. 
-For instance, foundation models have made blind (non-intrusive) speech intelligibility metrics much more accurate. 
-But speech metrics are unreliable for music, because spoken and sung language and intonation are different. 
+Consequently, there are many techniques from speech that could be adapted to music to create novel research. 
+For instance, foundation models have made blind (non-intrusive) speech intelligibility metrics much more accurate, can they be adapted for music? 
+Current speech metrics are unreliable for music, because spoken and sung language and intonation are different. 
 Also, sung speech is typically embedded in a music accompaniment which has different characteristics than the independent noise background that spoken speech metrics try to account for. 
 These will pose interesting problems for challenge entrants to overcome.
 
 ## What will be provided?
 
-* A novel dataset of song excerpts paired with lyric intelligibility scores from listener tests.
+* A novel dataset of song excerpts paired with lyric intelligibility scores from listening tests.
 * Software and baseline system.
-* A leaderboard Eval.AI to allow entrants to track progress.
+* A leaderboard via Eval.AI to allow entrants to track progress.
 
-Some song excerpts will be provided as-is and others will have been passed through a hearing loss simulator to mimic listeners with hearing loss but not wearing hearing aids. 
-Entrants can treat the all the audios as-is, no knowledge of hearing loss modelling is needed to take part in the challenge.
+Some song excerpts will be passed through a hearing loss simulator.  But entrants can accepted the audio as-is, and no knowledge of hearing loss modelling is needed to take part in the challenge.
 
 ## ICASSP
 

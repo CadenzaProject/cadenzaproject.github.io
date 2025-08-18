@@ -20,7 +20,7 @@ This section is under construction and some information may change in the final 
 The baseline is based on the singing adapted STOI and vocal-specific features (SA-STOI) system [1] to make predictions. 
 SA-STOI is a self-reference metric (the reference is generated from the processed signal) that uses estimated vocals as 
 reference and 12 vocal features computed from the processed signal and the estimated vocals to 
-account for singing styles and expressions. The final computation is obtained by using a SVM-based regression model trained 
+account for singing styles and expressions. The final computation is obtained by using a support vector machines (SVM) -based regression model trained 
 using a 13 feature vector (the STOI score combined with the 12 vocal features) and, using human intelligibility scores as reference.
 
 <div style={{textAlign:'center'}}>
@@ -34,10 +34,10 @@ using a 13 feature vector (the STOI score combined with the 12 vocal features) a
 
 ### A1. Differences Baseline implementation v/s original SA-STOI
 1. The original SA-STOI model is based on a U-NET music source separation model (MSS) and MATLAB functions to compute the vocal features.
-For our baseline, we replaced the U-NET MSS for the HDemucs model which reported higher performance in MUSDB-18 benchmark.
+For our baseline, we replaced the U-NET MSS with the HDemucs model which reported higher performance in MUSDB-18 demixing benchmark.
 The model was ported to Python using the functions available to compute the same features as the original SA-STOI.
 
-2. The original SA-STOI model was trained 140 audio segments, each scored by 17 participants. 
+2. The original SA-STOI model was trained on 140 audio segments, each scored by 17 participants. 
 The final intelligibility score corresponds to the average across all 17 scores. Our ported model was trained on more 
 than 8000 audio segments, each scored by a single participant. For details of the dataset, please refer to the [dataset description](data)
 
@@ -59,8 +59,8 @@ The baseline system achieve the following performance on the validation set:
 
 | Metric      | Value | 
 |:------------|------:| 
-| RMSE        |  xxxx | 
-| Correlation |   xxx |
+| RMSE        |  TBC | 
+| Correlation |  TBC |
 
 
 ## References 
