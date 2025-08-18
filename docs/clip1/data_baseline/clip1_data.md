@@ -58,7 +58,7 @@ Each excerpt was presented twice, with the first serving to help participants ad
 Both, ground truth and responses transcriptions were text normalised before computing the intelligibility scores.
 We started by expanding contractions (e.g. I'm to I am). 
 Next, we corrected any misspellings (e.g. correct remeber to remember)
-Tor the responses, we also looked for alternative transcriptions of homophones (e.g. t and tea or, your and you're)
+For the responses, we also looked for alternative transcriptions of homophones (e.g. t and tea or, your and you're)
 This process resulted in one alternative for the ground truth and several for the responses.
 
 All alternative transcriptions were then transcribed using the BEEP pronunciation dictionary. 

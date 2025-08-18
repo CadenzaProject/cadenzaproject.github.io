@@ -134,7 +134,7 @@ module.exports = {
                     items: [
                         {
                             to: '/docs/clip1/intro',
-                            label: 'CLIP1',
+                            label: 'ICASSP CLIP1',
                         },
                         {
                             to: '/docs/cadenza2/intro',
