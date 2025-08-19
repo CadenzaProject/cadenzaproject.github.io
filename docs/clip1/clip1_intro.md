@@ -10,7 +10,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Admonition from '@theme/Admonition';
 
-# ICASSP SPGC Cadenza Challenge 2025: Predicting Lyric Intelligibility
+# ICASSP 2026 Cadenza Challenge: Predicting Lyric Intelligibility
 
 :::warning[🚧 Website Under Construction  🚧]
 The full release will be on the 1st of September.
