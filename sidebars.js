@@ -20,10 +20,10 @@ module.exports = {
         'clip1/key_dates',
         { // Menu Dataset
             type: 'category',
-            label: 'Dataset & Baseline',
+            label: 'Dataset',
             items: [
                 'clip1/data_baseline/data',
-                'clip1/data_baseline/baseline',
+                // 'clip1/data_baseline/baseline',
                 'clip1/data_baseline/download_data',
             ]
         },

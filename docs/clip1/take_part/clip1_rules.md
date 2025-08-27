@@ -29,6 +29,8 @@ We will have a separate ranking list for intrusive and non-intrusive systems. In
 
 The evaluation set cannot be used for training or development of models.
 
+All evaluation samples must be processed independently. 
+
 ## Baseline models and computational restrictions
 
 * The use of pre-trained foundational models is allowed but must be fully declared.
