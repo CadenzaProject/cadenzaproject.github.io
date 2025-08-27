@@ -49,8 +49,8 @@ This post-processing step resulted in a final set of 3,700 audio excerpts.
 We first divided the 3,700 audio excerpts into training, validation, and evaluation sets with an 80/10/10 split, ensuring no artist overlap between sets. 
 Each excerpt was then processed using a hearing loss simulation for mild and moderate hearing loss, with different audiograms for each set. This produced three versions of every excerpt.
 
-The resultant 11,100 excerpts were distributed into 111 groups of 100 segments, ensuring that no two versions of the same excerpt appeared in the same group. 
-Using [Prolific](https://www.prolific.com/), we recruited 111 native English speakers with normal hearing to transcribe the excerpts. 
+[//]: # (The resultant 11,100 excerpts were distributed into 111 groups of 100 segments, ensuring that no two versions of the same excerpt appeared in the same group. )
+Using [Prolific](https://www.prolific.com/), we recruited native English speakers with normal hearing to transcribe the excerpts. 
 Each excerpt was presented twice, with the first serving to help participants adapt to changes in genre and style. Listeners were asked to type what they heard. Intelligibility scores were calculated as the percentage of correctly transcribed words.
 
 ### Generating Intelligibility Scores

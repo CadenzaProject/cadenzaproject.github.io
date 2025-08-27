@@ -37,6 +37,8 @@ The only data that can be used by the prediction model during evaluation are:
 
 We will have a separate ranking list for intrusive and non-intrusive systems. Intrusive (double-ended) methods are ones that make use of (4), the ground truth text.
 
+All evaluation samples must be processed independently. 
+
 ## Baseline models and computational restrictions
 
 * The use of pre-trained foundational models is allowed but must be fully declared.
