@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 # ICASSP 2026 Cadenza Challenge: Predicting Lyric Intelligibility
 
 :::warning[🚧 Website Under Construction  🚧]
-The full release will be on the 1st of September.
+The full release will be on first week of September.
 
 **Last update: 2025-08-27**
 :::

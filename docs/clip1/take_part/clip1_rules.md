@@ -30,14 +30,13 @@ The [FAQ](./FAQs) gives links to some models that might be used for this.
 The evaluation set cannot be used for training or development of models. Audio samples must be processed independently of each other.
 
 The only data that can be used by the prediction model during evaluation are:
+
 1. The stereo audio that our listeners heard during the intelligibility tests.
 2. Where the audio in (1) has hearing loss simulation, the audio without hearing loss simulation is also provided. 
 3. The listener's hearing impairment severity.
 4. The ground-truth text of the lyrics.
 
 We will have a separate ranking list for intrusive and non-intrusive systems. Intrusive (double-ended) methods are ones that make use of (4), the ground truth text.
-
-All evaluation samples must be processed independently. 
 
 ## Baseline models and computational restrictions
 
