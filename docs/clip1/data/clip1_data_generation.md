@@ -1,7 +1,7 @@
 ---
-id: data
-title: Data
-sidebar_label: Dataset
+id: data_generation
+title: Construction of the CLIP1 Dataset
+sidebar_label: Generation
 sidebar_position: 3.3
 ---
 import ReactPlayer from 'react-player';
@@ -9,34 +9,6 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::warning[Release of the data]
-The training and validation data are provided at challenge launch. 
-The evaluation data is provided closer to the submission deadline in November.
-:::
-
-## Download
-
-To download the data, please [register for the challenge](../take_part/registration) to get a download link.
-
-## Overview
-
-The Cadenza Lyrics Intelligibility Prediction (CLIP) dataset consists of thousands of audio extracts of unfamiliar Western popular music, each paired with (i) lyric intelligibility scores from listening tests, and (ii) ground truth transcriptions. For each scene we provide:
-
-1. The stereo audio that our listeners heard during the intelligibility tests. This audio may have no, mild or moderate hearing loss simulated.
-2. Where the audio in (1) has hearing loss simulation, the audio without hearing loss simulation is also provided. 
-3. The hearing impairment severity applied to the audio (1).
-4. The ground-truth text of the lyrics.
-5. The transcription by our listeners during the intelligibility tests.
-
-See the [rules](../take_part/rules) for which of these can be used for training, validation and evaluation.
-
-### Why provide Audio (2)
-
-The scenario we're simulating is someone listening to music, so audio (2) might be the signal to a pair of headphones. We're interested in diverse hearing and many people with hearing loss don't use hearing aids. Therefore in the listening test we added the effects of hearing loss to some of the audio, because people doing our listening tests were young and had no hearing loss. Consequently, (1) is what people heard in the listening tests, but (2) is a signal that is also available in our scenario.
-
-In our baseline, we use Audio (2) to estimate the vocals without hearing loss simulation using musical source separation. This is then used as a reference signal for an intrusive intelligibility metric.
-
-## Construction of the CLIP1 Dataset
 
 The audio in CLIP1 is based on the FMA dataset, which contains thousands of songs from various artists, genres and styles. Below the process to select audio excerpts; generate the ground truth transcriptions; and listener intelligibility scores is given. 
 
@@ -83,12 +55,6 @@ For the responses, we also looked for alternative transcriptions of homophones (
 | i'm thinking about you now                    | i am thinking about you now                        |
 | when were lost we know where to find it       | when we are lost we know where to find it          |
 | were gonna tell you our names so you remember | we are going to tell you our names so you remember |
-
-## B. Training, validation and evaluation data
-
-:::warning[🚧 Under Construction 🚧]
-:::
-
 
 ## References
 
