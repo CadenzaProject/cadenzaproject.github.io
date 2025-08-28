@@ -16,7 +16,21 @@ The evaluation data is provided closer to the submission deadline.
 
 ## Overview
 
-The main CLIP1 dataset consists of thousands of audio extracts of unfamiliar Western popular music, each paired with (i) lyric intelligibility scores from listening tests, and (ii) ground truth transcriptions.
+The main CLIP1 dataset consists of thousands of audio extracts of unfamiliar Western popular music, each paired with (i) lyric intelligibility scores from listening tests, and (ii) ground truth transcriptions. For each scene we provide:
+
+1. The stereo audio that our listeners heard during the intelligibility tests. This audio may have no, mild or moderate hearing loss simulated.
+2. Where the audio in (1) has hearing loss simulation, the audio without hearing loss simulation is also provided. 
+3. The hearing impairment severity applied to the audio (1).
+4. The ground-truth text of the lyrics.
+5. The transcription by our listeners during the intelligibility tests.
+
+See the rules for which of these can be used for training, validation and evaluation.
+
+### Why provide Audio (2)
+
+The scenario we're simulating is someone listening to music, so audio (2) might be the signal to a pair of headphones. We're interested in diverse hearing and many people with hearing loss don't use hearing aids. Therefore in the listening test we added the effects of hearing loss to some of the audio, because people doing our listening tests were young and had no hearing loss. Consequently, (1) is what people heard in the listening tests, but (2) is a signal that is also available in our scenario.
+
+In our baseline, we use Audio (2) to estimate the vocals without hearing loss simulation using musical source separation. This is then used as a reference signal for an intrusive intelligibility metric.
 
 ## Construction of the CLIP1 Dataset
 
