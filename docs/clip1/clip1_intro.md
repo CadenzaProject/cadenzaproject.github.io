@@ -13,7 +13,7 @@ import Admonition from '@theme/Admonition';
 # ICASSP 2026 Cadenza Challenge: Predicting Lyric Intelligibility
 
 :::warning[🚧 Website Under Construction  🚧]
-The full release will be on first week of September.
+Full release week commencing 1st September.
 
 **Last update: 2025-08-27**
 :::
@@ -59,14 +59,14 @@ Our dataset considers all these factors by:
 | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/noloss2.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/mild2.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/moderate2.wav' /> |           
 | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/noloss3.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/mild3.wav' /> | <ReactPlayer pip controls width="250px" height="50px" url='/audios/clip1/moderate3.wav' /> |
 
-## Learning from Speech Intelligibility prediction
+## Previous work
 
 Speech Intelligibility prediction is an established area of research and many different algorithms have been developed. 
 In contrast, metrics for lyrics are very rare (e.g. singing adapted STOI [3]). 
-Consequently, there are many techniques from speech that could be adapted to music to create novel research. 
-For instance, foundation models have made blind (non-intrusive) speech intelligibility metrics much more accurate, can they be adapted for music? 
-Current speech metrics are unreliable for music, because spoken and sung language and intonation are different. 
-Also, sung speech is typically embedded in a music accompaniment which has different characteristics than the independent noise background that spoken speech metrics try to account for. 
+Consequently, there are many techniques from speech that could be adapted to music to create novel research.
+For instance, foundation models have made blind (non-intrusive) speech intelligibility metrics much more accurate, can they be adapted for music? Would an automatic lyric transcription system be a good starting point?
+
+Current speech metrics are unreliable for music, because spoken and sung language, rhythm and intonation are different. In popular western music most vocals will have sound engineering techniques applied, such as reverb, double tracking and dynamic range compression. Also, sung speech is typically embedded in a music accompaniment which has different characteristics than the independent noise background that spoken speech metrics try to account for, e.g. there might be harmonizing backing singers. 
 These will pose interesting problems for challenge entrants to overcome.
 
 ## What will be provided?
@@ -83,7 +83,7 @@ The top teams will be invited to submit papers to present during [ICASSP 2026, 4
 
 ## Expressing interest
 
-To register and express your interest, please fill out the [registration](take_part/registration) form. And also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about the challenges.
+To register please fill out the [registration](take_part/registration) form. And also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about the challenges.
 
 ## References
 
