@@ -85,6 +85,17 @@ The top teams will be invited to submit papers to present during [ICASSP 2026, 4
 
 To register please fill out the [registration](take_part/registration) form. And also sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts and discussions about the challenges.
 
+## Challenge advisory board
+
+The Cadenza team would like to thank the following for their help with this challenge:
+* Fei Chen - Southern University of Science and Tech., China
+* Gao Xiaoxue – A*STAR, Singapore
+* Ye Wang – National University of Singapore, Singapore
+* Emmanouil Benetos – Queen Mary University of London, UK
+* Bidisha Sharma - Uniphore Systems, India & USA
+* Axel Roebel – IRCAM, France 
+
+
 ## References
 
 1. Fine, P. A. and Ginsborg, J., 2014. [Making myself understood: perceived factors affecting the intelligibility of sung text](https://pmc.ncbi.nlm.nih.gov/articles/PMC4155173/). Frontiers in psychology, 5, 809.
