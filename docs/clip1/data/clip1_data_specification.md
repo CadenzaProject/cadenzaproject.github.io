@@ -51,8 +51,8 @@ cadenza_data/
 
 * Stored as 16-bit stereo FLAC files at 44100 Hz.
 * Filenames:
-    * train/signals/`<HASH_NUMBER>`.flac: audio signal to predict intelligibility.
-    * train/unprocessed/`<HASH_NUMBER>`_unproc.flac: the unprocessed audio signal.
+    * train/signals/`<HASH_NUMBER>`.flac: audio (1) signal to predict intelligibility.
+    * train/unprocessed/`<HASH_NUMBER>`_unproc.flac: the unprocessed (without hearing loss) audio (2) signal.
 * Notes:
   * Audios and unprocessed audios have matching `<HASH_NUMBER>`.   
   * Slight misalignment and variations in the number of frames may occur between the signals audio and the unprocessed audio due to the hearing loss simulation.
@@ -66,12 +66,12 @@ The metadata contains list of dictionaries, each representing the listener's res
 
 Fields:
 * `signal`: audio filename.
-* `prompt`: original target sentence.
-* `response`: listener test transcription response ('#' indicates no response/understanding).
+* `prompt`: original target sentence (ground truth).
+* `response`: text transcription from Prolific listening tests ('#' indicates no response/understanding).
 * `n_words`: number of words in prompts after expanding contractions.
 * `words_correct`: number of correctly identified words.
-* `correctness`: Rate of correctly identified words (the target variable).
-* `hearing_loss`: Indicating if the signal has not processed (**No Loss**) or if it has **Mild** or **Moderate** simulated hearing loss 
+* `correctness`: Intelligibility score i.e. rate of correctly identified words (the target variable).
+* `hearing_loss`: Indicating if the signal audio was: not processed (**No Loss**); has **Mild** simulated hearing loss; or **Moderate** simulated hearing loss 
 
 ```json title="cadenza_data/metadata/train_metadata.json"
 [
@@ -93,10 +93,10 @@ The validation metadata is saved in `valid_metadata.json`.
 The metadata contains list of dictionaries, each representing the listener's response.
 
 Fields:
-* `signal`: name of signal to predict intelligibility.
-* `prompt`: original target sentence.
+* `signal`: name of signal to predict intelligibility from.
+* `prompt`: original target sentence (ground truth). 
 * `n_words`: number of words in prompts after expanding contractions.
-* `hearing_loss`: Indicating if the signal has not processed (**No Loss**) or if it has **Mild** or **Moderate** simulated hearing loss
+* `hearing_loss`: Indicating if the signal audio was: not processed (**No Loss**); has **Mild** simulated hearing loss; or **Moderate** simulated hearing loss
 
 ```json title="cadenza_data/metadata/valid_metadata.json"
 [
