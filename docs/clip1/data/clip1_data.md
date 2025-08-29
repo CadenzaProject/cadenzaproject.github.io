@@ -69,7 +69,6 @@ Note, in the ground truth, there are a small number of phrases containing highly
 We first divided the 3,700 audio excerpts into training, validation, and evaluation sets with an 80/10/10 split, ensuring no artist overlap between sets. 
 Each excerpt was then processed using a hearing loss simulation for mild and moderate hearing loss. For the simulation of hearing loss, an audiogram with the appropriate hearing loss severity was chosen at random. This produced three versions of every excerpt.
 
-[//]: # (The resultant 11,100 excerpts were distributed into 111 groups of 100 segments, ensuring that no two versions of the same excerpt appeared in the same group. )
 Using [Prolific](https://www.prolific.com/), we recruited many native English speakers who were young adults with self-declared normal hearing. 
 Each excerpt was presented twice, with the first serving to help listeners adapt to genre and vocal style. Listeners were asked to type what they heard.
 

@@ -61,19 +61,19 @@ cadenza_data/
 
 ## Training Metadata
 
-The train metadata is saved in `train_metadata.json`. 
+The train metadata is saved in `metadata/train_metadata.json`. 
 The metadata contains list of dictionaries, each representing the listener's response.
 
 Fields:
 * `signal`: audio filename.
 * `prompt`: original target sentence.
 * `response`: listener test transcription response ('#' indicates no response/understanding).
-* `n_words`: number of words in prompts after expanding contractions.
+* `n_words`: number of words in prompts after expanding contractions (see [data generation](data) page).
 * `words_correct`: number of correctly identified words.
 * `correctness`: Rate of correctly identified words (the target variable).
 * `hearing_loss`: Indicating if the signal has not processed (**No Loss**) or if it has **Mild** or **Moderate** simulated hearing loss 
 
-```json title="cadenza_data/metadata/train_metadata.json"
+```json title="metadata/train_metadata.json"
 [
   {
     "signal": "b2486a8e181f84acd2db4d61",
@@ -89,7 +89,7 @@ Fields:
 
 ## Validation Metadata
 
-The validation metadata is saved in `valid_metadata.json`.
+The validation metadata is saved in `metadata/valid_metadata.json`.
 The metadata contains list of dictionaries, each representing the listener's response.
 
 Fields:
