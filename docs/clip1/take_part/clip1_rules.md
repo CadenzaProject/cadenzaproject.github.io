@@ -14,10 +14,10 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 We have provided teams with signals and listener responses for training and validation. This includes:
 
 1. The stereo audio that our listeners heard during the intelligibility tests. This audio may have no, mild or moderate hearing loss simulated.
-2. The audio without hearing loss simulation (in a third of cases, this is the same as (1)). 
+2. The audio without hearing loss simulation (where (1) has hearing loss simulation). 
 3. The listener's hearing impairment severity.
 4. The ground-truth text of the lyrics.
-5. The transcription by our listeners during the intelligibility tests.
+5. The transcription by our listeners during the intelligibility tests and the intelligibility scores.
 
 See [Data](../data/data) for more details on how these were generated.
 
