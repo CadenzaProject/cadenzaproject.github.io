@@ -15,7 +15,9 @@ import Admonition from '@theme/Admonition';
 :::warning[🚧 Website Under Construction  🚧]
 Full release week commencing 1st September.
 
-**Last update: 2025-08-28**
+Coming soon **Baseline** and **Leaderboard**.
+
+**Last update: 2025-08-29**
 :::
 
 <Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="Lead singing in a band singing into a microphone" />

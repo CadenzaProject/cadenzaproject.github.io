@@ -26,7 +26,7 @@ This package contains 5 samples from the training and 5 from the validation data
 
 **- Installation Instructions**
 
-1. Download the `.ta.gz` files.
+1. Download the `.tar.gz` files.
 2. unpack each archive using the following commands:
 ```shell showLineNumbers=1
 tar -xvzf cadenza_clip1_data.train.v1.0.tar.gz  # For training data
@@ -39,8 +39,8 @@ tar -xvzf cadenza_clip1_data.valid.v1.0.tar.gz # For validation data
 cadenza_data/
 ├── metadata/
 ├── train/
-│   ├── signals/      # Audio to predict intelligibility
-│   └── unprocessed/  # Audio without hearing loss
+│   ├── signals/      # Audio (1) to predict intelligibility
+│   └── unprocessed/  # Audio (2) without hearing loss
 ├── valid/
 │   ├── signals/
 │   └── unprocessed/
@@ -54,7 +54,7 @@ cadenza_data/
     * train/signals/`<HASH_NUMBER>`.flac: audio (1) signal to predict intelligibility.
     * train/unprocessed/`<HASH_NUMBER>`_unproc.flac: the unprocessed (without hearing loss) audio (2) signal.
 * Notes:
-  * Audios and unprocessed audios have matching `<HASH_NUMBER>`.   
+  * Audios (1) and unprocessed audios (2) have matching `<HASH_NUMBER>`.   
   * Slight misalignment and variations in the number of frames may occur between the signals audio and the unprocessed audio due to the hearing loss simulation.
 
 
@@ -68,7 +68,7 @@ Fields:
 * `signal`: audio filename.
 * `prompt`: original target sentence (ground truth).
 * `response`: text transcription from Prolific listening tests ('#' indicates no words entered).
-* `n_words`: number of words in prompts after expanding contractions (see [data generation](data) page).
+* `n_words`: number of words in prompts after expanding contractions (see [data construction](data#construction-of-the-clip1-dataset)).
 * `words_correct`: number of correctly identified words.
 * `correctness`: Intelligibility score i.e. rate of correctly identified words (the target variable).
 * `hearing_loss`: Indicating if the signal audio was: not processed (**No Loss**); has **Mild** simulated hearing loss; or **Moderate** simulated hearing loss 
