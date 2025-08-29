@@ -24,7 +24,7 @@ module.exports = {
             items: [
                 'clip1/data/data',
                 'clip1/data/data_specification',
-                'clip1/data/data_generation',
+                // 'clip1/data/data_generation',
             ]
         },
         {  // Menu Take Part

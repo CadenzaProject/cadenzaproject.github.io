@@ -45,7 +45,7 @@ Intelligibility scores were computed as the ratio of correctly transcribed words
 
 Ground truth and listener transcriptions were text normalised before computing the intelligibility scores as follows. 
 We started by expanding contractions (e.g. I'm to I am). 
-Next, we corrected any misspellings (e.g. remeber to remember)
+Next, we corrected any misspellings (e.g. remeber to remember).
 For the responses, we also looked for alternative transcriptions of homophones (e.g. your and you're). All alternative transcriptions were then transcribed using the BEEP pronunciation dictionary. This accounted for when transcribers used a different transcription of a homophone. This process resulted in one ground truth and several normalised transcriptions per extract. The final score corresponds to the maximum score across alternatives.
 
 **Examples of text normalisation**
