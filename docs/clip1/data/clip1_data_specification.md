@@ -24,36 +24,38 @@ If you need to have a quick view of the data structure, we also provide a demo p
 This package contains 5 samples from the training and 5 from the validation data.
 :::
 
-**Installation Instructions**
+**- Installation Instructions**
 
 1. Download the `.ta.gz` files.
 2. unpack each archive using the following commands:
-```shell
+```shell showLineNumbers=1
 tar -xvzf cadenza_clip1_data.train.v1.0.tar.gz  # For training data
 tar -xvzf cadenza_clip1_data.valid.v1.0.tar.gz # For validation data
 ```
 
-Directory Structure after unpacking:
+**- Directory Structure after unpacking**
 
-```shell
+<pre>
 cadenza_data/
-├── metadata/        
+├── metadata/
 ├── train/
 │   ├── signals/      # Audio to predict intelligibility
 │   └── unprocessed/  # Audio without hearing loss
-├── valid/  
-│   ├── signals/      
-│   └── unprocessed/  
+├── valid/
+│   ├── signals/
+│   └── unprocessed/
 └── Manifest/
-```
+</pre>
 
 ## Audio signals
 
 * Stored as 16-bit stereo FLAC files at 44100 Hz.
 * Filenames:
-    * train/signals/`<HAS_NUMBER>`.flac: signal to predict intelligibility.
-    * train/unprocessed/`<HAS_NUMBER>`_unproc.flac: the unprocessed version of the previous signal (without hearing loss simulation).
-* Note: Slight misalignment can occur between the signal and unprocessed signal due to the hearing loss simulation.
+    * train/signals/`<HASH_NUMBER>`.flac: audio signal to predict intelligibility.
+    * train/unprocessed/`<HASH_NUMBER>`_unproc.flac: the unprocessed audio signal.
+* Notes:
+  * Audios and unprocessed audios have matching `<HASH_NUMBER>`.   
+  * Slight misalignment and variations in the number of frames may occur between the signals audio and the unprocessed audio due to the hearing loss simulation.
 
 
 
