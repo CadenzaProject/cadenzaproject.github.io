@@ -26,9 +26,11 @@ The Cadenza Lyrics Intelligibility Prediction (CLIP) dataset consists of thousan
 2. Where the audio in (1) has hearing loss simulation, the audio without hearing loss simulation is also provided. 
 3. The hearing impairment severity applied to the audio (1).
 4. The ground-truth text of the lyrics.
-5. The transcription by our listeners during the intelligibility tests.
+5. The transcription given by our listeners during the intelligibility tests and the intelligibility score.
 
 See the [rules](../take_part/rules) for which of these can be used for training, validation and evaluation.
+
+<Image img={require('../../static/img/clip1/data_explanation_diagram.png')} alt="schematic of data generation" />
 
 ### Why provide Audio (2)
 
