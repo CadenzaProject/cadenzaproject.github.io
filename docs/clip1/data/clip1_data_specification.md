@@ -16,7 +16,13 @@ The data is distributed as two gzipped tar archives:
 
 * `cadenza_clip1_data.train.v1.0.tar.gz` [4.5GB]: labelled training data.
 * `cadenza_clip1_data.valid.v1.0.tar.gz` [576MB]: unlabelled validation data.
-* `cadenza_clip1_data.demo.v1.0.tar.gz` [4MB]: 10 samples from training and validation data.
+
+:::tip[Demo data]
+If you need to have a quick view of the data structure, we also provide a demo package:
+* `cadenza_clip1_data.demo.v1.0.tar.gz` [4MB]
+
+This package contains 5 samples from the training and 5 from the validation data.
+:::
 
 **Installation Instructions**
 
