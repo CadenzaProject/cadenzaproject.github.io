@@ -9,10 +9,6 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::info
-To download the data please fill out the [registration form](../take_part/registration)
-:::
-
 
 ## Data Distribution and Installation
 
@@ -37,8 +33,8 @@ Directory Structure after unpacking:
 cadenza_data/
 ├── metadata/        
 ├── train/
-│   ├── signals/      # Signals to predict intelligibility
-│   └── unprocessed/  # Unprocessed signals
+│   ├── signals/      # Audio to predict intelligibility
+│   └── unprocessed/  # Audio without hearing loss
 ├── valid/  
 │   ├── signals/      
 │   └── unprocessed/  
@@ -61,9 +57,9 @@ The train metadata is saved in `train_metadata.json`.
 The metadata contains list of dictionaries, each representing the listener's response.
 
 Fields:
-* `signal`: name of signal to predict intelligibility.
+* `signal`: audio filename.
 * `prompt`: original target sentence.
-* `response`: listener test response.
+* `response`: listener test transcription response ('#' indicates no response/understanding).
 * `n_words`: number of words in prompts after expanding contractions.
 * `words_correct`: number of correctly identified words.
 * `correctness`: Rate of correctly identified words (the target variable).
