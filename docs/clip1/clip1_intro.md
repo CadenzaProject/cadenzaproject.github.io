@@ -12,12 +12,12 @@ import Admonition from '@theme/Admonition';
 
 # ICASSP 2026 Cadenza Challenge: Predicting Lyric Intelligibility
 
-:::warning[🚧 Website Under Construction  🚧]
-Full release week commencing 1st September.
+:::info[🎉 ICASSP 2026 Challenge Launch]
+We're live! 🚀
 
-Coming soon **Baseline** and **Leaderboard**.
+Stay tuned, the **Baseline** and **Leaderboard** to follow this week.
 
-**Last update: 2025-08-29**
+**Last updated: 2025-09-01**
 :::
 
 <Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="Lead singing in a band singing into a microphone" />
