@@ -14,9 +14,7 @@ import Admonition from '@theme/Admonition';
 
 :::info[🎉 ICASSP 2026 Challenge Launch]
 We're live! 🚀
-
 Stay tuned, the **Baseline** and **Leaderboard** to follow this week.
-
 **Last updated: 2025-09-01**
 :::
 
