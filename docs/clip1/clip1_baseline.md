@@ -13,24 +13,27 @@ Two baselines, one intrusive and one non-intrusive, have been provided to help y
 
 ## Overview
 
-**Non-intrusive**
+### Non-intrusive
 
-The non-instrusive baseline is based on the short term objective intelligibility (STOI) model [1] to make predictions. STOI is an intrusive measure that takes two inputs.
+The non-instrusive (blind) baseline is based on the short term objective intelligibility (STOI) model [1] to make predictions. STOI is an metric that compares two signals.
 
 1. A processed signal.
 2. A reference signal.
 
-However, in the baseline, the reference signal corresponds to the vocals estimated from the unprocessed signals.
-I.e. estimated from the signal before applying hearing loss simulation.
+In the baseline, the reference signal corresponds to the vocals estimated from the original music i.e. the unprocessed track (Audio 2). The vocals are extracted using musical source separation (HDemucs) on the signal before any hearing loss simulation.
 
-**Intrusive**
+(Note, STOI is normally seen as being intrusive, but the way we have formed the reference makes it non-intrusive).
+
+### Intrusive
 
 The intrusive baseline is based on ASR transcription using Whisper. In this case, we use Whisper model `base.en` and `temperature=0.0` to transcribe the signal.
-And, using the Ground Truth transcriptions, we compute the correctness score corresponding to `hit / total words`
+Next, using the Ground Truth transcriptions, we compute the correctness score corresponding to fraction of words correct to the total number of words.
 
-In both baselines, predictions are intelligibility scores between 0 and 1. 
-These scores are then passed through a logistic function, whose parameters have been optimized on the training data to minimize the RMSE between the predicted and measured intelligibility scores. 
-The output of the logistic function is the final sentence intelligibility prediction.
+Because this needs the ground truth text, it is classed as intrusive (double-ended).
+
+### Logisitic mapping for both baselines
+
+Raw predictions from the above algorithms lie between 0 and 1. These are then passed through a fitted logistic function to improve the mapping to the intelligibility scores measured in the listening tests. For each baseline, this is done by optimising the parameters of the logistic function to minimize the RMSE between the predicted and measured intelligibility scores for the training set.  The output of the logistic function is the final intelligibility prediction.
 
 ## How to use the baseline
 
