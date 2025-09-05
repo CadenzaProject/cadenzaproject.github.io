@@ -14,8 +14,8 @@ import Admonition from '@theme/Admonition';
 
 :::info[🎉 ICASSP 2026 Challenge Launch]
 We're live! 🚀  
-Stay tuned, the **Baseline** and **Leaderboard** to follow this week.  
-**Last updated: 2025-09-01**
+Baseline available and **Leaderboard** to follow.  
+**Last updated: 2025-09-05**
 :::
 
 <Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="Lead singing in a band singing into a microphone" />
