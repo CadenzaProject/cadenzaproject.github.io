@@ -18,18 +18,16 @@ Baseline and Leaderboard available.
 **Last updated: 2025-09-08**
 :::
 
-<Image img={require('../../static/img/clip1/clip1_landing.jpg')} alt="Lead singing in a band singing into a microphone" />
-Image by <a href="https://pixabay.com/users/sabena206-20184104/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Sabena Costa</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5989931">Pixabay</a>
-
 ## Overview
-
-<iframe width="100%" height="560" src="https://www.youtube.com/embed/6nzDaEzSMww?si=zuwjl3zDViQqq7_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
 Understanding the lyrics in music is key for music enjoyment [1]. 
 People with hearing loss can have difficulties clearly and effortlessly hearing lyrics [2], however. 
 In speech technology, having metrics to automatically evaluate intelligibility has driven improvements in speech enhancement. 
 We want to do the same for music with lyrics.
+
+This video gives you a brief overview of the challenge.
+
+<iframe width="100%" height="560" src="https://www.youtube.com/embed/6nzDaEzSMww?si=zuwjl3zDViQqq7_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Challenge entrants will be given thousands of audio segments of accompanied singing, and their task is to predict the word correct rate from perceptual experiments, where normal hearing listeners were asked to write down the lyrics they heard. 
 All audios will be presented as-is and processed by a hearing loss simulator for a mild and moderate hearing loss, so diverse hearing characteristics are incorporated into the challenge.

@@ -36,6 +36,12 @@ The scenario we're simulating is someone listening to music, so audio (2) might 
 
 In our baseline, we use Audio (2) to estimate the vocals without hearing loss simulation using music source separation. This is then used as a reference signal for an intelligibility metric.
 
+## Data exporation
+
+This video explores the dataset and highlights some interesting aspects to research.
+
+<iframe width="100%" height="560" src="https://www.youtube.com/embed/0w5DyZ8Itv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Construction of the CLIP1 Dataset
 
 <Image img={require('../../../static/img/clip1/data_explanation_diagram.png')} alt="schematic of data generation" />
