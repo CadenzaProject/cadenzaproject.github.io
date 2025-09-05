@@ -42,7 +42,7 @@ Raw predictions from the above algorithms lie between 0 and 1. These are then pa
 
 ## How to use the baseline
 
-The baseline system is included in the `pyclarity` Python package (version pyclarity >= 0.8), which is available on GitHub. 
+The baseline system is included in the `pyclarity` Python package (version pyclarity >= 0.8.0), which is available on GitHub. 
 The relevant scripts are located in the `recipes/cad_icassp_2026/baseline` directory. To use the baseline system:
 
 1. Download the Code: Clone or download the repository from GitHub.
@@ -54,8 +54,8 @@ The baseline systems achieve the following performance on the validation set:
 
 | System  | RMSE  |  NCC  |
 |:--------|:-----:|:-----:| 
-| STOI    | 0.361 | 0.141 |
-| Whisper | 0.292 | 0.598 |
+| STOI    | 36.07 | 0.141 |
+| Whisper | 29.20 | 0.598 |
 
 ## References 
 
