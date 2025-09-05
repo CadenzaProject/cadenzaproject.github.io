@@ -20,16 +20,21 @@ The non-instrusive (blind) baseline is based on the short term objective intelli
 1. A processed signal.
 2. A reference signal.
 
-In the baseline, the reference signal corresponds to the vocals estimated from the original music i.e. the unprocessed track (Audio 2). The vocals are extracted using musical source separation (HDemucs) on the signal before any hearing loss simulation.
+In the baseline, the reference signal corresponds to the vocals estimated from the original music i.e. the unprocessed track (Audio 2). The vocals are extracted using musical source separation (HDemucs [2]) on the signal before any hearing loss simulation.
 
 (Note, STOI is normally seen as being intrusive, but the way we have formed the reference makes it non-intrusive).
 
+<Image img={require('../../static/img/clip1/stoi_baseline.png')} alt="STOI-based baseline" />
+
 ### Intrusive
 
-The intrusive baseline is based on ASR transcription using Whisper. In this case, we use Whisper model `base.en` and `temperature=0.0` to transcribe the signal.
+The intrusive baseline is based on ASR transcription using Whisper [3]. In this case, we use Whisper model `base.en` and `temperature=0.0` to transcribe the signal.
 Next, using the Ground Truth transcriptions, we compute the correctness score corresponding to fraction of words correct to the total number of words.
+Before computing the score, the ground truth and Whisper hypothesis were text normalised, numbers transcribed to written format and contractions expanded.
 
 Because this needs the ground truth text, it is classed as intrusive (double-ended).
+
+<Image img={require('../../static/img/clip1/whisper_baseline.png')} alt="Whisper-based baseline" />
 
 ### Logisitic mapping for both baselines
 
@@ -54,4 +59,6 @@ The baseline systems achieve the following performance on the validation set:
 
 ## References 
 
-[1] C. H. Taal, R. C. Hendriks, R. Heusdens, and J. Jensen, [An algorithm for intelligibility prediction of time–frequency weighted noisy speech](https://ieeexplore.ieee.org/document/5713237), in IEEE Transactions on Audio, Speech, and Language Processing
+[1] C. H. Taal, R. C. Hendriks, R. Heusdens, and J. Jensen, [An algorithm for intelligibility prediction of time–frequency weighted noisy speech](https://ieeexplore.ieee.org/document/5713237), in IEEE Transactions on Audio, Speech, and Language Processing.  
+[2] Alexandre Defossez, [Hybrid spectrogram and wave-form source separation](https://mdx-workshop.github.io/proceedings/defossez.pdf) in Proceedings of the ISMIR 2021 Workshop on Music Source Separation, 2021.  
+[3] Radford, A., Kim, J. W., Xu, T., Brockman, G., McLeavey, C., & Sutskever, I. [Robust speech recognition via large-scale weak supervision](https://proceedings.mlr.press/v202/radford23a/radford23a.pdf), in International conference on machine learning. 
