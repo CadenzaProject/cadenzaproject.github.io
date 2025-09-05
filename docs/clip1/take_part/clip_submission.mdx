@@ -7,6 +7,65 @@ sidebar_position: 4.6
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::info
-How to submit your entry will be detailed later in the autumn.
-:::
+## Registration
+
+All teams are required to [register](registration). Registered teams will be assigned a unique team ID to identify their submission.
+Please mind that you will receive your TEAM_ID after the submission windows open. This will be sent to same email account you use during registration.
+
+## Evaluation data?
+
+The evaluation data will have the same format as the validation data (see details in [data specification](../data/data_specification#validation-metadata)).
+
+Pairs of processed and un-processed audio signal will be provided together with their metadata using the same field as the validation dataset.
+It won't contain the listener's correctness score. We will score your submission for you and return your score (we aim to do this within 24 hours of submission).
+
+## What do I need to submit?
+
+All teams must submit
+
+* Their predicted intelligibility scores
+* A two-page technical report
+
+### The predicted intelligibility scores
+
+The predicted scores need to be submitted in a CSV file named `ICASSP2026_<TEAMS_ID>.csv` where `<TEAM_ID>` is your individual TEAM_ID provided after registration.
+
+The CSV file should have two columns,
+> signal_id, intelligibility_score
+
+where the `signal_id` is the unique signal identifier used for each FLAC file name (the metadata's `signal` field) and
+the `intelligibility_score` is the predicted intelligibility scored between 0 and 1.
+
+### The technical report
+
+* A two-page technical report must be submitted alongside your predicted scores.
+* Your report should include an abstract and introduction and sections on experimental setup/methodology including system information and model/network architecture, evaluation/results, discussion, conclusion and references. Please provide an estimation of the computational resources needed. You must describe any pre-existing tools, software and models used.
+* We suggest you can use the ICASSP 2026 template.
+* The top five systems will be invited to submit a paper to the ICASSP 2026 special session.
+
+Note, you will not have your final evaluation set scores when you submit your report.
+We will score your submission for you and return your score (we aim to do this within 24 hours of submission).
+This extra information can then be included in a revised version of your report, which will be published on the workshop website in time for the workshop itself on May 2026.
+
+## Where should I submit my entry?
+
+The CSV file and the technical report should be sent as an email attachment to the email address: `cadenzachallengecontact@gmail.com`
+
+Please use `ICASSP2026 Submission <TEAM_ID>` as the subject line.
+
+## Multiple submissions
+
+If your team wishes to make more than one submission then please prepare separate CSV files adding 'a', 'b' etc to your `<TEAM_ID>`,
+e.g. If your `<TEAM_ID>` is E001 use the names `ICASSP2026_E001a.csv` and `ICASSP2026_E001b.csv`.
+We will only accept multiple entries where we judge the systems to be significantly different,
+i.e. separate entries cannot be the same system with different hyper-parameter tunings.
+
+If you have submitted multiple entries you may describe them both in the same technical report or use separate technical reports if the systems are unrelated and you need more space.
+
+## Code
+
+We encourage you to make your code open source.
+
+## How will intellectual property be handled?
+
+See [Intellectual Property](rules#intellectual-property) section for details.
