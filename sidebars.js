@@ -27,6 +27,7 @@ module.exports = {
             ]
         },
         'clip1/baseline',
+        'clip1/leaderboard',
         {  // Menu Take Part
             type: 'category',
             label: 'Take Part',
