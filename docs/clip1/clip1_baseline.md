@@ -38,6 +38,10 @@ Note, ASR methods for speech intelligibility prediction have become popular in r
 
 Raw predictions from the above algorithms lie between 0 and 1. These are then passed through a fitted logistic function to improve the mapping to the intelligibility scores (correctness) measured in the listening tests. For each baseline, this is done by optimising the parameters of the logistic function to minimize the RMSE between the predicted and measured intelligibility scores for the training set. The output of the logistic function is the final intelligibility prediction.
 
+## Introduction video to baselines
+
+<iframe width="100%" height="560" src="https://www.youtube.com/embed/UiYuyCbmARA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## How to use the baseline
 
 The baseline system is included in the `pyclarity` Python package (version pyclarity >= 0.8.0), which is available on GitHub. 
