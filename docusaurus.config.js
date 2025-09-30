@@ -15,7 +15,7 @@ module.exports = {
     url: 'https://cadenzaproject.github.io/',
     baseUrl: '/',
     onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'throw',
+    // onBrokenMarkdownLinks: 'throw', # deprecated in v3.9
     favicon: 'img/favicon.ico',
     organizationName: 'cadenzaproject', // Usually your GitHub org/user name.
     projectName: 'cadenzaproject.github.io', // Usually your repo name.
@@ -29,6 +29,9 @@ module.exports = {
             admonitions: false,
             headingIds: false,
         },
+        hooks:{
+            onBrokenMarkdownLinks: 'throw' // new in V 3.9
+        }
     },
     themes: ['@docusaurus/theme-mermaid'],
     // stylesheets: [{
@@ -87,7 +90,7 @@ module.exports = {
         announcementBar: {
             id: 'announcement',
             content:
-                "🚀 ICASSP 2026 Cadenza Challenge is now live!",
+                "🚀 <a href='https://cadenzachallenge.org/docs/clip1/intro'>ICASSP 2026 Cadenza Challenge is now live!<a>",
             backgroundColor: '#a2dea2',
             textColor: '#070707',
             isCloseable: false,
