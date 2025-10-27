@@ -26,14 +26,18 @@ We used Prolific to run lyric intelligibility tests. Listeners with normal heari
 
 [Singing adapted STOI](https://ieeexplore.ieee.org/document/8910414), which combines the traditional STOI (speech) metric with vocal-specific features to account for the different singing styles is a rare example of an existing metric for sung speech. But there are lots of [speech intelligibility metrics](https://www.sciencedirect.com/science/article/pii/S1877050918302187) that might also be adapted. For example, approaches using large language models are becoming more common.
 
-## Intrusive vs non-intrusive
+[//]: # (## Intrusive vs non-intrusive)
 
-There are two broad classes of speech intelligibility models:
+[//]: # ()
+[//]: # (There are two broad classes of speech intelligibility models:)
 
-- Intrusive metrics (also known as double-ended) are most common. This is where the intelligibility is estimated by comparing the degraded or processed speech signal with the original clean speech signal.
-- Non-intrusive metrics (also known as single-ended or blind) are less well developed. This is where intelligibility is estimated from the degraded or processed speech signal alone.
+[//]: # ()
+[//]: # (- Intrusive metrics &#40;also known as double-ended&#41; are most common. This is where the intelligibility is estimated by comparing the degraded or processed speech signal with the original clean speech signal.)
 
-In the Cadenza project, both types of metrics are of interest.
+[//]: # (- Non-intrusive metrics &#40;also known as single-ended or blind&#41; are less well developed. This is where intelligibility is estimated from the degraded or processed speech signal alone.)
+
+[//]: # ()
+[//]: # (In the Cadenza project, both types of metrics are of interest.)
 
 ## Learning Resources
 

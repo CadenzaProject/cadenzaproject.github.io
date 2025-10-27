@@ -36,7 +36,8 @@ The only data that can be used by the prediction model during evaluation are:
 3. The listener's hearing impairment severity.
 4. The ground-truth text of the lyrics.
 
-We will have a separate ranking list for intrusive and non-intrusive systems. Intrusive (double-ended) methods are ones that make use of (4), the ground truth text.
+We will have a separate ranking list for intrusive and non-intrusive systems. Intrusive methods are ones that make use of (4), the ground truth text. 
+Non-intrusive ones don't use (4) (This is a slightly different definition to that commonly used in speech intelligibility because of our scenario). 
 
 ## Baseline models and computational restrictions
 
