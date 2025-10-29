@@ -12,14 +12,11 @@ import Admonition from '@theme/Admonition';
 
 # ICASSP 2026 Cadenza Challenge: Predicting Lyric Intelligibility
 
-:::info[🎉 ICASSP 2026 Challenge - We're live! 🚀]
-- [Baseline code](https://github.com/claritychallenge/clarity/tree/main/recipes/cad_icassp_2026) 
-- [Leaderboard](leaderboard)
-- Videos:
-  - [Dataset exploration](data/data#data-exploration)
-  - [Baseline](baseline#introduction-video-to-baselines)   
+:::info[🎉 ICASSP 2026 Challenge - Submission Windows Now Open 🎉]
+- ### [Submission Instructions](take_part/submission) 
+- ### Submission Data Available at [Zenodo](https://zenodo.org/uploads/17476436)
   
-**Last updated: 2025-09-15**
+**Last updated: 2025-10-31**
 :::
 
 ## Overview

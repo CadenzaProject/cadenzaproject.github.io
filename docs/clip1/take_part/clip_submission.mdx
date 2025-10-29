@@ -15,32 +15,45 @@ Please mind that you will receive your TEAM_ID after the submission windows open
 ## Evaluation data?
 
 The evaluation data will have the same format as the validation data (see details in [data specification](../data/data_specification#validation-metadata)).
-
 Pairs of processed and un-processed audio signal will be provided together with their metadata using the same field as the validation dataset.
 It won't contain the listener's correctness score. We will score your submission for you and return your score (we aim to do this within 24 hours of submission).
+
+To get access to the data, please download the package from the Zenodo repository:
+
+* `cadenza_clip1_data.eval.v1.0.tar.gz` [561 MB]: unlabelled evaluation data.
+* [Zenodo link](https://zenodo.org/uploads/17476436)
 
 ## What do I need to submit?
 
 All teams must submit
 
-* Their predicted intelligibility scores
+* CSV file with the evaluation predictions (evaluation set) with scores ranging between 0 and 100.
+* CSV file with the validation prediction (validation set) with scores ranging between 0 and 100.
 * A two-page technical report
 
 ### The predicted intelligibility scores
 
-The predicted scores need to be submitted in a CSV file named `ICASSP2026_<TEAMS_ID>.csv` where `<TEAM_ID>` is your individual TEAM_ID provided after registration.
+The predicted scores need to be submitted in a CSV file named `ICASSP2026_<DATA SET>_<TEAMS_ID>.csv` where `<TEAM_ID>` is your individual TEAM_ID provided after registration,
+and `<DATA SET>` is either `valid` or `eval` for validation and evaluation sets, respectably.
 
-The CSV file should have two columns,
+For example, for team `T001`, the files with the predicted scores should be called:
+
+* `ICASSP2026_valid_T001.csv` for the validation set predictions.
+* `ICASSP2026_eval_T001.csv` for the evaluation set predictions.
+
+The CSV files should have two columns with headers,
 > signal_id, intelligibility_score
 
 where the `signal_id` is the unique signal identifier used for each FLAC file name (the metadata's `signal` field) and
-the `intelligibility_score` is the predicted intelligibility given in terms of the percentage words recognised correctly for the signal (i.e. between 0 and 100).
+the `intelligibility_score` is the predicted intelligibility **given in terms of the percentage words recognised correctly** for the signal (i.e. **between 0 and 100**).
+
+
 
 ### The technical report
 
 * A two-page technical report must be submitted alongside your predicted scores.
 * Your report should include an abstract and introduction and sections on experimental setup/methodology including system information and model/network architecture, evaluation/results, discussion, conclusion and references. Please provide an estimation of the computational resources needed. You must describe any pre-existing tools, software and models used.
-* We suggest you can use the ICASSP 2026 template.
+* We suggest you use the [ICASSP 2026 Paper Kit](https://cmsworkshops.com/ICASSP2026/papers.php).
 * The top five systems will be invited to submit a paper to the ICASSP 2026 special session.
 
 Note, you will not have your final evaluation set scores when you submit your report.
@@ -49,16 +62,16 @@ This extra information can then be included in a revised version of your report,
 
 ## Where should I submit my entry?
 
-The CSV file and the technical report should be sent as an email attachment to the email address: `cadenzachallengecontact@gmail.com`
+The CSV files and the technical report should be sent as an email attachment to the email address: `cadenzachallengecontact@gmail.com`
 
 Please use `ICASSP2026 Submission <TEAM_ID>` as the subject line.
 
 ## Multiple submissions
 
-If your team wishes to make more than one submission then please prepare separate CSV files adding 'a', 'b' etc to your `<TEAM_ID>`,
-e.g. If your `<TEAM_ID>` is E001 use the names `ICASSP2026_E001a.csv` and `ICASSP2026_E001b.csv`.
+If your team wishes to make more than one submission then please prepare separate CSV files adding 'a', 'b', etc to your `<TEAM_ID>`,
+e.g. if your `<TEAM_ID>` is T001 use the names `ICASSP2026_valid_T001a.csv` and `ICASSP2026_valid_T001b.csv` for the validation set. Same structure for the evaluation set.
 We will only accept multiple entries where we judge the systems to be significantly different,
-i.e. separate entries cannot be the same system with different hyper-parameter tunings.
+i.e. separate entries cannot be the same system with different hyperparameter tunings.
 
 If you have submitted multiple entries you may describe them both in the same technical report or use separate technical reports if the systems are unrelated and you need more space.
 

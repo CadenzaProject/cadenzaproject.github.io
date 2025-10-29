@@ -66,8 +66,11 @@ The metadata contains list of dictionaries, each representing the listener's res
 
 Fields:
 * `signal`: audio filename.
-* `prompt`: original target sentence (ground truth).
-* `response`: text transcription from Prolific listening tests ('#' indicates no words entered).
+* `fma`: Free Music Archive track id. Same as the one in fma metadata. 
+* `original_prompt`: original target sentence.
+* `prompt`: text normalised target sentence (ground truth) used for correctness computation.
+* `original response`: text transcription from Prolific listening tests ('#' indicates no words entered).
+* `response`: text normalised transcription used for correctness computation.
 * `n_words`: number of words in prompts after expanding contractions (see [data construction](data#construction-of-the-clip1-dataset)).
 * `words_correct`: number of correctly identified words.
 * `correctness`: Intelligibility score i.e. rate of correctly identified words (the target variable).
@@ -76,35 +79,40 @@ Fields:
 ```json title="metadata/train_metadata.json"
 [
   {
-    "signal": "b2486a8e181f84acd2db4d61",
-    "prompt": "in my mind I can see is fine",
-    "response": "#",
-    "n_words": 8,
-    "words_correct": 0,
-    "correctness": 0.0,
-    "hearing_loss": "Moderate"
+    "signal":"b2486a8e181f84acd2db4d61",
+    "fma":"001750",
+    "original_prompt":"in my mind I can see is fine",
+    "prompt":"in my mind i can see is fine",
+    "original_response":"#",
+    "response":"",
+    "n_words":8,
+    "words_correct":0,
+    "correctness":0.0,
+    "hearing_loss":"Moderate"
   }
 ]
 ```
 
-## Validation Metadata
+## Validation/Evaluation Metadata
 
 The validation metadata is saved in `metadata/valid_metadata.json`.
 The metadata contains list of dictionaries, each representing the listener's response.
 
 Fields:
 * `signal`: name of signal to predict intelligibility from.
-* `prompt`: original target sentence (ground truth). 
+* `original_prompt`: original target sentence.
+* `prompt`: text normalised target sentence (ground truth) used for correctness computation.
 * `n_words`: number of words in prompts after expanding contractions.
 * `hearing_loss`: Indicating if the signal audio was: not processed (**No Loss**); has **Mild** simulated hearing loss; or **Moderate** simulated hearing loss
 
 ```json title="cadenza_data/metadata/valid_metadata.json"
 [
   {
-    "signal": "c657dc0bd1f822f8ff7104a1",
-    "prompt": "do you know i am truly alone",
-    "n_words": 7,
-    "hearing_loss": "Moderate"
+    "signal":"c657dc0bd1f822f8ff7104a1",
+    "original_prompt":"do you know i am truly alone",
+    "prompt":"do you know i am truly alone",
+    "n_words":7,
+    "hearing_loss":"Moderate"
   }
 ]
 ```
