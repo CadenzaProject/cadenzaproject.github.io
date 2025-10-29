@@ -18,6 +18,7 @@ module.exports = {
     tutorialSidebar_clip1: [
         'clip1/intro',
         'clip1/key_dates',
+        'clip1/submission',
         { // Menu Dataset
             type: 'category',
             label: 'Dataset',
