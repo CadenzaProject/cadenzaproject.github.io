@@ -16,33 +16,33 @@
         <content type="html"><![CDATA[<p>People with hearing loss can have difficulties to clearly and effortlessly hearing lyrics. In speech technology, having metrics to automatically evaluate intelligibility has driven improvements in speech enhancement through machine learning. We want to do the same for music lyrics. We are busy working on the infrastructure for the Cadenza Lyrics Intelligibility Prediction Challenge (CLIP) that will launch at the start of September.</p>
 <p>Lyric intelligibility prediction is an understudied topic with only a couple of studies available. In speech, we're seeing advancements driven by large Language Models, but the equivalent is not available for music. One of the reasons for this is the lack of data where audio is paired with listener scores for intelligibility. This is what our new CLIP1 database will address.</p>
 <!-- -->
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="poppadom-peach-by-madonna">Poppadom Peach by Madonna<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#poppadom-peach-by-madonna" class="hash-link" aria-label="Direct link to Poppadom Peach by Madonna" title="Direct link to Poppadom Peach by Madonna" translate="no">​</a></h2>
-<p>One of the challenges were facing is that sung lyrics are often inherently less intelligibile than speech because of the way they're articulated. This is why Misheard lyrics are common and <a href="https://www.wearelyrical.com/misheard-lyrics-from-fatherly-advice-to-flavorful-delights-madonnas-spicy-tribute/" target="_blank" rel="noopener noreferrer">websites gather funny examples</a>. Because we're going to get word correct rates from listener transcriptions, we're going to have to avoid cases where the singer is unclear, but that does bias the dataset. What other challenges do you foresee us having?</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="clip-dataset-construction">CLIP Dataset Construction<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#clip-dataset-construction" class="hash-link" aria-label="Direct link to CLIP Dataset Construction" title="Direct link to CLIP Dataset Construction" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="poppadom-peach-by-madonna">Poppadom Peach by Madonna<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#poppadom-peach-by-madonna" class="hash-link" aria-label="Direct link to Poppadom Peach by Madonna" title="Direct link to Poppadom Peach by Madonna" translate="no">​</a></h2>
+<p>One of the challenges were facing is that sung lyrics are often inherently less intelligibile than speech because of the way they're articulated. This is why Misheard lyrics are common and <a href="https://www.wearelyrical.com/misheard-lyrics-from-fatherly-advice-to-flavorful-delights-madonnas-spicy-tribute/" target="_blank" rel="noopener noreferrer" class="">websites gather funny examples</a>. Because we're going to get word correct rates from listener transcriptions, we're going to have to avoid cases where the singer is unclear, but that does bias the dataset. What other challenges do you foresee us having?</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="clip-dataset-construction">CLIP Dataset Construction<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#clip-dataset-construction" class="hash-link" aria-label="Direct link to CLIP Dataset Construction" title="Direct link to CLIP Dataset Construction" translate="no">​</a></h2>
 <p>Difficulties in constructing a suitable dataset arise because:</p>
 <ul>
-<li>The music must be unknown to listeners, so intelligibility scores are not overestimated due to previous knowledge of the words.</li>
-<li>The music must have the proper license for processing, modifying and sharing.</li>
-<li>The music must have ground truth transcriptions. This is challenging for unknown or non-commercial songs.</li>
-<li>The scale of the data must be large for machine learning.</li>
+<li class="">The music must be unknown to listeners, so intelligibility scores are not overestimated due to previous knowledge of the words.</li>
+<li class="">The music must have the proper license for processing, modifying and sharing.</li>
+<li class="">The music must have ground truth transcriptions. This is challenging for unknown or non-commercial songs.</li>
+<li class="">The scale of the data must be large for machine learning.</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="the-audio-samples">The Audio Samples<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#the-audio-samples" class="hash-link" aria-label="Direct link to The Audio Samples" title="Direct link to The Audio Samples" translate="no">​</a></h3>
-<p>These will be taken from the <a href="https://github.com/mdeff/fma" target="_blank" rel="noopener noreferrer">FMA-Full corpus</a> <strong>[1]</strong>. The process of constructing this dataset:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-audio-samples">The Audio Samples<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#the-audio-samples" class="hash-link" aria-label="Direct link to The Audio Samples" title="Direct link to The Audio Samples" translate="no">​</a></h3>
+<p>These will be taken from the <a href="https://github.com/mdeff/fma" target="_blank" rel="noopener noreferrer" class="">FMA-Full corpus</a> <strong>[1]</strong>. The process of constructing this dataset:</p>
 <ol>
-<li>From the FMA-Full dataset, we filter out all songs with NonDerivative license, and labelled Classical, Instrumental, Experimental and International because these don't have vocals or are not music.</li>
-<li>Then, we discarded all songs that lack vocals (where the RMS of the separated vocals using <a href="https://github.com/facebookresearch/demucs" target="_blank" rel="noopener noreferrer">HTDemucs</a> <strong>[2]</strong> were &lt; 0.01 or no segments were detected with <a href="https://github.com/snakers4/silero-vad" target="_blank" rel="noopener noreferrer">SileroVAD</a>.</li>
-<li>Next, we split the remaining songs into choruses and verses using the <a href="https://github.com/mir-aidj/all-in-one" target="_blank" rel="noopener noreferrer">All-in-one</a> <strong>[3]</strong> model and randomly selected one verse or chorus per song.</li>
+<li class="">From the FMA-Full dataset, we filter out all songs with NonDerivative license, and labelled Classical, Instrumental, Experimental and International because these don't have vocals or are not music.</li>
+<li class="">Then, we discarded all songs that lack vocals (where the RMS of the separated vocals using <a href="https://github.com/facebookresearch/demucs" target="_blank" rel="noopener noreferrer" class="">HTDemucs</a> <strong>[2]</strong> were &lt; 0.01 or no segments were detected with <a href="https://github.com/snakers4/silero-vad" target="_blank" rel="noopener noreferrer" class="">SileroVAD</a>.</li>
+<li class="">Next, we split the remaining songs into choruses and verses using the <a href="https://github.com/mir-aidj/all-in-one" target="_blank" rel="noopener noreferrer" class="">All-in-one</a> <strong>[3]</strong> model and randomly selected one verse or chorus per song.</li>
 </ol>
-<p>Unfortunately, FMA-full does not include transcriptions. Consequently, we are using <a href="https://labelstud.io/" target="_blank" rel="noopener noreferrer">LabelStudio</a> and human annotators to segment and transcribe coherent lyrics phrases within each verse or chorus. The goal is to get up to 5000 transcribed lyrics phrases that, after a cleaning process, will result in 3500 audio segments.
+<p>Unfortunately, FMA-full does not include transcriptions. Consequently, we are using <a href="https://labelstud.io/" target="_blank" rel="noopener noreferrer" class="">LabelStudio</a> and human annotators to segment and transcribe coherent lyrics phrases within each verse or chorus. The goal is to get up to 5000 transcribed lyrics phrases that, after a cleaning process, will result in 3500 audio segments.
 These 3500 segments will be augmented by processing them using a hearing loss simulator, generating three versions: as-is and two processed signals (mild and moderate loss), resulting in about 10,000 audio segments.</p>
 <div style="text-align:center"><img src="https://cadenzaproject.github.io/img/blog_2025-06-06/labelstudio.png"><p><strong>Screenshot of one annotation using LabelStudio</strong></p></div>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="the-intelligibility-scores">The Intelligibility Scores<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#the-intelligibility-scores" class="hash-link" aria-label="Direct link to The Intelligibility Scores" title="Direct link to The Intelligibility Scores" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-intelligibility-scores">The Intelligibility Scores<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#the-intelligibility-scores" class="hash-link" aria-label="Direct link to The Intelligibility Scores" title="Direct link to The Intelligibility Scores" translate="no">​</a></h3>
 <p>To score the audio samples by their intelligibility, we will use Prolific and ask people with normal hearing to transcribe the audio segments
 after one or two listenings. This data will be then split into train and evaluation data for our challenge.</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="stay-informed">Stay informed<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#stay-informed" class="hash-link" aria-label="Direct link to Stay informed" title="Direct link to Stay informed" translate="no">​</a></h2>
-<p>To stay informed about our lyric intelligibility prediction challenge, please sign up to our <a href="https://groups.google.com/g/cadenza-challenge/" target="_blank" rel="noopener noreferrer">Google Group</a></p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="reference">Reference<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#reference" class="hash-link" aria-label="Direct link to Reference" title="Direct link to Reference" translate="no">​</a></h2>
-<p><strong>[1]</strong> Michael Defferrard, Kirell Benzi, Pierre Vandergheynst, &amp; Xavier Bresson. (2017). FMA: A Dataset for Music Analysis. Proceedings of the 18th International Society for Music Information Retrieval Conference, 316–323. <a href="https://doi.org/10.5281/zenodo.1414728" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.1414728</a><br>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="stay-informed">Stay informed<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#stay-informed" class="hash-link" aria-label="Direct link to Stay informed" title="Direct link to Stay informed" translate="no">​</a></h2>
+<p>To stay informed about our lyric intelligibility prediction challenge, please sign up to our <a href="https://groups.google.com/g/cadenza-challenge/" target="_blank" rel="noopener noreferrer" class="">Google Group</a></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="reference">Reference<a href="https://cadenzaproject.github.io/blog/CLIP%20Dataset#reference" class="hash-link" aria-label="Direct link to Reference" title="Direct link to Reference" translate="no">​</a></h2>
+<p><strong>[1]</strong> Michael Defferrard, Kirell Benzi, Pierre Vandergheynst, &amp; Xavier Bresson. (2017). FMA: A Dataset for Music Analysis. Proceedings of the 18th International Society for Music Information Retrieval Conference, 316–323. <a href="https://doi.org/10.5281/zenodo.1414728" target="_blank" rel="noopener noreferrer" class="">https://doi.org/10.5281/zenodo.1414728</a><br>
 <strong>[2]</strong> Rouard, Simon and Massa, Francisco and Defossez, Alexandre. (2023). Hybrid Transformers for Music Source Separation<br>
 <strong>[3]</strong> Kim, Taejun and Nam, Juhan. (2023). All-In-One Metrical And Functional Structure Analysis With Neighborhood Attentions on Demixed Audio. IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)</p>]]></content>
         <author>
@@ -67,52 +67,52 @@ after one or two listenings. This data will be then split into train and evaluat
 It gives us great pleasure to pre-announce the next Cadenza Challenge for music processing and hearing difference.
 This autumn we will be running the Cadenza Lyric Intelligibility Prediction Challenge (CLIP).
 We're hoping this will be accepted as an ICASSP 2026 Grand Challenge.</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="the-challenge">The Challenge<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#the-challenge" class="hash-link" aria-label="Direct link to The Challenge" title="Direct link to The Challenge" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-challenge">The Challenge<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#the-challenge" class="hash-link" aria-label="Direct link to The Challenge" title="Direct link to The Challenge" translate="no">​</a></h2>
 <p>To develop better music processing through machine learning, we need reliable way to automatically evaluate the audio.
 For music with lyrics, then we need a metric to evaluate the intelligibility of the sung words.
 The metric would come from a predictive model that takes as input audio and estimates the lyric intelligibility score that someone would achieve in a listening test.</p>
 <p>With the development of large language models and foundation models for speech and music, there is great potential to significantly improve the current state-of-the-art.
 The music will be genres like pop and rock. Some of this will be as-is, other will be passed through a hearing loss simulator to mimic listeners with hearing loss but not wearing hearing aids.</p>
 <!-- -->
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="what-will-be-provided">What will be provided<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#what-will-be-provided" class="hash-link" aria-label="Direct link to What will be provided" title="Direct link to What will be provided" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-will-be-provided">What will be provided<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#what-will-be-provided" class="hash-link" aria-label="Direct link to What will be provided" title="Direct link to What will be provided" translate="no">​</a></h3>
 <ul>
-<li>Training, evaluation and test tests of music.</li>
-<li>Ground truth lyric intelligibility from listening tests.</li>
-<li>Software tools including a baseline system.</li>
+<li class="">Training, evaluation and test tests of music.</li>
+<li class="">Ground truth lyric intelligibility from listening tests.</li>
+<li class="">Software tools including a baseline system.</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="important-dates">Important Dates<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#important-dates" class="hash-link" aria-label="Direct link to Important Dates" title="Direct link to Important Dates" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="important-dates">Important Dates<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#important-dates" class="hash-link" aria-label="Direct link to Important Dates" title="Direct link to Important Dates" translate="no">​</a></h3>
 <p>All dates are to be intended anywhere on earth time (AoE) and are provisional.</p>
 <ul>
-<li>1st September 2025: Launch of challenge, release of data.</li>
-<li>1st November 2025: Release of evaluation data and opening of submission window.</li>
-<li>1st December 2025: Submission deadline. All entrants must have submitted their predictions plus a draft of their technical report.</li>
-<li>If this is accepted as an ICASSP Grand Challenge<!-- -->
+<li class="">1st September 2025: Launch of challenge, release of data.</li>
+<li class="">1st November 2025: Release of evaluation data and opening of submission window.</li>
+<li class="">1st December 2025: Submission deadline. All entrants must have submitted their predictions plus a draft of their technical report.</li>
+<li class="">If this is accepted as an ICASSP Grand Challenge<!-- -->
 <ul>
-<li>7th December 2025. Invited papers for ICASSP session</li>
-<li>2-8 May 2026. Session at ICASSP 2026</li>
+<li class="">7th December 2025. Invited papers for ICASSP session</li>
+<li class="">2-8 May 2026. Session at ICASSP 2026</li>
 </ul>
 </li>
 </ul>
 <p>We will know whether this is an ICASSP grand challenge in July 2025.</p>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="stay-informed">Stay informed<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#stay-informed" class="hash-link" aria-label="Direct link to Stay informed" title="Direct link to Stay informed" translate="no">​</a></h3>
-<p>To stay informed please sign up to our <a href="https://groups.google.com/g/cadenza-challenge/" target="_blank" rel="noopener noreferrer">Google Group</a></p>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="organisers">Organisers<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#organisers" class="hash-link" aria-label="Direct link to Organisers" title="Direct link to Organisers" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="stay-informed">Stay informed<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#stay-informed" class="hash-link" aria-label="Direct link to Stay informed" title="Direct link to Stay informed" translate="no">​</a></h3>
+<p>To stay informed please sign up to our <a href="https://groups.google.com/g/cadenza-challenge/" target="_blank" rel="noopener noreferrer" class="">Google Group</a></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="organisers">Organisers<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#organisers" class="hash-link" aria-label="Direct link to Organisers" title="Direct link to Organisers" translate="no">​</a></h3>
 <ul>
-<li>Michael A. Akeroyd, University of Nottingham</li>
-<li>Scott Bannister, University of Leeds</li>
-<li>Jon P Barker, University of Sheffield</li>
-<li>Trevor J. Cox, University of Salford</li>
-<li>Bruno Fazenda, University of Salford</li>
-<li>Jennifer Firth, University of Nottingham</li>
-<li>Simone Graetzer, University of Salford</li>
-<li>Alinka Greasley, University of Leeds</li>
-<li>Gerardo Roa-Dabike, University of Sheffield</li>
-<li>Rebecca R. Vos, University of Salford</li>
-<li>William M. Whitmer, University of Nottingham</li>
+<li class="">Michael A. Akeroyd, University of Nottingham</li>
+<li class="">Scott Bannister, University of Leeds</li>
+<li class="">Jon P Barker, University of Sheffield</li>
+<li class="">Trevor J. Cox, University of Salford</li>
+<li class="">Bruno Fazenda, University of Salford</li>
+<li class="">Jennifer Firth, University of Nottingham</li>
+<li class="">Simone Graetzer, University of Salford</li>
+<li class="">Alinka Greasley, University of Leeds</li>
+<li class="">Gerardo Roa-Dabike, University of Sheffield</li>
+<li class="">Rebecca R. Vos, University of Salford</li>
+<li class="">William M. Whitmer, University of Nottingham</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="funded-by">Funded by<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#funded-by" class="hash-link" aria-label="Direct link to Funded by" title="Direct link to Funded by" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="funded-by">Funded by<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#funded-by" class="hash-link" aria-label="Direct link to Funded by" title="Direct link to Funded by" translate="no">​</a></h3>
 <p>Engineering and Physical Sciences Research Council (EPSRC), UK</p>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="partners">Partners<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#partners" class="hash-link" aria-label="Direct link to Partners" title="Direct link to Partners" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="partners">Partners<a href="https://cadenzaproject.github.io/blog/Preannouncing%20CLIP#partners" class="hash-link" aria-label="Direct link to Partners" title="Direct link to Partners" translate="no">​</a></h3>
 <p>RNID, Google, Logitech, Sonova, BBC R&amp;D, Oldenburg University.</p>]]></content>
         <author>
             <name>Gerardo Roa</name>
@@ -137,7 +137,7 @@ The music will be genres like pop and rock. Some of this will be as-is, other wi
 We presented our study findings at the International Conference of Music Perception and Cognition (ICMPC) in Tokyo, Japan in August and at the Basic Auditory Science (BAS) conference in London in September.</p>
 <!-- -->
 <div style="text-align:center"><figure id="fig1"><img width="400" src="https://cadenzaproject.github.io/img/blog_2023-10-05/apsco.png"></figure></div>
-<p>Second, the entrants in the <a href="https://cadenzachallenge.org/docs/cadenza1/cc1_intro" target="_blank" rel="noopener noreferrer">First Cadenza Challenge</a> have now submitted systems they devised to improve the audio quality of various music samples.
+<p>Second, the entrants in the <a href="https://cadenzachallenge.org/docs/cadenza1/cc1_intro" target="_blank" rel="noopener noreferrer" class="">First Cadenza Challenge</a> have now submitted systems they devised to improve the audio quality of various music samples.
 These samples have been tailored for the hearing profiles of our listener panel participants and are currently being prepared for our online software.</p>
 <p><strong>We will be releasing the main online listening experiment over the coming days!</strong></p>
 <p>On 20th September, we ran a webinar for our listener panel. In the first part, we gave a short talk summarising the aims and results of the sensory panel study.
@@ -203,10 +203,10 @@ incredible commitment, motivation, and contribution to this research!</p>]]></co
         <link href="https://cadenzaproject.github.io/blog/Sensory evaluation study"/>
         <updated>2023-01-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Here at Cadenza our sensory evaluation work to define audio quality for hearing impaired listeners is underway. We want to understand better how hearing-impaired listeners perceive audio quality in music and develop quality metrics that will subsequently be used by our listener panel to rate the systems submitted by challenge entrants. Through careful listening tasks and group discussion, the sensory panel will arrive at a consensus about important sound quality attributes and how these should be measured. You can find out more about this process on the Sensory Evaluation page.]]></summary>
-        <content type="html"><![CDATA[<p>Here at Cadenza our sensory evaluation work to define audio quality for hearing impaired listeners is underway. We want to understand better how hearing-impaired listeners perceive audio quality in music and develop quality metrics that will subsequently be used by our listener panel to rate the systems submitted by challenge entrants. Through careful listening tasks and group discussion, the sensory panel will arrive at a consensus about important sound quality attributes and how these should be measured. You can find out more about this process on the <a href="https://cadenzaproject.github.io/docs/learning_resources/Perceptual_testing/edu_PT_sensory_Evaluation">Sensory Evaluation page</a>.</p>
+        <content type="html"><![CDATA[<p>Here at Cadenza our sensory evaluation work to define audio quality for hearing impaired listeners is underway. We want to understand better how hearing-impaired listeners perceive audio quality in music and develop quality metrics that will subsequently be used by our listener panel to rate the systems submitted by challenge entrants. Through careful listening tasks and group discussion, the sensory panel will arrive at a consensus about important sound quality attributes and how these should be measured. You can find out more about this process on the <a class="" href="https://cadenzaproject.github.io/docs/learning_resources/Perceptual_testing/edu_PT_sensory_Evaluation">Sensory Evaluation page</a>.</p>
 <!-- -->
-<p>The first task was an individual elicitation task in which we asked twelve listeners with hearing impairment to provide single-word perceptual terms to describe various music excerpts provided to them. This resulted in hundreds of unique attributes used to describe sound quality, of which 89 were used more than four times (see  <a href="https://cadenzaproject.github.io/blog/Sensory%20evaluation%20study#fig1">Fig. 1</a>) and 87 were used two or three times (see <a href="https://cadenzaproject.github.io/blog/Sensory%20evaluation%20study#fig2">Fig. 2</a>). This provided the starting point for the first Focus group which sought to identify the most important attributes and to identify ways of grouping the attributes into perceptual dimensions that could be captured in the quality metric.</p>
-<p>The outcome of Focus group one was a spatial mapping of the ways in which the panel grouped attributes together which was used as a starting point for Focus group two (see <a href="https://cadenzaproject.github.io/blog/Sensory%20evaluation%20study#fig3">Fig. 3</a>). The panel then discussed further the meaning and grouping of different terms to reach consensus about important dimensions. In February, we will carry out a third Focus group to arrive at final dimensions, how these can be defined, and how they can be rated or scored in the challenges.</p>
+<p>The first task was an individual elicitation task in which we asked twelve listeners with hearing impairment to provide single-word perceptual terms to describe various music excerpts provided to them. This resulted in hundreds of unique attributes used to describe sound quality, of which 89 were used more than four times (see  <a href="https://cadenzaproject.github.io/blog/Sensory%20evaluation%20study#fig1" class="">Fig. 1</a>) and 87 were used two or three times (see <a href="https://cadenzaproject.github.io/blog/Sensory%20evaluation%20study#fig2" class="">Fig. 2</a>). This provided the starting point for the first Focus group which sought to identify the most important attributes and to identify ways of grouping the attributes into perceptual dimensions that could be captured in the quality metric.</p>
+<p>The outcome of Focus group one was a spatial mapping of the ways in which the panel grouped attributes together which was used as a starting point for Focus group two (see <a href="https://cadenzaproject.github.io/blog/Sensory%20evaluation%20study#fig3" class="">Fig. 3</a>). The panel then discussed further the meaning and grouping of different terms to reach consensus about important dimensions. In February, we will carry out a third Focus group to arrive at final dimensions, how these can be defined, and how they can be rated or scored in the challenges.</p>
 <p>We would like to thank our Sensory panel group for their ongoing motivation and commitment with this challenging task!</p>
 <figure id="fig1"><img width="500" src="https://cadenzaproject.github.io/img/sensory_blog_1.png"><figcaption>Figure 1, 89 terms that were used four or more times to describe the musical excerpts.</figcaption></figure>
 <figure id="fig2"><img width="500" src="https://cadenzaproject.github.io/img/sensory_blog_2.png"><figcaption>Figure 2, 87 terms that were used twice or three times to describe the musical excerpts.</figcaption></figure>
