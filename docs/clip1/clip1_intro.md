@@ -12,11 +12,11 @@ import Admonition from '@theme/Admonition';
 
 # ICASSP 2026 Cadenza Challenge: Predicting Lyric Intelligibility
 
-:::info[🎉 ICASSP 2026 Challenge - Submission Windows Now Open 🎉]
-- ### [Submission Instructions](take_part/submission) 
-- ### Submission Data Available at [Zenodo](https://zenodo.org/uploads/17476436)
-  
-**Last updated: 2025-10-31**
+:::info[🎉 2-page paper submission deadline EXTENDED!! 🎉]
+
+The deadline for invited teams to submit their 2-page papers to ICASSP 2026 has been extended to **2025-12-15**.
+
+**Last updated: 2025-12-02**
 :::
 
 ## Overview
