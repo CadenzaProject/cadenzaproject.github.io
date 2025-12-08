@@ -7,9 +7,9 @@ sidebar_position: 2
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-- **w/c 1st September 2025**: Challenge launch with training/development datasets; rules and documentation.
-- **1st November 2025**: Release of evaluation data and opening of submission window.
-- **1st December 2025**: Submission deadline. All entrants must have submitted their predictions plus a draft of their technical report.
+- :heavy_check_mark: **w/c 1st September 2025**: Challenge launch with training/development datasets; rules and documentation.
+- :heavy_check_mark: **1st November 2025**: Release of evaluation data and opening of submission window.
+- :heavy_check_mark: **1st December 2025**: Submission deadline. All entrants must have submitted their predictions plus a draft of their technical report.
 - ~~**7th December 2025**: Top teams invited to submit 2-page paper for ICASSP 2026.~~ **DEADLINE EXTENDED**
 - **15th December 2025**: ICASSP 2026 2-page paper submission deadline. Only invited teams!!
 - **11th January 2026**: ICASSP paper acceptance notification. 
