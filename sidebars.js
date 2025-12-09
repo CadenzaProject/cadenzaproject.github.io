@@ -38,7 +38,7 @@ module.exports = {
                 'clip1/take_part/FAQs',
             ],
         },
-        'clip1/results',
+        'clip1/results'
     ],
     tutorialSidebar_cad2: [
         'cadenza2/intro',  // landing
