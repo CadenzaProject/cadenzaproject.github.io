@@ -16,6 +16,11 @@
             "sort": false
         },
         {
+            "dataField": "paper",
+            "text": "Paper",
+            "type": "Link"
+        },
+        {
             "dataField": "Score",
             "text": "Score",
             "sort": true
