@@ -136,6 +136,10 @@ module.exports = {
                     position: 'right',
                     items: [
                         {
+                            to: '/docs/clip2/intro',
+                            label: 'CLIP2',
+                                            },
+                        {
                             to: '/docs/clip1/intro',
                             label: 'ICASSP 2026 CLIP1',
                         },

@@ -23,8 +23,8 @@ function HomepageHeader() {
             About Us{" "}
           </Link>{" "}
           
-          <Link className="button button--secondary button--lg" to="./docs/clip1/intro" style={{margin: "10px"}}>
-              ICASSP 2026 Grand Challenge{" "}
+          <Link className="button button--secondary button--lg" to="./docs/clip2/intro" style={{margin: "10px"}}>
+              Pre-announcement Cadenza CLIP2 Challenge
           </Link>{" "}
           {/*The Current Challenge*/}
           <Link className="button button--secondary button--lg" to="./blog" style={{margin: "10px"}}>
