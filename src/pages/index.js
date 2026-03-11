@@ -24,16 +24,12 @@ function HomepageHeader() {
           </Link>{" "}
           
           <Link className="button button--secondary button--lg" to="./docs/clip2/intro" style={{margin: "10px"}}>
-              Pre-announcement Cadenza CLIP2 Challenge
+              Pre-announcement <br /> Cadenza CLIP2 Challenge{" "}
           </Link>{" "}
           {/*The Current Challenge*/}
           <Link className="button button--secondary button--lg" to="./blog" style={{margin: "10px"}}>
           Latest News{" "}
           </Link>{" "}
-          
-          {/* <Link className="button button--secondary button--lg" to="./test" style={{margin: "10px"}}>
-          Test{" "}
-          </Link>{" "} */}
         </div>{" "}
       </div>{" "}
     </header>
