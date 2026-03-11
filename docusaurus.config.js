@@ -90,7 +90,7 @@ module.exports = {
         announcementBar: {
             id: 'announcement',
             content:
-                "🔥🔥 Results for the ICASSP 2026 Challenge are now available — <a href='https://cadenzachallenge.org/docs/clip1/results'>Check results here</a><a>",
+                "🎉🎉 Pre-announcement of <a href='https://cadenzachallenge.org/docs/clip2/intro'>Second Lyric Intelligibility Challenge - CLIP2</a> 🎉🎉",
             backgroundColor: '#a2dea2',
             textColor: '#070707',
             isCloseable: false,
