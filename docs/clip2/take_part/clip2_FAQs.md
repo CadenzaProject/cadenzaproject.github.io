@@ -1,6 +1,6 @@
 ---
 id: FAQs
-title: FAQ for CLIP1
+title: FAQ for CLIP2
 sidebar_label: FAQs/Resources
 sidebar_position: 4.7
 ---
@@ -14,30 +14,22 @@ We will also be updating it with answers to any challenge-specific questions tha
 
 ## What is Lyric Intelligibility?
 
-Lyric intelligibility, as defined by Cadenza's sensory panel of hearing aid users, refers to "how clearly and effortlessly the words in the music can be heard". Fine et al. [1] reported that trained and amateur singers (including singing teachers) believe that the understanding of the sung message while hearing a song is very important for their enjoyment.
+Lyric intelligibility, as defined by Cadenza's sensory panel of hearing aid users, refers to "how clearly and effortlessly the words in the music can be heard". 
+Fine et al. [1] reported that trained and amateur singers (including singing teachers) believe that the understanding of the sung message while hearing a song is very important for their enjoyment.
 
-For the CLIP1 challenge, the intelligibility metric is the percentage of words in a sentence that a listener identified correctly. This makes it compatible with a common definition of speech intelligibility.
+For the CLIP2 challenge, the intelligibility metric is the percentage of words in a sentence that a listener identified correctly. 
+This makes it compatible with the definition in [CLIP1](../../clip1/intro) and common definition of speech intelligibility.
 
 ## How was Lyric Intelligibility measured with listeners?
 
-We used Prolific to run lyric intelligibility tests. Listeners with normal hearing transcribed the words from song excerpts processed in various ways, e.g. as-is and passed through a hearing loss simulation.
+We used Prolific to run lyric intelligibility tests. 
+Listeners with normal hearing transcribed the words from song excerpts processed in various ways, e.g. as-is and passed through a hearing loss simulation.
 
 ## Previous lyric intelligibility metrics
 
-[Singing adapted STOI](https://ieeexplore.ieee.org/document/8910414), which combines the traditional STOI (speech) metric with vocal-specific features to account for the different singing styles is a rare example of an existing metric for sung speech. But there are lots of [speech intelligibility metrics](https://www.sciencedirect.com/science/article/pii/S1877050918302187) that might also be adapted. For example, approaches using large language models are becoming more common.
-
-[//]: # (## Intrusive vs non-intrusive)
-
-[//]: # ()
-[//]: # (There are two broad classes of speech intelligibility models:)
-
-[//]: # ()
-[//]: # (- Intrusive metrics &#40;also known as double-ended&#41; are most common. This is where the intelligibility is estimated by comparing the degraded or processed speech signal with the original clean speech signal.)
-
-[//]: # (- Non-intrusive metrics &#40;also known as single-ended or blind&#41; are less well developed. This is where intelligibility is estimated from the degraded or processed speech signal alone.)
-
-[//]: # ()
-[//]: # (In the Cadenza project, both types of metrics are of interest.)
+- [CLIP1 results](../../clip1/results), where 27 systems from 22 team were submitted presenting different approaches that often combined high level encoder embeddings complemented with signal features and perceptual metrics.
+- [Singing adapted STOI](https://ieeexplore.ieee.org/document/8910414), which combines the traditional STOI (speech) metric with vocal-specific features to account for the different singing styles. 
+- Lots of [speech intelligibility metrics](https://www.sciencedirect.com/science/article/pii/S1877050918302187) that might be adapted to singing.
 
 ## Learning Resources
 
