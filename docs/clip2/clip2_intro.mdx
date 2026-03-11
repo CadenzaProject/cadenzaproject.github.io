@@ -9,7 +9,10 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-<Image img={require('../../static/img/clip2/clip2_landing.jpg')} alt="CLIP1 Challenge" />
+import ElevenLabs from '@site/static/img/clip2/elevenlabs.png';
+import Landing from '@site/static/img/clip2/clip2_landing.jpg';
+
+<Image img={Landing} alt="CLIP1 Challenge" />
 Image by <a href="https://pixabay.com/users/cjsinnott0-780578/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=639110">Christopher Sinnott</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=639110">Pixabay</a>
 
 :::info
@@ -32,12 +35,22 @@ The CLIP1 dataset is derived from the FMA dataset, a collection of thousands of 
 covering a wide range of music genres and singing styles. However, the inherent variability in music makes it difficult to comprehensively
 capture all possible conditions.
 
-We are now excited to announce the launch of the second lyric intelligibility challenge, which builds on CLIP1
+We are now excited to announce the launch of the second Cadenza lyric intelligibility prediction challenge CLIP2, which builds on CLIP1
 by presenting a new dataset that extends CLIP1 dataset by incorporating new music genres and new listening conditions.
 
 ## CLIP2 Dataset
 
-The CLIP2 dataset is a collection of thousands of music excerpts extracted from AI-generated songs created using ElevenLabs. 
+<div style={{ textAlign: 'center' }}>
+    <a href="https://elevenlabs.io" target="_blank">
+        <Image
+            img={ElevenLabs}
+            alt="ElevenLabs"
+            style={{ width: '50%', marginTop: '10px', marginBottom: '25px'  }}
+        />
+    </a>
+</div>
+
+The CLIP2 dataset is a collection of thousands of music excerpts extracted from AI-generated songs created in collaboration with [ElevenLabs](https://elevenlabs.io).
 Generating music in this way allows us to include pieces from genres that would normally be difficult to 
 distribute due to derivative and copyright restrictions.
 
