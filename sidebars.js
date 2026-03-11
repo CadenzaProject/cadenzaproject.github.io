@@ -22,7 +22,7 @@ module.exports = {
              type: 'category',
              label: 'Take Part',
              items: [
-                 'clip2/take_part/registration',
+                // 'clip2/take_part/registration',
                  'clip2/take_part/rules',
                  'clip2/take_part/FAQs',
              ],
