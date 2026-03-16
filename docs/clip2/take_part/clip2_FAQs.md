@@ -27,7 +27,7 @@ Listeners with normal hearing transcribed the words from song excerpts processed
 
 ## Previous lyric intelligibility metrics
 
-- [CLIP1 results](../../clip1/results), where 27 systems from 22 team were submitted presenting different approaches that often combined high level encoder embeddings complemented with signal features and perceptual metrics.
+- [CLIP1 results](../../clip1/results), where 27 systems from 22 team were submitted, presenting different approaches that often combined high level encoder embeddings complemented with signal features and perceptual metrics.
 - [Singing adapted STOI](https://ieeexplore.ieee.org/document/8910414), which combines the traditional STOI (speech) metric with vocal-specific features to account for the different singing styles. 
 - Lots of [speech intelligibility metrics](https://www.sciencedirect.com/science/article/pii/S1877050918302187) that might be adapted to singing.
 
