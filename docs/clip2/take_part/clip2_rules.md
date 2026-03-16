@@ -12,11 +12,11 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 We provide teams with signals and listener responses for training and development. This includes:
 
-1. **Audio1**: The stereo audio that our listeners heard during the intelligibility tests. 
-   - This audio may have no, mild or moderate hearing loss (HL) simulated.
-   - This audio might have head-related transfer function (HRTF) applied to simulate listening scenarios and spatial locations. 
-2. **Audio2**: The audio without hearing loss simulation.  
-   - If Audio1 has no hearing loss simulated, Audio1 will be equal to Audio2.
+1. **Audio1**: The stereo audio that our listeners heard during the intelligibility tests. This audio may have: 
+   - Reverb.
+   - Background noise.
+   - Simulated no, mild or moderate hearing loss (HL).
+2. **Audio2**: Original audio. I.e. the audio without any processing.
 3. **Severity**: The listener's hearing impairment severity used in the HL simulation.
 4. **Lyrics**: The ground-truth text of the lyrics.
 5. **Transcription**: The transcription by our listeners during the intelligibility tests. 
@@ -37,7 +37,7 @@ The evaluation sets cannot be used for training or development of models. Audio 
 The only data that can be used by the prediction model during evaluation are:
 
 1. **Audio1**: The stereo audio that our listeners heard during the intelligibility tests.
-2. **Audio2**: The audio without hearing loss simulation (in a third of cases, this is the same as (1)). 
+2. **Audio2**: The original audio without any processing. 
 3. **Severity**: The listener's hearing impairment severity.
 4. **Lyrics**: The ground-truth text of the lyrics.
 
