@@ -17,11 +17,12 @@ Image by <a href="https://pixabay.com/users/cjsinnott0-780578/?utm_source=link-a
 
 :::info
 CLIP2 will be submitted as a proposal for an ICASSP 2027 Grand Challenge;
-however, the challenge will run regardless of its acceptance as an official ICASSP Grand Challenge.
+however, the challenge will run regardless of whether it is accepted as an ICASSP Grand Challenge.
 :::
 
-To advance in the development of better music processing through machine learning, whether is human performed or AI generated music,
-we need reliable ways to evaluate the audio quality. For music with lyrics, this includes metric that assess the intelligibility of the sung words.
+Building on the success of last year's lyrics intelligibility challenge, [ICASSP 2026 Challenge (CLIP1)](../clip1/intro), this new lyric intelligibility challenge CLIP2 features AI generated music over a broader range of genres.
+
+To advance music processing through machine learning, we need reliable ways to evaluate audio quality. This is true whether the music comes from humans or AI. For songs, we need a metric to assess the intelligibility of the lyrics.
 There are several factors that can affect intelligibility, including:
 
 * Vocal style and articulation
@@ -29,14 +30,10 @@ There are several factors that can affect intelligibility, including:
 * Mixing and production techniques
 * Listener hearing ability
 
-In 2025, we launched the first lyrics intelligibility challenge, [ICASSP 2026 Challenge (CLIP1)](../clip1/intro),
-where we introduced the first dataset constructed to assess lyrics intelligibility (the [CLIP1 dataset](../clip1/data/data)).
-The CLIP1 dataset is derived from the FMA dataset, a collection of thousands of master recordings created by different singers and musicians,
-covering a wide range of music genres and singing styles. However, the inherent variability in music makes it difficult to comprehensively
-capture all possible conditions.
+In 2025, CLIP1 introduced the first dataset to assess lyrics intelligibility (the [CLIP1 dataset](../clip1/data/data)) derived from human performers and the FMA dataset.
+We are now excited to pre-announce the launch of the second Cadenza lyric intelligibility prediction challenge CLIP2, with a new dataset that includes more music genres, new listening conditions and AI generated music.
 
-We are now excited to announce the launch of the second Cadenza lyric intelligibility prediction challenge CLIP2, which builds on CLIP1
-by presenting a new dataset that extends CLIP1 dataset by incorporating new music genres and new listening conditions.
+While most entrants beat the baseline in CLIP1, the residual RMSE error was still high, so there is plenty of room for you to improve on CLIP1.
 
 ## CLIP2 Dataset
 
@@ -50,17 +47,15 @@ by presenting a new dataset that extends CLIP1 dataset by incorporating new musi
     </a>
 </div>
 
-The CLIP2 dataset is a collection of thousands of music excerpts extracted from AI-generated songs created in collaboration with [ElevenLabs](https://elevenlabs.io).
+The CLIP2 dataset features thousands of music excerpts extracted from AI-generated songs created in collaboration with [ElevenLabs](https://elevenlabs.io).
 Generating music in this way allows us to include pieces from genres that would normally be difficult to 
-distribute due to derivative and copyright restrictions.
+distribute due to copyright restrictions.
 
-CLIP2 includes samples from several music genres, ranging from Pop/Rock to Musical Theater and choral music. 
-The excerpts will be processed with head-related transfer functions (HRTFs) to represent different listening scenarios and spatial locations. 
+Music genres include Pop/Rock, Musical Theater and choral music. The excerpts will be processed with reverberation and background noise to represent different listening scenarios and spatial locations. 
 Additionally, excerpts will be provided both in their original form and processed through a hearing-loss simulator to 
 mimic listeners with hearing loss who are not wearing hearing aids.
 
-ElevenLabs is an AI research and product company that offers music generation services. 
-Their models are trained on properly licensed music through agreements with organizations such as Merlin and Kobalt, 
+ElevenLabs models are trained on properly licensed music through agreements with organizations such as Merlin and Kobalt, 
 ensuring fair use of artists' work. 
 
 ## Challenge Overview
