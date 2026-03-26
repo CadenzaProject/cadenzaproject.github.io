@@ -18,23 +18,23 @@ module.exports = {
      tutorialSidebar_clip2: [
          'clip2/intro',
          'clip2/key_dates',
-         {
-            type: 'category',
-            label: 'Dataset',
-            items: [
-                'clip2/data/data'
-            ]
-         },
-         {  // Menu Take Part
-             type: 'category',
-             label: 'Take Part',
-             items: [
-                // 'clip2/take_part/registration',
-                 'clip2/take_part/rules',
-                 'clip2/take_part/submission',
-                 'clip2/take_part/FAQs',
-             ],
-         },
+         // {
+         //    type: 'category',
+         //    label: 'Dataset',
+         //    items: [
+         //        'clip2/data/data'
+         //    ]
+         // },
+         // {  // Menu Take Part
+         //     type: 'category',
+         //     label: 'Take Part',
+         //     items: [
+         //        // 'clip2/take_part/registration',
+         //         'clip2/take_part/rules',
+         //         'clip2/take_part/submission',
+         //         'clip2/take_part/FAQs',
+         //     ],
+         // },
      ],
 
     tutorialSidebar_clip1: [
