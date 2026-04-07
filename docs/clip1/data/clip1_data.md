@@ -16,7 +16,7 @@ The evaluation data is provided closer to the submission deadline in November.
 
 ## Download
 
-To download the data, please [register for the challenge](../take_part/registration) to get a download link.
+The data is available on [Zenodo](https://zenodo.org/records/17950664).
 
 ## Overview
 

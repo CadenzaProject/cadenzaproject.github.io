@@ -13,7 +13,11 @@ The CAD1 challenge concluded in July 2023.
 All signals and corresponding HAAQI scores submitted by participants are anonymously and openly accessible on Zenodo at https://zenodo.org/records/13271525
 
 If you are interested in exploring this challenge further or using the submission signals, please cite the following paper:
-> G. Roa Dabike, M. A. Akeroyd, S. Bannister, J. P. Barker, T. J. Cox, B. Fazenda, J. Firth, S. Graetzer, A. Greasley, R. R. Vos and W. M. Whitmer, "The First Cadenza Challenges: Using Machine Learning Competitions to Improve Music for Listeners With a Hearing Loss," in IEEE Open Journal of Signal Processing, under review.
+> Roa-Dabike, G., Akeroyd, M. A., Bannister, S., Barker, J. P., Cox, T. J., Fazenda, B., Firth, J., Graetzer, S., Greasley, A., Vos, R. R., & Whitmer, W. M. (2025). The First Cadenza Challenges: Using Machine Learning Competitions to Improve Music for Listeners With a Hearing Loss. IEEE Open Journal of Signal Processing, 6, 722–734.
+https://ieeexplore.ieee.org/document/11030066
+
+>Bannister, S., Firth, J., Roa-Dabike, G., Vos, R., Whitmer, W., Greasley, A. E., Graetzer, S., Fazenda, B., Cox, T., Barker, J., & Akeroyd, M. A. (2026). The First Cadenza Challenge: Perceptual Evaluation of Machine Learning Systems to Improve Audio Quality of Popular Music for Those with Hearing Loss. Trends in Hearing, 30, 23312165251408761.
+https://doi.org/10.1177/23312165251408761
 
 :::
 
