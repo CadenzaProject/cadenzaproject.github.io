@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
-import Container from "@mui/material/Container";
+// import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -19,7 +19,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 function AboutHeader() {
-  const { siteConfig } = useDocusaurusContext();
+  // const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
@@ -38,10 +38,10 @@ function PersonCard({ name, affiliation, avatar, url }) {
         avatar={
           <Avatar
             alt={name}
-            sx={{ bgcolor: red[500] }}
+            sx={{ bgcolor: red[500], width: 104, height: 104 }}
             aria-label="recipe"
             src={useBaseUrl(avatar)}
-            sx={{ width: 104, height: 104 }}
+            // sx={{ width: 104, height: 104 }}
           />
         }
         title={name}
@@ -66,10 +66,10 @@ function SteeringPersonCard({ name, affiliation, avatar, url }) {
           avatar={
             <Avatar
               alt={name}
-              sx={{ bgcolor: red[500] }}
+              sx={{ bgcolor: red[500], width: 104, height: 104 }}
               aria-label="recipe"
               src={useBaseUrl(avatar)}
-              sx={{ width: 104, height: 104 }}
+              // sx={{ width: 104, height: 104 }}
             />
           }
           title={name}
@@ -165,10 +165,10 @@ const PersonList = [
     avatar: "/img/avatar/greasley.jpeg",
   },
   {
-    name: "Gerardo Roa",
+    name: "Gerardo Roa-Dabike",
     department: "School of Science, Engineering and Environment",
-    affiliation: "University of Salford",
-    url: "https://www.salford.ac.uk/our-staff/gerardo-roa-dabike",
+    affiliation: "University of Sheffield",
+    url: "https://sheffield.ac.uk/cs/people/research-staff/gerardo-roa-dabike",
     avatar: "/img/avatar/roa.jpeg",
   },
   {
