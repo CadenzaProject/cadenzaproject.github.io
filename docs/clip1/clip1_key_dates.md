@@ -14,7 +14,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 - :heavy_check_mark: **15th December 2025**: ICASSP 2026 2-page paper submission deadline. Only invited teams!!
 - :heavy_check_mark: **11th January 2026**: ICASSP paper acceptance notification. 
 - :heavy_check_mark: **18th January 2026**: ICASSP camera-ready 2-page papers due.
-- **3rd-8th May 2026**: Special session during ICASSP 2026, Barcelona, Spain.
+- :heavy_check_mark: **3rd-8th May 2026**: Special session during ICASSP 2026, Barcelona, Spain.
 
 All dates are to be intended anywhere on earth time (AoE) and are provisional
 

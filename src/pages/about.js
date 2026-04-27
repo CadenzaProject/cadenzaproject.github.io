@@ -257,11 +257,11 @@ export default function Home() {
                   height: 100,
                 }}
                 alt="RNID logo."
-                src={useBaseUrl("img/logos/RNID-logo.jpeg")}
+                src={useBaseUrl("img/logos/RNID-logo-FULL.jpg")}
               />
               <Box
                   component="img"
-                  style={{marginLeft: '10rem', marginRight: 'rem' }}
+                  style={{marginLeft: '5rem', marginRight: 'rem' }}
                   sx={{
                     height: 100,
                   }}
@@ -270,7 +270,7 @@ export default function Home() {
               />
               <Box
                   component="img"
-                  style={{marginLeft: '10rem', marginRight: '0rem' }}
+                  style={{marginLeft: '9rem', marginRight: '0rem' }}
                   sx={{
                     height: 100,
                   }}
@@ -280,9 +280,9 @@ export default function Home() {
               <br></br>
               <Box
                   component="img"
-                  style={{marginLeft: '5rem', marginRight: '0rem' }}
+                  style={{marginLeft: '6rem', marginRight: '1rem' }}
                   sx={{
-                    height: 100,
+                    height: 80,
                   }}
                   alt="Google logo."
                   src={useBaseUrl("img/logos/google-logo.png")}
@@ -291,16 +291,16 @@ export default function Home() {
                   component="img"
                   style={{marginLeft: '5rem', marginRight: '0rem' }}
                   sx={{
-                    height: 100,
+                    height: 70,
                   }}
                   alt="Sonova logo."
                   src={useBaseUrl("img/logos/sonova-logo.png")}
               />
               <Box
                   component="img"
-                  style={{marginLeft: '5rem', marginRight: '10rem' }}
+                  style={{marginLeft: '5rem', marginRight: '5rem' }}
                   sx={{
-                    height: 100,
+                    height: 110,
                   }}
                   alt="BBC logo."
                   src={useBaseUrl("img/logos/bbc-logo.png")}
