@@ -11,7 +11,7 @@ import React, { useState, useEffect } from 'react';
 
 export function makeColumns(format) {
     const LinkFormatter = (cell, row, rowIndex, extraData) => {
-        return(row.paper ? <a href={row.paper}>Link</a>: null)
+        return(row.paper ? <a href={row.paper} target="_blank">Link</a>: null)
     }
 
     for (const row of format) {
