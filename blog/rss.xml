@@ -4,10 +4,34 @@
         <title>The Cadenza Project Blog</title>
         <link>https://cadenzaproject.github.io/blog</link>
         <description>The Cadenza Project Blog</description>
-        <lastBuildDate>Fri, 06 Jun 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Research Concert]]></title>
+            <link>https://cadenzaproject.github.io/blog/Concert</link>
+            <guid>https://cadenzaproject.github.io/blog/Concert</guid>
+            <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Cadenza and Manchester Camerata Research Concert]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cadenza-and-manchester-camerata-research-concert">Cadenza and Manchester Camerata Research Concert<a href="https://cadenzaproject.github.io/blog/Concert#cadenza-and-manchester-camerata-research-concert" class="hash-link" aria-label="Direct link to Cadenza and Manchester Camerata Research Concert" title="Direct link to Cadenza and Manchester Camerata Research Concert" translate="no">​</a></h2>
+<div style="display:flex;justify-content:center;align-items:center;gap:200px"><img src="https://cadenzaproject.github.io/img/logo.png"><img src="https://cadenzaproject.github.io/img/blog_2026-05-18/camerata.png" style="height:170px;width:auto"></div>
+<div style="text-align:center;font-size:2rem;font-weight:bold"><p>29 OCTOBER 2026</p></div>
+<p><em>When it comes to live concerts, people with hearing loss often talk of a poorer
+experience. We’ve listened... so we’re putting on a concert of our own!</em></p>
+<p>The Cadenza project team are putting on a <strong>free concert</strong> in conjunction with
+<strong>Manchester Camerata</strong> at Stoller Hall, Manchester on <strong>29th October 2026</strong>.</p>
+<p>The concert will mix <strong>romantic classical music</strong> alongside a <strong>research activity</strong> wherein
+you’ll hear the orchestra perform excerpts in novel ways, based on problems reported
+by people with hearing loss, to see how they affect your listening experiences. The
+focus will be on the experience of hearing aid users, but all are welcome!
+There will also be a Q&amp;A session at the end of the concert with experts on hearing loss,
+hearing aids and music.</p>
+<p>To receive updates on this event, please sign up to the Hearing Aids for Music mailing list: <a href="http://eepurl.com/h0QXbr" target="_blank" rel="noopener noreferrer" class="">http://eepurl.com/h0QXbr</a></p>
+]]></content:encoded>
+            <category>cadenza</category>
+            <category>camerata</category>
+        </item>
         <item>
             <title><![CDATA[CLIP Challenge Dataset]]></title>
             <link>https://cadenzaproject.github.io/blog/CLIP Dataset</link>
