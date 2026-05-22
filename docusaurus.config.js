@@ -87,14 +87,14 @@ module.exports = {
     // emoji from https://emojipedia.org/
     themeConfig: {
         // Uncomment the following code to add the announcement bar
-        announcementBar: {
-            id: 'announcement',
-            content:
-                "🎉🎉 Pre-announcement of <a href='https://cadenzachallenge.org/docs/clip2/intro'>Second Lyric Intelligibility Challenge - CLIP2</a> 🎉🎉",
-            backgroundColor: '#a2dea2',
-            textColor: '#070707',
-            isCloseable: false,
-        },
+        // announcementBar: {
+        //     id: 'announcement',
+        //     content:
+        //         "🎉🎉 Launched <a href='https://cadenzachallenge.org/docs/clip2/intro'>Second Lyric Intelligibility Challenge - CLIP2</a> 🎉🎉",
+        //     backgroundColor: '#a2dea2',
+        //     textColor: '#070707',
+        //     isCloseable: false,
+        // },
         blog: {
             sidebar: {
                 groupByYear: true,
