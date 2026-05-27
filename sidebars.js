@@ -25,6 +25,8 @@ module.exports = {
                 'clip2/data/data'
             ]
          },
+         'clip2/baseline',
+         'clip2/leaderboard',
          {  // Menu Take Part
              type: 'category',
              label: 'Take Part',
