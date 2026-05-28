@@ -26,13 +26,13 @@ module.exports = {
             ]
          },
          'clip2/baseline',
-         'clip2/leaderboard',
          {  // Menu Take Part
              type: 'category',
              label: 'Take Part',
              items: [
                  'clip2/take_part/registration',
                  'clip2/take_part/rules',
+                 'clip2/take_part/leaderboard',
                  'clip2/take_part/submission',
                  'clip2/take_part/FAQs',
              ],
