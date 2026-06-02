@@ -9,7 +9,8 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 Dates are tentative because we are waiting for ICASSP to publish their Grand Challenge call.
 
-- **8th June 2026** Challenge launch with training/development datasets; baseline; rules and documentation.
+- **15th June 2026** Challenge launch with training/development datasets; rules and documentation.
+- **22nd June 2026**: Release of baseline.
 - **1st October 2026**: Release of evaluation data and opening of the submission window.
 - **30th October 2026**: Submission deadline. All entrants must have submitted their predictions plus a draft of their technical report.
 
