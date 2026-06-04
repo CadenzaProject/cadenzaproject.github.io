@@ -20,7 +20,7 @@ The data is available on [Zenodo](https://zenodo.org/records/20413050).
 
 ## Overview
 
-The Cadenza Lyrics Intelligibility Prediction (CLIP) dataset consists of thousands of audio extracts of unfamiliar Western popular music, each paired with (i) lyric intelligibility scores from listening tests, and (ii) ground truth transcriptions. For each scene we provide:
+The Cadenza Lyrics Intelligibility Prediction (CLIP2) dataset consists of thousands of audio extracts of music, each paired with (i) lyric intelligibility scores from listening tests, and (ii) ground truth transcriptions. For each scene we provide:
 
 1. The stereo audio that our listeners heard during the intelligibility tests. This audio may have no, mild or moderate hearing loss simulated.
 2. The audio without hearing loss simulation (in cases where audio (1) has no hearing loss simulation, audio(1)=audio(2)).
@@ -30,11 +30,11 @@ The Cadenza Lyrics Intelligibility Prediction (CLIP) dataset consists of thousan
 
 See the [rules](../take_part/rules) for which of these can be used for training, validation and evaluation.
 
-### Why provide Audio (2)
+### Why provide Audio(2)?
 
-The scenario we're simulating is someone listening to music, so audio (2) might be the signal fed to a pair of headphones. We're interested in diverse hearing and many people with hearing loss don't use hearing aids. Therefore in the listening test we added the effects of hearing loss to some of the audio (people doing our listening tests were young and had no hearing loss). Consequently, audio (1) is what people heard in the listening tests, but audio (2) is also available in our scenario.
+The scenario we're simulating is someone listening to music, so audio (2) might be the signal fed to a pair of headphones. We're interested in diverse hearing and many people with hearing loss don't use hearing aids. Therefore in the listening test we added the effects of hearing loss to some of the audio (people doing our listening tests were young and had no hearing loss). Consequently, audio(1) is what people heard in the listening tests, but audio(2) is also available in our scenario.
 
-In our baseline, we use Audio (2) to estimate the vocals without hearing loss simulation using music source separation. This is then used as a reference signal for an intelligibility metric.
+In our baseline, we use Audio(2) to estimate the vocals without hearing loss simulation using music source separation. This is then used as a reference signal for an intelligibility metric.
 
 ## Data exploration
 

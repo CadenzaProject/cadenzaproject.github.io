@@ -20,7 +20,7 @@ If CLIP2 is accepted as an ICASSP SP Grand Challenge
 - **January 2027**: ICASSP camera-ready 2-page papers due.
 - **16th-21th May 2027**: Session during ICASSP 2027, Toronto, Canada.
 
-If CLIP2 doesn't become an ICASSP SP Grand Challenge, we'll organise a separate Cadenza workshop for entrants.
+If CLIP2 doesn't become an ICASSP SP Grand Challenge, we'll organise a separate online Cadenza workshop for entrants.
 
 
 
