@@ -19,11 +19,11 @@ function HomepageHeader() {
         Quick links:
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="./docs/clip2/intro" style={{margin: "10px"}}>
-            Cadenza CLIP2 Challenge{" "}
+            CLIP2 Challenge{" "}
           </Link>{" "}
           <Link
               className="button button--secondary button--lg" to="./docs/camerata/intro" style={{margin: "10px"}}>
-            Research Concert{" "}
+            Camerata Research Concert{" "}
           </Link>{" "}
 
           {/*The Current Challenge*/}
