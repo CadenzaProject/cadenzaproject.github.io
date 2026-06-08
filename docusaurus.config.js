@@ -164,11 +164,15 @@ module.exports = {
                 },
                 {
                     type: 'dropdown',
-                    label: 'Workshops',
+                    label: 'Events',
                     position: 'right',
                     items: [
                         {
-                            to: 'https://cadenzachallenge.org/cadenza2025-workshop//',
+                            to: '/docs/camerata/intro',
+                            label: 'Camerata Research Concert',
+                        },
+                        {
+                            to: 'https://cadenzachallenge.org/cadenza2025-workshop/',
                             label: 'Cadenza Workshop 2025',
                         },
                         {
