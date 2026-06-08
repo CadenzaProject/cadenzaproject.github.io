@@ -15,21 +15,22 @@ See [Dataset](../data/data) for more details on how the dataset was generated.
 We provide teams with signals and listener responses for training and development. This includes:
 
 1. **Audio1**: The stereo audio for which participants must predict lyric intelligibility. This is the audio presented to listeners during the intelligibility tests and includes:
-   - Reverberation (high-order ambisonics (HOA) combined with head-related transfer functions (HRTF)).
-   - Background noise.
+   - Reverberation (high-order ambisonics (HOA) [1] combined with head-related transfer functions (HRTF) [2]).
+   - Background noise [3].
    - Simulated no, mild or moderate hearing loss (HL).
 2. **Audio2**: Audio1 without the hearing loss simulation. This corresponds to the signal at the entrance of the listener’s ear canal.
 3. **Severity**: The listener's hearing impairment severity category used in the HL simulation.
 4. **Lyrics**: The ground-truth lyric text.
-5. **Transcription**:  The transcriptions produced by listeners during the intelligibility tests.
+5. **Transcription**: The transcriptions produced by listeners during the intelligibility tests.
 6. **Intelligibility**: The intelligibility scores obtained from the listening tests, computed by comparing the ground-truth lyrics with the listeners’ transcriptions.
 
-Teams are free to split this data into training and development sets as they see fit.
+Teams are free to split this data into training and development sets as they see fit. 
+However, since each excerpt is presented with three hearing loss categories (as-is, mild, and moderate), we recommend splitting by unique prompts first.
 
 In addition, teams can use:
 - The training and validation set from the CLIP1 dataset.
     - Note, CLIP1 test set must not be used for training or model validation.
-- Their own data for training
+- Their own data for training.
 - Expanded versions of the CLIP1 and CLIP2 training data through simple automated modifications.
 - Additional pre-training data generated using existing speech intelligibility, lyric intelligibility, and hearing loss models.
 
@@ -38,8 +39,8 @@ In addition, teams can use:
 The validation set includes only the following fields:
 
 1. **Audio1**: The stereo audio for which participants must predict lyric intelligibility. This is the audio presented to listeners during the intelligibility tests and includes:
-    - Reverberation (high-order ambisonics (HOA) combined with head-related transfer functions (HRTF)).
-    - Background noise.
+    - Reverberation (high-order ambisonics (HOA) [1] combined with head-related transfer functions (HRTF) [2]).
+    - Background noise [3].
     - Simulated no, mild or moderate hearing loss (HL).
 2. **Audio2**: Audio1 without the hearing loss simulation. This corresponds to the signal at the entrance of the listener’s ear canal.
 3. **Severity**: The listener's hearing impairment severity category used in the HL simulation.
@@ -66,9 +67,9 @@ Please follow the instructions in [Submission](submission) to submit your predic
 ## Baseline models and computational restrictions
 
 * The use of pre-trained foundational models is allowed but must be fully declared.
-* Teams may choose to use all or some of the components of the provided baseline.
+* Teams may choose to use all or some of the components from the provided baseline.
 * There is no limit on computational cost, but we expect entrants to report model size.
-* Models can be non-causal.
+* Models can be causal or non-causal.
 
 ## What sort of model do I create?
 
@@ -98,7 +99,8 @@ If you wish to submit multiple entries,
 
 ### Ablation
 
-Systems that use **Audio2 and/or Lyrics and/or Severity** must, whenever possible, also submit results **with and without these components**. This is to enable a more detailed assessment of how each type of information impacts system performance.
+Systems that use **Audio2 and/or Lyrics and/or Severity** must, whenever possible, also submit results **with and without these components**. 
+This is to enable a more detailed assessment of how each type of information impacts system performance.
 
 Participants are encouraged to include additional ablation studies that they consider informative.
 
