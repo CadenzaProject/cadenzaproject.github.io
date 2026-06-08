@@ -9,8 +9,8 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::warning[Release of the data]
-The training and development data are provided at challenge launch.
+:::tip[Release of the data]
+The training and validation data are provided at challenge launch.
 The evaluation data is provided closer to the submission deadline in November.
 :::
 
@@ -36,54 +36,76 @@ The scenario we're simulating is someone listening to music, so audio (2) might 
 
 In our baseline, we use Audio(2) to estimate the vocals without hearing loss simulation using music source separation. This is then used as a reference signal for an intelligibility metric.
 
-## Data exploration
+[//]: # (## Data exploration)
 
-This video explores the dataset and highlights some interesting aspects to research.
+[//]: # ()
+[//]: # (This video explores the dataset and highlights some interesting aspects to research.)
 
-<iframe width="100%" height="560" src="https://www.youtube.com/embed/0w5DyZ8Itv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[//]: # ()
+[//]: # (<iframe width="100%" height="560" src="https://www.youtube.com/embed/0w5DyZ8Itv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
 
-## Construction of the CLIP1 Dataset
+## Construction of the CLIP2 Dataset
 
-<Image img={require('../../../static/img/clip1/data_explanation_diagram.png')} alt="schematic of data generation" />
+[//]: # ()
+[//]: # (<Image img={require&#40;'../../../static/img/clip1/data_explanation_diagram.png'&#41;} alt="schematic of data generation" />)
 
-Figure 1. Schematic of data generated and process. Black lines indicate metadata and blue audio.
+[//]: # ()
+[//]: # (Figure 1. Schematic of data generated and process. Black lines indicate metadata and blue audio.)
 
-The audio in CLIP1 is based on the FMA dataset, which contains thousands of songs from various artists, genres and styles. Below the process to select audio excerpts; generate the ground truth transcriptions; and listener intelligibility scores is given.
+### Generating the music
 
-### Selecting the tracks from FMA
+We began by using ChatGPT to generate thousands of prompts across different music genres. 
+Care was taken to avoid prompts violating ElevenLabs copyright policies. In general, each prompt included:
 
-We began with the FMA-full, which includes all complete (untrimmed) songs. Then we:
-1. Filtered out any tracks whose license did not allow derivative works.
-2. Excluded songs labelled as Classical, Instrumental, Experimental, or International to get just English songs.
-3. Removed tracks without vocals. This was done using the [HTDemucs](https://github.com/facebookresearch/demucs?tab=readme-ov-file) audio source separation model [2] combined with the [Silero VAD](https://github.com/snakers4/silero-vad) voice activity detector and RMS analysis.
-4. We then selected one chorus or verse per song. This was done after segmenting the track into choruses and verses using the [All-in-one](https://github.com/mir-aidj/all-in-one) model [3].
+1. Choose a random artist or band as a reference to clearly describe singing and musical composition style.
+2. However, the prompt should not include the name of the artist or band used as a reference.
+3. The generation should correspond to a single verse or chorus of a song.
+4. The generated audio should be 30 seconds long.
+5. Include ground-truth English lyrics for the song.
+6. Generate the vocals using the generated lyrics.
 
-This process resulted in just over 17,000 segments.
+This process resulted in 2,125 30-second audio signals of generated music with ground-truth lyrics. 
+We then recruited five native English-speaking PhD students from the Universities of Salford and Sheffield. 
+Each annotator was assigned 420 random songs, with no overlap between assignments. 
+Using the academic version of [Label Studio](https://labelstud.io), annotators were tasked with listening to the generated music to:
 
-### Generating ground truth lyric transcriptions
+1. Validate that the generated vocals matched the ground-truth lyrics.
+2. Split the music into phrases based on the ground-truth lyrics.
 
-We used a structured annotation process supplemented with published lyrics on sites such as bandcamp and genius to clarify ambiguous cases where those were available.
+The resulting phrases were then post-processed to ensure data consistency and quality. 
+We removed repeated phrases from the same song, phrases in which a word was repeated more than twice, 
+and retained only those containing between five and ten words. 
+This post-processing step resulted in a final set of 9,207 audio excerpts with ground-truth transcriptions.
 
-The lyric transcription was done by native English-speaking PhD students from the Universities of Salford and Sheffield. Using the academic version of [Label Studio](https://labelstud.io), each annotator was assigned 500 random segments (choruses and verses) with no overlap between assignments. For each segment, three versions were presented to help the annotators: the original audio; the vocals extracted from the audio using musical source separation; and the audio with low-frequency bass removed. Annotators were allowed to listen to the tracks as many times as needed. Annotators were asked to flag obscene lyrics so they could be removed.
+### Listening test to get intelligibility scores
 
-The resulting phrases were then post-processed to ensure data consistency and quality. We removed any repeated phrases from the same song; ones were a word was repeated more than twice; and retained only those containing between five and ten words. Audio boundaries were carefully adjusted to just include the ground truth words. This post-processing step resulted in a final set of 3,700 audio excerpts with ground truth transcriptions.
+We first divided the 9,207 audio excerpts into training, validation, and evaluation sets using an 80/10/10 split, ensuring no reference artist or band overlap between sets. 
+That is, if the same artist was used to describe the singer’s characteristics in two different songs, both songs were placed in the same set.
 
-Note, in the ground truth, there are a small number of phrases containing highly unintelligible words where the annotator was unable to pick up the word. These words were marked as "?". We kept this data because they represent very unintelligible phrases that occur within sung language.
+Each audio excerpt was then processed to include reverberation using fourth-order high-order ambisonics from MOTUS [[1]](#ref-1) 
+and downmixed to stereo using a head-related transfer function (HRTF) from SONICOM [[2]](#ref-1). 
+Next, random noise from the WHAM! dataset [[3]](#ref-1) was added to the audio.
 
-### Listening tests to get intelligibility scores
+Each resulting excerpt was then processed using a hearing loss simulation for mild and moderate hearing loss. 
+For the simulation, an audiogram corresponding to the appropriate hearing loss severity was randomly selected. This produced three versions of every excerpt.
 
-We first divided the 3,700 audio excerpts into training, validation, and evaluation sets with an 80/10/10 split, ensuring no artist overlap between sets.
-Each excerpt was then processed using a hearing loss simulation for mild and moderate hearing loss. For the simulation of hearing loss, an audiogram with the appropriate hearing loss severity was chosen at random. This produced three versions of every excerpt.
+Using [Prolific](https://www.prolific.com/), we recruited native English speakers who were young adults with self-declared normal hearing. 
+Each excerpt was presented twice, with the first presentation serving to help listeners adapt to the genre and vocal style. Listeners were then asked to type what they heard.
 
-Using [Prolific](https://www.prolific.com/), we recruited many native English speakers who were young adults with self-declared normal hearing.
-Each excerpt was presented twice, with the first serving to help listeners adapt to genre and vocal style. Listeners were asked to type what they heard.
+Intelligibility scores were computed as the ratio of correctly transcribed words to the total number of words in the ground-truth text. 
+Ground truth and listener transcriptions were text-normalised prior to computing intelligibility scores as follows.
 
-Intelligibility scores were computed as the ratio of correctly transcribed words to the total number of words in the ground-truth text.
+We started by expanding contractions (e.g. I'm -> I am).
+Next, we corrected any misspellings (e.g. remeber -> remember)
+For the responses, we also looked for alternative homophones transcriptions (e.g. your and you're). 
+All alternative transcriptions were then transcribed using the [BEEP pronunciation dictionary](https://www.openslr.org/14/). 
+This accounted for when transcribers used a different transcription of homophones.
 
-Ground truth and listener transcriptions were text normalised before computing the intelligibility scores as follows.
-We started by expanding contractions (e.g. I'm to I am).
-Next, we corrected any misspellings (e.g. remeber to remember)
-For the responses, we also looked for alternative transcriptions of homophones (e.g. your and you're). All alternative transcriptions were then transcribed using the BEEP pronunciation dictionary. This accounted for when transcribers used a different transcription of a homophone. This process resulted in one ground truth and several normalised transcriptions per extract. The final score corresponds to the maximum score across alternatives.
+This process resulted in one ground-truth reference and several normalised transcriptions per excerpt. 
+The final score corresponds to the maximum score across all alternatives.
+
+For training set samples, we collected one response per excerpt, and three responses for the validation and evaluation sets.
+The validation and evaluation set scores correspond to the average across the three responses.
 
 **Examples of text normalisation**
 
@@ -95,7 +117,8 @@ For the responses, we also looked for alternative transcriptions of homophones (
 
 ## References
 
-1. Defferrard, Michaël, Kirell Benzi, Pierre Vandergheynst, and Xavier Bresson., 2017, [FMA: A DATASET FOR MUSIC ANALYSIS](https://archives.ismir.net/ismir2017/paper/000075.pdf), International Society for Music Information Retrieval.
-2. S. Rouard, F. Massa and A. Défossez, 2023, [Hybrid Transformers for Music Source Separation](https://ieeexplore.ieee.org/document/10096956) ICASSP.
-3. T. Kim and J. Nam, 2023, [All-in-One Metrical and Functional Structure Analysis with Neighborhood Attentions on Demixed Audio](https://ieeexplore.ieee.org/document/10248148) WASPAA.
+<a id="ref-1"></a>
+1. G. Götz, S. J. Schlecht and V. Pulkki, [A dataset of higher-order Ambisonic room impulse responses and 3D models measured in a room with varying furniture](https://ieeexplore.ieee.org/document/9610933), 2021 Immersive and 3D Audio: from Architecture to Automotive (I3DA), Bologna, Italy, 2021, pp. 1-8, doi: 10.1109/I3DA48870.2021.9610933.
+2. Engel, Isaac and Daugintis, Rapolas and Vicente, Thibault and Hogg, Aidan O. T. and Pauwels, Johan and Tournier, Arnaud J. and Picinali, Lorenzo, 2023, [The SONICOM HRTF Dataset](https://aes.org/publications/elibrary-page/?id=22128), Audio Experience Design (www.axdesign.co.uk).
+3. G. Wichern, J. Antognini, M. Flynn, L. R. Zhu, E. McQuinn, D. Crow, E. Manilow, and J. Le Roux, [WHAM!: Extending speech separation to noisy environments](https://www.isca-archive.org/interspeech_2019/wichern19_interspeech.pdf), in Proc. ISCA Interspeech, Sep. 2019.
 
