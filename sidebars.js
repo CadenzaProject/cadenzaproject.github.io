@@ -22,7 +22,8 @@ module.exports = {
             type: 'category',
             label: 'Dataset',
             items: [
-                'clip2/data/data'
+                'clip2/data/data',
+                'clip2/data/data_specification'
             ]
          },
          'clip2/baseline',
