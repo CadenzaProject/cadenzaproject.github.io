@@ -9,12 +9,12 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 Dates are tentative because we are waiting for ICASSP to publish their Grand Challenge call.
 
-- **15th June 2026** Challenge launch with training/development datasets; rules and documentation.
-- **22nd June 2026**: Release of baseline.
+- **15th June 2026** Challenge launch - rules and documentation.
+- **1st July 2026**: Release of validation/training dataset and baseline.
 - **1st October 2026**: Release of evaluation data and opening of the submission window.
 - **30th October 2026**: Submission deadline. All entrants must have submitted their predictions plus a draft of their technical report.
 
-If CLIP2 is accepted as an ICASSP SP Grand Challenge
+If CLIP2 is accepted as an ICASSP 2027 SP Grand Challenge
 
 - **December 2026**: Top teams invited to submit 2 page paper for ICASSP
 - **January 2027**: ICASSP camera-ready 2-page papers due.
