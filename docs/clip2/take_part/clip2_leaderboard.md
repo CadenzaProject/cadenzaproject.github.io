@@ -31,9 +31,9 @@ Make sure that there are no extra spaces between commas
 2. **Submit to EvalAI**:
 
 * Create an account on [EvalAI](https://eval.ai/) if you don't have one already.
-* Log in and navigate to [Second Cadenza Lyric Intelligibility Prediction Challenge] (https://eval.ai/web/challenges/challenge-page/xxxxxx).
+* Log in and navigate to [CLIP2 - The 2nd Cadenza Lyrics Intelligibility Prediction Challenge](https://eval.ai/web/challenges/challenge-page/2703/).
 * In the submission section, upload your CSV file. Here you will have the option to make your results private or public.
 
 3. **Ranking**:
 
-Systems will be ranked by their root mean square error (RMSE) score. Systems with lower RMSE will be ranked higher in the leaderboard.
+Systems will be ranked by their root mean squared error (RMSE) score. Systems with lower RMSE will be ranked higher in the leaderboard.
