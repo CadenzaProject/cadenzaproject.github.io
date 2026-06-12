@@ -11,7 +11,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 :::tip[Coming Soon]
 
-🚧 This page will be available closer to the **Cadenza CLIP2 evaluation set release**.
+🚧 This page will be available The first week of July.
 
 Stay tuned!
 
