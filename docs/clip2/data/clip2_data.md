@@ -9,11 +9,116 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::tip[Coming Soon]
-
-🚧 This page will be available closer to the **Cadenza CLIP2 Challenge launch**.
-
-Stay tuned!
-
+:::tip[Release of the data]
+The training and validation data are provided at challenge launch.
+The evaluation data is provided closer to the submission deadline in November.
 :::
+
+## Download
+
+The data is available on [Zenodo](https://zenodo.org/records/20413050).
+
+## Overview
+
+The Cadenza Lyrics Intelligibility Prediction (CLIP2) dataset consists of thousands of audio extracts of music, each paired with (i) lyric intelligibility scores from listening tests, and (ii) ground truth transcriptions. For each scene we provide:
+
+1. The stereo audio that our listeners heard during the intelligibility tests. This audio may have no, mild or moderate hearing loss simulated.
+2. The audio without hearing loss simulation (in cases where audio (1) has no hearing loss simulation, audio(1)=audio(2)).
+3. The hearing impairment severity applied to the audio (1).
+4. The ground-truth text of the lyrics.
+5. The transcription given by our listeners during the intelligibility tests and the intelligibility score.
+
+See the [rules](../take_part/rules) for which of these can be used for training, validation and evaluation.
+
+### Why provide Audio(2)?
+
+The scenario we're simulating is someone listening to music, so audio (2) might be the signal fed to a pair of headphones. We're interested in diverse hearing and many people with hearing loss don't use hearing aids. Therefore in the listening test we added the effects of hearing loss to some of the audio (people doing our listening tests were young and had no hearing loss). Consequently, audio(1) is what people heard in the listening tests, but audio(2) is also available in our scenario.
+
+In our baseline, we use Audio(2) to estimate the vocals without hearing loss simulation using music source separation. This is then used as a reference signal for an intelligibility metric.
+
+[//]: # (## Data exploration)
+
+[//]: # ()
+[//]: # (This video explores the dataset and highlights some interesting aspects to research.)
+
+[//]: # ()
+[//]: # (<iframe width="100%" height="560" src="https://www.youtube.com/embed/0w5DyZ8Itv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
+
+## Construction of the CLIP2 Dataset
+
+[//]: # ()
+[//]: # (<Image img={require&#40;'../../../static/img/clip1/data_explanation_diagram.png'&#41;} alt="schematic of data generation" />)
+
+[//]: # ()
+[//]: # (Figure 1. Schematic of data generated and process. Black lines indicate metadata and blue audio.)
+
+### Generating the music
+
+We began by using ChatGPT to generate thousands of prompts across different music genres. 
+Care was taken to avoid prompts violating ElevenLabs copyright policies. In general, each prompt included:
+
+1. Choose a random artist or band as a reference to clearly describe singing and musical composition style.
+2. However, the prompt should not include the name of the artist or band used as a reference.
+3. The generation should correspond to a single verse or chorus of a song.
+4. The generated audio should be 30 seconds long.
+5. Include ground-truth English lyrics for the song.
+6. Generate the vocals using the generated lyrics.
+
+This process resulted in 2,125 30-second audio signals of generated music with ground-truth lyrics. 
+We then recruited five native English-speaking PhD students from the Universities of Salford and Sheffield. 
+Each annotator was assigned 420 random songs, with no overlap between assignments. 
+Using the academic version of [Label Studio](https://labelstud.io), annotators were tasked with listening to the generated music to:
+
+1. Validate that the generated vocals matched the ground-truth lyrics.
+2. Split the music into phrases based on the ground-truth lyrics.
+
+The resulting phrases were then post-processed to ensure data consistency and quality. 
+We removed repeated phrases from the same song, phrases in which a word was repeated more than twice, 
+and retained only those containing between five and ten words. 
+This post-processing step resulted in a final set of 9,207 audio excerpts with ground-truth transcriptions.
+
+### Listening test to get intelligibility scores
+
+We first divided the 9,207 audio excerpts into training, validation, and evaluation sets using an 80/10/10 split, ensuring no reference artist or band overlap between sets. 
+That is, if the same artist was used to describe the singer’s characteristics in two different songs, both songs were placed in the same set.
+
+Each audio excerpt was then processed to include reverberation using fourth-order high-order ambisonics from MOTUS [[1]](#ref-1) 
+and downmixed to stereo using a head-related transfer function (HRTF) from SONICOM [[2]](#ref-1). 
+Next, random noise from the WHAM! dataset [[3]](#ref-1) was added to the audio.
+
+Each resulting excerpt was then processed using a hearing loss simulation for mild and moderate hearing loss. 
+For the simulation, an audiogram corresponding to the appropriate hearing loss severity was randomly selected. This produced three versions of every excerpt.
+
+Using [Prolific](https://www.prolific.com/), we recruited native English speakers who were young adults with self-declared normal hearing. 
+Each excerpt was presented twice, with the first presentation serving to help listeners adapt to the genre and vocal style. Listeners were then asked to type what they heard.
+
+Intelligibility scores were computed as the ratio of correctly transcribed words to the total number of words in the ground-truth text. 
+Ground truth and listener transcriptions were text-normalised prior to computing intelligibility scores as follows.
+
+We started by expanding contractions (e.g. I'm -> I am).
+Next, we corrected any misspellings (e.g. remeber -> remember)
+For the responses, we also looked for alternative homophones transcriptions (e.g. your and you're). 
+All alternative transcriptions were then transcribed using the [BEEP pronunciation dictionary](https://www.openslr.org/14/). 
+This accounted for when transcribers used a different transcription of homophones.
+
+This process resulted in one ground-truth reference and several normalised transcriptions per excerpt. 
+The final score corresponds to the maximum score across all alternatives.
+
+For training set samples, we collected one response per excerpt, and three responses for the validation and evaluation sets.
+The validation and evaluation set scores correspond to the average across the three responses.
+
+**Examples of text normalisation**
+
+| Original Phrase                               | Alternative Phrase                                 | 
+|-----------------------------------------------|----------------------------------------------------|
+| i'm thinking about you now                    | i am thinking about you now                        |
+| when were lost we know where to find it       | when we are lost we know where to find it          |
+| were gonna tell you our names so you remember | we are going to tell you our names so you remember |
+
+## References
+
+<a id="ref-1"></a>
+1. G. Götz, S. J. Schlecht and V. Pulkki, [A dataset of higher-order Ambisonic room impulse responses and 3D models measured in a room with varying furniture](https://ieeexplore.ieee.org/document/9610933), 2021 Immersive and 3D Audio: from Architecture to Automotive (I3DA), Bologna, Italy, 2021, pp. 1-8, doi: 10.1109/I3DA48870.2021.9610933.
+2. Engel, Isaac and Daugintis, Rapolas and Vicente, Thibault and Hogg, Aidan O. T. and Pauwels, Johan and Tournier, Arnaud J. and Picinali, Lorenzo, 2023, [The SONICOM HRTF Dataset](https://aes.org/publications/elibrary-page/?id=22128), Audio Experience Design (www.axdesign.co.uk).
+3. G. Wichern, J. Antognini, M. Flynn, L. R. Zhu, E. McQuinn, D. Crow, E. Manilow, and J. Le Roux, [WHAM!: Extending speech separation to noisy environments](https://www.isca-archive.org/interspeech_2019/wichern19_interspeech.pdf), in Proc. ISCA Interspeech, Sep. 2019.
 

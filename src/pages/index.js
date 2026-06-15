@@ -18,18 +18,18 @@ function HomepageHeader() {
         <p className="hero__subtitle"> {siteConfig.tagline} </p>{" "}
         Quick links:
         <div className={styles.buttons}>
-          <Link 
-            className="button button--secondary button--lg" to="./about" style={{margin: "10px"}}>
-            About Us{" "}
-          </Link>{" "}
-          
           <Link className="button button--secondary button--lg" to="./docs/clip2/intro" style={{margin: "10px"}}>
-              Pre-announcement <br /> Cadenza CLIP2 Challenge{" "}
+            CLIP2 Challenge{" "}
           </Link>{" "}
+          <Link
+              className="button button--secondary button--lg" to="./docs/camerata/intro" style={{margin: "10px"}}>
+            Camerata Research Concert{" "}
+          </Link>{" "}
+
           {/*The Current Challenge*/}
-          <Link className="button button--secondary button--lg" to="./blog" style={{margin: "10px"}}>
-          Latest News{" "}
-          </Link>{" "}
+          {/*<Link className="button button--secondary button--lg" to="./blog" style={{margin: "10px"}}>*/}
+          {/*Latest News{" "}*/}
+          {/*</Link>{" "}*/}
         </div>{" "}
       </div>{" "}
     </header>

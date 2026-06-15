@@ -89,11 +89,6 @@ const SteeringPersonList = [
     avatar: "/img/avatar/archer-boyd.jpeg",
   },
   {
-    name: "Richard F. Lyon",
-    affiliation: "Google",
-    avatar: "/img/avatar/lyon.jpeg",
-  },
-  {
     name: "Andrew Harper",
     affiliation: "Logitech",
     avatar: "/img/avatar/harper.jpeg",
@@ -278,15 +273,6 @@ export default function Home() {
                   src={useBaseUrl("img/logos/oldenburg-logo.jpeg")}
               />
               <br></br>
-              <Box
-                  component="img"
-                  style={{marginLeft: '6rem', marginRight: '1rem' }}
-                  sx={{
-                    height: 80,
-                  }}
-                  alt="Google logo."
-                  src={useBaseUrl("img/logos/google-logo.png")}
-              />
               <Box
                   component="img"
                   style={{marginLeft: '5rem', marginRight: '0rem' }}

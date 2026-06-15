@@ -16,8 +16,9 @@ import Landing from '@site/static/img/clip2/clip2_landing.jpg';
 Image by <a href="https://pixabay.com/users/cjsinnott0-780578/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=639110">Christopher Sinnott</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=639110">Pixabay</a>
 
 
-:::warning[CLIP2 Launch]
-CLIP2 launch moved to 15th June 2026
+:::danger[Delay in Data release]
+Due to unforeseen circumstances, CLIP2 data release has to be pushed back to the first week of July.
+We appologies for any inconvinience this could case it.
 :::
 
 :::info
@@ -25,7 +26,7 @@ CLIP2 will be submitted as a proposal for an ICASSP 2027 Grand Challenge;
 however, the challenge will run regardless of whether it is accepted as an ICASSP Grand Challenge.
 :::
 
-Building on the success of last year's lyrics intelligibility challenge, [ICASSP 2026 Challenge (CLIP1)](../clip1/intro), this new lyric intelligibility challenge CLIP2 features AI generated music over a broader range of genres.
+Building on the success of last year's lyrics intelligibility challenge, [ICASSP 2026 Challenge (CLIP1)](../clip1/intro), this new lyric intelligibility challenge CLIP2 features AI generated music, more genres and new listening conditions.
 
 To advance music processing through machine learning, we need reliable ways to evaluate audio quality. This is true whether the music comes from humans or AI. For songs, we need a metric to assess the intelligibility of the lyrics.
 There are several factors that can affect intelligibility, including:
@@ -36,27 +37,17 @@ There are several factors that can affect intelligibility, including:
 * Listener hearing ability
 
 In 2025, CLIP1 introduced the first dataset to assess lyrics intelligibility (the [CLIP1 dataset](../clip1/data/data)) derived from human performers and the FMA dataset.
-We are now excited to pre-announce the launch of the second Cadenza lyric intelligibility prediction challenge CLIP2, with a new dataset that includes more music genres, new listening conditions and AI generated music.
+We are now excited to present the second Cadenza lyric intelligibility prediction challenge CLIP2, with a new dataset that includes more music genres, new listening conditions and AI generated music.
 
 While most entrants beat the baseline in CLIP1, the residual RMSE error was still high, so there is plenty of room for you to improve on CLIP1.
 
 ## CLIP2 Dataset
 
-<div style={{ textAlign: 'center' }}>
-    <a href="https://elevenlabs.io" target="_blank">
-        <Image
-            img={ElevenLabs}
-            alt="ElevenLabs"
-            style={{ width: '50%', marginTop: '10px', marginBottom: '25px'  }}
-        />
-    </a>
-</div>
-
 The CLIP2 dataset features thousands of music excerpts extracted from AI-generated songs created in collaboration with [ElevenLabs](https://elevenlabs.io).
 Generating music in this way allows us to include pieces from genres that would normally be difficult to 
 distribute due to copyright restrictions.
 
-Music genres include Pop/Rock, Musical Theater and choral music. The excerpts will be processed with reverberation and background noise to represent different listening scenarios and spatial locations. 
+Genres include pop/rock, musical theater and choral music. The excerpts will be processed with reverberation and background noise to represent listening in a room in the presence of unwanted noise. 
 Additionally, excerpts will be provided both in their original form and processed through a hearing-loss simulator to 
 mimic listeners with hearing loss who are not wearing hearing aids.
 
@@ -74,3 +65,13 @@ estimates the score a listener would likely achieve in a listening test.
 * A dataset of song excerpts.
 * All samples will include lyrics intelligibility scores from listening tests.
 * Software and baseline system.
+
+<div style={{ textAlign: 'center' }}>
+    <a href="https://elevenlabs.io" target="_blank">
+        <Image
+            img={ElevenLabs}
+            alt="ElevenLabs"
+            style={{ width: '50%', marginTop: '10px', marginBottom: '25px'  }}
+        />
+    </a>
+</div>
