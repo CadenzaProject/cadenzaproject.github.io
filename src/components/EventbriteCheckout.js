@@ -13,7 +13,7 @@ export default function EventbriteCheckout() {
                 widgetType: 'checkout',
                 eventId: '1991542799123',
                 iframeContainerId: 'eventbrite-widget-container-1991542799123',
-                iframeContainerHeight: 425,
+                iframeContainerHeight: 700,
                 onOrderComplete: () => {
                     console.log('Order complete!');
                 },
