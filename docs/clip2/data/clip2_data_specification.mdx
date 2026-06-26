@@ -1,0 +1,155 @@
+---
+id: data_specification
+title: Dataset Specification
+sidebar_label: Specification
+sidebar_position: 3.3
+---
+import ReactPlayer from 'react-player';
+import Image from '@theme/IdealImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import { TwitterTimelineEmbed } from "react-twitter-embed";
+
+
+## Data Distribution and Installation
+
+The data is distributed as two gzipped tar archives:
+
+* `cadenza_clip2_data.train.v1.0.tar.gz` [13.8 GB]: labelled training data.
+* `cadenza_clip2_data.valid.v1.0.tar.gz` [1.4 GB]: unlabelled validation data.
+
+:::tip[Demo data]
+
+If you need to have a quick view of the data structure, we also provide a demo package:
+* [`cadenza_clip2_data.demo.v1.0.zip`](https://drive.google.com/file/d/16WVDpJDFZNER1GoReomizWR-zg6J-QOn/view?usp=drive_link) [9.8 MB]
+
+This package contains 10 samples from the training and 5 from the validation data.
+
+:::
+
+### Installation Instructions
+
+1. Download the `.tar.gz` files.
+2. unpack each archive using the following commands:
+3. 
+```shell showLineNumbers=1
+tar -xvzf cadenza_clip2_data.train.v1.0.tar.gz  # For training data
+tar -xvzf cadenza_clip2_data.valid.v1.0.tar.gz # For validation data
+```
+
+### Directory Structure after unpacking
+
+<pre>
+{`cadenza_data/
+└── clip2
+      ├── metadata/         # Lyrics, hearing loss severity, transcription and score
+      ├── train/
+      │   ├── signals/      # Audio (1) to predict intelligibility
+      │   └── unprocessed/  # Audio (2) without hearing loss
+      ├── valid/
+      │   ├── signals/
+      │   └── unprocessed/
+      └── Manifest/         # files' checksum`}
+</pre>
+
+## Audio signals
+
+* Stored as 16-bit stereo FLAC files at 44,100 Hz.
+* Filenames:
+    * {`<split>`}/signals/`<HASH_NUMBER>`.flac: audio (1) signal to predict intelligibility.
+    * {`<split>`}/unprocessed/`<HASH_NUMBER>`_unproc.flac: the unprocessed (without hearing loss) audio (2) signal.
+* Notes:
+  * Audio (1) and unprocessed audio (2) have matching `<HASH_NUMBER>`.
+  * Slight misalignment and variations in the number of frames may occur between Audio (1) and Audio (2) due to the hearing loss simulation.
+
+## Training Metadata
+
+The train metadata is saved in `metadata/train_metadata.json`. 
+The metadata contains a list of dictionaries, each containing the `correctness` score for each Audio1 signal.
+
+Fields:
+* `signal`: hash code for the audio filename.
+* `original_prompt`: original target sentence.
+* `prompt`: text normalised target sentence (ground truth) used for correctness computation.
+* `n_words`: number of words in prompts after expanding contractions (see [data construction](data#construction-of-the-clip1-dataset)).
+* `hearing_loss`: Indicating if the signal audio was: not processed (**No Loss**); has **Mild** simulated hearing loss; or **Moderate** simulated hearing loss
+* `correctness`: Intelligibility score i.e. rate of correctly identified words (the target variable).
+* `phoneme_correctness`: Intelligibility score in terms of phoneme accuracy. _**Included only for completeness but not used in CLIP2 challenge.**_
+
+```json title="cadenza_data/clip2/metadata/train_metadata.json"
+[
+   {
+        "signal":"0a0ba7f0820333dbd0eb5668",
+        "original_prompt":"If you need me you gotta tell me",
+        "prompt":"if you need me you got to tell me",
+        "n_words":9,
+        "correctness":0.6666666667,
+        "phoneme_correctness":0.7619047619,
+        "hearing_loss":"No Loss"
+    }
+]
+```
+
+### Listener Test Responses
+
+The detail of listener test responses are in `metadata/train_responses.json`.
+This file contains a dictionary with the detailed responses of the listener to each Audio1 signal.
+For the Training set it includes a single response. And, for the validation and evaluation sets,
+it includes all three responses used for computing the average correctness.
+
+Field:
+* `response_id`: An indication if corresponds to Score1/Score2/score3 for that sample
+* `original_response`: Response as typed by the listener test participant
+* `response`: Response after text normalization.
+* `hits`: the number of correctly identified words
+* `correctness`: the correctness score for that response
+* `phoneme_hits`: the number of correctly identified phonemes
+* `phoneme_correctness`: the correctness score for that response in terms of phoneme accuracy.
+
+```json title="cadenza_data/clip2/metadata/train_responses.json"
+{
+    "0a0ba7f0820333dbd0eb5668": [
+        {
+            "response_id": "Score1",
+            "original_response": "if you feel it, you gotta tell them",
+            "response": "if you feel it you got to tell them",
+            "hits": 6,
+            "correctness": 0.6666666666666666,
+            "phoneme_hits": 16,
+            "phoneme_correctness": 0.7619047619047619
+        }
+    ]
+}
+```
+
+## Validation/Evaluation Metadata
+
+The validation and evaluation metadata are saved in `metadata/valid_metadata.json` and `metadata/eval_metadata.json`, respectably.
+The metadata contains a list of dictionaries, each representing the listener's response to each Audio1 signal.
+
+Fields:
+* `signal`: name of signal to predict intelligibility from.
+* `original_prompt`: original target sentence.
+* `prompt`: text normalised target sentence (ground truth) used for correctness computation.
+* `n_words`: number of words in prompts after expanding contractions.
+* `hearing_loss`: Indicating if the signal audio was: not processed (**No Loss**); has **Mild** simulated hearing loss; or **Moderate** simulated hearing loss
+
+```json title="cadenza_data/clip2/metadata/valid_metadata.json"
+[
+    {
+        "signal":"0a0756cfefa6cf78a85ee3f3",
+        "original_prompt":"My world begins with you",
+        "prompt":"my world begins with you",
+        "n_words":5,
+        "hearing_loss":"Mild"
+    }
+]
+```
+:::warning[Note]
+
+Correctness scores and responses are not available for the validation and evaluation set.
+Please, read how to score the validation set in the [**Leaderboad**](../take_part/leaderboard) webpage.
+
+:::
+
+
+  

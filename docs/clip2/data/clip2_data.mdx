@@ -10,8 +10,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 :::tip[Release of the data]
-The training and validation data are provided at challenge launch.
+
+The training and validation data are provided at challenge launch.  <br />
 The evaluation data is provided closer to the submission deadline in November.
+
 :::
 
 ## Download
@@ -20,10 +22,12 @@ The data is available on [Zenodo](https://zenodo.org/records/20413050).
 
 ## Overview
 
-The Cadenza Lyrics Intelligibility Prediction (CLIP2) dataset consists of thousands of audio extracts of music, each paired with (i) lyric intelligibility scores from listening tests, and (ii) ground truth transcriptions. For each scene we provide:
+The Cadenza Lyrics Intelligibility Prediction (CLIP2) dataset consists of thousands of audio extracts of music,
+each paired with (i) lyric intelligibility scores from listening tests, and (ii) ground truth transcriptions.
+For each scene we provide:
 
 1. The stereo audio that our listeners heard during the intelligibility tests. This audio may have no, mild or moderate hearing loss simulated.
-2. The audio without hearing loss simulation (in cases where audio (1) has no hearing loss simulation, audio(1)=audio(2)).
+2. The audio without hearing loss simulation (in cases where audio (1) has no hearing loss simulation, audio (1)=audio (2)).
 3. The hearing impairment severity applied to the audio (1).
 4. The ground-truth text of the lyrics.
 5. The transcription given by our listeners during the intelligibility tests and the intelligibility score.
@@ -32,29 +36,35 @@ See the [rules](../take_part/rules) for which of these can be used for training,
 
 ### Why provide Audio(2)?
 
-The scenario we're simulating is someone listening to music, so audio (2) might be the signal fed to a pair of headphones. We're interested in diverse hearing and many people with hearing loss don't use hearing aids. Therefore in the listening test we added the effects of hearing loss to some of the audio (people doing our listening tests were young and had no hearing loss). Consequently, audio(1) is what people heard in the listening tests, but audio(2) is also available in our scenario.
+The scenario we're simulating is someone listening to music while in a coffee shop or a pub.
+So audio (2) might be the signal fed to the entrance of the ear canal.
 
-In our baseline, we use Audio(2) to estimate the vocals without hearing loss simulation using music source separation. This is then used as a reference signal for an intelligibility metric.
+We're interested in diverse hearing, and many people with hearing loss don't use hearing aids.
+Therefore, in the listening test we added the effects of hearing loss to some of the audios
+(people doing our listening tests were young and had no reported hearing loss).
+
+Consequently, audio (1) is what people heard in the listening tests, but audio (2) is also available in our scenario.
 
 [//]: # (## Data exploration)
 
 [//]: # ()
+[//]: # ()
 [//]: # (This video explores the dataset and highlights some interesting aspects to research.)
 
+[//]: # ()
 [//]: # ()
 [//]: # (<iframe width="100%" height="560" src="https://www.youtube.com/embed/0w5DyZ8Itv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
 
 ## Construction of the CLIP2 Dataset
 
-[//]: # ()
-[//]: # (<Image img={require&#40;'../../../static/img/clip1/data_explanation_diagram.png'&#41;} alt="schematic of data generation" />)
 
-[//]: # ()
-[//]: # (Figure 1. Schematic of data generated and process. Black lines indicate metadata and blue audio.)
+<Image img={require('../../../static/img/clip2/clip2_data_diagrams.png')} alt="schematic of data generation" />
+
+Figure 1. Schematic of data generated and process. Black lines indicate metadata and blue audio.
 
 ### Generating the music
 
-We began by using ChatGPT to generate thousands of prompts across different music genres. 
+We began by using ChatGPT to generate thousands of prompts across different music genres.
 Care was taken to avoid prompts violating ElevenLabs copyright policies. In general, each prompt included:
 
 1. Choose a random artist or band as a reference to clearly describe singing and musical composition style.
@@ -65,9 +75,9 @@ Care was taken to avoid prompts violating ElevenLabs copyright policies. In gene
 6. Generate the vocals using the generated lyrics.
 
 This process resulted in 2,125 30-second audio signals of generated music with ground-truth lyrics. 
-We then recruited five native English-speaking PhD students from the Universities of Salford and Sheffield. 
-Each annotator was assigned 420 random songs, with no overlap between assignments. 
-Using the academic version of [Label Studio](https://labelstud.io), annotators were tasked with listening to the generated music to:
+We then recruited five native English-speaking PhD students from the Universities of Salford and Sheffield, UK.
+Each annotator was assigned 425 random songs, with no overlap between assignments.
+Using the academic version of [Label Studio](https://labelstud.io), annotators were asked to:
 
 1. Validate that the generated vocals matched the ground-truth lyrics.
 2. Split the music into phrases based on the ground-truth lyrics.
@@ -79,33 +89,40 @@ This post-processing step resulted in a final set of 9,207 audio excerpts with g
 
 ### Listening test to get intelligibility scores
 
-We first divided the 9,207 audio excerpts into training, validation, and evaluation sets using an 80/10/10 split, ensuring no reference artist or band overlap between sets. 
+We first divided the 9,207 audio excerpts into training, validation, and evaluation sets using an 80/10/10 split,
+ensuring no artist or band used as reference overlap between sets.
 That is, if the same artist was used to describe the singer’s characteristics in two different songs, both songs were placed in the same set.
 
-Each audio excerpt was then processed to include reverberation using fourth-order high-order ambisonics from MOTUS [[1]](#ref-1) 
-and downmixed to stereo using a head-related transfer function (HRTF) from SONICOM [[2]](#ref-1). 
+Each audio excerpt was then processed to include reverberation using fourth-order high-order ambisonics (HOA) from MOTUS [[1]](#ref-1)
+and downmixed to stereo using a head-related transfer function (HRTF) from SONICOM [[2]](#ref-1).
 Next, random noise from the WHAM! dataset [[3]](#ref-1) was added to the audio.
 
 Each resulting excerpt was then processed using a hearing loss simulation for mild and moderate hearing loss. 
-For the simulation, an audiogram corresponding to the appropriate hearing loss severity was randomly selected. This produced three versions of every excerpt.
+For the simulation, an audiogram corresponding to the appropriate hearing loss severity was randomly selected.
+This produced three versions of every excerpt.
 
-Using [Prolific](https://www.prolific.com/), we recruited native English speakers who were young adults with self-declared normal hearing. 
+The training, validation and evaluation split was done at this early stage to ensure no overlapping between sets.
+So, before processing the music signals, we randomly split the HOA and HRTF datasets.
+For the noise, we used the same split defined in the WHAM! dataset.
+Finally, for the audiograms used in the hearing loss simulation, a different set of audiograms was used on each split.
+
+Using [Prolific](https://www.prolific.com/), we recruited more than 380 native English speakers who were young adults with self-declared normal hearing.
 Each excerpt was presented twice, with the first presentation serving to help listeners adapt to the genre and vocal style. Listeners were then asked to type what they heard.
 
 Intelligibility scores were computed as the ratio of correctly transcribed words to the total number of words in the ground-truth text. 
 Ground truth and listener transcriptions were text-normalised prior to computing intelligibility scores as follows.
 
 We started by expanding contractions (e.g. I'm -> I am).
-Next, we corrected any misspellings (e.g. remeber -> remember)
+Next, we corrected any misspellings (e.g. remeber -> remember).
 For the responses, we also looked for alternative homophones transcriptions (e.g. your and you're). 
 All alternative transcriptions were then transcribed using the [BEEP pronunciation dictionary](https://www.openslr.org/14/). 
-This accounted for when transcribers used a different transcription of homophones.
+This accounted for when transcribers used a different spelling of homophones (e.g. pair and pear).
 
 This process resulted in one ground-truth reference and several normalised transcriptions per excerpt. 
 The final score corresponds to the maximum score across all alternatives.
 
-For training set samples, we collected one response per excerpt, and three responses for the validation and evaluation sets.
-The validation and evaluation set scores correspond to the average across the three responses.
+We collected one response per training excerpt, and three responses for validation and evaluation excerpts.
+The validation and evaluation scores correspond to the average across the three responses.
 
 **Examples of text normalisation**
 

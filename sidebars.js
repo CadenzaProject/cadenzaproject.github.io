@@ -22,28 +22,51 @@ module.exports = {
      tutorialSidebar_clip2: [
          'clip2/intro',
          'clip2/key_dates',
-         // {
-         //    type: 'category',
-         //    label: 'Dataset',
-         //    items: [
-         //        'clip2/data/data',
-         //        'clip2/data/data_specification'
-         //    ]
-         // },
-         // 'clip2/baseline',
+         {
+            type: 'category',
+            label: 'Dataset',
+            items: [
+                'clip2/data/data',
+                'clip2/data/data_specification'
+            ]
+         },
+         'clip2/baseline',
          {  // Menu Take Part
              type: 'category',
              label: 'Take Part',
              items: [
                  'clip2/take_part/registration',
                  'clip2/take_part/rules',
-                 // 'clip2/take_part/leaderboard',
-                 // 'clip2/take_part/submission',
+                 'clip2/take_part/leaderboard',
+                 'clip2/take_part/submission',
                  'clip2/take_part/FAQs',
              ],
          },
      ],
-
+    tutorialSidebar_clip2_beta: [
+        'clip2_beta/intro',
+        'clip2_beta/key_dates',
+        {
+            type: 'category',
+            label: 'Dataset',
+            items: [
+                'clip2_beta/data/data',
+                'clip2_beta/data/data_specification'
+            ]
+        },
+        'clip2_beta/baseline',
+        {  // Menu Take Part
+            type: 'category',
+            label: 'Take Part',
+            items: [
+                'clip2_beta/take_part/registration',
+                'clip2_beta/take_part/rules',
+                'clip2_beta/take_part/leaderboard',
+                'clip2_beta/take_part/submission',
+                'clip2_beta/take_part/FAQs',
+            ],
+        },
+    ],
     tutorialSidebar_clip1: [
         'clip1/intro',
         'clip1/key_dates',
