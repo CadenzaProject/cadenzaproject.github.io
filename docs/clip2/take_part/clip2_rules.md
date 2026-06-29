@@ -18,7 +18,7 @@ We provide teams with signals and listener responses for training and developmen
    - Reverberation (high-order ambisonics (HOA) [1] combined with head-related transfer functions (HRTF) [2]).
    - Background noise [3].
    - Simulated no, mild or moderate hearing loss (HL).
-2. **Audio2**: Audio1 without the hearing loss simulation. This corresponds to the signal at the entrance of the listener’s ear canal.
+2. **Audio2**: Audio1 with the same noise and reverberation, but without the hearing loss simulation.
 3. **Severity**: The listener's hearing impairment severity category used in the HL simulation.
 4. **Lyrics**: The ground-truth lyric text.
 5. **Transcription**: The transcriptions produced by listeners during the intelligibility tests.
@@ -38,13 +38,10 @@ In addition, teams can use:
 
 The validation set includes only the following fields:
 
-1. **Audio1**: The stereo audio for which participants must predict lyric intelligibility. This is the audio presented to listeners during the intelligibility tests and includes:
-    - Reverberation (high-order ambisonics (HOA) [1] combined with head-related transfer functions (HRTF) [2]).
-    - Background noise [3].
-    - Simulated no, mild or moderate hearing loss (HL).
-2. **Audio2**: Audio1 without the hearing loss simulation. This corresponds to the signal at the entrance of the listener’s ear canal.
-3. **Severity**: The listener's hearing impairment severity category used in the HL simulation.
-4. **Lyrics**: The ground-truth lyric text.
+1. **Audio1**
+2. **Audio2**
+3. **Severity**
+4. **Lyrics**
 
 To obtain scores on the validation set, please submit your predictions to the [leaderboard](leaderboard).
 
