@@ -27,8 +27,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script><link rel="stylesheet" href="/assets/css/styles.fce70a13.css">
-<script src="/assets/js/runtime~main.51371c71.js" defer="defer"></script>
-<script src="/assets/js/main.08ad41d5.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.f534333f.js" defer="defer"></script>
+<script src="/assets/js/main.24ca4004.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -46,7 +46,7 @@
 <li class="">Simulated no, mild or moderate hearing loss (HL).</li>
 </ul>
 </li>
-<li class=""><strong>Audio2</strong>: Audio1 without the hearing loss simulation. This corresponds to the signal at the entrance of the listener’s ear canal.</li>
+<li class=""><strong>Audio2</strong>: Audio1 with the same noise and reverberation, but without the hearing loss simulation.</li>
 <li class=""><strong>Severity</strong>: The listener&#x27;s hearing impairment severity category used in the HL simulation.</li>
 <li class=""><strong>Lyrics</strong>: The ground-truth lyric text.</li>
 <li class=""><strong>Transcription</strong>: The transcriptions produced by listeners during the intelligibility tests.</li>
@@ -68,16 +68,10 @@ However, since each excerpt is presented with three hearing loss categories (as-
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="validation">Validation<a href="#validation" class="hash-link" aria-label="Direct link to Validation" title="Direct link to Validation" translate="no">​</a></h3>
 <p>The validation set includes only the following fields:</p>
 <ol>
-<li class=""><strong>Audio1</strong>: The stereo audio for which participants must predict lyric intelligibility. This is the audio presented to listeners during the intelligibility tests and includes:<!-- -->
-<ul>
-<li class="">Reverberation (high-order ambisonics (HOA) [1] combined with head-related transfer functions (HRTF) [2]).</li>
-<li class="">Background noise [3].</li>
-<li class="">Simulated no, mild or moderate hearing loss (HL).</li>
-</ul>
-</li>
-<li class=""><strong>Audio2</strong>: Audio1 without the hearing loss simulation. This corresponds to the signal at the entrance of the listener’s ear canal.</li>
-<li class=""><strong>Severity</strong>: The listener&#x27;s hearing impairment severity category used in the HL simulation.</li>
-<li class=""><strong>Lyrics</strong>: The ground-truth lyric text.</li>
+<li class=""><strong>Audio1</strong></li>
+<li class=""><strong>Audio2</strong></li>
+<li class=""><strong>Severity</strong></li>
+<li class=""><strong>Lyrics</strong></li>
 </ol>
 <p>To obtain scores on the validation set, please submit your predictions to the <a class="" href="/docs/clip2/take_part/leaderboard">leaderboard</a>.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="evaluation">Evaluation<a href="#evaluation" class="hash-link" aria-label="Direct link to Evaluation" title="Direct link to Evaluation" translate="no">​</a></h3>
