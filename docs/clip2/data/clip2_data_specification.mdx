@@ -33,7 +33,7 @@ This package contains 10 samples from the training and 5 from the validation dat
 3. 
 ```shell showLineNumbers=1
 tar -xvzf cadenza_clip2_data.train.v1.0.tar.gz  # For training data
-tar -xvzf cadenza_clip2_data.valid.v1.0.tar.gz # For validation data
+tar -xvzf cadenza_clip2_data.valid.v1.0.tar.gz  # For validation data
 ```
 
 ### Directory Structure after unpacking
@@ -43,8 +43,8 @@ tar -xvzf cadenza_clip2_data.valid.v1.0.tar.gz # For validation data
 └── clip2
       ├── metadata/         # Lyrics, hearing loss severity, transcription and score
       ├── train/
-      │   ├── signals/      # Audio (1) to predict intelligibility
-      │   └── unprocessed/  # Audio (2) without hearing loss
+      │   ├── signals/      # Audio (1) - to predict intelligibility
+      │   └── unprocessed/  # Audio (2) - without hearing loss
       ├── valid/
       │   ├── signals/
       │   └── unprocessed/
@@ -55,8 +55,8 @@ tar -xvzf cadenza_clip2_data.valid.v1.0.tar.gz # For validation data
 
 * Stored as 16-bit stereo FLAC files at 44,100 Hz.
 * Filenames:
-    * {`<split>`}/signals/`<HASH_NUMBER>`.flac: audio (1) signal to predict intelligibility.
-    * {`<split>`}/unprocessed/`<HASH_NUMBER>`_unproc.flac: the unprocessed (without hearing loss) audio (2) signal.
+    * `<SPLIT>/signals/<HASH_NUMBER>.flac`: audio (1) signal to predict intelligibility.
+    * `<SPLIT>/unprocessed/<HASH_NUMBER>_unproc.flac`: the unprocessed (without hearing loss) audio (2) signal.
 * Notes:
   * Audio (1) and unprocessed audio (2) have matching `<HASH_NUMBER>`.
   * Slight misalignment and variations in the number of frames may occur between Audio (1) and Audio (2) due to the hearing loss simulation.
@@ -147,7 +147,7 @@ Fields:
 :::warning[Note]
 
 Correctness scores and responses are not available for the validation and evaluation set.
-Please, read how to score the validation set in the [**Leaderboad**](../take_part/leaderboard) webpage.
+Please read how to score the validation set in the [**Leaderboad**](../take_part/leaderboard) webpage.
 
 :::
 
