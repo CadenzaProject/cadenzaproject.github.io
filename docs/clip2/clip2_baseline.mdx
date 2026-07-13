@@ -1,0 +1,109 @@
+---
+id: baseline
+title: Baseline System
+sidebar_label: Baseline
+sidebar_position: 3.2
+---
+import ReactPlayer from 'react-player';
+import Image from '@theme/IdealImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import { TwitterTimelineEmbed } from "react-twitter-embed";
+import baseline from '@site/static/img/clip2/baseline.png';
+
+
+The baseline consists of a DNN regression model that predicts the ratio of correctly identified words by a person during a listening test.
+
+## Model Overview
+
+This model evaluates a single raw audio waveform to predict a lyric intelligibility score between 0 and 1.
+It leverages a frozen, pre-trained Whisper encoder to extract deep acoustic features,
+which are then aggregated and projected to generate the final prediction.
+
+### Architectural Components
+
+<Image img={baseline} alt="CLIP2 baseline" />
+
+1. **Feature Extraction (Audio to Spectrogram)**: <br />
+The input raw audio waveform is converted into a 2D log-mel spectrogram 
+using the standard `WhisperProcessor`. This transforms the time-domain signal into a frequency-domain representation.
+2. **Pre-trained Encoding (Whisper encoder)**:
+The spectrogram is fed into an OpenAI Whisper encoder. The baseline configuration uses `whisper-large-v3`.
+The baseline configuration extracts features from the final encoder layer (enc[32]).
+3. **Pooling and Linear Projection**:
+The extracted features are aggregated into a fixed-size representation using a temporal mean-pooling to collapse the time dimension.
+A linear projection then maps this vector to 256 hidden dimensions.
+4. **Regression Head**:
+The final representation is passed through a Multi-Layer Perceptron (MLP) with a Sigmoid activation function.
+This outputs a single continuous regression score strictly bounded between 0 and 1, representing the final predicted intelligibility ratio.
+
+### Training Configuration
+
+The baseline model is optimized using a progressive, two-stage training procedure.
+
+#### Stage 1: Mono
+
+This initial stage establishes a stable mapping from the acoustic features to the baseline prediction task.
+
+* Audio Format: Mono audio signals. Stereo signals are downmix to mono by averaging both channels.
+* Loss Function: Mean Squared Error (MSE).
+* Encoder Freezing Strategy:
+  * Initial Iterations: The Whisper-large-v3 encoder starts completely frozen. Only the linear projection layer and the regression head are trained.
+  * Unfreezing Point: After 5 epochs, the last 3 layers of the Whisper encoder are unfrozen, allowing its deep weights to fine-tune and adapt directly to the acoustics of the CLIP2 data.
+* Learning rate = 1e-3
+* Learning rate finetune encoder layers: 1e-06
+* Batch size = 32 samples
+* Max epochs = 50 epochs
+* Early stopping tolerance = 10 epochs
+* Reduce LR tolerance = 5 epochs
+* Optimizer = AdamW
+  * Weight decay = 1e-4
+
+The results of this model represent the `Baseline-Mono` in the leaderboard.
+
+#### Stage 2: Stereo (better-ear)
+
+Because the evaluation music samples contain Head-Related Transfer Functions (HRTFs), the audio arriving at each ear differs in timing and amplitude.
+Averaging these channels into a mono downmix can cause artifacts, negatively affecting the correct perception of intelligibility
+
+Human listeners naturally exhibit a `better-ear` advantage, where the ear closer to the acoustic source receives a clearer, more intelligible signal.
+To model this behavior, the second training stage shifts to spatial processing.
+
+* Audio Format: Stereo audio signals (preserving individual left and right ear channels).
+* Loss Function: Better-Ear Mean Squared Error (Better-Ear MSE). This function dynamically emphasizes the channel with the clearer acoustic properties.
+
+$$
+\text{MSE}_{\text{better-ear}} = \text{MSE}(\max(\text{Predictions}_{\text{left-ear}}, \text{Predictions}_{\text{right-ear}}), \text{targets})
+$$
+
+* Training Strategy:
+  * Starts from the Stage 1 pre-trained model, freezing the encoder and only updating the projection layer and regression head.
+  * Left and right channels are passed through the same shared model. The loss is then computed for both channels, and the max is used to backpropagate the gradients.
+* Learning rate = 1e-4
+* Batch size = 32 samples
+* Max epochs = 3
+* Optimizer = AdamW
+  * Weight decay = 1e-4
+
+The results of this model represent the `Baseline-BE` in the leaderboard.
+
+## How to use the baseline
+
+The baseline training and evaluation scripts are in the `pyclarity` Python package (version pyclarity >=0.9.0),
+wich is available on GitHub at [https://github.com/claritychallenge/clarity](https://github.com/claritychallenge/clarity).
+The relevant scripts are located in the `recipes/clip2/baseline` directory. To use the baseline system:
+
+1. Download the Code: Clone or download the repository from GitHub.
+2. Follow the Instructions: Refer to the README file in the recipes/clip2/baseline directory for detailed steps to run the baseline.
+
+## Baseline Performance
+
+The baseline systems achieve the following performance on the validation set:
+
+| System        | RMSE  |  PCC  |
+|:--------------|:-----:|:-----:|
+| Baseline-Mono | 18.45 | 81.27 |
+| Baseline-BE   | 18.34 | 81.51 |
+
+The Baseline-BE results show a slight improvement over the Baseline-Mono of 0.11 RMSE.
+
+[//]: # (A paired sign test on per-excerpt absolute error shows Baseline-BE achieves lower error than Baseline-Mono on 1140 of 2117 signals &#40;53.8%&#41;.)
