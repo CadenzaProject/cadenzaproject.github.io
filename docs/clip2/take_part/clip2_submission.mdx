@@ -7,15 +7,88 @@ sidebar_position: 4.6
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-Sign up to our [Google group](https://groups.google.com/g/cadenza-challenge) for alerts about the challenges and to help shape the challenges.
+## Registration
 
-:::tip
+All teams are required to [register](registration). Registered teams will be assigned a unique team ID to identify their submission.
+Please mind that you will receive your `TEAM_ID` after the submission windows open. This will be sent to the same email account you use during registration.
 
-Submission will be available soon.
-Please check the [important dates](../key_dates) page.
+## Evaluation data?
 
+The evaluation data will have the same format as the validation data (see details in [data specification](../data/data_specification#validation-metadata)).
+Pairs of processed and unprocessed audio signals will be provided together with their metadata using the same fields as the validation dataset.
+It won't contain the listener's correctness score or their responses.
+We will score your submission for you and return your score (we aim to do this within 48 hours of submission).
+
+:::warning[release of the Evaluation Data]
+See [Key Dates](../key_dates) to check when evaluation data will be released.
 :::
-[//]: # ()
-[//]: # (Please use the following form to submit your predictions)
 
-[//]: # (https://forms.gle/issZt2KTbMTaZPSB6)
+[//]: # (To get access to the data, please download the package from the Zenodo repository:)
+
+[//]: # ()
+[//]: # (* `cadenza_clip2_data.eval.v1.0.tar.gz` [561 MB]: unlabelled evaluation data.)
+
+[//]: # (* [Zenodo link]&#40;https://zenodo.org/records/20413050&#41; Version 1.2.0)
+
+## What do I need to submit?
+
+All teams must submit
+
+* CSV file with the evaluation predictions (evaluation set) with scores ranging between 0 and 100.
+* CSV file with the validation prediction (validation set) with scores ranging between 0 and 100.
+* A two-page technical report
+
+:::warning
+Please note: we can only score your submission if it includes predictions for **both the evaluation and validation sets**.
+:::
+
+### The predicted intelligibility scores
+
+The predicted scores need to be submitted in a CSV file named `ICASSP2027_<DATA SET>_<TEAMS_ID>.csv` where:
+- `<TEAM_ID>` is your individual TEAM_ID provided after registration,
+- `<DATA SET>` is either `valid` or `eval` for validation and evaluation sets, respectably.
+
+For example, for team `T001`, the files with the predicted scores should be called:
+
+* `ICASSP2027_valid_T001.csv` for the validation set predictions.
+* `ICASSP2027_eval_T001.csv` for the evaluation set predictions.
+
+The CSV files should have two columns with headers,
+> signal_id, intelligibility_score
+
+where the `signal_id` is the unique signal identifier used for each FLAC file name (the metadata's `signal` field) and
+the `intelligibility_score` is the predicted intelligibility **given in terms of the percentage words recognised correctly** for the signal (i.e. **between 0 and 100**).
+
+### The technical report
+
+* A two-page technical report must be submitted alongside your predicted scores.
+* Your report should include an abstract and introduction and sections on experimental setup/methodology including system information and model/network architecture, evaluation/results, discussion, conclusion and references. Please provide an estimation of the computational resources needed. You must describe any pre-existing tools, software and models used.
+* We suggest you use the official ICASSP 2027 Paper Kit.
+* The top five systems will be invited to submit a paper to the ICASSP 2027 special session.
+
+Note, you will not have your final evaluation set scores when you submit your report.
+We will score your submission for you and return your score (we aim to do this within 48 hours of submission).
+This extra information can then be included in a revised version of your report, which will be published on our website in time for ICASSP 2027 on May.
+
+## Where should I submit my entry?
+
+The CSV files and the technical report should be submitted using the following form:<br />
+[Submission Form](https://forms.gle/NPAF6w5jcfghBGVR7)
+
+## Multiple submissions
+
+If your team wishes to make more than one submission, then please prepare separate CSV files adding 'a', 'b', etc to your `<TEAM_ID>`,
+e.g. if your `<TEAM_ID>` is T001 use the names `ICASSP2027_valid_T001a.csv` and `ICASSP2027_valid_T001b.csv` for the validation set. Same structure for the evaluation set.
+We will only accept multiple entries where we judge the systems to be significantly different,
+i.e. separate entries cannot be the same system with different hyperparameter tunings.
+
+If you have submitted multiple entries, you may describe them both in the same technical report or use separate technical reports if the systems are unrelated, and you need more space.
+
+## Code
+
+We encourage you to make your code open source.
+
+## How will intellectual property be handled?
+
+See [Intellectual Property](rules#intellectual-property) section for details.
+

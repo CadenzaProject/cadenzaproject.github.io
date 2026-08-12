@@ -87,14 +87,14 @@ module.exports = {
     // emoji from https://emojipedia.org/
     themeConfig: {
         // Uncomment the following code to add the announcement bar
-        // announcementBar: {
-        //     id: 'announcement',
-        //     content:
-        //         "🎉🎉 Launched <a href='https://cadenzachallenge.org/docs/clip2/intro'>Second Lyric Intelligibility Challenge - CLIP2</a> 🎉🎉",
-        //     backgroundColor: '#a2dea2',
-        //     textColor: '#070707',
-        //     isCloseable: false,
-        // },
+        announcementBar: {
+            id: 'announcement',
+            content:
+                "🎉 <a href='https://cadenzachallenge.org/docs/clip2/intro'>CLIP2 has been officially accepted as an ICASSP 2027 Grand Challenge!</a> 🎉",
+            backgroundColor: '#a2dea2',
+            textColor: '#070707',
+            isCloseable: false,
+        },
         blog: {
             sidebar: {
                 groupByYear: true,
@@ -111,25 +111,6 @@ module.exports = {
                 src: 'img/logo.png',
             },
             items: [
-                {
-                    type: 'dropdown',
-                    label: 'About Us',
-                    position: 'right',
-                    items: [
-                        {
-                            to: '/about/',
-                            label: 'About Us',
-                        },
-                        {
-                            label: 'Social',
-                            to: '/social',
-                        },
-                        {
-                            to: '/contact/',
-                            label: 'Contact Us',
-                        },
-                    ]
-                },
                 {
                     type: 'dropdown',
                     label: 'Challenges',
@@ -158,9 +139,19 @@ module.exports = {
                     ]
                 },
                 {
-                    to: 'publications',
-                    label: 'Publications',
+                    type: 'dropdown',
+                    label: 'Datasets',
                     position: 'right',
+                    items: [
+                        {
+                            to: '/docs/clip2/data/data',
+                            label: 'CLIP2',
+                        },
+                        {
+                            to: '/docs/clip1/data/data',
+                            label: 'CLIP1',
+                        }
+                    ]
                 },
                 {
                     type: 'dropdown',
@@ -182,6 +173,11 @@ module.exports = {
                     ]
                 },
                 {
+                    to: 'publications',
+                    label: 'Publications',
+                    position: 'right',
+                },
+                {
                     to: 'https://cadenzachallenge.org/cadenza_tutorials/intro.html',
                     label: 'Tutorials',
                     position: 'right',
@@ -190,6 +186,25 @@ module.exports = {
                     to: '/docs/learning_resources/learning_intro/',
                     label: 'Learning Resources',
                     position: 'right'
+                },
+                {
+                    type: 'dropdown',
+                    label: 'About Us',
+                    position: 'right',
+                    items: [
+                        {
+                            to: '/about/',
+                            label: 'About Us',
+                        },
+                        {
+                            label: 'Social',
+                            to: '/social',
+                        },
+                        {
+                            to: '/contact/',
+                            label: 'Contact Us',
+                        },
+                    ]
                 },
                 {
                     to: '/blog/',

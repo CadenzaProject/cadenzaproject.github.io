@@ -9,9 +9,24 @@ import Image from '@theme/IdealImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-:::warning[Release of the data]
-The training and validation data are provided at challenge launch.
-The evaluation data is provided closer to the submission deadline in November.
+:::warning[Data Article]
+You can read the [**data article**](https://www.sciencedirect.com/science/article/pii/S2352340926000193) here.
+
+```bibtex
+@article{CadenzaClIP,
+    title = {The Cadenza lyric intelligibility prediction (CLIP) dataset},
+    author = {Gerardo Roa-Dabike and Trevor J. Cox and Jon P. Barker and Bruno M. Fazenda and Simone Graetzer and Rebecca R. Vos and Michael A. Akeroyd and Jennifer Firth and William M. Whitmer and Scott Bannister and Alinka Greasley},
+    journal = {Data in Brief},
+    volume = {65},
+    pages = {112466},
+    year = {2026},
+    issn = {2352-3409},
+    doi = {https://doi.org/10.1016/j.dib.2026.112466},
+    url = {https://www.sciencedirect.com/science/article/pii/S2352340926000193}
+}
+```
+
+
 :::
 
 ## Download

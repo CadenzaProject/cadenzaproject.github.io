@@ -13,15 +13,12 @@ Dates are tentative because we are waiting for ICASSP to publish their Grand Cha
 - :heavy_check_mark: **1st July 2026**: Release of validation/training dataset.
 - :heavy_check_mark: **15th July 2026**: Release baseline.
 - **1st October 2026**: Release of evaluation data and opening of the submission window.
-- **30th October 2026**: Submission deadline. All entrants must have submitted their predictions plus a draft of their technical report.
-
-If CLIP2 is accepted as an ICASSP 2027 SP Grand Challenge
-
+- **30th October 2026**: Submission deadline. [Submission instructions!](take_part/submission)
 - **December 2026**: Top teams invited to submit 2 page paper for ICASSP
 - **January 2027**: ICASSP camera-ready 2-page papers due.
 - **16th-21th May 2027**: Session during ICASSP 2027, Toronto, Canada.
 
-If CLIP2 doesn't become an ICASSP SP Grand Challenge, we'll organise a separate online Cadenza workshop for entrants.
+
 
 
 
