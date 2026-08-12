@@ -18,8 +18,12 @@
     --ifm-font-size-base: 18px;
 }
 
-.navbar__search {
-    padding-left: 16px;
+.navbar {
+    font-size: 16px;
+}
+
+.dropdown__link {
+    font-size: 16px;
 }
 
 
