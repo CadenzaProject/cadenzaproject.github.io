@@ -20,7 +20,7 @@ We provide teams with signals and listener responses for training and developmen
    - Simulated no, mild or moderate hearing loss (HL).
 2. **Audio2**: Audio1 with the same noise and reverberation, but without the hearing loss simulation.
 3. **Severity**: The listener's hearing impairment severity category used in the HL simulation.
-4. **Lyrics**: The ground-truth lyric text.
+4. **Lyrics**: The ground-truth lyric text. This includes the number of words in the sentence.
 5. **Transcription**: The transcriptions produced by listeners during the intelligibility tests.
 6. **Intelligibility**: The intelligibility scores obtained from the listening tests, computed by comparing the ground-truth lyrics with the listeners’ transcriptions.
 
