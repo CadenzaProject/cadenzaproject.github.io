@@ -59,7 +59,7 @@ jobs:
       - uses: actions/setup-node@v4
         if: steps.git_status.outputs.changed == 'true'
         with:
-          node-version: 20
+          node-version: 24
           cache: yarn
 
       - name: Install site dependencies

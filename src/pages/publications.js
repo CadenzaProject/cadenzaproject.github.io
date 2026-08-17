@@ -45,32 +45,7 @@ const ScholarBadge = ({ citationInfo }) => {
     );
 };
 
-// const renderCitation = (publication) => {
-//     const url = publication.entryTags.url;
-//     publication.entryTags.url = "";
-//     publication.entryTags.doi = "";
-//
-//     const citationString = bibtexParse.toBibtex([publication], false);
-//     const citation = new Cite(citationString);
-//     const formattedCitation = citation.format("bibliography", {
-//         format: "html",
-//         template: "apa",
-//         lang: "en-US",
-//     });
-//     if (url) {
-//         publication.entryTags.url = "";
-//         return (
-//             <div>
-//                 <div dangerouslySetInnerHTML={{ __html: formattedCitation }} />
-//                 <a href={url}>{url}</a>
-//             </div>
-//         );
-//     } else {
-//         return <div dangerouslySetInnerHTML={{ __html: formattedCitation }} />;
-//     }
-// };
-
-const renderCitation = (publication, citationsMap) => {
+const renderCitation = (publication, citationsMap = {}) => {
     const url = publication.entryTags.url;
     publication.entryTags.url = "";
     publication.entryTags.doi = "";
@@ -83,7 +58,7 @@ const renderCitation = (publication, citationsMap) => {
         lang: "en-US",
     });
 
-    const citationInfo = citationsMap[publication.citationKey];
+    const citationInfo = citationsMap?.[publication.citationKey];
 
     return (
         <div>
@@ -94,7 +69,7 @@ const renderCitation = (publication, citationsMap) => {
     );
 };
 
-const PublicationsList = ({ year }) => {
+const PublicationsList = ({ year, citationsMap = {} }) => {
     const [publications, setPublications] = useState([]);
 
     useEffect(() => {
@@ -112,54 +87,11 @@ const PublicationsList = ({ year }) => {
     return (
         <ul>
             {publications.map((publication, index) => (
-                <li key={index}>{renderCitation(publication)}</li>
+                <li key={index}>{renderCitation(publication, citationsMap)}</li>
             ))}
         </ul>
     );
 };
-
-// export default function Home() {
-//     const { siteConfig } = useDocusaurusContext();
-//     const [years, setYears] = useState([]);
-//
-//     useEffect(() => {
-//         fetch("publications.bib")
-//             .then((response) => response.text())
-//             .then((data) => {
-//                 const parsedData = bibtexParse.toJSON(data);
-//                 const uniqueYears = [
-//                     ...new Set(
-//                         parsedData.map((publication) => publication.entryTags.year)
-//                     ),
-//                 ]
-//                     .sort()
-//                     .reverse();
-//                 setYears(uniqueYears);
-//             });
-//     }, []);
-//
-//     return (
-//         <Layout
-//             title={`Hello from ${siteConfig.title}`}
-//             description="Description will go into a meta tag in <head />"
-//         >
-//             <main>
-//                 <PublicationsHeader />
-//                 <div className="container">
-//                     <Paper sx={{ p: 2, m: 4 }}>
-//                         {years.map((year) => (
-//                             <React.Fragment key={year}>
-//                                 <h2>{year}</h2>
-//                                 <PublicationsList year={year} />
-//                             </React.Fragment>
-//                         ))}
-//                     </Paper>
-//                 </div>
-//             </main>{" "}
-//         </Layout>
-//     );
-// }
-
 
 export default function Home() {
     const { siteConfig } = useDocusaurusContext();
