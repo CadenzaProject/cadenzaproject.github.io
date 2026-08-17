@@ -11,7 +11,7 @@ on:
       # Only fire when the bib file itself changes -- this also prevents
       # an infinite loop, since this job's own commit only touches
       # static/citations.json, not publications.bib.
-      - "publications.bib"
+      - "static/publications.bib"
 
 jobs:
   update-citations:
