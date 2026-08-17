@@ -16,17 +16,20 @@ Usage:
     python scripts/fetch_scholar_citations.py --user BfYwEGMAAAAJ
 
 Requires each bib entry you want a badge for to have a `scholarid`
-field:
+field containing just the paper id (the part after the colon in
+`citation_for_view`, not the user id):
 
     @article{mykey,
       title    = {...},
       ...
-      scholarid = {BfYwEGMAAAAJ:u5HHmVD_uO8C},
+      scholarid = {u5HHmVD_uO8C},
     }
 
 Get that value by opening your own Scholar profile, clicking the paper,
-and copying the part after `citation_for_view=` in the URL (it already
-includes your user id, a colon, then the paper id).
+and copying the URL's `citation_for_view=USERID:PAPERID` part -- keep
+only the PAPERID (after the colon). The user id comes from --user
+instead, so if you ever change/merge Scholar profiles, you only update
+the one --user flag rather than every bib entry.
 
 Output format (static/citations.json):
 {
@@ -90,9 +93,14 @@ def load_bib_entries(bib_path: Path):
     entries = []
     for entry in bib_database.entries:
         key = entry.get("ID")
-        scholar_id = entry.get("scholarid", "").strip()
+        paper_id = entry.get("scholarid", "").strip()
+        # Backwards-compat: if someone pastes the full "USERID:PAPERID"
+        # form (e.g. copy-pasted straight from an old entry), just take
+        # the part after the colon.
+        if ":" in paper_id:
+            paper_id = paper_id.split(":", 1)[1]
         if key:
-            entries.append({"key": key, "scholar_id": scholar_id})
+            entries.append({"key": key, "paper_id": paper_id})
     return entries
 
 
@@ -106,15 +114,15 @@ def load_existing_citations(out_path: Path):
     return {}
 
 
-def fetch_citation_count(user_id: str, scholar_id: str):
+def fetch_citation_count(user_id: str, paper_id: str):
     """
-    scholar_id is expected as 'USERID:PUBID'. Returns (count, url):
-    count is an int, or None if it couldn't be fetched this run
-    (e.g. blocked/rate-limited).
+    paper_id is just the PAPERID part (not USERID:PAPERID). Returns
+    (count, url): count is an int, or None if it couldn't be fetched
+    this run (e.g. blocked/rate-limited).
     """
     url = (
         "https://scholar.google.com/citations?view_op=view_citation"
-        f"&hl=en&user={user_id}&citation_for_view={scholar_id}"
+        f"&hl=en&user={user_id}&citation_for_view={user_id}:{paper_id}"
     )
     try:
         resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT_SECONDS)
@@ -157,15 +165,15 @@ def main():
     missing_scholar_id = []
     failed = []
 
-    with_id = [e for e in bib_entries if e["scholar_id"]]
-    without_id = [e for e in bib_entries if not e["scholar_id"]]
+    with_id = [e for e in bib_entries if e["paper_id"]]
+    without_id = [e for e in bib_entries if not e["paper_id"]]
     missing_scholar_id.extend(
         f"{e['key']}: no `scholarid` field set -- add one to get a badge" for e in without_id
     )
 
     for i, entry in enumerate(with_id, start=1):
-        print(f"[{i}/{len(with_id)}] {entry['key']} ({entry['scholar_id']})")
-        count, url = fetch_citation_count(args.user, entry["scholar_id"])
+        print(f"[{i}/{len(with_id)}] {entry['key']} ({entry['paper_id']})")
+        count, url = fetch_citation_count(args.user, entry["paper_id"])
         if count is None:
             failed.append(f"{entry['key']}: fetch failed this run, keeping previous value if any")
         else:
