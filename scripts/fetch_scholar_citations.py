@@ -86,6 +86,22 @@ HEADERS = {
 
 CITED_BY_RE = re.compile(r"Cited by (\d+)")
 
+# Phrases Google Scholar's block/CAPTCHA interstitial pages contain.
+# These pages can still be HTTP 200 and can still coincidentally contain
+# the string "citation_for_view" (e.g. echoing the requested URL back),
+# so a mere substring check isn't reliable evidence of a real page.
+BLOCK_PAGE_INDICATORS = (
+    "detected unusual traffic",
+    "not a robot",
+    "recaptcha",
+    "gs_captcha",
+)
+
+# A marker that only appears on a genuine citation_for_view page (the
+# title heading's element id). Used as positive evidence, not just the
+# absence of block phrases.
+GENUINE_PAGE_MARKER = "gsc_oci_title"
+
 
 def load_bib_entries(bib_path: Path):
     with open(bib_path, encoding="utf-8") as f:
@@ -134,17 +150,24 @@ def fetch_citation_count(user_id: str, paper_id: str):
         print(f"  HTTP {resp.status_code} -- likely rate-limited, skipping for now")
         return None, url
 
+    text_lower = resp.text.lower()
+    if any(indicator in text_lower for indicator in BLOCK_PAGE_INDICATORS):
+        print("  Response looks like a Scholar block/CAPTCHA page -- skipping")
+        return None, url
+
     match = CITED_BY_RE.search(resp.text)
-    if not match:
-        # No "Cited by" text usually just means 0 citations, but could
-        # also mean Scholar served a block/CAPTCHA page instead of the
-        # real one. Treat as "couldn't determine" rather than assuming 0.
-        if "citation_for_view" not in resp.text:
-            print("  Response didn't look like a citation page (possible block) -- skipping")
-            return None, url
+    if match:
+        return int(match.group(1)), url
+
+    if GENUINE_PAGE_MARKER in resp.text:
+        # Confirmed a real citation page, and it has no "Cited by" text
+        # -- that genuinely means 0 citations.
         return 0, url
 
-    return int(match.group(1)), url
+    # Neither a match nor confirmed to be a real page nor a recognized
+    # block phrase -- ambiguous. Don't guess; treat as "couldn't fetch".
+    print("  Response didn't look like a recognizable citation page -- skipping")
+    return None, url
 
 
 def main():
