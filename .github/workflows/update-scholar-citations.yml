@@ -6,12 +6,12 @@ on:
     - cron: "0 6 1 * *"
   workflow_dispatch: {} # lets you trigger it manually from the Actions tab
   push:
-    branches: [main]
-    paths:
-      # Only fire when the bib file itself changes -- this also prevents
-      # an infinite loop, since this job's own commit only touches
-      # static/citations.json, not static/publications.bib.
-      - "static/publications.bib"
+    branches: [main, citation_badge]
+#    paths:
+#      # Only fire when the bib file itself changes -- this also prevents
+#      # an infinite loop, since this job's own commit only touches
+#      # static/citations.json, not static/publications.bib.
+#      - "static/publications.bib"
 
 jobs:
   update-citations:
@@ -51,6 +51,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: update Google Scholar citation counts"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
 
       # --- Below: build the site and deploy it, same as `yarn deploy`
