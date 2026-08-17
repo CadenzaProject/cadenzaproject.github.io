@@ -1,0 +1,79 @@
+name: Update Google Scholar citation counts
+
+on:
+  schedule:
+    # Runs at 06:00 UTC on the 1st of every month.
+    - cron: "0 6 1 * *"
+  workflow_dispatch: {} # lets you trigger it manually from the Actions tab
+  push:
+    branches: [main, citation_badge] # adjust if your default branch has a different name
+    paths:
+      # Only fire when the bib file itself changes -- this also prevents
+      # an infinite loop, since this job's own commit only touches
+      # static/citations.json, not publications.bib.
+      - "publications.bib"
+
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install fetch-script dependencies
+        run: pip install scholarly bibtexparser
+
+      - name: Fetch citation counts
+        # Replace BfYwEGMAAAAJ with your Google Scholar user id if it ever changes
+        run: python scripts/fetch_scholar_citations.py --user BfYwEGMAAAAJ
+
+      - name: Check for changes
+        id: git_status
+        run: |
+          git add static/citations.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No citation changes -- skipping commit, build, and deploy."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit updated citations.json
+        if: steps.git_status.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update Google Scholar citation counts"
+          git push
+
+      # --- Below: build the site and deploy it, same as `yarn deploy`
+      # would, but only when citation counts actually changed. ---
+
+      - uses: actions/setup-node@v4
+        if: steps.git_status.outputs.changed == 'true'
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Install site dependencies
+        if: steps.git_status.outputs.changed == 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Build site
+        if: steps.git_status.outputs.changed == 'true'
+        run: yarn build
+
+      - name: Deploy to GitHub Pages
+        if: steps.git_status.outputs.changed == 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          # Match whatever branch your `yarn deploy` already publishes to
+          # (Docusaurus defaults to gh-pages).
+          publish_branch: gh-pages
