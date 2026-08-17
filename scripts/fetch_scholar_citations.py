@@ -33,6 +33,7 @@ Notes:
 import argparse
 import difflib
 import json
+import os
 import re
 import sys
 import time
@@ -44,7 +45,7 @@ except ImportError:
     sys.exit("Missing dependency: pip install bibtexparser")
 
 try:
-    from scholarly import scholarly
+    from scholarly import scholarly, ProxyGenerator
 except ImportError:
     sys.exit("Missing dependency: pip install scholarly")
 
@@ -83,6 +84,36 @@ def load_bib_entries(bib_path: Path):
                 "scholar_id": scholar_id,
             })
     return entries
+
+
+def setup_proxy():
+    """
+    Google Scholar aggressively blocks requests from shared/CI IPs (like
+    GitHub Actions runners). Routing through a proxy avoids this.
+
+    - If a SCRAPERAPI_KEY env var is set, use ScraperAPI (recommended --
+      free tier at scraperapi.com covers this use case comfortably).
+    - Otherwise, fall back to scholarly's free rotating proxy pool. This
+      is unreliable (public proxies get blocked too) but requires no
+      signup, so it's a reasonable first try.
+    """
+    pg = ProxyGenerator()
+    scraperapi_key = os.environ.get("SCRAPERAPI_KEY")
+
+    if scraperapi_key:
+        print("Using ScraperAPI proxy...")
+        success = pg.ScraperAPI(scraperapi_key)
+    else:
+        print("No SCRAPERAPI_KEY set -- trying free rotating proxies "
+              "(less reliable; see README to add a ScraperAPI key instead)...")
+        success = pg.FreeProxies()
+
+    if success:
+        scholarly.use_proxy(pg)
+        print("Proxy configured.")
+    else:
+        print("WARNING: proxy setup failed -- requests will go out directly "
+              "and are likely to be blocked by Google Scholar.")
 
 
 def fetch_scholar_publications(user_id: str):
@@ -172,6 +203,7 @@ def main():
     bib_entries = load_bib_entries(bib_path)
     print(f"Loaded {len(bib_entries)} entries from {bib_path}")
 
+    setup_proxy()
     scholar_pubs = fetch_scholar_publications(args.user)
     results, unmatched = match_entries(bib_entries, scholar_pubs, args.user)
 

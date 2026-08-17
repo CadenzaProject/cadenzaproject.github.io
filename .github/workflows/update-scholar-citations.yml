@@ -6,12 +6,12 @@ on:
     - cron: "0 6 1 * *"
   workflow_dispatch: {} # lets you trigger it manually from the Actions tab
   push:
-    branches: [main, citation_badge] # adjust if your default branch has a different name
-    paths:
+    branches: [main, citation_badge]
+   # paths:
       # Only fire when the bib file itself changes -- this also prevents
       # an infinite loop, since this job's own commit only touches
-      # static/citations.json, not publications.bib.
-      - "static/publications.bib"
+      # static/citations.json, not static/publications.bib.
+   #   - "static/publications.bib"
 
 jobs:
   update-citations:
@@ -30,6 +30,12 @@ jobs:
 
       - name: Fetch citation counts
         # Replace BfYwEGMAAAAJ with your Google Scholar user id if it ever changes
+        env:
+          # Optional but recommended: add a SCRAPERAPI_KEY repo secret
+          # (free tier at scraperapi.com) to avoid Google Scholar blocking
+          # requests from the GitHub Actions runner IP. Safe to leave unset --
+          # falls back to free rotating proxies, which are less reliable.
+          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
         run: python scripts/fetch_scholar_citations.py --user BfYwEGMAAAAJ
 
       - name: Check for changes
