@@ -7,11 +7,11 @@ on:
   workflow_dispatch: {} # lets you trigger it manually from the Actions tab
   push:
     branches: [main, citation_badge]
-#    paths:
-#      # Only fire when the bib file itself changes -- this also prevents
-#      # an infinite loop, since this job's own commit only touches
-#      # static/citations.json, not static/publications.bib.
-#      - "static/publications.bib"
+    paths:
+      # Only fire when the bib file itself changes -- this also prevents
+      # an infinite loop, since this job's own commit only touches
+      # static/citations.json, not static/publications.bib.
+      - "static/publications.bib"
 
 jobs:
   update-citations:

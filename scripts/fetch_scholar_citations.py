@@ -3,14 +3,6 @@
 Fetch Google Scholar citation counts for publications.bib entries and
 write them to static/citations.json, keyed by BibTeX cite key.
 
-This mirrors how al-folio's own citation-badge feature works: rather
-than scraping your whole Scholar author profile (which is a heavier,
-more block-prone request and needs proxy machinery to survive on CI
-runners), it fetches ONE lightweight page per paper -- the public
-"citation_for_view" page for a specific paper -- and parses the
-"Cited by N" text out of its meta tags. No proxy library, no author
-profile scrape.
-
 Usage:
     pip install requests bibtexparser
     python scripts/fetch_scholar_citations.py --user BfYwEGMAAAAJ
