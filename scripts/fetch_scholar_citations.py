@@ -1,39 +1,55 @@
 #!/usr/bin/env python3
 """
-Fetch Google Scholar citation counts for every entry in publications.bib
-and write them to static/citations.json, keyed by BibTeX cite key.
+Fetch Google Scholar citation counts for publications.bib entries and
+write them to static/citations.json, keyed by BibTeX cite key.
+
+This mirrors how al-folio's own citation-badge feature works: rather
+than scraping your whole Scholar author profile (which is a heavier,
+more block-prone request and needs proxy machinery to survive on CI
+runners), it fetches ONE lightweight page per paper -- the public
+"citation_for_view" page for a specific paper -- and parses the
+"Cited by N" text out of its meta tags. No proxy library, no author
+profile scrape.
 
 Usage:
-    pip install scholarly bibtexparser
+    pip install requests bibtexparser
     python scripts/fetch_scholar_citations.py --user BfYwEGMAAAAJ
+
+Requires each bib entry you want a badge for to have a `scholarid`
+field:
+
+    @article{mykey,
+      title    = {...},
+      ...
+      scholarid = {BfYwEGMAAAAJ:u5HHmVD_uO8C},
+    }
+
+Get that value by opening your own Scholar profile, clicking the paper,
+and copying the part after `citation_for_view=` in the URL (it already
+includes your user id, a colon, then the paper id).
 
 Output format (static/citations.json):
 {
-  "roadabike2019_interspeech": {
+  "mykey": {
     "count": 46,
     "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BfYwEGMAAAAJ&citation_for_view=BfYwEGMAAAAJ:u5HHmVD_uO8C"
   },
   ...
 }
 
+Entries without a `scholarid` are skipped (listed in
+scripts/scholar_unmatched.txt) rather than guessed at.
+
 Notes:
-- Google Scholar has no official API and aggressively rate-limits/blocks
-  scraping, so this is designed to run occasionally (e.g. weekly via a
-  scheduled GitHub Action), not on every page load.
-- Matching between your .bib entries and Scholar's publication list is
-  done by fuzzy-matching the title (case/punctuation-insensitive). If a
-  match can't be found confidently, that entry is skipped and a warning
-  is printed -- check scholar_unmatched.txt afterwards.
-- If Scholar starts blocking requests (common on shared IPs like GitHub
-  Actions runners), try the `scholarly.use_proxy` options documented at
-  https://github.com/scholarly-python-package/scholarly, or fall back to
-  running this locally and committing the JSON manually.
+- Google Scholar still rate-limits (429) occasionally, especially from
+  shared CI IPs. When that happens for a given paper, this script keeps
+  whatever count was already in citations.json for it (rather than
+  wiping it to 0/missing) and tries again next run -- same behavior as
+  al-folio's plugin.
 """
 
 import argparse
-import difflib
 import json
-import os
 import re
 import sys
 import time
@@ -45,24 +61,27 @@ except ImportError:
     sys.exit("Missing dependency: pip install bibtexparser")
 
 try:
-    from scholarly import scholarly, ProxyGenerator
+    import requests
 except ImportError:
-    sys.exit("Missing dependency: pip install scholarly")
+    sys.exit("Missing dependency: pip install requests")
 
 ROOT = Path(__file__).resolve().parent.parent
 BIB_PATH = ROOT / "static" / "publications.bib"
 OUT_PATH = ROOT / "static" / "citations.json"
 UNMATCHED_PATH = ROOT / "scripts" / "scholar_unmatched.txt"
 
-MATCH_THRESHOLD = 0.80  # 0-1, how similar titles must be to count as a match
+REQUEST_DELAY_SECONDS = 2  # be polite between requests
+REQUEST_TIMEOUT_SECONDS = 15
 
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+}
 
-def normalize_title(title: str) -> str:
-    title = re.sub(r"[{}]", "", title)  # strip bibtex brace-protection
-    title = title.lower()
-    title = re.sub(r"[^a-z0-9 ]", " ", title)
-    title = re.sub(r"\s+", " ", title).strip()
-    return title
+CITED_BY_RE = re.compile(r"Cited by (\d+)")
 
 
 def load_bib_entries(bib_path: Path):
@@ -71,134 +90,53 @@ def load_bib_entries(bib_path: Path):
     entries = []
     for entry in bib_database.entries:
         key = entry.get("ID")
-        title = entry.get("title", "")
-        # Optional manual override: add `scholarid = {USERID:PUBID}` to a
-        # bib entry (the part after user= and citation_for_view= in a
-        # Scholar citation URL) to skip fuzzy title matching entirely.
         scholar_id = entry.get("scholarid", "").strip()
-        if key and (title or scholar_id):
-            entries.append({
-                "key": key,
-                "title": title,
-                "norm_title": normalize_title(title) if title else "",
-                "scholar_id": scholar_id,
-            })
+        if key:
+            entries.append({"key": key, "scholar_id": scholar_id})
     return entries
 
 
-def setup_proxy():
-    """
-    Google Scholar aggressively blocks requests from shared/CI IPs (like
-    GitHub Actions runners). Routing through a proxy avoids this.
-
-    - If a SCRAPERAPI_KEY env var is set, use ScraperAPI (recommended --
-      free tier at scraperapi.com covers this use case comfortably).
-    - Otherwise, fall back to scholarly's free rotating proxy pool. This
-      is unreliable (public proxies get blocked too) but requires no
-      signup, so it's a reasonable first try.
-    """
-    pg = ProxyGenerator()
-    scraperapi_key = os.environ.get("SCRAPERAPI_KEY")
-
-    if scraperapi_key:
-        print("Using ScraperAPI proxy...")
+def load_existing_citations(out_path: Path):
+    if out_path.exists():
         try:
-            success = pg.ScraperAPI(scraperapi_key)
-        except Exception as e:
-            print(f"WARNING: ScraperAPI setup failed ({type(e).__name__}: {e}); "
-                  "falling back to a direct (unproxied) connection.")
-            return
-    else:
-        print("No SCRAPERAPI_KEY set -- trying free rotating proxies "
-              "(less reliable; see README to add a ScraperAPI key instead)...")
-        try:
-            success = pg.FreeProxies()
-        except Exception as e:
-            print(f"WARNING: free-proxy setup failed ({type(e).__name__}: {e}); "
-                  "falling back to a direct (unproxied) connection. "
-                  "This is a known library-compatibility issue -- adding a "
-                  "SCRAPERAPI_KEY secret avoids it entirely (see README).")
-            return
-
-    if success:
-        scholarly.use_proxy(pg)
-        print("Proxy configured.")
-    else:
-        print("WARNING: proxy setup failed -- requests will go out directly "
-              "and are likely to be blocked by Google Scholar.")
+            with open(out_path, encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, OSError):
+            pass
+    return {}
 
 
-def fetch_scholar_publications(user_id: str):
-    print(f"Fetching Scholar author profile for user={user_id} ...")
-    author = scholarly.search_author_id(user_id)
-    author = scholarly.fill(author, sections=["publications"])
-    pubs = []
-    for i, pub in enumerate(author["publications"], start=1):
-        bib = pub.get("bib", {})
-        title = bib.get("title", "")
-        if not title:
-            continue
-        # author_pub_id looks like "USERID:XXXXXXXXXXX" and is what
-        # citation_for_view needs in the URL.
-        author_pub_id = pub.get("author_pub_id", "")
-        pubs.append({
-            "title": title,
-            "norm_title": normalize_title(title),
-            "num_citations": pub.get("num_citations", 0),
-            "author_pub_id": author_pub_id,
-        })
-        # Be polite / reduce chance of getting blocked.
-        time.sleep(1)
-    print(f"Fetched {len(pubs)} publications from Scholar.")
-    return pubs
+def fetch_citation_count(user_id: str, scholar_id: str):
+    """
+    scholar_id is expected as 'USERID:PUBID'. Returns (count, url):
+    count is an int, or None if it couldn't be fetched this run
+    (e.g. blocked/rate-limited).
+    """
+    url = (
+        "https://scholar.google.com/citations?view_op=view_citation"
+        f"&hl=en&user={user_id}&citation_for_view={scholar_id}"
+    )
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT_SECONDS)
+    except requests.RequestException as e:
+        print(f"  Request failed: {type(e).__name__}: {e}")
+        return None, url
 
+    if resp.status_code != 200:
+        print(f"  HTTP {resp.status_code} -- likely rate-limited, skipping for now")
+        return None, url
 
-def match_entries(bib_entries, scholar_pubs, user_id: str):
-    results = {}
-    unmatched = []
-    pubs_by_id = {p["author_pub_id"]: p for p in scholar_pubs if p["author_pub_id"]}
+    match = CITED_BY_RE.search(resp.text)
+    if not match:
+        # No "Cited by" text usually just means 0 citations, but could
+        # also mean Scholar served a block/CAPTCHA page instead of the
+        # real one. Treat as "couldn't determine" rather than assuming 0.
+        if "citation_for_view" not in resp.text:
+            print("  Response didn't look like a citation page (possible block) -- skipping")
+            return None, url
+        return 0, url
 
-    for entry in bib_entries:
-        matched_pub = None
-
-        # 1. Manual override via `scholarid = {USERID:PUBID}` in the bib entry.
-        if entry["scholar_id"]:
-            matched_pub = pubs_by_id.get(entry["scholar_id"])
-            if not matched_pub:
-                unmatched.append(
-                    f"{entry['key']}: scholarid '{entry['scholar_id']}' set but not found "
-                    "in this author's publication list -- check it's correct"
-                )
-                continue
-        else:
-            # 2. Fall back to fuzzy title matching.
-            best = None
-            best_score = 0.0
-            for pub in scholar_pubs:
-                score = difflib.SequenceMatcher(None, entry["norm_title"], pub["norm_title"]).ratio()
-                if score > best_score:
-                    best_score = score
-                    best = pub
-            if best and best_score >= MATCH_THRESHOLD:
-                matched_pub = best
-            else:
-                unmatched.append(
-                    f"{entry['key']}: {entry['title']} (best score {best_score:.2f} -- "
-                    "consider adding a `scholarid = {{USERID:PUBID}}` override)"
-                )
-                continue
-
-        author_pub_id = matched_pub["author_pub_id"]
-        url = (
-            "https://scholar.google.com/citations?view_op=view_citation"
-            f"&hl=en&user={user_id}&citation_for_view={author_pub_id}"
-        )
-        results[entry["key"]] = {
-            "count": matched_pub["num_citations"],
-            "url": url,
-        }
-
-    return results, unmatched
+    return int(match.group(1)), url
 
 
 def main():
@@ -215,20 +153,36 @@ def main():
     bib_entries = load_bib_entries(bib_path)
     print(f"Loaded {len(bib_entries)} entries from {bib_path}")
 
-    setup_proxy()
-    scholar_pubs = fetch_scholar_publications(args.user)
-    results, unmatched = match_entries(bib_entries, scholar_pubs, args.user)
+    results = load_existing_citations(out_path)
+    missing_scholar_id = []
+    failed = []
+
+    with_id = [e for e in bib_entries if e["scholar_id"]]
+    without_id = [e for e in bib_entries if not e["scholar_id"]]
+    missing_scholar_id.extend(
+        f"{e['key']}: no `scholarid` field set -- add one to get a badge" for e in without_id
+    )
+
+    for i, entry in enumerate(with_id, start=1):
+        print(f"[{i}/{len(with_id)}] {entry['key']} ({entry['scholar_id']})")
+        count, url = fetch_citation_count(args.user, entry["scholar_id"])
+        if count is None:
+            failed.append(f"{entry['key']}: fetch failed this run, keeping previous value if any")
+        else:
+            results[entry["key"]] = {"count": count, "url": url}
+        if i < len(with_id):
+            time.sleep(REQUEST_DELAY_SECONDS)
 
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, sort_keys=True)
-    print(f"Wrote {len(results)} matched citation counts to {out_path}")
+    print(f"Wrote {len(results)} citation counts to {out_path}")
 
-    if unmatched:
+    notes = missing_scholar_id + failed
+    if notes:
         UNMATCHED_PATH.parent.mkdir(parents=True, exist_ok=True)
         with open(UNMATCHED_PATH, "w", encoding="utf-8") as f:
-            f.write("\n".join(unmatched))
-        print(f"WARNING: {len(unmatched)} entries could not be matched confidently.")
-        print(f"See {UNMATCHED_PATH} -- you may need to fix titles or raise/lower MATCH_THRESHOLD.")
+            f.write("\n".join(notes))
+        print(f"NOTE: {len(notes)} entries need attention -- see {UNMATCHED_PATH}")
 
 
 if __name__ == "__main__":
