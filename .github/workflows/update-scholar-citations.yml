@@ -7,11 +7,11 @@ on:
   workflow_dispatch: {} # lets you trigger it manually from the Actions tab
   push:
     branches: [main, citation_badge]
-   # paths:
-      # Only fire when the bib file itself changes -- this also prevents
-      # an infinite loop, since this job's own commit only touches
-      # static/citations.json, not static/publications.bib.
-   #   - "static/publications.bib"
+#    paths:
+#      # Only fire when the bib file itself changes -- this also prevents
+#      # an infinite loop, since this job's own commit only touches
+#      # static/citations.json, not static/publications.bib.
+#      - "static/publications.bib"
 
 jobs:
   update-citations:
@@ -26,7 +26,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install fetch-script dependencies
-        run: pip install scholarly bibtexparser
+        # free-proxy is pinned: newer releases changed get_proxy_list()'s
+        # signature in a way that's incompatible with scholarly's current
+        # FreeProxies() implementation (TypeError: missing 'repeat').
+        run: pip install scholarly bibtexparser "free-proxy<1.1"
 
       - name: Fetch citation counts
         # Replace BfYwEGMAAAAJ with your Google Scholar user id if it ever changes

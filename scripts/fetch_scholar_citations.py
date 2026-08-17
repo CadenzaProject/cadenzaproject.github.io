@@ -102,11 +102,23 @@ def setup_proxy():
 
     if scraperapi_key:
         print("Using ScraperAPI proxy...")
-        success = pg.ScraperAPI(scraperapi_key)
+        try:
+            success = pg.ScraperAPI(scraperapi_key)
+        except Exception as e:
+            print(f"WARNING: ScraperAPI setup failed ({type(e).__name__}: {e}); "
+                  "falling back to a direct (unproxied) connection.")
+            return
     else:
         print("No SCRAPERAPI_KEY set -- trying free rotating proxies "
               "(less reliable; see README to add a ScraperAPI key instead)...")
-        success = pg.FreeProxies()
+        try:
+            success = pg.FreeProxies()
+        except Exception as e:
+            print(f"WARNING: free-proxy setup failed ({type(e).__name__}: {e}); "
+                  "falling back to a direct (unproxied) connection. "
+                  "This is a known library-compatibility issue -- adding a "
+                  "SCRAPERAPI_KEY secret avoids it entirely (see README).")
+            return
 
     if success:
         scholarly.use_proxy(pg)
