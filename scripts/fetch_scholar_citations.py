@@ -49,7 +49,7 @@ except ImportError:
     sys.exit("Missing dependency: pip install scholarly")
 
 ROOT = Path(__file__).resolve().parent.parent
-BIB_PATH = ROOT / "publications.bib"
+BIB_PATH = ROOT / "static" / "publications.bib"
 OUT_PATH = ROOT / "static" / "citations.json"
 UNMATCHED_PATH = ROOT / "scripts" / "scholar_unmatched.txt"
 
