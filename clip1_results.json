@@ -58,7 +58,7 @@
   "data":
   [
     {"rank":1, "id": "T045 *", "ref_text": "Yes", "unproc": "No", "severity":"Yes", "dRMSE":25.89, "eRMSE":26.44, "ecorr":0.67, "paper":"https://doi.org/10.1109/ICASSP55912.2026.11461380"},
-    {"rank":2, "id": "T071a *", "ref_text": "Yes", "unproc": "Yes", "severity":"No", "dRMSE":26.4, "eRMSE":26.52, "ecorr":0.67, "paper": "https://doi.org/10.1109/ICASSP55912.2026.11461380"},
+    {"rank":2, "id": "T071a *", "ref_text": "Yes", "unproc": "Yes", "severity":"No", "dRMSE":26.4, "eRMSE":26.52, "ecorr":0.67, "paper": "https://doi.org/10.1109/ICASSP55912.2026.11464474"},
     {"rank":3, "id": "T013a *", "ref_text": "Yes", "unproc": "No", "severity":"No", "dRMSE":26.61, "eRMSE":26.54, "ecorr":0.67, "paper":"https://doi.org/10.1109/ICASSP55912.2026.11465056"},
     {"rank":4, "id": "T017", "ref_text": "No", "unproc": "No", "severity":"No", "dRMSE":26.82, "eRMSE":26.67, "ecorr":0.67, "paper":"/reports/clip1/T017.pdf"},
     {"rank":5, "id": "T072a", "ref_text": "Yes", "unproc": "Yes", "severity":"Yes", "dRMSE":26.59, "eRMSE":26.68, "ecorr":0.66, "paper":"/reports/clip1/T072.pdf"},
@@ -77,7 +77,7 @@
     {"rank":18, "id": "T084", "ref_text": "Yes", "unproc": "No", "severity":"Yes", "dRMSE":27.71, "eRMSE":29.17, "ecorr":0.59, "paper":"/reports/clip1/T084.pdf"},
     {"rank":19, "id": "T013b", "ref_text": "No", "unproc": "Yes", "severity":"No", "dRMSE":29.75, "eRMSE":29.68, "ecorr":0.57, "paper":"https://doi.org/10.1109/ICASSP55912.2026.11465056"},
     {"rank":20, "id": "T036", "ref_text": "No", "unproc": "No", "severity":"No", "dRMSE":30.98, "eRMSE":30.97, "ecorr":0.5, "paper":"/reports/clip1/T036.pdf"},
-    {"rank":21, "id": "T071b", "ref_text": "No", "unproc": "Yes", "severity":"No", "dRMSE":31, "eRMSE":31.64, "ecorr":0.46, "paper": "https://doi.org/10.1109/ICASSP55912.2026.11461380"},
+    {"rank":21, "id": "T071b", "ref_text": "No", "unproc": "Yes", "severity":"No", "dRMSE":31, "eRMSE":31.64, "ecorr":0.46, "paper": "https://doi.org/10.1109/ICASSP55912.2026.11464474"},
     {"rank":22, "id": "T044b", "ref_text": "No", "unproc": "No", "severity":"No", "dRMSE":31.45, "eRMSE":32.2, "ecorr":0.45, "paper":"/reports/clip1/T044.pdf"},
     {"rank":23, "id": "T054", "ref_text": "Yes", "unproc": "No", "severity":"Yes", "dRMSE":31.44, "eRMSE":32.3, "ecorr":0.43, "paper":"/reports/clip1/T054.pdf"},
     {"rank":24, "id": "T044a", "ref_text": "No", "unproc": "Yes", "severity":"No", "dRMSE":34.22, "eRMSE":32.77, "ecorr":0.48, "paper":"/reports/clip1/T044.pdf"},
