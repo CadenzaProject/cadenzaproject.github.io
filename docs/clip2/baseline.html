@@ -27,8 +27,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script><link rel="stylesheet" href="/assets/css/styles.5b1882aa.css">
-<script src="/assets/js/runtime~main.b9dc1d63.js" defer="defer"></script>
-<script src="/assets/js/main.04aeafd7.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.c04262b3.js" defer="defer"></script>
+<script src="/assets/js/main.13717190.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -40,7 +40,7 @@
 It leverages a frozen, pre-trained Whisper encoder to extract deep acoustic features,
 which are then aggregated and projected to generate the final prediction.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="architectural-components">Architectural Components<a href="#architectural-components" class="hash-link" aria-label="Direct link to Architectural Components" title="Direct link to Architectural Components" translate="no">​</a></h3>
-<div style="text-align:center"><div style="background-size:cover;background-repeat:no-repeat;position:relative;background-image:url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAACXBIWXMAAC4jAAAuIwF4pT92AAABGUlEQVR4nAXBTU7CQBgA0DmIHsW17lx6A0/g3gQ3JsQTuHDjCXRhCIoxqBRbqDSlAzLt0E6nMpSO9I8BpXy+h3Ip+oLRVOWyLqU8WGdJtMkWlIdsKuMZXWcJX2Wyi1ZuNwaug/L02yzmx79uB3L7CWCTw9+cVKXdBBV8cuRjHIcYQzD+ajGf1TzL2hHThGUid/OAbV3ThIi4IXKoLibcAMfTb0QSHTm0C8bwuSpUWoWCbHtOC0hgMTSeduIRewVMtXvXdy4Gkxb0cRN+MgH+zKl6owYQ1ucotD5YZL5BZGnXhVKHuUp3YooVNzRFtZfVN7GrclO4aLEo95Z2+3Rp3F0Oe5MTbyyuRt77+WD4WKONh3rYbp8BwP4/3+HuikBDfGUAAAAASUVORK5CYII=&quot;)"><svg style="width:100%;height:auto;max-width:100%;margin-bottom:-4px" width="640" height="425"></svg><noscript><img style="width:100%;height:auto;max-width:100%;margin-bottom:-4px;position:absolute;top:0;left:0" src="/assets/ideal-img/baseline.f6d62d1.640.png" srcset="/assets/ideal-img/baseline.f6d62d1.640.png 640w,/assets/ideal-img/baseline.02c714a.940.png 940w" alt="CLIP2 baseline" width="640" height="425"></noscript></div><p><strong>Diagram of the CLIP2 baseline system and training pipeline</strong></p></div>
+<div style="text-align:center"><div style="background-size:cover;background-repeat:no-repeat;position:relative;background-image:url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAACXBIWXMAAC4jAAAuIwF4pT92AAABGElEQVR4nAXBwVKCQBgA4H2QepTO3rr2Bj1B9yZPzTg9QTNdeoM6OGPW2DgqJAFDBBKLC+yuCcSOLgJa4t/3oUJkekLJui5ERwhxspVisZM54YyGIluSrcx5JYWKqkDJgE2hJtP7MmOnv8EYpN0H2BXwl+JmY/egjk2OItfNmOtA7H09UxJdzS0LfMOAVZ4fkjjeY0OHBQ4YcubT1OcazEL9Ls+TlhO+geYMmrKWB5YG+3f3BfzIYsgLJ5nHRjCLlEdC3bYdDMDw+rAqUogTpzG8J8BU54iaasT1ESxM5XZT162iWjcJcSuuqRWZvJbf2N5vtgVGP7Q8WlnD87X2cP1p+mehl9zM8PjS+Oi1g263w4ajCwA4/gfn7e6Muq0cJAAAAABJRU5ErkJggg==&quot;)"><svg style="width:100%;height:auto;max-width:100%;margin-bottom:-4px" width="640" height="425"></svg><noscript><img style="width:100%;height:auto;max-width:100%;margin-bottom:-4px;position:absolute;top:0;left:0" src="/assets/ideal-img/baseline.fa08dc7.640.png" srcset="/assets/ideal-img/baseline.fa08dc7.640.png 640w,/assets/ideal-img/baseline.c296864.940.png 940w" alt="CLIP2 baseline" width="640" height="425"></noscript></div><p><strong>Diagram of the CLIP2 baseline system and training pipeline</strong></p></div>
 <br>
 <ol>
 <li class=""><strong>Feature Extraction (Audio to Spectrogram)</strong>: <br>
