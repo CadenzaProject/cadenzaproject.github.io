@@ -18,7 +18,8 @@ module.exports = {
     tutorialSidebar_camerata: [
         'camerata/intro',
         'camerata/venue',
-        'camerata/tickets'
+        // 'camerata/tickets'
+        'camerata/gallery'
     ],
      tutorialSidebar_clip2: [
          'clip2/intro',

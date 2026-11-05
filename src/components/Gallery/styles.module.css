@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.item {
+  display: block;
+  overflow: hidden;          /* keeps the zoom inside the tile */
+  border-radius: 8px;
+}
+
+.grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.item:hover img,
+.item:focus-visible img {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grid img { transition: none; }
+  .item:hover img,
+  .item:focus-visible img { transform: none; }
+}
