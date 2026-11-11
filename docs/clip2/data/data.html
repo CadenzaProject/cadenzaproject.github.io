@@ -27,8 +27,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script><link rel="stylesheet" href="/assets/css/styles.4f65fac2.css">
-<script src="/assets/js/runtime~main.132be3cf.js" defer="defer"></script>
-<script src="/assets/js/main.01371e13.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.745a2524.js" defer="defer"></script>
+<script src="/assets/js/main.d457d169.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -61,15 +61,13 @@ Therefore, in the listening test we added the effects of hearing loss to some of
 <div style="background-size:cover;background-repeat:no-repeat;position:relative;background-image:url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAACCAYAAABhYU3QAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAXUlEQVR4nAFSAK3/AI+rWGWLp1dAhp9TaBFmZg/ATFk5cD2OGXiaZFtrhlVfYlZRLPDMYbIAj6xZcoSfUUuKolV0C0JCF6tBRUaWLnMWg6JcW3yWTliDaSsd89Fiw164Ic4v4o0PAAAAAElFTkSuQmCC&quot;)"><svg style="width:100%;height:auto;max-width:100%;margin-bottom:-4px" width="640" height="150"></svg><noscript><img style="width:100%;height:auto;max-width:100%;margin-bottom:-4px;position:absolute;top:0;left:0" src="/assets/ideal-img/clip2_data_diagrams.b06392e.640.png" srcset="/assets/ideal-img/clip2_data_diagrams.b06392e.640.png 640w,/assets/ideal-img/clip2_data_diagrams.72a8185.940.png 940w" alt="schematic of data generation" width="640" height="150"></noscript></div>
 <p>Figure 1. Schematic of data generated and process. Black lines indicate metadata and blue audio.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="generating-the-music">Generating the music<a href="#generating-the-music" class="hash-link" aria-label="Direct link to Generating the music" title="Direct link to Generating the music" translate="no">​</a></h3>
-<p>We began by using ChatGPT to generate thousands of prompts across different music genres.
-Care was taken to avoid prompts violating ElevenLabs copyright policies. In general, each prompt included:</p>
+<p>We used ChatGPT to write thousands of prompts across many music genres, then used them to generate songs with ElevenLabs.
+To respect ElevenLabs’ copyright rules, each prompt described the style of a randomly chosen real artist without naming them.
+Every prompt also asked ElevenLabs to:</p>
 <ol>
-<li class="">Choose a random artist or band as a reference to clearly describe singing and musical composition style.</li>
-<li class="">However, the prompt should not include the name of the artist or band used as a reference.</li>
-<li class="">The generation should correspond to a single verse or chorus of a song.</li>
-<li class="">The generated audio should be 30 seconds long.</li>
-<li class="">Include ground-truth English lyrics for the song.</li>
-<li class="">Generate the vocals using the generated lyrics.</li>
+<li class="">produce a 30-second clip of a single verse or chorus</li>
+<li class="">write original English lyrics</li>
+<li class="">generate the vocal using those lyrics, so we know exactly what words appear in each clip</li>
 </ol>
 <p>This process resulted in 2,125 30-second audio signals of generated music with ground-truth lyrics.
 We then recruited five native English-speaking PhD students from the Universities of Salford and Sheffield, UK.
