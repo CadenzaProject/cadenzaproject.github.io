@@ -45,16 +45,6 @@ Therefore, in the listening test we added the effects of hearing loss to some of
 
 Consequently, audio (1) is what people heard in the listening tests, but audio (2) is also available in our scenario.
 
-[//]: # (## Data exploration)
-
-[//]: # ()
-[//]: # ()
-[//]: # (This video explores the dataset and highlights some interesting aspects to research.)
-
-[//]: # ()
-[//]: # ()
-[//]: # (<iframe width="100%" height="560" src="https://www.youtube.com/embed/0w5DyZ8Itv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
-
 ## Construction of the CLIP2 Dataset
 
 
@@ -64,15 +54,13 @@ Figure 1. Schematic of data generated and process. Black lines indicate metadata
 
 ### Generating the music
 
-We began by using ChatGPT to generate thousands of prompts across different music genres.
-Care was taken to avoid prompts violating ElevenLabs copyright policies. In general, each prompt included:
+We used ChatGPT to write thousands of prompts across many music genres, then used them to generate songs with ElevenLabs.
+To respect ElevenLabs’ copyright rules, each prompt described the style of a randomly chosen real artist without naming them.
+Every prompt also asked ElevenLabs to:
 
-1. Choose a random artist or band as a reference to clearly describe singing and musical composition style.
-2. However, the prompt should not include the name of the artist or band used as a reference.
-3. The generation should correspond to a single verse or chorus of a song.
-4. The generated audio should be 30 seconds long.
-5. Include ground-truth English lyrics for the song.
-6. Generate the vocals using the generated lyrics.
+1. produce a 30-second clip of a single verse or chorus
+2. write original English lyrics
+3. generate the vocal using those lyrics, so we know exactly what words appear in each clip
 
 This process resulted in 2,125 30-second audio signals of generated music with ground-truth lyrics. 
 We then recruited five native English-speaking PhD students from the Universities of Salford and Sheffield, UK.
