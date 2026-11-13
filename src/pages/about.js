@@ -120,8 +120,8 @@ const PersonList = [
   {
     name: "Scott Bannister",
     department: "School of Music",
-    affiliation: "University of Leeds",
-    url: "https://ahc.leeds.ac.uk/music/staff/3358/dr-scott-bannister",
+    affiliation: "University of Manchester (formally Univerity of Leeds)",
+    url: "https://research.manchester.ac.uk/en/persons/scott-bannister/",
     avatar: "/img/avatar/bannister.jpeg",
   },
   {
